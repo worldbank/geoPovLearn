@@ -1,0 +1,49 @@
+---
+title: "Welcome to GeoPov"
+---
+
+🌍 We are a group of development economists and geospatial enthusiasts working at the intersection of poverty, place, and policy. At GeoPov, we believe that where people live matters just as much as how they live — and we're here to make sure that spatial realities are part of the poverty dialogue.
+
+## 🎯 Our Goal
+
+To develop a global agenda that:
+
+- **Empowers economists** by integrating geospatial data and spatial analysis into country-level diagnostics and policy engagement.
+- **Contributes to global knowledge** that helps design local solutions grounded in data and spatial context.
+
+## 🧭 What We Do
+
+Our work is organized around three main pillars:
+
+### Pillar 1: Spatial Analysis
+
+We apply a geographic lens to pressing policy questions on poverty and inequality. Whether it's identifying where jobs are (and aren't) for the poor, mapping urban deprivation, or analyzing rural income dynamics, we use spatially disaggregated data to generate actionable insights. This includes household surveys, censuses, administrative records, private sector data, and satellite-based remote sensing — covering everything from climate and land use to infrastructure and conflict. We also develop and share open, reproducible code and tools that can be adapted across countries and topics.
+
+[Learn more about our Spatial Analysis work →](projects/spatial-analysis.qmd)
+
+### Pillar 2: Knowledge and Data Center
+
+We bring clarity to the what, why, and how of using geospatial data in poverty analysis. This pillar focuses on:
+
+- Building a curated repository of geospatial data sources and methods, with clear guidance on how they can (and can't) be used in applied work.
+- Showcasing examples of microeconomic analyses that successfully integrate geospatial data to answer real-world policy questions.
+
+[Explore our Knowledge and Data Center →](projects/knowledge-data-center.qmd)
+
+### Pillar 3: Capacity Building
+
+We help demystify geospatial data for microeconomists. Through hands-on trainings and peer-learning events, we build core skills for microeconomists to use geospatial methods with confidence. Whether you're just getting started or looking to refine your toolkit, we're here to support you through our growing Community of Practice.
+
+[Explore our seminars and training events →](seminars/index.qmd)
+
+## 👥 Meet the Team
+
+We're a global multi-disciplinary team in the Distributional Impact of Policy under the Prosperity Vice Presidency. We combine expertise in microeconomic analysis, spatial economics, and data engineering.
+
+**Who we are:**
+
+- Curious minds who ask "where", "who", "what" and "why" together
+- Passionate about open data, open code, and inclusive analytics
+- Believers in the power of maps and evidence to drive better policy
+
+[Meet our team members →](team/index.qmd)

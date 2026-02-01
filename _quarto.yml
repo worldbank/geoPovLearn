@@ -1,0 +1,66 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "GeoPov"
+  favicon: assets/wbg-favicon.png
+  repo-url: https://github.com/worldbank/geoPovLearn
+  repo-actions: [edit, issue]
+  issue-url: https://github.com/worldbank/geoPovLearn/issues/new
+  navbar:
+    background: primary
+    search: true
+    logo: assets/wbg-logo-prosperity-white.svg
+    right:
+      - text: "Internal Resources"
+        menu:
+          - text: "Prosperity"
+            href: http://prosperity/
+            target: _blank
+          - text: "GeoPov"
+            href: http://geopov/
+            target: _blank
+          - text: "Distributional Impact of Policies"
+            href: http://poverty/
+            target: _blank
+      - icon: github
+        href: https://github.com/worldbank/geoPovLearn
+        aria-label: GitHub
+        target: _blank
+  sidebar:
+    style: "docked"
+    search: true
+    logo: assets/geopov-logo.png
+    contents:
+      - text: "About Us"
+        href: index.qmd
+      - section: "GeoPov BBL Series"
+        href: seminars/index.qmd
+        contents:
+          - seminars/seminar-2026-02/overview.qmd
+          - seminars/seminar-2025-10/overview.qmd
+      - section: "Projects"
+        href: projects/index.qmd
+        contents:
+          - text: "Spatial Analysis"
+            href: projects/spatial-analysis.qmd
+          - text: "Knowledge and Data Center"
+            href: projects/knowledge-data-center.qmd
+          - text: "Capacity Building"
+            href: projects/capacity-building.qmd
+      - section: "Team"
+        href: team/index.qmd
+        contents:
+          - team/ben-brunckhorst.qmd
+          - team/eduard-bukin.qmd
+          - team/henry-stemmler.qmd
+          - team/maria-davalos.qmd
+          - team/nga-nguyen.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    toc-depth: 3

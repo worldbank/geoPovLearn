@@ -1,0 +1,34 @@
+---
+title: "Spatial Analysis"
+date: "2024-01-30"
+description: "Applying a geographic lens to pressing policy questions on poverty and inequality"
+categories: [pillar, analysis, methods]
+---
+
+## Overview
+
+We apply a geographic lens to pressing policy questions on poverty and inequality. Whether it's identifying where jobs are (and aren't) for the poor, mapping urban deprivation, or analyzing rural income dynamics, we use spatially disaggregated data to generate actionable insights.
+
+## Our Approach
+
+We work with diverse data sources including:
+
+- Household surveys
+- Censuses
+- Administrative records
+- Private sector data
+- Satellite-based remote sensing
+
+Our analysis covers everything from climate and land use to infrastructure and conflict.
+
+## Tools and Methods
+
+We develop and share open, reproducible code and tools that can be adapted across countries and topics.
+
+## Current Projects
+
+*Project examples will be added here*
+
+## Publications and Outputs
+
+*Key outputs will be added here*

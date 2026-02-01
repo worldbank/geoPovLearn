@@ -1,0 +1,21 @@
+/* Custom styles for GeoPov website */
+
+/* Navbar logo sizing */
+.navbar-logo {
+  height: 40px !important;
+  width: auto !important;
+  max-height: 40px !important;
+}
+
+/* Sidebar logo sizing */
+.sidebar-logo {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Ensure listing images have consistent sizing */
+.quarto-listing .listing-image {
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+}

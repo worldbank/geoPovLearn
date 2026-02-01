@@ -1,0 +1,48 @@
+---
+title: "Capacity Building"
+date: "2024-01-30"
+description: "Demystifying geospatial data for microeconomists through hands-on training and peer-learning"
+categories: [pillar, training, community]
+---
+
+## Overview
+
+We help demystify geospatial data for microeconomists. Through hands-on trainings and peer-learning events, we build core skills for microeconomists to use geospatial methods with confidence.
+
+## Our Approach
+
+Whether you're just getting started or looking to refine your toolkit, we're here to support you through our growing Community of Practice.
+
+## Training Programs
+
+### Introductory Workshops
+
+*For those new to geospatial analysis*
+
+### Advanced Methods
+
+*Deep dives into specific techniques*
+
+### Applied Case Studies
+
+*Learning from real-world applications*
+
+## Community of Practice
+
+Join our community to:
+
+- Share experiences and challenges
+- Learn from peers
+- Access ongoing support
+- Contribute to collective knowledge
+
+## Upcoming Events
+
+*Check the [Seminars](../seminars/index.qmd) page for upcoming training events*
+
+## Resources
+
+- Training materials
+- Code examples
+- Self-paced tutorials
+- Community forums

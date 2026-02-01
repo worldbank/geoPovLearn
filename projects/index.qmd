@@ -1,0 +1,25 @@
+---
+title: "Projects"
+# Uncomment below to enable automatic listing:
+# listing:
+#   contents: "*.qmd"
+#   type: default
+#   sort: "date desc"
+#   fields: [date, title, description]
+---
+
+Our work is organized around three main pillars that guide our approach to integrating geospatial data with poverty analysis.
+
+## Our Three Pillars
+
+### [Spatial Analysis](spatial-analysis.qmd)
+
+Applying a geographic lens to pressing policy questions on poverty and inequality.
+
+### [Knowledge and Data Center](knowledge-data-center.qmd)
+
+Building a curated repository of geospatial data sources and methods for poverty analysis.
+
+### [Capacity Building](capacity-building.qmd)
+
+Demystifying geospatial data for microeconomists through hands-on training and peer-learning.

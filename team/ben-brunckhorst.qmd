@@ -1,0 +1,29 @@
+---
+title: "Ben James Brunckhorst"
+image: "ben-photo.jpg"
+image-alt: "Ben James Brunckhorst"
+about:
+  template: trestles
+  image-width: 300px
+  links:
+    - icon: envelope
+      text: Email
+      href: mailto:bbrunckhorst@worldbank.org
+    - icon: github
+      text: GitHub
+      href: https://github.com/
+---
+
+## Bio
+
+*Add Ben's detailed biography here*
+
+## Expertise
+
+- Area of expertise 1
+- Area of expertise 2
+- Area of expertise 3
+
+## Selected Publications
+
+*Add publications here*

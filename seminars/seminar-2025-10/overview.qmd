@@ -1,0 +1,43 @@
+---
+title: "Geocoding GMD"
+title-long: "Geocoding the Global Monitoring Database"
+date: "2025-10-30"
+description: "What happens when household surveys meet geospatial data? Learn how the GMD now includes geocoded variables capturing spatial context for 3 million households across 44 countries."
+author: "Ben James Brunckhorst and Minh Cong Nguyen"
+categories: [geocoding, survey data, gmd]
+image: "H3_cover.png"
+---
+
+## Overview
+
+What happens when household surveys meet geospatial data? The Global Monitoring Database (GMD)—the World Bank's harmonized repository of household surveys—now includes geocoded variables that capture the spatial context of interviewed households.
+
+Using a global grid system (H3 hexagons), survey locations are linked to powerful spatial indicators such as population density, urbanization, nighttime lights, accessibility, and climate. Nearly 100 surveys across 44 low- and middle-income countries—representing about 3 million households—have already been mapped to more than 130,000 unique locations.
+
+This integration opens new doors for analysis, allowing researchers and practitioners to combine household data with geospatial insights to better understand living conditions and inform policy.
+
+## Presenters
+
+**Ben James Brunckhorst** ([bbrunckhorst@worldbank.org](mailto:bbrunckhorst@worldbank.org)) and **Minh Cong Nguyen** ([mnguyen3@worldbank.org](mailto:mnguyen3@worldbank.org))
+
+## What You Will Learn
+
+In this webinar, you will:
+
+- Learn the methodology behind geocoding household locations
+- Discover how to access the data and supporting documentation
+- See real-world use cases and practical tips for analysis
+
+## Materials
+
+### Presentation Slides
+
+<iframe src="Geocoding%20GMD.pdf" width="100%" height="600px" style="border: 1px solid #ccc; border-radius: 4px;"></iframe>
+
+**Download:** [Geocoding GMD Slides (PDF)](Geocoding%20GMD.pdf)
+
+**Interactive slides (requires World Bank VPN):** [Open interactive slides](https://datanalytics-int.worldbank.org/geocoding-gmd){target="_blank"}
+
+## Recording
+
+*Recording to be added*

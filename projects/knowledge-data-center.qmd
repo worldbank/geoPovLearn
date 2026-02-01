@@ -1,0 +1,38 @@
+---
+title: "Knowledge and Data Center"
+date: "2024-01-30"
+description: "Building clarity around the what, why, and how of using geospatial data in poverty analysis"
+categories: [pillar, knowledge, data]
+---
+
+## Overview
+
+We bring clarity to the what, why, and how of using geospatial data in poverty analysis.
+
+## What We Provide
+
+### Data Repository
+
+Building a curated repository of geospatial data sources and methods, with clear guidance on how they can (and can't) be used in applied work.
+
+### Practical Examples
+
+Showcasing examples of microeconomic analyses that successfully integrate geospatial data to answer real-world policy questions.
+
+## Resources
+
+### Data Sources
+
+*Curated list of geospatial data sources*
+
+### Methods and Guidelines
+
+*Best practices and methodological guidance*
+
+### Case Studies
+
+*Examples of successful applications*
+
+## How to Use This Resource
+
+*Guidance for economists new to geospatial data*

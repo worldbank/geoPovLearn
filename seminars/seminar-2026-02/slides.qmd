@@ -57,7 +57,7 @@ Speaker: **Eduard Bukin** [ebukin\@worldbank.org](mailto:ebukin@worldbank.org)
 AI tools that we got used to over past years are impressive!
 
 :::::: columns
-:::: {.column width="65%"}
+::: {.column width="65%"}
 **Traditional Chat-Based Tools:**
 
 -   Web-based [Open AI ChatGPT](https://chatgpt.com/)
@@ -71,7 +71,7 @@ AI tools that we got used to over past years are impressive!
 -   **Pros:**
 
     -   Uses familiar technologies: Browser, Chat, Stata editor, copy-paste...
-::::
+:::
 
 :::: {.column width="35%"}
 **Cons:**
@@ -87,7 +87,6 @@ AI tools that we got used to over past years are impressive!
 :::
 ::::
 ::::::
-
 
 ## Example 1: From an Monstrocity to a Reproducible Package {.demo}
 
@@ -105,7 +104,6 @@ To do all this, we used:
     -   [Inline code completions](https://positron.posit.co/assistant-completions.html){target="_blank"}
     -   [Chat: help and assistance](https://positron.posit.co/assistant-chat.html){target="_blank"}
     -   [Agent: active changes to my code and code execution](https://positron.posit.co/assistant-chat-agents.html){target="_blank"}
-
 :::
 
 ## How does this different from a familiar AI-chat?
@@ -124,9 +122,8 @@ To do all this, we used:
 
 ### What AI tools and software do you use in your daily work?
 
-
-:::::: columns
-:::: {.column width="50%"}
+::::: columns
+::: {.column width="50%"}
 **Chat-based (in browser or an app):**
 
 -   OpenAI GPT
@@ -137,9 +134,9 @@ To do all this, we used:
 -   Google Gemini
 -   Grok
 -   Others: \_\_\_\_\_\_\_\_\_\_\_
-::::
+:::
 
-:::: {.column width="50%"}
+::: {.column width="50%"}
 **Agent-integrated software:**
 
 -   Positron + GH Copilot / Other LLMs
@@ -150,28 +147,26 @@ To do all this, we used:
 -   Cursor + LLMs
 -   GitHub Copilot Workspace (web-based)
 -   Others: \_\_\_\_\_\_\_\_\_\_\_
-::::
-::::::
+:::
+:::::
 
 # Key Concepts
 
 What do we need to know about modern analysis with AI?
 
-1.  AI: Chat | Agent | Inline Completion
+1.  AI: Chat \| Agent \| Inline Completion
 2.  Context awareness
 3.  Model Context Protocol (MCP)
 4.  Integrated Development Environments (IDEs)
 5.  LLMs for coding: GitHub Copilot, OpenAI GTP, Anthropic Claude, and others
 6.  Efficient prompting
 
----
+------------------------------------------------------------------------
 
-## AI: Chat | Agent | Inline Code
+## AI: Chat \| Agent \| Inline Code
 
-
-:::::: columns
-:::: {.column width="30%" .fragment}
-
+::::::::: columns
+:::: {.column .fragment width="30%"}
 **AI-Chat**
 
 -   General assistance
@@ -182,12 +177,9 @@ What do we need to know about modern analysis with AI?
 ::: callout-tip
 Use to **Ask** the model to think and reason.
 :::
-
 ::::
 
-:::: {.column width="40%" .fragment}
-
-
+:::: {.column .fragment width="40%"}
 **AI-Agent**
 
 -   Execute Mode
@@ -201,8 +193,7 @@ Use **Agent** mode to execute explicit instructions.
 :::
 ::::
 
-:::: {.column width="30%" .fragment}
-
+:::: {.column .fragment width="30%"}
 **Inline Code Completion**
 
 -   Real-time code suggestions while you type
@@ -210,11 +201,10 @@ Use **Agent** mode to execute explicit instructions.
 ::: callout-tip
 Use for quick code snippets.
 :::
-
 ::::
-::::::
+:::::::::
 
----
+------------------------------------------------------------------------
 
 ## Context Awareness
 
@@ -236,7 +226,6 @@ Use for quick code snippets.
 -   Project-specific suggestions
 -   Understands dependencies
 -   Reduces hallucinations
-
 :::
 :::::
 
@@ -246,27 +235,24 @@ Use for quick code snippets.
 
 ## Model Context Protocol (MCP)
 
-::::: columns
+:::::: columns
 ::: {.column width="15%"}
 ![](images/mcp-logo.png){width="100"}
 :::
 
-::: {.column width="85%"}
+:::: {.column width="85%"}
 ::: {.callout-note appearance="simple"}
 "A universal adapter for AI: one standard protocol replacing fragmented data integrations, connecting assistants to any system where information lives."— [Anthropic's invention](https://www.anthropic.com/news/model-context-protocol){target="_blank"}
 :::
-:::
+::::
+::::::
 
-
-:::::
 ::: fragment
-
 There is a [growing ecosystem of MCPs](https://github.com/modelcontextprotocol/servers){target="_blank"} .
-
 :::
 
 ::::: columns
-::: {.column width="75%" .fragment}
+::: {.column .fragment width="75%"}
 **MCP are essential to connect LLMs with:**
 
 -   Execution environments: **Stata**, R, Python
@@ -275,12 +261,11 @@ There is a [growing ecosystem of MCPs](https://github.com/modelcontextprotocol/s
 -   Tools: version control (GitHub), visualization, reporting
 :::
 
-::: {.column width="25%" .fragment}
+::: {.column .fragment width="25%"}
 Relevant are:
 
-- [Stata-MCP extension](https://github.com/sepinetam/stata-mcp){target="_blank"}
-- [R MCP Tools](https://tidyverse.org/blog/2025/07/mcptools-0-1-0/){target="_blank"}
-
+-   [Stata-MCP extension](https://github.com/sepinetam/stata-mcp){target="_blank"}
+-   [R MCP Tools](https://tidyverse.org/blog/2025/07/mcptools-0-1-0/){target="_blank"}
 :::
 :::::
 
@@ -290,9 +275,7 @@ Relevant are:
 
 ::::: columns
 ::: {.column width="50%"}
-**Popular IDEs:**
-
--   **Positron** (Posit) - Modern AI-native IDE
+-   **Positron** (Posit) - Modern AI-native IDE for data science and any programming language
 -   **RStudio** - R-focused environment
 -   **JupyterLab** - Notebook-based interface
 -   **VS Code** - General-purpose with extensions
@@ -311,133 +294,256 @@ Relevant are:
 :::
 :::::
 
-::: fragment
-**Why use an IDE?** Everything in one place: write code, run analysis, view results, get AI help—no context switching between applications.
-:::
-
-
 ## LLMs for Coding
 
-**Large Language Models powering AI assistants:**
+**Large Language Models power AI assistants through coding agents:**
 
-::: incremental
--   **GitHub Copilot**: Uses OpenAI models (GPT-4) and Anthropic Claude
--   **OpenAI GPT**: GPT-4, GPT-4 Turbo
--   **Anthropic Claude**: Opus, Sonnet, Haiku
--   **Others**: Google Gemini, Meta Llama, Mistral
+::::: columns
+::: {.column width="35%"}
+**GitHub Copilot** uses: OpenAI GPT, Anthropic Claude, and others.
+
+**Chrome/Web-browser extensions** also provide access to LLMs.
+
+**Claude Code** IDE uses **Anthropic Claude** only models.
 :::
 
-. . .
+::: {.column width="65%"}
+![](images/claude-preformace.webp)
+:::
+:::::
+
+## Question 2. How do you use AI tools in your daily work?
+
+List top 3 use cases for the AI tools you use.
+
+-   Spell checking, grammar, and writing assistance
+
+-   Read and summarise text and documents
+
+-   Undersand code and text
+
+-   Dumping data into LLM and asking for insights
+
+-   Other
+
+## Software Development vs Data Analysis: Different AI Roles
+
+::::: columns
+::: {.column width="50%"}
+**Software Development**
+
+-   **Goal:** Build functional systems
+-   **Success metric:** Binary (works/breaks)
+-   **Central question:** "Does it execute correctly?"
+-   **AI's strength:**
+    -   Generate boilerplate code
+    -   Suggest syntax and patterns
+    -   Automate testing
+    -   Refactor code structure
+-   **Primary risk:** Bugs, crashes, security flaws
+-   **Verification:** Unit tests, integration tests
+-   **Trust level:** High for implementation
+:::
+
+::: {.column width="50%"}
+**Data Analysis**
+
+-   **Goal:** Generate valid insights
+-   **Success metric:**
+-   **Central question:** "Are these conclusions sound?"
+-   **AI's strength:**
+    -   Write data manipulation code
+    -   Create visualizations
+    -   Suggest statistical methods
+    -   Automate repetitive tasks
+-   **Primary risk:** Correct code producing invalid conclusions
+-   **Verification:** Domain expertise, theoretical validity
+-   **Trust level:** Low for interpretation
+:::
+:::::
+
+::: callout-warning
+**Key insight:** In analysis, syntactically correct code ≠ methodologically sound results.
+AI can produce perfect code that violates logic and common sense, or draws invalid inferences.
+:::
 
 ::: callout-note
-## Software Development vs Data Analysis
-
-While these tools were built for software development, they excel at data analysis tasks: data cleaning, statistical modeling, visualization, and report generation.
+**Bottom line:** AI excels at the *mechanics* of analysis (data cleaning, computation, visualization).
+Researchers must retain ownership of *scientific judgment*: choosing appropriate methods, validating assumptions, and interpreting substantive meaning.
 :::
 
-## Workflow Integration {.diagram}
+## Integrated workflow {.diagram}
 
 **Your all-in-one workspace for data analysis:**
 
 ```{mermaid}
-%%| fig-width: 10
-%%| fig-cap: "IDE Integration with AI Assistants"
+%%| fig-width: 14
+%%| fig-height: 8
+%%| fig-cap: "AI-Assisted Analysis Workflow"
 graph LR
-    subgraph IDE["Local setup: Integrated Development Environment (IDE)"]
-        direction LR
-        subgraph Editors[" "]
+    subgraph IDE["🖥️ Local IDE Environment"]
+        direction TB
+
+        subgraph Editors["📝 Code Editors"]
             direction LR
-            P["Positron</br>(Posit)"]
-            R["RStudio</br>(Posit)"]
-            V["VS Code</br>(Microsoft)"]
-            C["Claude Code</br>(Anthropic)"]
-            J["JupyterLab<br/>(Project Jupyter)"]
-            CS["Cursor<br/>(Anysphere)"]
-        end
-
-        subgraph Tools[" "]
-            direction LR
-
-            AI["AI Integration:<br/>• Chat<br/>• Agent<br/>• Inline Code"]
-
-        subgraph MCP["MCP"]
-            direction LR
-            ST["Stata MCP"]
-            RP["R MCP"]
-            PY["Python MCP"]
-        end
-
-            Exec["Execution Environment:<br/>• Stata<br/>• R<br/>• Python"]
+            P["<b>Positron</b><br/><i>Posit</i>"]
+            R["<b>RStudio</b><br/><i>Posit</i>"]
+            V["<b>VS Code</b><br/><i>Microsoft</i>"]
+            C["<b>Claude Code</b><br/><i>Anthropic</i>"]
+            J["<b>JupyterLab</b><br/><i>Project Jupyter</i>"]
+            CS["<b>Cursor</b><br/><i>Anysphere</i>"]
         end
 
 
-        Editors <--> AI
+        AI["🤖 <b>AI Integration</b><br/>• Chat<br/>• Agent<br/>• Inline Code"]
+        MCP["🔌<b>Model Context Protocol</b><br/>• Stata MCP<br/>• R/Python MCP"]
+        Exec["⚙️ <b>Execution</b><br/>• Stata<br/>• R<br/>• Python"]
 
-        AI <-->  MCP
-        Exec <-->  MCP
-
-        Editors <-->  Exec
-
-
+        Editors <==> AI
+        Editors <==> MCP
+        Editors <==> Exec
+        AI <==> MCP
+        MCP <==> Exec
     end
 
-
-    subgraph AIproviders["Web-assistants"]
+    subgraph Cloud["☁️ Cloud Services"]
         direction LR
+        subgraph AA[" "]
+            subgraph AIProviders["🌐 AI Platforms"]
+                direction LR
+                GHC["<b>GitHub Copilot</b>"]
+                ANT["<b>Anthropic Claude</b>"]
+            end
+            subgraph AIAgents["🌐 AI Agents"]
+                direction LR
+                MAI["<b>WB Mai</b>"]
+                OTH["<b>Other</b>"]
+            end
+        end
 
-        GHC["GitHub Copilot"]
-        ANT["Anthropic Claude"]
-        OTH["Other"]
+        subgraph LLM["🧠 LLMs"]
+            direction LR
+            GPT["OpenAI<br/>GPT-4"]
+            Claude["Anthropic<br/>Claude"]
+            Google["Google<br/>Gemini"]
 
+        end
     end
 
-    subgraph LLM["Large Language Models"]
-        direction LR
-        GPT["OpenAI GPT"]
-        Claude["Anthropic Claude"]
-        Google["Google Gemini"]
-        Meta["Meta Llama"]
-        OtherLLM["Other"]
-    end
+    MCP <===>|"API Calls"| AIProviders
+    GHC <===>|"Chooses from"| LLM
+    ANT <===> Claude
+    AIAgents <===> LLM
 
-    MCP <==> AIproviders
-    GHC <--> GPT
-    GHC <--> Claude
-    GHC <--> Google
-    GHC <--> Meta
-    GHC <--> OtherLLM
-    ANT <--> Claude
-    OTH <--> OtherLLM
+    classDef ideBox fill:#e8f4f8,stroke:#0277bd,stroke-width:3px,color:#000
+    classDef editorBox fill:#fff3e0,stroke:#ef6c00,stroke-width:2px,color:#000
+    classDef editorItem fill:#ffe0b2,stroke:#e65100,stroke-width:2px,color:#000
+    classDef aiBox fill:#f3e5f5,stroke:#8e24aa,stroke-width:2px,color:#000
+    classDef mcpBox fill:#e8f5e9,stroke:#43a047,stroke-width:2px,color:#000
+    classDef mcpItem fill:#c8e6c9,stroke:#2e7d32,stroke-width:1px,color:#000
+    classDef execBox fill:#fce4ec,stroke:#d81b60,stroke-width:2px,color:#000
+    classDef cloudBox fill:#e1f5fe,stroke:#0288d1,stroke-width:3px,color:#000
+    classDef providerBox fill:#b3e5fc,stroke:#0277bd,stroke-width:2px,color:#000
+    classDef providerItem fill:#81d4fa,stroke:#01579b,stroke-width:2px,color:#000
+    classDef llmBox fill:#fff9c4,stroke:#f9a825,stroke-width:2px,color:#000
+    classDef llmItem fill:#fff59d,stroke:#f57f17,stroke-width:1px,color:#000
 
-    style IDE fill:#e1f5ff
-    style Editors fill:#b3e0ff
-    style P fill:#d9f0ff
-    style V fill:#d9f0ff
-    style R fill:#d9f0ff
-    style C fill:#d9f0ff
-    style J fill:#d9f0ff
-    style AI fill:#cceeff
-    style Exec fill:#cceeff
-    style GHC fill:#fff4e1
-    style LLM fill:#f0e1ff
+    class IDE ideBox
+    class Editors editorBox
+    class P,R,V,C,J,CS editorItem
+    class AI aiBox
+    class MCP mcpBox
+    class ST,RP,PY mcpItem
+    class Exec execBox
+    class Cloud cloudBox
+    class AA providerBox
+    class AIProviders providerBox
+    class AIAgents providerBox
+    class GHC,ANT providerItem
+    class MAI,OTH providerItem
+    class LLM llmBox
+    class GPT,Claude,Google llmItem
 ```
 
-**Why use an IDE?** Everything in one place: write code, run analysis, view results, get AI help—no context switching between applications.
+# How to Start?
+
+-  Setup the software
+
+-  Challange your usual workflow
+
+-  Experiment with AI assistance
+
+-  Learn by doing
+
+-  Keep learning new technologies: Git, GitHub, R, Python, etc.
 
 
+## Software Setup Overview
 
-# Getting Started
-
-## How to Start?
-
-::: incremental
-1.  **Set up your environment** → [Full Instructions](setup-instructions.qmd#setup)
-2.  **Start with small experiments**
-3.  **Join our Community of Practice**
-4.  **Share your experiences**
+::: callout-note
+**Full details:** [Setup Instructions](setup-instructions.qmd#setup)
 :::
 
-------------------------------------------------------------------------
+1.  **Install prerequisite software** (via WB Software Center)
+    -   Stata 19+, R 4.5+, Python 3.13+, Quarto, Git
+    -   Install Python `uv` package: `pip install uv`
+2.  **Install Positron IDE** (system-level install):  Request help from IT if needed
+3.  **Install key extensions** in Positron
+    -   **Stata MCP**, **Quarto**
+4.  **Connect GitHub**: Sign in to GitHub account
+    -   Enable Positron Assistant in settings
+    -   Configure LLM provider (GitHub Copilot/Claude/GPT)
+5.  **Start experimenting!**
+    -   Open assistant: `Ctrl+Shift+P` \> "Ask Positron Assistant"
+    -   Try: chat, agent mode, inline code completion
+
+## Positron overview
+
+![](images/user-interface-for-rstudio-migration.jpeg)
+
+
+## Positron Assistant Features
+
+{{< video https://positron.posit.co/videos/positron-assistant-copytoeditor.mp4 >}}
+
+::: footer
+Source: [positron.posit.co/features](https://positron.posit.co/features.html)
+:::
+
+## Starting a project in Positron
+
+
+## Creaing a '.do' file and writing code with AI assistance
+
+
+## Running Stata in Positron
+
+::: incremental
+1. install Python
+2. install uv extension in python: `pip install uv`
+3. install Stata MCP extension in Positron
+4. configure Stata path in Positron settings
+:::
+
+## Explore further
+
+-  Git
+-  GitHub
+-  R and Python
+-  Software development best practices
+-  Testing and validation
+-  Building applications
+
+## Question 3.
+
+What use cases do you see for AI-assisted analysis in your work that you want to learn more about?
+
+-  Reproducible research packages
+-  Data cleaning and preparation
+-  Statistical analysis and modeling
+-  Visualization and reporting
+-  Mapping and spatial analysis
+-  Other
 
 ## Resources
 
@@ -454,14 +560,9 @@ graph LR
 **Contact**:
 
 -   Eduard Bukin: [ebukin\@worldbank.org](mailto:ebukin@worldbank.org)
--   Henry Stemmler: [hstemmler\@worldbank.org](mailto:hstemmler@worldbank.org)
 
 ------------------------------------------------------------------------
 
 ## Thank You! {.title}
-
-### Stay Connected
-
-Next in the GeoPov Series: - The geography of jobs in India - Survey representativeness methods - Mobile phone data for poverty analysis
 
 [→ Visit our website for updates](../../index.qmd)

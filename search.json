@@ -793,7 +793,7 @@
     "href": "seminars/seminar-2026-02/slides.html#welcome",
     "title": "Revolutionize Your Analysis in Stata and R",
     "section": "Welcome",
-    "text": "Welcome\nRevolutionize Your Analysis in Stata and R\nAI Agent-Assisted Workflow with GitHub Copilot and Claude\n\nWelcome to the first seminar in our series on AI-assisted analysis.\n\nSpeaker: Eduard Bukin",
+    "text": "Welcome\nRevolutionize Your Analysis in Stata and R\nAI Agent-Assisted Workflow with GitHub Copilot and Claude\n\nWelcome to the first seminar in our series on AI-assisted analysis.\n\nSpeaker: Eduard Bukin ebukin@worldbank.org",
     "crumbs": [
       "GeoPov BBL Series",
       "Revolutionizing Coding in Stata/R",
@@ -805,7 +805,7 @@
     "href": "seminars/seminar-2026-02/slides.html#todays-agenda",
     "title": "Revolutionize Your Analysis in Stata and R",
     "section": "Today’s Agenda",
-    "text": "Today’s Agenda\n\nExample 1: From a messy code to a reproducible package\nKey Concepts:\n\nAI-Chat vs AI-Agent vs Inline Code Completion\nContext awareness\nModel communication protocol (MCP)\nIntegrated Development Environments (IDEs)\nLLMs for coding: GitHub Copilot, OpenAI GTP, Anthropic Claude, and others\n\nHow to start using AI in coding?\n\nSoftware Setup Overview\nTips and Best Practices\n\nExample 2: Develop analysis with AI assistance\nQ&A and Discussion",
+    "text": "Today’s Agenda\n\nExample 1: From a messy code to a reproducible package\nKey Concepts:\n\nAI-Chat vs AI-Agent vs Inline Code Completion\nContext awareness\nMCP: Model communication protocol\nIDE: Integrated Development Environment\nLLMs for coding: GitHub Copilot, Anthropic Claude, OpenAI GTP, and others\n\nHow to start using AI in coding?\n\nSoftware Setup Overview\nTips and Best Practices\n\nExample 2: Develop analysis with AI assistance\nQ&A and Discussion",
     "crumbs": [
       "GeoPov BBL Series",
       "Revolutionizing Coding in Stata/R",
@@ -817,7 +817,7 @@
     "href": "seminars/seminar-2026-02/slides.html#motivation-1",
     "title": "Revolutionize Your Analysis in Stata and R",
     "section": "Motivation (1)",
-    "text": "Motivation (1)\nAI tools that we got used to over past years are impressive!\n\n\nTraditional Chat-Based Tools:\n\nWeb-based Open AI ChatGPT\nMicrosoft Copilot\nIsolated AI models, Google AI in search\nWB MAI\nare extremely useful and complement eachother.\nRely on conversational interface and manual copy-paste of code snippets.\n\n\nIntegrated Approach\n\nContext-aware AI Agents\nIntegrated development environment (IDE)\nProject-specific assistance",
+    "text": "Motivation (1)\nAI tools that we got used to over past years are impressive!\n\n\nTraditional Chat-Based Tools:\n\nWeb-based Open AI ChatGPT\nMicrosoft Copilot\nIsolated AI models, Google AI in search\nWB MAI\nPros:\n\nUses familiar technologies: Browser, Chat, Stata editor, copy-paste…\n\n\n\nCons:\n\nNot integrated with our analysis\n\nException: Co-pilot in MS Office\n\nNot aware of the analysis context\nProvides generic answer, not project-specific",
     "crumbs": [
       "GeoPov BBL Series",
       "Revolutionizing Coding in Stata/R",
@@ -825,11 +825,11 @@
     ]
   },
   {
-    "objectID": "seminars/seminar-2026-02/slides.html#example-1-from-messy-code-to-reproducible-package",
-    "href": "seminars/seminar-2026-02/slides.html#example-1-from-messy-code-to-reproducible-package",
+    "objectID": "seminars/seminar-2026-02/slides.html#example-1-from-a-monstrosity-to-a-reproducible-package",
+    "href": "seminars/seminar-2026-02/slides.html#example-1-from-a-monstrosity-to-a-reproducible-package",
     "title": "Revolutionize Your Analysis in Stata and R",
-    "section": "Example 1: From Messy Code to Reproducible Package",
-    "text": "Example 1: From Messy Code to Reproducible Package\nLive demonstration of building a reproducibility package with AI assistance",
+    "section": "Example 1: From a Monstrosity to a Reproducible Package",
+    "text": "Example 1: From a Monstrosity to a Reproducible Package\nLive demonstration of building a reproducibility package with AI assistance",
     "crumbs": [
       "GeoPov BBL Series",
       "Revolutionizing Coding in Stata/R",
@@ -841,7 +841,7 @@
     "href": "seminars/seminar-2026-02/slides.html#example-1-summary",
     "title": "Revolutionize Your Analysis in Stata and R",
     "section": "Example 1: Summary",
-    "text": "Example 1: Summary\n\nIntegrated Development Environment (IDE) - Positron\nGitHub Copilot that uses Anthropic Claude Sonnet 4.5 LLM to provide\n\nInline code completions\nChat: help and assistance\nAgent: active changes to my code and code execution\n\nUnder 5 mins we’ve created a well-structured reproducibility package from messy code running both: Stata and R and creating fully customized graphics and reports.",
+    "text": "Example 1: Summary\nTo do all this, we used:\n\nIntegrated Development Environment (IDE) - Positron\nGitHub Copilot that used Anthropic Claude Sonnet 4.5 LLM to provide:\n\nInline code completions\nChat: help and assistance\nAgent: active changes to my code and code execution",
     "crumbs": [
       "GeoPov BBL Series",
       "Revolutionizing Coding in Stata/R",
@@ -849,11 +849,11 @@
     ]
   },
   {
-    "objectID": "seminars/seminar-2026-02/slides.html#how-does-this-different-from-traditional-ai-chat",
-    "href": "seminars/seminar-2026-02/slides.html#how-does-this-different-from-traditional-ai-chat",
+    "objectID": "seminars/seminar-2026-02/slides.html#how-does-this-different-from-a-familiar-ai-chat",
+    "href": "seminars/seminar-2026-02/slides.html#how-does-this-different-from-a-familiar-ai-chat",
     "title": "Revolutionize Your Analysis in Stata and R",
-    "section": "How does this different from traditional AI chat?",
-    "text": "How does this different from traditional AI chat?\n\nWe did not copy-paste anything from chat windows to our code.\nThe AI agent was fully aware of our project context, files, data, and code.\nThe AI agent was able to autonomously execute code, make changes to files, and create new files.\nThe AI agent was integrated into our development environment (IDE) and worked alongside us.\nThe AI agent did not have access to our data outside of our local machine and IDE.\n\nAll code was executed locally on our machine.",
+    "section": "How does this different from a familiar AI-chat?",
+    "text": "How does this different from a familiar AI-chat?\n\nAI-Agent: AI acted autonomously, execute code, changed files, etc.\nContext aware: AI understood files, data, and code structures.\nIDE: AI was integrated into our development environment, worked alongside us.\nPrivacy: AI did NOT have access to our data.\n\nAll code was executed locally, AI has only seen the output structure.",
     "crumbs": [
       "GeoPov BBL Series",
       "Revolutionizing Coding in Stata/R",
@@ -864,8 +864,8 @@
     "objectID": "seminars/seminar-2026-02/slides.html#quick-question",
     "href": "seminars/seminar-2026-02/slides.html#quick-question",
     "title": "Revolutionize Your Analysis in Stata and R",
-    "section": "Quick question:",
-    "text": "Quick question:\nWhat AI tools and software do you use in your daily work so far?\n\nChat-based (in browser or an app):\n\nOpenAI GPT\nMicrosoft Copilot (Windows or Office/Word/Excel)\nWB MAI (Web-based tools)\nGitHub Copilot\nAnthropic Claude\nGoogle Gemini\nGrok\nOthers: ___________\n\nAgent-integrated software:\n\nPositron + GH Copilot / Other LLMs\nVS Code + GH Copilot / Other LLMs\nRStudio + GH Copilot / Other LLMs\nJupyterLab + GH Copilot / Other LLMs\nClaude Code + Anthropic LLMs\nCursor + LLMs\nGitHub Copilot Workspace (web-based)\nOthers: ___________",
+    "section": "Quick question",
+    "text": "Quick question\nWhat AI tools and software do you use in your daily work?\n\n\nChat-based (in browser or an app):\n\nOpenAI GPT\nMicrosoft Copilot (Windows or Office/Word/Excel)\nWB MAI (Web-based tools)\nGitHub Copilot\nAnthropic Claude\nGoogle Gemini\nGrok\nOthers: ___________\n\n\nAgent-integrated software:\n\nPositron + GH Copilot / Other LLMs\nVS Code + GH Copilot / Other LLMs\nRStudio + GH Copilot / Other LLMs\nJupyterLab + GH Copilot / Other LLMs\nClaude Code + Anthropic LLMs\nCursor + LLMs\nGitHub Copilot Workspace (web-based)\nOthers: ___________",
     "crumbs": [
       "GeoPov BBL Series",
       "Revolutionizing Coding in Stata/R",
@@ -873,47 +873,11 @@
     ]
   },
   {
-    "objectID": "seminars/seminar-2026-02/slides.html#overview",
-    "href": "seminars/seminar-2026-02/slides.html#overview",
+    "objectID": "seminars/seminar-2026-02/slides.html#ai-chat-agent-inline-code",
+    "href": "seminars/seminar-2026-02/slides.html#ai-chat-agent-inline-code",
     "title": "Revolutionize Your Analysis in Stata and R",
-    "section": "Overview",
-    "text": "Overview\n\nAI-Chat vs AI-Agent vs Inline Code Completion\nContext awareness\nModel Context Protocol (MCP)\nIntegrated Development Environments (IDEs)\nLLMs for coding: GitHub Copilot, OpenAI GTP, Anthropic Claude, and others",
-    "crumbs": [
-      "GeoPov BBL Series",
-      "Revolutionizing Coding in Stata/R",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "seminars/seminar-2026-02/slides.html#ai-chat-vs-ai-agent-vs-inline-code-completion-1",
-    "href": "seminars/seminar-2026-02/slides.html#ai-chat-vs-ai-agent-vs-inline-code-completion-1",
-    "title": "Revolutionize Your Analysis in Stata and R",
-    "section": "AI-Chat vs AI-Agent vs Inline Code Completion (1)",
-    "text": "AI-Chat vs AI-Agent vs Inline Code Completion (1)\nAI-Chat: Ask Mode\n\nConversational interface\nGeneral purpose assistance\nLimited context awareness: knows only what you provide\nOne‑off questions\nCode snippets\nExplanations of code/output\n\n. . .\n\n\n\n\n\n\nUsage\n\n\nUse Ask mode to think.",
-    "crumbs": [
-      "GeoPov BBL Series",
-      "Revolutionizing Coding in Stata/R",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "seminars/seminar-2026-02/slides.html#ai-chat-vs-ai-agent-vs-inline-code-completion-2",
-    "href": "seminars/seminar-2026-02/slides.html#ai-chat-vs-ai-agent-vs-inline-code-completion-2",
-    "title": "Revolutionize Your Analysis in Stata and R",
-    "section": "AI-Chat vs AI-Agent vs Inline Code Completion (2)",
-    "text": "AI-Chat vs AI-Agent vs Inline Code Completion (2)\nAI-Agent: Execute Mode\n\nAutonomous task execution\nFull project context awareness\nIntegrated with development tools\nCan read/write files, run code, and make changes (after user approval)\nMulti‑step workflows\nEnd‑to‑end tasks (clean → estimate → table → robustness)\n\n. . .\n\n\n\n\n\n\nUsage\n\n\nUse Agent mode to execute explicit instructions",
-    "crumbs": [
-      "GeoPov BBL Series",
-      "Revolutionizing Coding in Stata/R",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "seminars/seminar-2026-02/slides.html#ai-chat-vs-ai-agent-vs-inline-code-completion-3",
-    "href": "seminars/seminar-2026-02/slides.html#ai-chat-vs-ai-agent-vs-inline-code-completion-3",
-    "title": "Revolutionize Your Analysis in Stata and R",
-    "section": "AI-Chat vs AI-Agent vs Inline Code Completion (3)",
-    "text": "AI-Chat vs AI-Agent vs Inline Code Completion (3)\nInline Code Completion\n\nReal-time code suggestions while you type\nCan be context-aware or not\nSpeeds up coding by autocompleting:\n\nFunction names\nParameters\nCommon patterns",
+    "section": "AI: Chat | Agent | Inline Code",
+    "text": "AI: Chat | Agent | Inline Code\n\n\nAI-Chat\n\nGeneral assistance\nLimited context: only what you tell it\nCode snippets\nExplanations of code/output\n\n\n\n\n\n\n\nTip\n\n\nUse to Ask the model to think and reason.\n\n\n\n\nAI-Agent\n\nExecute Mode\nContext awareness\nIntegrated with development\nWrites and runs after user’s approval\nEnd‑to‑end tasks (clean → estimate → table → robustness)\n\n\n\n\n\n\n\nTip\n\n\nUse Agent mode to execute explicit instructions.\n\n\n\n\nInline Code Completion\n\nReal-time code suggestions while you type\n\n\n\n\n\n\n\nTip\n\n\nUse for quick code snippets.",
     "crumbs": [
       "GeoPov BBL Series",
       "Revolutionizing Coding in Stata/R",
@@ -925,7 +889,7 @@
     "href": "seminars/seminar-2026-02/slides.html#context-awareness",
     "title": "Revolutionize Your Analysis in Stata and R",
     "section": "Context Awareness",
-    "text": "Context Awareness\nWhat AI “knows” when helping you code:\n\nYour files: All code files, documentation, and project structure\nYour data structure: Variable names, data types, relationships (without sending raw data to cloud)\nYour history: Recent edits, commands run, and conversations\nYour environment: Installed packages, dependencies, and configurations\nYour intent: Current task based on files you have open and recent actions\nResults of code execution: Output, errors, and logs from running code\n\nWhy it matters:\n\nAI gives relevant suggestions specific to your project\nNo need to copy-paste code context manually\nAI understands dependencies between files\nReduces hallucinations by grounding responses in your actual codebase\n\nReferences:\n\nGitHub Copilot Context\nAnthropic’s Claude Sonnet\nPositron Documentation on AI Context",
+    "text": "Context Awareness\n\n\nWhat AI “knows”:\n\nFiles: Code, docs, structure\nData structure: Variable names, types\nHistory: Edits, commands\nEnvironment: Packages, dependencies\nIntent: Current task\nExecution results: Output, errors\n\n\nWhy it matters:\n\nProject-specific suggestions\nUnderstands dependencies\nReduces hallucinations\n\n\n\nSee: Positron: AI Context, or GHCopilot, and Claude",
     "crumbs": [
       "GeoPov BBL Series",
       "Revolutionizing Coding in Stata/R",
@@ -937,7 +901,7 @@
     "href": "seminars/seminar-2026-02/slides.html#model-context-protocol-mcp",
     "title": "Revolutionize Your Analysis in Stata and R",
     "section": "Model Context Protocol (MCP)",
-    "text": "Model Context Protocol (MCP)\n\n\n\n\n\n\n“…a standardized, open framework for AI models (LLMs) to securely and efficiently connect with external applications, data sources, tools, and each-other — acting like a universal adapter (e.g., USB-C for AI)”\n— Google AI Search + Wikipedia\n\n\n\n\n\nEssential connections:\n\nExecution environments: Stata, R, Python\nEditors: Positron, VS Code, RStudio, JupyterLab",
+    "text": "Model Context Protocol (MCP)\n\n\n\n\n\n\n\n\n\n\n“A universal adapter for AI: one standard protocol replacing fragmented data integrations, connecting assistants to any system where information lives.”— Anthropic’s invention\n\n\n\n\n\nThere is a growing ecosystem of MCPs .\n\n\n\nMCP are essential to connect LLMs with:\n\nExecution environments: Stata, R, Python\nEditors: Positron, VS Code, RStudio, JupyterLab\nData sources: databases, APIs, files\nTools: version control (GitHub), visualization, reporting\n\n\nRelevant are:\n\nStata-MCP extension\nR MCP Tools",
     "crumbs": [
       "GeoPov BBL Series",
       "Revolutionizing Coding in Stata/R",
@@ -949,7 +913,7 @@
     "href": "seminars/seminar-2026-02/slides.html#integrated-development-environments-ides",
     "title": "Revolutionize Your Analysis in Stata and R",
     "section": "Integrated Development Environments (IDEs)",
-    "text": "Integrated Development Environments (IDEs)\nYour coding workspace:\n\n\nFor Data Science:\n\nPositron (Posit)\nRStudio\nJupyterLab\nVS Code\n\n\nKey Features:\n\nCode editor\nConsole/terminal\nFile browser\nVariable viewer\nPlot viewer",
+    "text": "Integrated Development Environments (IDEs)\nYour all-in-one workspace for data analysis:\n\n\n\nPositron (Posit) - Modern AI-native IDE for data science and any programming language\nRStudio - R-focused environment\nJupyterLab - Notebook-based interface\nVS Code - General-purpose with extensions\nClaude Code - Anthropic’s AI coding IDE\n\n\nWhat IDEs provide:\n\nCode editor with syntax highlighting\nConsole/terminal for interactive execution\nFile browser and project management\nVariable/data viewer to inspect objects\nPlot viewer for visualizations\nIntegrated AI assistants (Chat, Agent, Completions)",
     "crumbs": [
       "GeoPov BBL Series",
       "Revolutionizing Coding in Stata/R",
@@ -961,7 +925,7 @@
     "href": "seminars/seminar-2026-02/slides.html#llms-for-coding",
     "title": "Revolutionize Your Analysis in Stata and R",
     "section": "LLMs for Coding",
-    "text": "LLMs for Coding\nLarge Language Models powering AI assistants:\n\nGitHub Copilot: Uses OpenAI models (GPT-4) and Anthropic Claude\nOpenAI GPT: GPT-4, GPT-4 Turbo\nAnthropic Claude: Opus, Sonnet, Haiku\nOthers: Google Gemini, Meta Llama, Mistral\n\n\n\n\n\n\n\n\nSoftware Development vs Data Analysis\n\n\nWhile these tools were built for software development, they excel at data analysis tasks: data cleaning, statistical modeling, visualization, and report generation.",
+    "text": "LLMs for Coding\nLarge Language Models power AI assistants through coding agents:\n\n\nGitHub Copilot uses: OpenAI GPT, Anthropic Claude, and others.\nChrome/Web-browser extensions also provide access to LLMs.\nClaude Code IDE uses Anthropic Claude only models.",
     "crumbs": [
       "GeoPov BBL Series",
       "Revolutionizing Coding in Stata/R",
@@ -969,11 +933,131 @@
     ]
   },
   {
-    "objectID": "seminars/seminar-2026-02/slides.html#how-to-start",
-    "href": "seminars/seminar-2026-02/slides.html#how-to-start",
+    "objectID": "seminars/seminar-2026-02/slides.html#question-2.-how-do-you-use-ai-tools-in-your-daily-work",
+    "href": "seminars/seminar-2026-02/slides.html#question-2.-how-do-you-use-ai-tools-in-your-daily-work",
     "title": "Revolutionize Your Analysis in Stata and R",
-    "section": "How to Start?",
-    "text": "How to Start?\n\nSet up your environment → Full Instructions\nStart with small experiments\nJoin our Community of Practice\nShare your experiences",
+    "section": "Question 2. How do you use AI tools in your daily work?",
+    "text": "Question 2. How do you use AI tools in your daily work?\nList top 3 use cases for the AI tools you use.\n\nSpell checking, grammar, and writing assistance\nRead and summarise text and documents\nUnderstand code and text\nDumping data into LLM and asking for insights\nOther",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#software-development-vs-data-analysis-different-ai-roles",
+    "href": "seminars/seminar-2026-02/slides.html#software-development-vs-data-analysis-different-ai-roles",
+    "title": "Revolutionize Your Analysis in Stata and R",
+    "section": "Software Development vs Data Analysis: Different AI Roles",
+    "text": "Software Development vs Data Analysis: Different AI Roles\n\n\nSoftware Development\n\nGoal: Build functional systems\nSuccess metric: Binary (works/breaks)\nCentral question: “Does it execute correctly?”\nAI’s strength:\n\nGenerate boilerplate code\nSuggest syntax and patterns\nAutomate testing\nRefactor code structure\n\nPrimary risk: Bugs, crashes, security flaws\nVerification: Unit tests, integration tests\nTrust level: High for implementation\n\n\nData Analysis\n\nGoal: Generate valid insights\nSuccess metric:\nCentral question: “Are these conclusions sound?”\nAI’s strength:\n\nWrite data manipulation code\nCreate visualizations\nSuggest statistical methods\nAutomate repetitive tasks\n\nPrimary risk: Correct code producing invalid conclusions\nVerification: Domain expertise, theoretical validity\nTrust level: Low for interpretation\n\n\n\n\n\n\n\n\nWarning\n\n\nKey insight: In analysis, syntactically correct code ≠ methodologically sound results. AI can produce perfect code that violates logic and common sense, or draws invalid inferences.\n\n\n\n\n\n\n\n\n\nNote\n\n\nBottom line: AI excels at the mechanics of analysis (data cleaning, computation, visualization). Researchers must retain ownership of scientific judgment: choosing appropriate methods, validating assumptions, and interpreting substantive meaning.",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#integrated-workflow",
+    "href": "seminars/seminar-2026-02/slides.html#integrated-workflow",
+    "title": "Revolutionize Your Analysis in Stata and R",
+    "section": "Integrated workflow",
+    "text": "Integrated workflow\nYour all-in-one workspace for data analysis:\n\n\n\n\n\ngraph LR\n    subgraph IDE[\"🖥️ Local IDE Environment\"]\n        direction TB\n\n        subgraph Editors[\"📝 Code Editors\"]\n            direction LR\n            P[\"&lt;b&gt;Positron&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Posit&lt;/i&gt;\"]\n            R[\"&lt;b&gt;RStudio&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Posit&lt;/i&gt;\"]\n            V[\"&lt;b&gt;VS Code&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Microsoft&lt;/i&gt;\"]\n            C[\"&lt;b&gt;Claude Code&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Anthropic&lt;/i&gt;\"]\n            J[\"&lt;b&gt;JupyterLab&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Project Jupyter&lt;/i&gt;\"]\n            CS[\"&lt;b&gt;Cursor&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Anysphere&lt;/i&gt;\"]\n        end\n\n\n        AI[\"🤖 &lt;b&gt;AI Integration&lt;/b&gt;&lt;br/&gt;• Chat&lt;br/&gt;• Agent&lt;br/&gt;• Inline Code\"]\n        MCP[\"🔌&lt;b&gt;Model Context Protocol&lt;/b&gt;&lt;br/&gt;• Stata MCP&lt;br/&gt;• R/Python MCP\"]\n        Exec[\"⚙️ &lt;b&gt;Execution&lt;/b&gt;&lt;br/&gt;• Stata&lt;br/&gt;• R&lt;br/&gt;• Python\"]\n\n        Editors &lt;==&gt; AI\n        Editors &lt;==&gt; MCP\n        Editors &lt;==&gt; Exec\n        AI &lt;==&gt; MCP\n        MCP &lt;==&gt; Exec\n    end\n\n    subgraph Cloud[\"☁️ Cloud Services\"]\n        direction LR\n        subgraph AA[\" \"]\n            subgraph AIProviders[\"🌐 AI Platforms\"]\n                direction LR\n                GHC[\"&lt;b&gt;GitHub Copilot&lt;/b&gt;\"]\n                ANT[\"&lt;b&gt;Anthropic Claude&lt;/b&gt;\"]\n            end\n            subgraph AIAgents[\"🌐 AI Agents\"]\n                direction LR\n                MAI[\"&lt;b&gt;WB Mai&lt;/b&gt;\"]\n                OTH[\"&lt;b&gt;Other&lt;/b&gt;\"]\n            end\n        end\n\n        subgraph LLM[\"🧠 LLMs\"]\n            direction LR\n            GPT[\"OpenAI&lt;br/&gt;GPT-4\"]\n            Claude[\"Anthropic&lt;br/&gt;Claude\"]\n            Google[\"Google&lt;br/&gt;Gemini\"]\n\n        end\n    end\n\n    MCP &lt;===&gt;|\"API Calls\"| AIProviders\n    GHC &lt;===&gt;|\"Chooses from\"| LLM\n    ANT &lt;===&gt; Claude\n    AIAgents &lt;===&gt; LLM\n\n    classDef ideBox fill:#e8f4f8,stroke:#0277bd,stroke-width:3px,color:#000\n    classDef editorBox fill:#fff3e0,stroke:#ef6c00,stroke-width:2px,color:#000\n    classDef editorItem fill:#ffe0b2,stroke:#e65100,stroke-width:2px,color:#000\n    classDef aiBox fill:#f3e5f5,stroke:#8e24aa,stroke-width:2px,color:#000\n    classDef mcpBox fill:#e8f5e9,stroke:#43a047,stroke-width:2px,color:#000\n    classDef mcpItem fill:#c8e6c9,stroke:#2e7d32,stroke-width:1px,color:#000\n    classDef execBox fill:#fce4ec,stroke:#d81b60,stroke-width:2px,color:#000\n    classDef cloudBox fill:#e1f5fe,stroke:#0288d1,stroke-width:3px,color:#000\n    classDef providerBox fill:#b3e5fc,stroke:#0277bd,stroke-width:2px,color:#000\n    classDef providerItem fill:#81d4fa,stroke:#01579b,stroke-width:2px,color:#000\n    classDef llmBox fill:#fff9c4,stroke:#f9a825,stroke-width:2px,color:#000\n    classDef llmItem fill:#fff59d,stroke:#f57f17,stroke-width:1px,color:#000\n\n    class IDE ideBox\n    class Editors editorBox\n    class P,R,V,C,J,CS editorItem\n    class AI aiBox\n    class MCP mcpBox\n    class ST,RP,PY mcpItem\n    class Exec execBox\n    class Cloud cloudBox\n    class AA providerBox\n    class AIProviders providerBox\n    class AIAgents providerBox\n    class GHC,ANT providerItem\n    class MAI,OTH providerItem\n    class LLM llmBox\n    class GPT,Claude,Google llmItem\n\n\n AI-Assisted Analysis Workflow",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#software-setup-overview",
+    "href": "seminars/seminar-2026-02/slides.html#software-setup-overview",
+    "title": "Revolutionize Your Analysis in Stata and R",
+    "section": "Software Setup Overview",
+    "text": "Software Setup Overview\n\n\n\n\n\n\nNote\n\n\nFull details: Setup Instructions\n\n\n\n\nInstall prerequisite software (via WB Software Center)\n\nStata 19+, R 4.5+, Python 3.13+, Quarto, Git\nInstall Python uv package: pip install uv\n\nInstall Positron IDE (system-level install): Request help from IT if needed\nInstall key extensions in Positron\n\nStata MCP, Quarto\n\nConnect GitHub: Sign in to GitHub account\n\nEnable Positron Assistant in settings\nConfigure LLM provider (GitHub Copilot/Claude/GPT)\n\nStart experimenting!\n\nOpen assistant: Ctrl+Shift+P &gt; “Ask Positron Assistant”\nTry: chat, agent mode, inline code completion",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#positron-overview",
+    "href": "seminars/seminar-2026-02/slides.html#positron-overview",
+    "title": "Revolutionize Your Analysis in Stata and R",
+    "section": "Positron overview",
+    "text": "Positron overview",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#positron-assistant-features",
+    "href": "seminars/seminar-2026-02/slides.html#positron-assistant-features",
+    "title": "Revolutionize Your Analysis in Stata and R",
+    "section": "Positron Assistant Features",
+    "text": "Positron Assistant Features\n\n\nSource: positron.posit.co/features",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#starting-a-project-in-positron",
+    "href": "seminars/seminar-2026-02/slides.html#starting-a-project-in-positron",
+    "title": "Revolutionize Your Analysis in Stata and R",
+    "section": "Starting a project in Positron",
+    "text": "Starting a project in Positron",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#creating-a-.do-file-and-writing-code-with-ai-assistance",
+    "href": "seminars/seminar-2026-02/slides.html#creating-a-.do-file-and-writing-code-with-ai-assistance",
+    "title": "Revolutionize Your Analysis in Stata and R",
+    "section": "Creating a ‘.do’ file and writing code with AI assistance",
+    "text": "Creating a ‘.do’ file and writing code with AI assistance",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#running-stata-in-positron",
+    "href": "seminars/seminar-2026-02/slides.html#running-stata-in-positron",
+    "title": "Revolutionize Your Analysis in Stata and R",
+    "section": "Running Stata in Positron",
+    "text": "Running Stata in Positron\n\ninstall Python\ninstall uv extension in python: pip install uv\ninstall Stata MCP extension in Positron\nconfigure Stata path in Positron settings",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#explore-further",
+    "href": "seminars/seminar-2026-02/slides.html#explore-further",
+    "title": "Revolutionize Your Analysis in Stata and R",
+    "section": "Explore further",
+    "text": "Explore further\n\nGit\nGitHub\nR and Python\nSoftware development best practices\nTesting and validation\nBuilding applications",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#question-3.",
+    "href": "seminars/seminar-2026-02/slides.html#question-3.",
+    "title": "Revolutionize Your Analysis in Stata and R",
+    "section": "Question 3.",
+    "text": "Question 3.\nWhat use cases do you see for AI-assisted analysis in your work that you want to learn more about?\n\nReproducible research packages\nData cleaning and preparation\nStatistical analysis and modeling\nVisualization and reporting\nMapping and spatial analysis\nOther",
     "crumbs": [
       "GeoPov BBL Series",
       "Revolutionizing Coding in Stata/R",
@@ -997,7 +1081,7 @@
     "href": "seminars/seminar-2026-02/slides.html#qa",
     "title": "Revolutionize Your Analysis in Stata and R",
     "section": "Q&A",
-    "text": "Q&A\nQuestions?\nContact:\n\nEduard Bukin: ebukin@worldbank.org\nHenry Stemmler: hstemmler@worldbank.org",
+    "text": "Q&A\nQuestions?\nContact:\n\nEduard Bukin: ebukin@worldbank.org",
     "crumbs": [
       "GeoPov BBL Series",
       "Revolutionizing Coding in Stata/R",
@@ -1009,7 +1093,7 @@
     "href": "seminars/seminar-2026-02/slides.html#thank-you",
     "title": "Revolutionize Your Analysis in Stata and R",
     "section": "Thank You!",
-    "text": "Thank You!\nStay Connected\nNext in the GeoPov Series: - The geography of jobs in India - Survey representativeness methods - Mobile phone data for poverty analysis\n→ Visit our website for updates",
+    "text": "Thank You!\n→ Visit our website for updates",
     "crumbs": [
       "GeoPov BBL Series",
       "Revolutionizing Coding in Stata/R",

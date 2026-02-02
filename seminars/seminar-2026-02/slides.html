@@ -7,7 +7,9 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="../../site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.27">
 
   <meta name="author" content="Eduard Bukin">
@@ -123,6 +125,9 @@
       margin-right: 0; 
     }
   </style>
+  <script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -159,7 +164,7 @@ Eduard Bukin
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<p>Speaker: <strong>Eduard Bukin</strong></p>
+<p>Speaker: <strong>Eduard Bukin</strong> <a href="mailto:ebukin@worldbank.org">ebukin@worldbank.org</a></p>
 </section>
 <section id="todays-agenda" class="slide level2">
 <h2>Today’s Agenda</h2>
@@ -169,9 +174,9 @@ Eduard Bukin
 <ul>
 <li><p>AI-Chat vs AI-Agent vs Inline Code Completion</p></li>
 <li><p>Context awareness</p></li>
-<li><p>Model communication protocol (MCP)</p></li>
-<li><p>Integrated Development Environments (IDEs)</p></li>
-<li><p>LLMs for coding: GitHub Copilot, OpenAI GTP, Anthropic Claude, and others</p></li>
+<li><p>MCP: Model communication protocol</p></li>
+<li><p>IDE: Integrated Development Environment</p></li>
+<li><p>LLMs for coding: GitHub Copilot, Anthropic Claude, OpenAI GTP, and others</p></li>
 </ul></li>
 <li><p>How to start using AI in coding?</p>
 <ul>
@@ -186,60 +191,65 @@ Eduard Bukin
 <h2>Motivation (1)</h2>
 <p>AI tools that we got used to over past years are impressive!</p>
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="column" style="width:65%;">
 <p><strong>Traditional Chat-Based Tools:</strong></p>
 <ul>
-<li class="fragment"><p>Web-based <a href="https://chatgpt.com/">Open AI ChatGPT</a></p></li>
-<li class="fragment"><p><a href="https://copilot.microsoft.com/">Microsoft Copilot</a></p></li>
-<li class="fragment"><p>Isolated AI models, <a href="https://search.google/ai-in-search/">Google AI in search</a></p></li>
-<li class="fragment"><p><a href="https://ai.worldbank.org/chat/mai">WB MAI</a></p></li>
-<li class="fragment"><p>are extremely useful and complement eachother.</p></li>
-<li class="fragment"><p>Rely on conversational interface and manual copy-paste of code snippets.</p></li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p><strong>Integrated Approach</strong></p>
+<li><p>Web-based <a href="https://chatgpt.com/">Open AI ChatGPT</a></p></li>
+<li><p><a href="https://copilot.microsoft.com/">Microsoft Copilot</a></p></li>
+<li><p>Isolated AI models, <a href="https://search.google/ai-in-search/">Google AI in search</a></p></li>
+<li><p><a href="https://ai.worldbank.org/chat/mai">WB MAI</a></p></li>
+<li><p><strong>Pros:</strong></p>
 <ul>
-<li><p>Context-aware AI Agents</p></li>
-<li><p>Integrated development environment (IDE)</p></li>
-<li><p>Project-specific assistance</p></li>
+<li>Uses familiar technologies: Browser, Chat, Stata editor, copy-paste…</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:35%;">
+<p><strong>Cons:</strong></p>
+<ul>
+<li class="fragment"><p>Not integrated with our analysis</p>
+<ul>
+<li class="fragment">Exception: Co-pilot in MS Office</li>
+</ul></li>
+<li class="fragment"><p>Not aware of the analysis context</p></li>
+<li class="fragment"><p>Provides generic answer, not project-specific</p></li>
 </ul>
 </div></div>
 </section>
-<section id="example-1-from-messy-code-to-reproducible-package" class="slide level2 demo">
-<h2>Example 1: From Messy Code to Reproducible Package</h2>
+<section id="example-1-from-a-monstrosity-to-a-reproducible-package" class="slide level2 demo">
+<h2>Example 1: From a Monstrosity to a Reproducible Package</h2>
 <p><strong>Live demonstration of building a reproducibility package with AI assistance</strong></p>
 </section>
 <section id="example-1-summary" class="slide level2">
 <h2>Example 1: Summary</h2>
+<p>To do all this, we used:</p>
 <ul>
-<li class="fragment"><p>Integrated Development Environment (IDE) - Positron</p></li>
-<li class="fragment"><p>GitHub Copilot that uses Anthropic <a href="https://claude.com/">Claude Sonnet 4.5 LLM</a> to provide</p>
+<li class="fragment"><p>Integrated Development Environment (IDE) - <a href="https://positron.posit.co/" target="_blank">Positron</a></p></li>
+<li class="fragment"><p><a href="https://github.com/features/copilot" target="_blank">GitHub Copilot</a> that used Anthropic <a href="https://claude.com/">Claude Sonnet 4.5 LLM</a> to provide:</p>
 <ul>
-<li class="fragment">Inline code completions</li>
-<li class="fragment">Chat: help and assistance</li>
-<li class="fragment">Agent: active changes to my code and code execution</li>
+<li class="fragment"><a href="https://positron.posit.co/assistant-completions.html" target="_blank">Inline code completions</a></li>
+<li class="fragment"><a href="https://positron.posit.co/assistant-chat.html" target="_blank">Chat: help and assistance</a></li>
+<li class="fragment"><a href="https://positron.posit.co/assistant-chat-agents.html" target="_blank">Agent: active changes to my code and code execution</a></li>
 </ul></li>
-<li class="fragment"><p>Under 5 mins we’ve created a well-structured reproducibility package from messy code running both: Stata and R and creating fully customized graphics and reports.</p></li>
 </ul>
 </section>
-<section id="how-does-this-different-from-traditional-ai-chat" class="slide level2">
-<h2>How does this different from traditional AI chat?</h2>
+<section id="how-does-this-different-from-a-familiar-ai-chat" class="slide level2">
+<h2>How does this different from a familiar AI-chat?</h2>
 <ul>
-<li><p>We did not copy-paste anything from chat windows to our code.</p></li>
-<li><p>The AI agent was fully <strong>aware of</strong> our project <strong>context</strong>, files, data, and code.</p></li>
-<li><p>The AI agent was able to <strong>autonomously execute</strong> code, make changes to files, and create new files.</p></li>
-<li><p>The AI agent was <strong>integrated</strong> into our development environment (IDE) and worked <strong>alongside us</strong>.</p></li>
-<li><p>The AI agent <strong>did not have access to our data</strong> outside of our local machine and IDE.</p>
+<li><p><strong>AI-Agent</strong>: AI acted autonomously, execute code, changed files, etc.</p></li>
+<li><p><strong>Context aware</strong>: AI understood files, data, and code structures.</p></li>
+<li><p><strong>IDE</strong>: AI was <strong>integrated</strong> into our <strong>development environment</strong>, worked <strong>alongside us</strong>.</p></li>
+<li><p><strong>Privacy</strong>: AI <strong>did NOT have access to our data</strong>.</p>
 <ul>
-<li>All code was executed locally on our machine.</li>
+<li>All code was executed locally, AI has only seen the output structure.</li>
 </ul></li>
 </ul>
 </section>
 <section id="quick-question" class="slide level2">
-<h2>Quick question:</h2>
-<h3 id="what-ai-tools-and-software-do-you-use-in-your-daily-work-so-far">What AI tools and software do you use in your daily work so far?</h3>
-<ul>
-<li><p>Chat-based (in browser or an app):</p>
+<h2>Quick question</h2>
+<h3 id="what-ai-tools-and-software-do-you-use-in-your-daily-work">What AI tools and software do you use in your daily work?</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Chat-based (in browser or an app):</strong></p>
 <ul>
 <li>OpenAI GPT</li>
 <li>Microsoft Copilot (Windows or Office/Word/Excel)</li>
@@ -249,8 +259,9 @@ Eduard Bukin
 <li>Google Gemini</li>
 <li>Grok</li>
 <li>Others: ___________</li>
-</ul></li>
-<li><p>Agent-integrated software:</p>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Agent-integrated software:</strong></p>
 <ul>
 <li>Positron + GH Copilot / Other LLMs</li>
 <li>VS Code + GH Copilot / Other LLMs</li>
@@ -260,198 +271,457 @@ Eduard Bukin
 <li>Cursor + LLMs</li>
 <li>GitHub Copilot Workspace (web-based)</li>
 <li>Others: ___________</li>
-</ul></li>
 </ul>
+</div></div>
 </section>
 <section>
 <section id="key-concepts" class="title-slide slide level1 center">
 <h1>Key Concepts</h1>
-
+<p>What do we need to know about modern analysis with AI?</p>
+<ol type="1">
+<li>AI: Chat | Agent | Inline Completion</li>
+<li>Context awareness</li>
+<li>Model Context Protocol (MCP)</li>
+<li>Integrated Development Environments (IDEs)</li>
+<li>LLMs for coding: GitHub Copilot, OpenAI GTP, Anthropic Claude, and others</li>
+<li>Efficient prompting</li>
+</ol>
 </section>
-<section id="overview" class="slide level2">
-<h2>Overview</h2>
+<section id="ai-chat-agent-inline-code" class="slide level2">
+<h2>AI: Chat | Agent | Inline Code</h2>
+<div class="columns">
+<div class="column fragment" style="width:30%;">
+<p><strong>AI-Chat</strong></p>
 <ul>
-<li class="fragment">AI-Chat vs AI-Agent vs Inline Code Completion</li>
-<li class="fragment">Context awareness</li>
-<li class="fragment">Model Context Protocol (MCP)</li>
-<li class="fragment">Integrated Development Environments (IDEs)</li>
-<li class="fragment">LLMs for coding: GitHub Copilot, OpenAI GTP, Anthropic Claude, and others</li>
+<li>General assistance</li>
+<li>Limited context: only what you tell it</li>
+<li>Code snippets</li>
+<li>Explanations of code/output</li>
 </ul>
-</section>
-<section id="ai-chat-vs-ai-agent-vs-inline-code-completion-1" class="slide level2">
-<h2>AI-Chat vs AI-Agent vs Inline Code Completion (1)</h2>
-<h3 id="ai-chat-ask-mode">AI-Chat: Ask Mode</h3>
-<ul>
-<li class="fragment">Conversational interface</li>
-<li class="fragment">General purpose assistance</li>
-<li class="fragment">Limited context awareness: knows only what you provide</li>
-<li class="fragment">One‑off questions</li>
-<li class="fragment">Code snippets</li>
-<li class="fragment">Explanations of code/output</li>
-</ul>
-<p>. . .</p>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Usage</strong></p>
+<p><strong>Tip</strong></p>
 </div>
 <div class="callout-content">
-<p>Use Ask mode to think.</p>
+<p>Use to <strong>Ask</strong> the model to think and reason.</p>
 </div>
 </div>
 </div>
-</section>
-<section id="ai-chat-vs-ai-agent-vs-inline-code-completion-2" class="slide level2">
-<h2>AI-Chat vs AI-Agent vs Inline Code Completion (2)</h2>
-<h3 id="ai-agent-execute-mode">AI-Agent: Execute Mode</h3>
+</div><div class="column fragment" style="width:40%;">
+<p><strong>AI-Agent</strong></p>
 <ul>
-<li class="fragment">Autonomous task execution</li>
-<li class="fragment">Full project context awareness</li>
-<li class="fragment">Integrated with development tools</li>
-<li class="fragment">Can read/write files, run code, and make changes (after user approval)</li>
-<li class="fragment">Multi‑step workflows</li>
-<li class="fragment">End‑to‑end tasks (clean → estimate → table → robustness)</li>
+<li>Execute Mode</li>
+<li>Context awareness</li>
+<li>Integrated with development</li>
+<li>Writes and runs after user’s approval</li>
+<li>End‑to‑end tasks (clean → estimate → table → robustness)</li>
 </ul>
-<p>. . .</p>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Usage</strong></p>
+<p><strong>Tip</strong></p>
 </div>
 <div class="callout-content">
-<p>Use Agent mode to execute explicit instructions</p>
+<p>Use <strong>Agent</strong> mode to execute explicit instructions.</p>
 </div>
 </div>
 </div>
-</section>
-<section id="ai-chat-vs-ai-agent-vs-inline-code-completion-3" class="slide level2">
-<h2>AI-Chat vs AI-Agent vs Inline Code Completion (3)</h2>
-<h3 id="inline-code-completion">Inline Code Completion</h3>
+</div><div class="column fragment" style="width:30%;">
+<p><strong>Inline Code Completion</strong></p>
 <ul>
-<li class="fragment">Real-time code suggestions while you type</li>
-<li class="fragment">Can be context-aware or not</li>
-<li class="fragment">Speeds up coding by autocompleting:
-<ul>
-<li class="fragment">Function names</li>
-<li class="fragment">Parameters</li>
-<li class="fragment">Common patterns</li>
-</ul></li>
+<li>Real-time code suggestions while you type</li>
 </ul>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Use for quick code snippets.</p>
+</div>
+</div>
+</div>
+</div></div>
 </section>
 <section id="context-awareness" class="slide level2">
 <h2>Context Awareness</h2>
-<p><strong>What AI “knows” when helping you code:</strong></p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><strong>What AI “knows”:</strong></p>
 <ul>
-<li><strong>Your files</strong>: All code files, documentation, and project structure</li>
-<li><strong>Your data structure</strong>: Variable names, data types, relationships (without sending raw data to cloud)</li>
-<li><strong>Your history</strong>: Recent edits, commands run, and conversations</li>
-<li><strong>Your environment</strong>: Installed packages, dependencies, and configurations</li>
-<li><strong>Your intent</strong>: Current task based on files you have open and recent actions</li>
-<li><strong>Results of code execution</strong>: Output, errors, and logs from running code</li>
+<li><strong>Files</strong>: Code, docs, structure</li>
+<li><strong>Data structure</strong>: Variable names, types</li>
+<li><strong>History</strong>: Edits, commands</li>
+<li><strong>Environment</strong>: Packages, dependencies</li>
+<li><strong>Intent</strong>: Current task</li>
+<li><strong>Execution results</strong>: Output, errors</li>
 </ul>
+</div><div class="column" style="width:40%;">
 <p><strong>Why it matters:</strong></p>
 <ul>
-<li>AI gives relevant suggestions specific to <em>your</em> project</li>
-<li>No need to copy-paste code context manually</li>
-<li>AI understands dependencies between files</li>
-<li>Reduces hallucinations by grounding responses in your actual codebase</li>
+<li>Project-specific suggestions</li>
+<li>Understands dependencies</li>
+<li>Reduces hallucinations</li>
 </ul>
-<p><strong>References:</strong></p>
-<ul>
-<li><a href="https://docs.github.com/en/copilot/using-github-copilot/getting-started-with-github-copilot#understanding-copilot-context" target="_blank">GitHub Copilot Context</a></li>
-<li><a href="https://www.anthropic.com/news/claude-sonnet-4-5" target="_blank">Anthropic’s Claude Sonnet</a></li>
-<li><a href="https://positron.posit.co/assistant-chat-context.html" target="_blank">Positron Documentation on AI Context</a></li>
-</ul>
+</div></div>
+<div class="footer">
+<p><strong>See:</strong> <a href="https://positron.posit.co/assistant-chat-context.html" target="_blank">Positron: AI Context</a>, or <a href="https://docs.github.com/en/copilot/using-github-copilot/getting-started-with-github-copilot#understanding-copilot-context" target="_blank">GHCopilot</a>, and <a href="https://www.anthropic.com/news/claude-sonnet-4-5" target="_blank">Claude</a></p>
+</div>
 </section>
 <section id="model-context-protocol-mcp" class="slide level2">
 <h2>Model Context Protocol (MCP)</h2>
+<div class="columns">
+<div class="column" style="width:15%;">
+<p><img data-src="images/mcp-logo.png" width="100"></p>
+</div><div class="column" style="width:85%;">
 <div class="callout callout-note callout-style-simple">
 <div class="callout-body">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-content">
-<p><em>“…a standardized, open framework for AI models (LLMs) to securely and efficiently connect with external applications, data sources, tools, and each-other — acting like a universal adapter (e.g., USB-C for AI)”</em></p>
-<p>— <a href="https://www.google.com/search?q=model+communication+protocol" target="_blank">Google AI Search</a> + <a href="https://en.wikipedia.org/wiki/Model_Context_Protocol" target="_blank">Wikipedia</a></p>
+<p>“A universal adapter for AI: one standard protocol replacing fragmented data integrations, connecting assistants to any system where information lives.”— <a href="https://www.anthropic.com/news/model-context-protocol" target="_blank">Anthropic’s invention</a></p>
 </div>
 </div>
 </div>
-
-<img data-src="images/mcp-diagram.png" class="quarto-figure quarto-figure-center r-stretch"><div class="fragment">
-<p><strong>Essential connections:</strong></p>
+</div></div>
+<div class="fragment">
+<p>There is a <a href="https://github.com/modelcontextprotocol/servers" target="_blank">growing ecosystem of MCPs</a> .</p>
+</div>
+<div class="columns">
+<div class="column fragment" style="width:75%;">
+<p><strong>MCP are essential to connect LLMs with:</strong></p>
 <ul>
 <li>Execution environments: <strong>Stata</strong>, R, Python</li>
 <li>Editors: Positron, VS Code, RStudio, JupyterLab</li>
+<li>Data sources: databases, APIs, files</li>
+<li>Tools: version control (GitHub), visualization, reporting</li>
 </ul>
-</div>
+</div><div class="column fragment" style="width:25%;">
+<p>Relevant are:</p>
+<ul>
+<li><a href="https://github.com/sepinetam/stata-mcp" target="_blank">Stata-MCP extension</a></li>
+<li><a href="https://tidyverse.org/blog/2025/07/mcptools-0-1-0/" target="_blank">R MCP Tools</a></li>
+</ul>
+</div></div>
 </section>
 <section id="integrated-development-environments-ides" class="slide level2">
 <h2>Integrated Development Environments (IDEs)</h2>
-<p><strong>Your coding workspace:</strong></p>
+<p><strong>Your all-in-one workspace for data analysis:</strong></p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><strong>For Data Science:</strong></p>
 <ul>
-<li><strong>Positron</strong> (Posit)</li>
-<li>RStudio</li>
-<li>JupyterLab</li>
-<li>VS Code</li>
+<li><strong>Positron</strong> (Posit) - Modern AI-native IDE for data science and any programming language</li>
+<li><strong>RStudio</strong> - R-focused environment</li>
+<li><strong>JupyterLab</strong> - Notebook-based interface</li>
+<li><strong>VS Code</strong> - General-purpose with extensions</li>
+<li><strong>Claude Code</strong> - Anthropic’s AI coding IDE</li>
 </ul>
 </div><div class="column" style="width:50%;">
-<p><strong>Key Features:</strong></p>
+<p><strong>What IDEs provide:</strong></p>
 <ul>
-<li>Code editor</li>
-<li>Console/terminal</li>
-<li>File browser</li>
-<li>Variable viewer</li>
-<li>Plot viewer</li>
+<li><strong>Code editor</strong> with syntax highlighting</li>
+<li><strong>Console/terminal</strong> for interactive execution</li>
+<li><strong>File browser</strong> and project management</li>
+<li><strong>Variable/data viewer</strong> to inspect objects</li>
+<li><strong>Plot viewer</strong> for visualizations</li>
+<li><strong>Integrated AI assistants</strong> (Chat, Agent, Completions)</li>
 </ul>
 </div></div>
 </section>
 <section id="llms-for-coding" class="slide level2">
 <h2>LLMs for Coding</h2>
-<p><strong>Large Language Models powering AI assistants:</strong></p>
+<p><strong>Large Language Models power AI assistants through coding agents:</strong></p>
+<div class="columns">
+<div class="column" style="width:35%;">
+<p><strong>GitHub Copilot</strong> uses: OpenAI GPT, Anthropic Claude, and others.</p>
+<p><strong>Chrome/Web-browser extensions</strong> also provide access to LLMs.</p>
+<p><strong>Claude Code</strong> IDE uses <strong>Anthropic Claude</strong> only models.</p>
+</div><div class="column" style="width:65%;">
+<p><img data-src="images/claude-preformace.webp"></p>
+</div></div>
+</section>
+<section id="question-2.-how-do-you-use-ai-tools-in-your-daily-work" class="slide level2">
+<h2>Question 2. How do you use AI tools in your daily work?</h2>
+<p>List top 3 use cases for the AI tools you use.</p>
 <ul>
-<li class="fragment"><strong>GitHub Copilot</strong>: Uses OpenAI models (GPT-4) and Anthropic Claude</li>
-<li class="fragment"><strong>OpenAI GPT</strong>: GPT-4, GPT-4 Turbo</li>
-<li class="fragment"><strong>Anthropic Claude</strong>: Opus, Sonnet, Haiku</li>
-<li class="fragment"><strong>Others</strong>: Google Gemini, Meta Llama, Mistral</li>
+<li><p>Spell checking, grammar, and writing assistance</p></li>
+<li><p>Read and summarise text and documents</p></li>
+<li><p>Understand code and text</p></li>
+<li><p>Dumping data into LLM and asking for insights</p></li>
+<li><p>Other</p></li>
 </ul>
-<div class="fragment">
+</section>
+<section id="software-development-vs-data-analysis-different-ai-roles" class="slide level2">
+<h2>Software Development vs Data Analysis: Different AI Roles</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Software Development</strong></p>
+<ul>
+<li><strong>Goal:</strong> Build functional systems</li>
+<li><strong>Success metric:</strong> Binary (works/breaks)</li>
+<li><strong>Central question:</strong> “Does it execute correctly?”</li>
+<li><strong>AI’s strength:</strong>
+<ul>
+<li>Generate boilerplate code</li>
+<li>Suggest syntax and patterns</li>
+<li>Automate testing</li>
+<li>Refactor code structure</li>
+</ul></li>
+<li><strong>Primary risk:</strong> Bugs, crashes, security flaws</li>
+<li><strong>Verification:</strong> Unit tests, integration tests</li>
+<li><strong>Trust level:</strong> High for implementation</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Data Analysis</strong></p>
+<ul>
+<li><strong>Goal:</strong> Generate valid insights</li>
+<li><strong>Success metric:</strong></li>
+<li><strong>Central question:</strong> “Are these conclusions sound?”</li>
+<li><strong>AI’s strength:</strong>
+<ul>
+<li>Write data manipulation code</li>
+<li>Create visualizations</li>
+<li>Suggest statistical methods</li>
+<li>Automate repetitive tasks</li>
+</ul></li>
+<li><strong>Primary risk:</strong> Correct code producing invalid conclusions</li>
+<li><strong>Verification:</strong> Domain expertise, theoretical validity</li>
+<li><strong>Trust level:</strong> Low for interpretation</li>
+</ul>
+</div></div>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Warning</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Key insight:</strong> In analysis, syntactically correct code ≠ methodologically sound results. AI can produce perfect code that violates logic and common sense, or draws invalid inferences.</p>
+</div>
+</div>
+</div>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Software Development vs Data Analysis</strong></p>
+<p><strong>Note</strong></p>
 </div>
 <div class="callout-content">
-<p>While these tools were built for software development, they excel at data analysis tasks: data cleaning, statistical modeling, visualization, and report generation.</p>
+<p><strong>Bottom line:</strong> AI excels at the <em>mechanics</em> of analysis (data cleaning, computation, visualization). Researchers must retain ownership of <em>scientific judgment</em>: choosing appropriate methods, validating assumptions, and interpreting substantive meaning.</p>
 </div>
+</div>
+</div>
+</section>
+<section id="integrated-workflow" class="slide level2 diagram">
+<h2>Integrated workflow</h2>
+<p><strong>Your all-in-one workspace for data analysis:</strong></p>
+<div class="cell" data-reveal="true" data-fig-width="14" data-fig-height="8" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+    subgraph IDE["🖥️ Local IDE Environment"]
+        direction TB
+
+        subgraph Editors["📝 Code Editors"]
+            direction LR
+            P["&lt;b&gt;Positron&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Posit&lt;/i&gt;"]
+            R["&lt;b&gt;RStudio&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Posit&lt;/i&gt;"]
+            V["&lt;b&gt;VS Code&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Microsoft&lt;/i&gt;"]
+            C["&lt;b&gt;Claude Code&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Anthropic&lt;/i&gt;"]
+            J["&lt;b&gt;JupyterLab&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Project Jupyter&lt;/i&gt;"]
+            CS["&lt;b&gt;Cursor&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Anysphere&lt;/i&gt;"]
+        end
+
+
+        AI["🤖 &lt;b&gt;AI Integration&lt;/b&gt;&lt;br/&gt;• Chat&lt;br/&gt;• Agent&lt;br/&gt;• Inline Code"]
+        MCP["🔌&lt;b&gt;Model Context Protocol&lt;/b&gt;&lt;br/&gt;• Stata MCP&lt;br/&gt;• R/Python MCP"]
+        Exec["⚙️ &lt;b&gt;Execution&lt;/b&gt;&lt;br/&gt;• Stata&lt;br/&gt;• R&lt;br/&gt;• Python"]
+
+        Editors &lt;==&gt; AI
+        Editors &lt;==&gt; MCP
+        Editors &lt;==&gt; Exec
+        AI &lt;==&gt; MCP
+        MCP &lt;==&gt; Exec
+    end
+
+    subgraph Cloud["☁️ Cloud Services"]
+        direction LR
+        subgraph AA[" "]
+            subgraph AIProviders["🌐 AI Platforms"]
+                direction LR
+                GHC["&lt;b&gt;GitHub Copilot&lt;/b&gt;"]
+                ANT["&lt;b&gt;Anthropic Claude&lt;/b&gt;"]
+            end
+            subgraph AIAgents["🌐 AI Agents"]
+                direction LR
+                MAI["&lt;b&gt;WB Mai&lt;/b&gt;"]
+                OTH["&lt;b&gt;Other&lt;/b&gt;"]
+            end
+        end
+
+        subgraph LLM["🧠 LLMs"]
+            direction LR
+            GPT["OpenAI&lt;br/&gt;GPT-4"]
+            Claude["Anthropic&lt;br/&gt;Claude"]
+            Google["Google&lt;br/&gt;Gemini"]
+
+        end
+    end
+
+    MCP &lt;===&gt;|"API Calls"| AIProviders
+    GHC &lt;===&gt;|"Chooses from"| LLM
+    ANT &lt;===&gt; Claude
+    AIAgents &lt;===&gt; LLM
+
+    classDef ideBox fill:#e8f4f8,stroke:#0277bd,stroke-width:3px,color:#000
+    classDef editorBox fill:#fff3e0,stroke:#ef6c00,stroke-width:2px,color:#000
+    classDef editorItem fill:#ffe0b2,stroke:#e65100,stroke-width:2px,color:#000
+    classDef aiBox fill:#f3e5f5,stroke:#8e24aa,stroke-width:2px,color:#000
+    classDef mcpBox fill:#e8f5e9,stroke:#43a047,stroke-width:2px,color:#000
+    classDef mcpItem fill:#c8e6c9,stroke:#2e7d32,stroke-width:1px,color:#000
+    classDef execBox fill:#fce4ec,stroke:#d81b60,stroke-width:2px,color:#000
+    classDef cloudBox fill:#e1f5fe,stroke:#0288d1,stroke-width:3px,color:#000
+    classDef providerBox fill:#b3e5fc,stroke:#0277bd,stroke-width:2px,color:#000
+    classDef providerItem fill:#81d4fa,stroke:#01579b,stroke-width:2px,color:#000
+    classDef llmBox fill:#fff9c4,stroke:#f9a825,stroke-width:2px,color:#000
+    classDef llmItem fill:#fff59d,stroke:#f57f17,stroke-width:1px,color:#000
+
+    class IDE ideBox
+    class Editors editorBox
+    class P,R,V,C,J,CS editorItem
+    class AI aiBox
+    class MCP mcpBox
+    class ST,RP,PY mcpItem
+    class Exec execBox
+    class Cloud cloudBox
+    class AA providerBox
+    class AIProviders providerBox
+    class AIAgents providerBox
+    class GHC,ANT providerItem
+    class MAI,OTH providerItem
+    class LLM llmBox
+    class GPT,Claude,Google llmItem
+</pre>
+</div>
+<p></p><figcaption> AI-Assisted Analysis Workflow</figcaption> </figure><p></p>
 </div>
 </div>
 </div>
 </section></section>
 <section>
-<section id="getting-started" class="title-slide slide level1 center">
-<h1>Getting Started</h1>
-
+<section id="how-to-start" class="title-slide slide level1 center">
+<h1>How to Start?</h1>
+<ul>
+<li><p>Setup the software</p></li>
+<li><p>Challenge your usual workflow</p></li>
+<li><p>Experiment with AI assistance</p></li>
+<li><p>Learn by doing</p></li>
+<li><p>Keep learning new technologies: Git, GitHub, R, Python, etc.</p></li>
+</ul>
 </section>
-<section id="how-to-start" class="slide level2">
-<h2>How to Start?</h2>
+<section id="software-setup-overview" class="slide level2">
+<h2>Software Setup Overview</h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Full details:</strong> <a href="../../seminars/seminar-2026-02/setup-instructions.html#setup">Setup Instructions</a></p>
+</div>
+</div>
+</div>
 <ol type="1">
-<li class="fragment"><strong>Set up your environment</strong> → <a href="../../seminars/seminar-2026-02/setup-instructions.html#setup">Full Instructions</a></li>
-<li class="fragment"><strong>Start with small experiments</strong></li>
-<li class="fragment"><strong>Join our Community of Practice</strong></li>
-<li class="fragment"><strong>Share your experiences</strong></li>
+<li><strong>Install prerequisite software</strong> (via WB Software Center)
+<ul>
+<li>Stata 19+, R 4.5+, Python 3.13+, Quarto, Git</li>
+<li>Install Python <code>uv</code> package: <code>pip install uv</code></li>
+</ul></li>
+<li><strong>Install Positron IDE</strong> (system-level install): Request help from IT if needed</li>
+<li><strong>Install key extensions</strong> in Positron
+<ul>
+<li><strong>Stata MCP</strong>, <strong>Quarto</strong></li>
+</ul></li>
+<li><strong>Connect GitHub</strong>: Sign in to GitHub account
+<ul>
+<li>Enable Positron Assistant in settings</li>
+<li>Configure LLM provider (GitHub Copilot/Claude/GPT)</li>
+</ul></li>
+<li><strong>Start experimenting!</strong>
+<ul>
+<li>Open assistant: <code>Ctrl+Shift+P</code> &gt; “Ask Positron Assistant”</li>
+<li>Try: chat, agent mode, inline code completion</li>
+</ul></li>
 </ol>
+</section>
+<section id="positron-overview" class="slide level2">
+<h2>Positron overview</h2>
+
+<img data-src="images/user-interface-for-rstudio-migration.jpeg" class="r-stretch"></section>
+<section id="positron-assistant-features" class="slide level2">
+<h2>Positron Assistant Features</h2>
+<video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="https://positron.posit.co/videos/positron-assistant-copytoeditor.mp4"></video>
+<div class="footer">
+<p>Source: <a href="https://positron.posit.co/features.html">positron.posit.co/features</a></p>
+</div>
+</section>
+<section id="starting-a-project-in-positron" class="slide level2">
+<h2>Starting a project in Positron</h2>
+</section>
+<section id="creating-a-.do-file-and-writing-code-with-ai-assistance" class="slide level2">
+<h2>Creating a ‘.do’ file and writing code with AI assistance</h2>
+</section>
+<section id="running-stata-in-positron" class="slide level2">
+<h2>Running Stata in Positron</h2>
+<ol type="1">
+<li class="fragment">install Python</li>
+<li class="fragment">install uv extension in python: <code>pip install uv</code></li>
+<li class="fragment">install Stata MCP extension in Positron</li>
+<li class="fragment">configure Stata path in Positron settings</li>
+</ol>
+</section>
+<section id="explore-further" class="slide level2">
+<h2>Explore further</h2>
+<ul>
+<li>Git</li>
+<li>GitHub</li>
+<li>R and Python</li>
+<li>Software development best practices</li>
+<li>Testing and validation</li>
+<li>Building applications</li>
+</ul>
+</section>
+<section id="question-3." class="slide level2">
+<h2>Question 3.</h2>
+<p>What use cases do you see for AI-assisted analysis in your work that you want to learn more about?</p>
+<ul>
+<li>Reproducible research packages</li>
+<li>Data cleaning and preparation</li>
+<li>Statistical analysis and modeling</li>
+<li>Visualization and reporting</li>
+<li>Mapping and spatial analysis</li>
+<li>Other</li>
+</ul>
 </section>
 <section id="resources" class="slide level2">
 <h2>Resources</h2>
@@ -467,13 +737,10 @@ Eduard Bukin
 <p><strong>Contact</strong>:</p>
 <ul>
 <li>Eduard Bukin: <a href="mailto:ebukin@worldbank.org">ebukin@worldbank.org</a></li>
-<li>Henry Stemmler: <a href="mailto:hstemmler@worldbank.org">hstemmler@worldbank.org</a></li>
 </ul>
 </section>
 <section id="thank-you" class="slide level2 title">
 <h2>Thank You!</h2>
-<h3 id="stay-connected">Stay Connected</h3>
-<p>Next in the GeoPov Series: - The geography of jobs in India - Survey representativeness methods - Mobile phone data for poverty analysis</p>
 <p><a href="../../index.html">→ Visit our website for updates</a></p>
 
 
@@ -515,7 +782,7 @@ Eduard Bukin
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'smaller': false,
+'smaller': true,
  
         // Display controls in the bottom right corner
         controls: false,
@@ -640,7 +907,7 @@ Eduard Bukin
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'none',
+        transition: 'fade',
 
         // Transition speed (default/fast/slow)
         transitionSpeed: 'default',
@@ -862,6 +1129,7 @@ Eduard Bukin
         }
       });
       </script>
+    <script>videojs(video_shortcode_videojs_video1);</script>
     
 
 </body></html>

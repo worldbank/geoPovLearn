@@ -3,134 +3,192 @@ title: "Workflow Setup Instructions"
 subtitle: "AI Agent-Assisted Analysis with GitHub Copilot and Claude"
 ---
 
+## Goals:
 
-Goals:
-
--  Setup software environment for AI agent-assisted analysis in Stata and R
--  Enable GitHub Copilot and Claude AI integration
--  Be able to reproduce AI-assisted coding workflow demonstrated in the seminar
-
+-   Setup software environment for AI agent-assisted analysis in Stata and R
+-   Enable GitHub Copilot or Claude AI integration
+-   Be able to reproduce AI-assisted coding workflow demonstrated in the seminar
 
 ## Software setup
 
 ### Step 1. Prerequisites software: Stata, R, Python
 
-1. Go to the World Bnk Software Center App and install of the following software (if not already installed):
+1.  Go to the World Bnk Software Center App and install of the following software (if not already installed):
 
--  Stata 19 or higher (latest version available)
--  R (latest version: 4.5.2)
--  Python (latest version: 3.13+)
--  Quarto (latest version: 1.3.343)
-    - May require a software installation request on eservice
+    ![](images/software-center.png){width="212"}
 
--  Git (latest version: 2.52+)
--  (Optional) Github Desktop
+    | Software | Version | Notes |
+    |----------|---------|-------|
+    | ![](images/stata.png){width="40"} **Stata** | 19 or higher (latest available) | |
+    | ![](images/R.png){width="40"} **R** | 4.5.2 (latest) | |
+    | ![](images/python.png){width="40"} **Python** | 3.13+ (latest) | |
+    | ![](images/quarto.png){width="40"} **Quarto** | 1.3.343 (latest) | May require software installation request |
+    | ![](images/git.png){width="40"} **Git** | 2.52+ (latest) | |
+    | ![](images/ghdesktop.png){width="40"} **GitHub Desktop** | Latest | Optional |
 
 ### Step 2. Install important python package
 
-1. Open Command Prompt (cmd) or PowerShell:
-   - Press `Win + R`, type `cmd` or `powershell`, and hit Enter.
+1.  Open Command Prompt (cmd) or PowerShell:
 
-2. Type `pip install uv` and press Enter to install the `uv` package.
+    -   Press `Win + R`, type `cmd` or `powershell`, and hit Enter.
+01
+2.  Type `pip install uv` and press Enter to install the `uv` package.
 
-   - `uv` is a package that allows environments management in python, see [https://pypi.org/project/uv/](https://pypi.org/project/uv/){target="_blank"}
+    -   `uv` is a package that allows environments management in python, see [https://pypi.org/project/uv/](https://pypi.org/project/uv/){target="_blank"}
 
-3. Check if UV is installed correctly by typing `uv --version` in the Command Prompt or PowerShell. You should see the version number of UV displayed. Someting like this:
+3.  Check if UV is installed correctly by typing `uv --version` in the Command Prompt or PowerShell.
+    You should see the version number of UV displayed.
+    Someting like this:
 
-   ```
-   uv 0.9.18 (0cee76417 2025-12-16)
-   ```
+    ```
+    uv 0.9.18 (0cee76417 2025-12-16)
+    ```
 
 ### Step 3. Install Positron (IDE) [^1]
 
-1. Download Positron from [https://positron.posit.co/download.html](https://positron.posit.co/download.html){target="_blank"}
+[^1]: Alternatively, you can use Visual Studio Code (VS Code) as your IDE.
+    Overall, we encourage using Positron because of its better context awareness when developing R/Stata and other analysis scripts.
+    If you opt using VS Code, it could be installed form the software center.
+    Please note that some steps below may differ slightly when using VS Code instead of Positron.
+    In addition, VS code doe snot have many built-in features for R language that Positron has out-of-the-box as well as laks key binding relevant to data science tasks.
 
-NOTE: Use "Windows 10, 11 x64 (system level install)", not the "user level install"
+1.  Download Positron from [https://positron.posit.co/download.html](https://positron.posit.co/download.html){target="_blank"}
 
-2. Make a "Software Installation Request" on eservice.
+::: {.callout-warning}
+**Important:** Use "Windows 10, 11 x64 (system level install)", not the "user level install"
+:::
 
-  - Go to [eservices/](http://eservices/){target="_blank"}
+2.  Make a "Software Installation Request" on eservice.
 
-  - Select "[Software Installation Request](https://worldbankgroup.service-now.com/wbg/en/software-installation-request?id=wbg_sc_catalog&sys_id=bd1e71b86f16d340db112d232e3ee4b7&table=sc_cat_item&searchTerm=Software%20installation){target="_blank"}"
+    -   Go to [eservices/](http://eservices/){target="_blank"}
 
-  - See [KB0076748](https://worldbankgroup.service-now.com/wbg?id=wbg_knowledge_article&sys_id=50a6a237971b6a500b41bf07f053af30&table=kb_knowledge&searchTerm=Software%20installation){target="_blank"} for more details.
+    -   Select "[Software Installation Request](https://worldbankgroup.service-now.com/wbg/en/software-installation-request?id=wbg_sc_catalog&sys_id=bd1e71b86f16d340db112d232e3ee4b7&table=sc_cat_item&searchTerm=Software%20installation){target="_blank"}"
 
-3. Once approved, you will have two paths to install Positron:
+    -   See [KB0076748](https://worldbankgroup.service-now.com/wbg?id=wbg_knowledge_article&sys_id=50a6a237971b6a500b41bf07f053af30&table=kb_knowledge&searchTerm=Software%20installation){target="_blank"} for more details.
 
-   - ITS Pesonnel will connect to your machine remotely and will install Positron for you using admin password.
+3.  Once approved, you will have two paths to install Positron:
 
-   - You will need to use admin password to install Positron yourself.
+    -   ITS Pesonnel will connect to your computer remotely and will install Positron for you using admin password.
 
-   In either way, follow these installation instructions:
+    -   You will need to use admin password to install Positron yourself.
 
-   - Step 1: Copy the executable (exe) or installation folder to C:\WBG.
+    In either way, follow these installation instructions:
 
-   - Step 2: Launch the command shell (cmd.exe) as an administrator.
+    -   Step 1: Copy the executable (exe) or installation folder to C:\WBG.
 
-   - Step 3: Navigate to C:\WBG in the command shell.
+    -   Step 2: Launch the command shell (cmd.exe) as an administrator.
 
-   - Step 4: Set the user profile, TEMP, and TMP environments, and Launch the executable from the shell prompt by typing:
+    -   Step 3: Navigate to C:\WBG in the command shell.
 
-     ```{pws}
-     set userprofile=c:\wbg\temp
-     set temp=c:\wbg\temp\temp
-     set tmp=c:\wbg\temp\temp
-     Positron-20XX.XX.X-XXX-Setup-x64.exe
-     ```
-     Note: Replace `Positron-20XX.XX.X-XXX-Setup-x64.exe` with the actual filename of the Positron installer you downloaded.
+    -   Step 4: Set the user profile, TEMP, and TMP environments, and Launch the executable from the shell prompt by typing:
 
-[^1]: Alternatively, you can use Visual Studio Code (VS Code) as your IDE. Overall, we encourage using Positron because of its better context awareness when developing R/Stata and other analysis scripts. If you opt using VS Code, it could be installed form the software center. Please note that some steps below may differ slightly when using VS Code instead of Positron. In addition, VS code doe snot have many built-in features for R language that Positron has out-of-the-box as well as laks key binding relevant to data science tasks.
+        ```
+        set userprofile=c:\wbg\temp
+        set temp=c:\wbg\temp\temp
+        set tmp=c:\wbg\temp\temp
+        Positron-20XX.XX.X-XXX-Setup-x64.exe
+        ```
+
+        Note: Replace `Positron-20XX.XX.X-XXX-Setup-x64.exe` with the actual filename of the Positron installer you downloaded.
 
 ### Step 4. Install Extensions in Positron
 
-Extensions are add-ons that enhance the functionality of Positron. To install  extensions open the Extensions panel by clicking on the square icon on the left sidebar or pressing `Ctrl+Shift+X`.
+Extensions are add-ons that enhance the functionality of Positron.
+To install extensions open the Extensions panel by clicking on the square icon on the left sidebar or pressing `Ctrl+Shift+X`.
+
+-   ![](images/extensions.png){width="40"}
 
 There are many extensions available for Positron. Below are the key extensions to install for AI-assisted analysis:
 
--  `Stata MCP` Extension [external link](https://open-vsx.org/extension/DeepEcon/stata-mcp){target="_blank"} enables Model Communication Protocol (MCP) for Stata, allowing better context awareness for AI agents. It also allows running Stata code directly from Positron. To install it:
+-   [`Stata MCP` Extension](https://open-vsx.org/extension/DeepEcon/stata-mcp){target="_blank"} enables Model Communication Protocol (MCP) for Stata, allowing better context awareness for AI agents and allows running Stata code directly from Positron.
 
-   - Search for "Stata MCP" in the Extensions panel.
+    `[](images/stata-mcp.png){width="80"}
 
-   - Click "Install" to add the extension to Positron.
+    To install it:
 
-   - Now we need to set up the Stata executable path and version.
+    -   Open the Extensions panel in Positron.
 
-     1. Go to Settings (File > Preferences > Settings or `Ctrl+,`),
-     2. Search for "Stata Path" (or `stata-vscode.stataPath`),
-     3. Set the path to your Stata executable folder
-        `C:\Program Files\StataNow19\` - for most WB laptops and VDIs.
-     4. Search for "Stata Edition" (or `stata-vscode.stataEdition`) and set it to "mp" for Stata MP version.
+    -   Search for "Stata MCP" in the Extensions panel.
 
-   - Now create a new Stata `.do` file and try running a simple command like `sysuse auto` to verify the setup.
+    -   Click "Install" to add the extension to Positron.
 
-   -  Results from Stata should appear in the "Output" panel.
+    -   Now we need to set up the Stata executable path and version.
+
+        1.  Go to Settings (`Ctrl+,` or File \> Preferences \> Settings),
+        2.  Search for "Stata Path" (or `stata-vscode.stataPath`),
+        3.  Set the path to your Stata executable folder `C:\Program Files\StataNow19\` - for most WB laptops and VDIs.
+        4.  Search for "Stata Edition" (or `stata-vscode.stataEdition`) and set it to "mp" for Stata MP version.
+
+    -   Now create a new Stata `.do` file and try running a simple command like `sysuse auto` to verify the setup.
+
+    -   Results from Stata should appear in the "Output" panel. To show the output panel
+
+        `Ctrl+Shit+P` and type `Output: Show Output Channels...` \> `Enter` \> `Stata`.
+
+-   [`Quarto` Extension](https://open-vsx.org/extension/quarto/quarto){target="_blank"} enables Quarto document editing and rendering in Positron.
+
+    To install it:
+
+    -   Open the Extensions panel in Positron.
+
+    -   Search for "Quarto" in the Extensions panel.
+
+    -   Click "Install" to add the extension to Positron.
 
 
-### Step 5. Enable GitHub Copilot in Positron Assistant
+## Connecting Github Copilot to Positron
 
-Thie requires you to have a GitHub account first and then link it to the World Bank organization. See instructions below if you dont have the account yet or did not link it to the WB org.
+This step should enable you to use Github Copilot coding agent and any LLM, such as Chat GPT or Antropic Claude with positron.
 
-To Enable GitHub Copilot in Positron:
+-   See [Positron Assistant: Getting Started](https://positron.posit.co/assistant-getting-started.html#step-3-use-positron-assistant) for the full overview of what it does.
 
-1. Open `Account`.
+### Step 1. Connect GitHub to Positron
 
-2. Sign in to your GitHub account that is linked to the World Bank organization.
+Thie requires you to have a GitHub account first and then link it to the World Bank organization.
+See GitHub Setup [@github-setup] instructions below if you dont have the account or did not link it to the WB organization. To connect GitHub to Positron:
 
-### Step 6. Start using the Positron Assistant with GitHub Copilot or other LLM providers
+1.  Open `Account`.
 
-1. Open Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P` on Mac).
+2.  Sign in to your GitHub account that is linked to the World Bank organization.
 
-2. Type `Help: Ask Positron Assistant` and hit enter.
+### Step 2. Enabling Positron Assistant in setting
 
-3. In the input box that appears, type your question. For example.
 
-```
-Write a Stata do file that loads the auto dataset and summarizes the price variable.
-Open it.
-Explain how to run it.
-```
+1.  Open settings [positron.assistant.enable](positron://settings/positron.assistant.enable) and check the box to enable it.
 
-## GitHub Setup
+    - `Ctrl+,` \> search for `positron.assistant.enable` \> check the box
+
+2.  Restart Positron to apply the changes or reload the window (`Ctrl+Shift+P` \> `Developer: Reload Window` \> `Enter`).
+
+See [Enable Positron Assistant](https://positron.posit.co/assistant-getting-started.html#step-1-enable-positron-assistant) for more details.
+
+### Step 3. Configure LLM Provider
+
+By default, when you are logged into GitHub, Positron Assistant uses GitHub Copilot as the LLM provider. Github copilot does both: code completion, anwering questions in chat and agent-mode (able to run code directly).
+
+Withing the Github Copilot, you can also configure other LLM providers, such as Anthropic Claude, OpenAI GPT, etc.
+
+If you want to use Anthropic Claude as the LLM provider or other LLMs follow instruction in [Configure language model providers](https://positron.posit.co/assistant-getting-started.html#step-3-use-positron-assistant){target="_blank"}.
+
+Note: code completion feature will still be provided by GitHub Copilot extension.
+
+### Step 4. Using Positron Assistant
+
+1.  `Ctrl+Shift+P` \> `Help: Ask Positron Assistant` \> `Enter` to open it.
+
+2.  In the input box that appears, type your question.
+
+    For example.
+
+    ```
+    Write a Stata do file that loads the auto dataset and summarizes the price variable.
+    Open it.
+    Explain how to run it.
+    ```
+
+To learn more about using Positron Assistant, see [Use Positron Assistant](https://positron.posit.co/assistant-getting-started.html#step-3-use-positron-assistant){target="_blank"}
+
+## GitHub Setup {#github-setup}
 
 To use GitHub Copilot in Positron, you need to have a GitHub account linked to the World Bank organization and obtain Copilot access.
 
@@ -142,68 +200,67 @@ Note: use your personal email address, **not the World Bank email**.
 
 ### Step 2: Join the World Bank GitHub Organization
 
-1. Submit a "[Join GitHub Organization Account Request](https://worldbankgroup.service-now.com/wbg/en/join-github-organization-account-request?id=wbg_sc_catalog&sys_id=910e1739db1a54903c5960ab13961912&table=sc_cat_item&searchTerm=github){target="_blank"}" on eServices to join [github.com/worldbank](https://github.com/worldbank){target="_blank"}
+1.  Submit a "[Join GitHub Organization Account Request](https://worldbankgroup.service-now.com/wbg/en/join-github-organization-account-request?id=wbg_sc_catalog&sys_id=910e1739db1a54903c5960ab13961912&table=sc_cat_item&searchTerm=github){target="_blank"}" on eServices to join [github.com/worldbank](https://github.com/worldbank){target="_blank"}
 
-2. Once your request is approved, you will receive an email invitation to join the World Bank GitHub organization
+2.  Once your request is approved, you will receive an email invitation to join the World Bank GitHub organization
 
-   - Email will be sent to the email address associated with your GitHub account
+    -   Email will be sent to the email address associated with your GitHub account
 
-3. Accept the invitation by clicking the link in the email
+3.  Accept the invitation by clicking the link in the email
 
-   - You need to confirm your membership in the World Bank organization on GitHub by following steps indicated in the email.
+    -   You need to confirm your membership in the World Bank organization on GitHub by following steps indicated in the email.
 
-   - If you don't confirm within few days, the invitation will expire, and you will need to request again through eService.
-
+    -   If you don't confirm within few days, the invitation will expire, and you will need to request again through eService.
 
 ### Step 3: Request GitHub Copilot Access
 
-1. After joining the World Bank organization, request GitHub Copilot access through your team lead or organization administrator
+1.  After joining the World Bank organization, request GitHub Copilot access through your team lead or organization administrator
 
-2. The request will be reviewed and approved by the GitHub organization administrators
+2.  The request will be reviewed and approved by the GitHub organization administrators
 
-   - Note: Bryan Cahill leads the github.com/worldbank organization and can help with Copilot access requests
+    -   Note: Bryan Cahill leads the github.com/worldbank organization and can help with Copilot access requests
 
-3. Once approved, you'll be able to use GitHub Copilot in Positron
+3.  Once approved, you'll be able to use GitHub Copilot in Positron
 
 ### Step 4: Verify GitHub Copilot Access
 
-1. Open Positron and sign in to your GitHub account (see Step 5 above)
+1.  Open Positron and sign in to your GitHub account (see Step 5 above)
 
-2. Check that the GitHub Copilot extension is active in the Extensions panel
+2.  Check that the GitHub Copilot extension is active in the Extensions panel
 
-3. Try typing a comment in a code file to verify that Copilot suggestions appear
+3.  Try typing a comment in a code file to verify that Copilot suggestions appear
 
 ## Troubleshooting
 
 ### GitHub Copilot Not Working
 
-- Verify your subscription is active
-- Check internet connection
-- Sign out and sign back in
-- Restart Positron/VS Code
+-   Verify your subscription is active
+-   Check internet connection
+-   Sign out and sign back in
+-   Restart Positron/VS Code
 
 ### Claude API Connection Issues
 
-- Verify API key is correct
-- Check firewall settings
-- Ensure VPN is connected if required
+-   Verify API key is correct
+-   Check firewall settings
+-   Ensure VPN is connected if required
 
 ### Language Extensions Not Loading
 
-- Verify language runtime is installed
-- Check extension compatibility
-- Review extension logs for errors
+-   Verify language runtime is installed
+-   Check extension compatibility
+-   Review extension logs for errors
 
 ## Additional Resources
 
-- [Positron Documentation](https://github.com/posit-dev/positron/wiki){target="_blank"}
-- [VS Code Documentation](https://code.visualstudio.com/docs){target="_blank"}
-- [GitHub Copilot Documentation](https://docs.github.com/en/copilot){target="_blank"}
-- World Bank GitHub: [https://github.com/worldbank](https://github.com/worldbank){target="_blank"}
+-   [Positron Documentation](https://github.com/posit-dev/positron/wiki){target="_blank"}
+-   [VS Code Documentation](https://code.visualstudio.com/docs){target="_blank"}
+-   [GitHub Copilot Documentation](https://docs.github.com/en/copilot){target="_blank"}
+-   World Bank GitHub: [https://github.com/worldbank](https://github.com/worldbank){target="_blank"}
 
 ## Support
 
 For technical support, contact:
 
-- **Eduard Bukin**: [ebukin@worldbank.org](mailto:ebukin@worldbank.org)
-- **Henry Stemmler**: [hstemmler@worldbank.org](mailto:hstemmler@worldbank.org)
+-   **Eduard Bukin**: [ebukin\@worldbank.org](mailto:ebukin@worldbank.org)
+-   **Henry Stemmler**: [hstemmler\@worldbank.org](mailto:hstemmler@worldbank.org)

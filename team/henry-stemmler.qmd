@@ -16,14 +16,6 @@ about:
 
 ## Bio
 
-*Add Henry's detailed biography here*
+An Economist by training, Henry Stemmler works on poverty analysis and geospatial analytics at the World Bank. His current work explores how spatial factors shape labor market outcomes and welfare in developing countries, with a particular interest in urban job accessibility and the geographic dimensions of poverty.
 
-## Expertise
-
-- Area of expertise 1
-- Area of expertise 2
-- Area of expertise 3
-
-## Selected Publications
-
-*Add publications here*
+He has co-authored World Bank flagship reports including the Poverty, Prosperity and Planet Report, and his work has appeared in journals such as the Economic Journal, Journal of Development Economics, World Development, and Food Policy. He holds a PhD in Economics from the University of Göttingen and previously worked as a postdoctoral researcher at ETH Zürich and as an Economist at the International Labor Organization.

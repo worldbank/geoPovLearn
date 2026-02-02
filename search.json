@@ -1,0 +1,1145 @@
+[
+  {
+    "objectID": "seminars/seminar-2025-10/overview.html",
+    "href": "seminars/seminar-2025-10/overview.html",
+    "title": "Geocoding GMD",
+    "section": "",
+    "text": "What happens when household surveys meet geospatial data? The Global Monitoring Database (GMD)—the World Bank’s harmonized repository of household surveys—now includes geocoded variables that capture the spatial context of interviewed households.\nUsing a global grid system (H3 hexagons), survey locations are linked to powerful spatial indicators such as population density, urbanization, nighttime lights, accessibility, and climate. Nearly 100 surveys across 44 low- and middle-income countries—representing about 3 million households—have already been mapped to more than 130,000 unique locations.\nThis integration opens new doors for analysis, allowing researchers and practitioners to combine household data with geospatial insights to better understand living conditions and inform policy.",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Geocoding GMD"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2025-10/overview.html#overview",
+    "href": "seminars/seminar-2025-10/overview.html#overview",
+    "title": "Geocoding GMD",
+    "section": "",
+    "text": "What happens when household surveys meet geospatial data? The Global Monitoring Database (GMD)—the World Bank’s harmonized repository of household surveys—now includes geocoded variables that capture the spatial context of interviewed households.\nUsing a global grid system (H3 hexagons), survey locations are linked to powerful spatial indicators such as population density, urbanization, nighttime lights, accessibility, and climate. Nearly 100 surveys across 44 low- and middle-income countries—representing about 3 million households—have already been mapped to more than 130,000 unique locations.\nThis integration opens new doors for analysis, allowing researchers and practitioners to combine household data with geospatial insights to better understand living conditions and inform policy.",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Geocoding GMD"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2025-10/overview.html#presenters",
+    "href": "seminars/seminar-2025-10/overview.html#presenters",
+    "title": "Geocoding GMD",
+    "section": "Presenters",
+    "text": "Presenters\nBen James Brunckhorst (bbrunckhorst@worldbank.org) and Minh Cong Nguyen (mnguyen3@worldbank.org)",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Geocoding GMD"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2025-10/overview.html#what-you-will-learn",
+    "href": "seminars/seminar-2025-10/overview.html#what-you-will-learn",
+    "title": "Geocoding GMD",
+    "section": "What You Will Learn",
+    "text": "What You Will Learn\nIn this webinar, you will:\n\nLearn the methodology behind geocoding household locations\nDiscover how to access the data and supporting documentation\nSee real-world use cases and practical tips for analysis",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Geocoding GMD"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2025-10/overview.html#materials",
+    "href": "seminars/seminar-2025-10/overview.html#materials",
+    "title": "Geocoding GMD",
+    "section": "Materials",
+    "text": "Materials\n\nPresentation Slides\n\n\nDownload: Geocoding GMD Slides (PDF)\nInteractive slides (requires World Bank VPN): Open interactive slides",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Geocoding GMD"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2025-10/overview.html#recording",
+    "href": "seminars/seminar-2025-10/overview.html#recording",
+    "title": "Geocoding GMD",
+    "section": "Recording",
+    "text": "Recording\nRecording to be added",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Geocoding GMD"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/overview.html",
+    "href": "seminars/seminar-2026-02/overview.html",
+    "title": "AI-Assisted Coding in Stata and R",
+    "section": "",
+    "text": "This seminar provides an overview of how we can harness the power of AI in our daily analytical work. Essential tools that can significantly improve your analysis and coding workflow will be demonstrated.\nAny task involving coding in Stata or R/Python programming languages can be more efficiently performed with the help of AI (such as Anthropic Claude, ChatGPT, or GitHub Copilot). However, using AI solely through a web browser or Windows Copilot captures only a fraction of its potential.\nTo enhance the efficiency and scope of your work, we can integrate WB-approved software (VS Code) that can incorporate AI-Agents and run Stata or R code directly. This will enable you to leverage AI in your daily analysis, make AI aware of your context, and prompt it to write code specifically to your data and objectives.\nThe goal of this seminar is to introduce these tools, demonstrate their potential and limitations, and provide a starting point for you to explore AI assistance independently.",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/overview.html#overview",
+    "href": "seminars/seminar-2026-02/overview.html#overview",
+    "title": "AI-Assisted Coding in Stata and R",
+    "section": "",
+    "text": "This seminar provides an overview of how we can harness the power of AI in our daily analytical work. Essential tools that can significantly improve your analysis and coding workflow will be demonstrated.\nAny task involving coding in Stata or R/Python programming languages can be more efficiently performed with the help of AI (such as Anthropic Claude, ChatGPT, or GitHub Copilot). However, using AI solely through a web browser or Windows Copilot captures only a fraction of its potential.\nTo enhance the efficiency and scope of your work, we can integrate WB-approved software (VS Code) that can incorporate AI-Agents and run Stata or R code directly. This will enable you to leverage AI in your daily analysis, make AI aware of your context, and prompt it to write code specifically to your data and objectives.\nThe goal of this seminar is to introduce these tools, demonstrate their potential and limitations, and provide a starting point for you to explore AI assistance independently.",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/overview.html#speaker",
+    "href": "seminars/seminar-2026-02/overview.html#speaker",
+    "title": "AI-Assisted Coding in Stata and R",
+    "section": "Speaker",
+    "text": "Speaker\nEduard Bukin (ebukin@worldbank.org)\nOpening Remarks: Gabriela Inchauste\nSeries Lead: Maria Eugenia Genoni (mgenoni@worldbank.org)\nModerator: Henry Stemmler (hstemmler@worldbank.org)",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/overview.html#what-you-will-learn",
+    "href": "seminars/seminar-2026-02/overview.html#what-you-will-learn",
+    "title": "AI-Assisted Coding in Stata and R",
+    "section": "What You Will Learn",
+    "text": "What You Will Learn\nDuring this first session, we will:\n\nDemonstrate how to use AI assistance in daily coding\nBriefly introduce key AI-relevant concepts:\n\nAI-Chat versus AI-Agent\nContext awareness and model communication protocol (MCP)\nIntegrated Development Environments (IDEs): VS Code\n\nExplain the software setup needed to leverage AI agents in analysis:\n\nPositron/VS Code\nGitHub and https://github.com/worldbank\nGitHub Copilot and access to Claude LLM for coding models\n\nShow step-by-step practical cases of AI application to produce high-quality analysis based on a general task of “reproducibility package preparation”:\n\nHow and where to start\nEffective prompt generation\nPerforming analysis\nQuality control, validation and preventing hallucinations\n\nDiscuss further potential uses of AI-Agents in our everyday work",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/overview.html#materials",
+    "href": "seminars/seminar-2026-02/overview.html#materials",
+    "title": "AI-Assisted Coding in Stata and R",
+    "section": "Materials",
+    "text": "Materials\n\nPresentation Slides\n\n\nView Slides | Download PDF",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/overview.html#recording",
+    "href": "seminars/seminar-2026-02/overview.html#recording",
+    "title": "AI-Assisted Coding in Stata and R",
+    "section": "Recording",
+    "text": "Recording\nRecording will be added after the seminar",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/overview.html#resources",
+    "href": "seminars/seminar-2026-02/overview.html#resources",
+    "title": "AI-Assisted Coding in Stata and R",
+    "section": "Additional Resources",
+    "text": "Additional Resources\n\nWorkflow Setup Instructions\nView full setup instructions\nTo follow along with the seminar, complete these setup steps:\n\nInstall prerequisite software from the World Bank Software Center: Stata 19+, R, Python, Git, Quarto\nInstall the uv Python package for environment management\nInstall Positron IDE (requires Software Installation Request)\nInstall extensions in Positron: Stata MCP, Quarto\nConnect GitHub to Positron, if you do not have a GitHub account\n\nset up a GitHub account,\nlinked it to github.com/worldbank,\nrequest Copilot access\n\nEnable Positron Assistant in Positron settings\n\n\n\nRelated Links\n\nGitHub World Bank Organization\nPositron IDE\nGitHub Copilot Documentation",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides-copy.html#welcome",
+    "href": "seminars/seminar-2026-02/slides-copy.html#welcome",
+    "title": "AI Agent-Assisted Workflow",
+    "section": "Welcome",
+    "text": "Welcome\nRevolutionize Your Analysis in Stata and R\nAI Agent-Assisted Workflow with GitHub Copilot and Claude\n\nWelcome to the first seminar in our series on AI-assisted analysis."
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides-copy.html#todays-agenda",
+    "href": "seminars/seminar-2026-02/slides-copy.html#todays-agenda",
+    "title": "AI Agent-Assisted Workflow",
+    "section": "Today’s Agenda",
+    "text": "Today’s Agenda\n\nIntroduction to AI in Daily Analytical Work\nKey Concepts: AI-Chat vs AI-Agent\nSoftware Setup Overview\nLive Demonstration: Reproducibility Package\nQ&A and Discussion"
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides-copy.html#the-challenge",
+    "href": "seminars/seminar-2026-02/slides-copy.html#the-challenge",
+    "title": "AI Agent-Assisted Workflow",
+    "section": "The Challenge",
+    "text": "The Challenge\n\nAnalysis workflows are becoming more complex\nCode quality and reproducibility are critical\nTime constraints limit thorough documentation\nKnowledge sharing across teams is difficult"
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides-copy.html#the-ai-revolution",
+    "href": "seminars/seminar-2026-02/slides-copy.html#the-ai-revolution",
+    "title": "AI Agent-Assisted Workflow",
+    "section": "The AI Revolution",
+    "text": "The AI Revolution\nTraditional tools capture only a fraction of AI potential:\n\n\nLimited Approach\n\nWeb browser ChatGPT\nWindows Copilot\nIsolated AI interactions\n\n\nIntegrated Approach\n\nContext-aware AI agents\nIntegrated development environment\nProject-specific assistance"
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides-copy.html#key-concepts-ai-chat-vs-ai-agent",
+    "href": "seminars/seminar-2026-02/slides-copy.html#key-concepts-ai-chat-vs-ai-agent",
+    "title": "AI Agent-Assisted Workflow",
+    "section": "Key Concepts: AI-Chat vs AI-Agent",
+    "text": "Key Concepts: AI-Chat vs AI-Agent\nAI-Chat\n\nConversational interface\nGeneral purpose assistance\nLimited context awareness\n\nAI-Agent\n\nAutonomous task execution\nFull project context\nIntegrated with development tools"
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides-copy.html#context-awareness-mcp",
+    "href": "seminars/seminar-2026-02/slides-copy.html#context-awareness-mcp",
+    "title": "AI Agent-Assisted Workflow",
+    "section": "Context Awareness & MCP",
+    "text": "Context Awareness & MCP\nModel Communication Protocol (MCP)\n\nEnables AI to understand your project structure\nAccesses your data and code context\nProvides targeted, relevant assistance"
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides-copy.html#the-ai-assisted-toolkit",
+    "href": "seminars/seminar-2026-02/slides-copy.html#the-ai-assisted-toolkit",
+    "title": "AI Agent-Assisted Workflow",
+    "section": "The AI-Assisted Toolkit",
+    "text": "The AI-Assisted Toolkit\n\nPositron/VS Code - Your development environment\nGitHub & GitHub Copilot - Code suggestions and completions\nClaude LLM - Advanced reasoning and analysis\nStata/R Integration - Direct language support"
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides-copy.html#setup",
+    "href": "seminars/seminar-2026-02/slides-copy.html#setup",
+    "title": "AI Agent-Assisted Workflow",
+    "section": "Software Setup",
+    "text": "Software Setup\nCore Components\n\nIDE: Positron or VS Code\nVersion Control: GitHub account (@worldbank)\nAI Tools: GitHub Copilot + Claude access\nLanguages: Stata, R, or Python\n\n→ Detailed setup instructions"
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides-copy.html#use-case-reproducibility-package",
+    "href": "seminars/seminar-2026-02/slides-copy.html#use-case-reproducibility-package",
+    "title": "AI Agent-Assisted Workflow",
+    "section": "Use Case: Reproducibility Package",
+    "text": "Use Case: Reproducibility Package\nThe Task\nCreate a complete, documented analysis package:\n\nClean, well-structured code\nComprehensive documentation\nQuality checks and validation\nReady for publication"
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides-copy.html#step-1-project-initialization",
+    "href": "seminars/seminar-2026-02/slides-copy.html#step-1-project-initialization",
+    "title": "AI Agent-Assisted Workflow",
+    "section": "Step 1: Project Initialization",
+    "text": "Step 1: Project Initialization\nAI-Assisted Setup\n# AI helps you structure the project\nproject/\n├── data/\n├── scripts/\n├── output/\n└── README.md\n\nDemonstrate how AI suggests optimal project structure"
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides-copy.html#step-2-effective-prompting",
+    "href": "seminars/seminar-2026-02/slides-copy.html#step-2-effective-prompting",
+    "title": "AI Agent-Assisted Workflow",
+    "section": "Step 2: Effective Prompting",
+    "text": "Step 2: Effective Prompting\nBad Prompt ❌\n\n“Write code to analyze data”\n\nGood Prompt ✅\n\n“Create an R script that loads household survey data from ‘data/survey.csv’, calculates poverty rates by region, and produces a summary table with confidence intervals”"
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides-copy.html#step-3-code-generation",
+    "href": "seminars/seminar-2026-02/slides-copy.html#step-3-code-generation",
+    "title": "AI Agent-Assisted Workflow",
+    "section": "Step 3: Code Generation",
+    "text": "Step 3: Code Generation\nWith AI Assistance\n\nAutocomplete: Real-time code suggestions\nDocumentation: Automatic comment generation\nBest Practices: Style and structure recommendations"
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides-copy.html#step-4-quality-control",
+    "href": "seminars/seminar-2026-02/slides-copy.html#step-4-quality-control",
+    "title": "AI Agent-Assisted Workflow",
+    "section": "Step 4: Quality Control",
+    "text": "Step 4: Quality Control\nPreventing Hallucinations\n\nAlways review AI-generated code\nTest with your actual data\nVerify statistical methods\nCross-check results\nUse version control"
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides-copy.html#live-demonstration",
+    "href": "seminars/seminar-2026-02/slides-copy.html#live-demonstration",
+    "title": "AI Agent-Assisted Workflow",
+    "section": "Live Demonstration",
+    "text": "Live Demonstration\nBuilding a Reproducibility Package\n[Live coding demonstration]"
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides-copy.html#real-world-benefits",
+    "href": "seminars/seminar-2026-02/slides-copy.html#real-world-benefits",
+    "title": "AI Agent-Assisted Workflow",
+    "section": "Real-World Benefits",
+    "text": "Real-World Benefits\n\n\nTime Savings\n\n30-50% faster coding\nAutomated documentation\nQuick debugging\n\n\nQuality Improvements\n\nConsistent coding style\nComprehensive error handling\nBetter documentation"
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides-copy.html#limitations-considerations",
+    "href": "seminars/seminar-2026-02/slides-copy.html#limitations-considerations",
+    "title": "AI Agent-Assisted Workflow",
+    "section": "Limitations & Considerations",
+    "text": "Limitations & Considerations\n\nAI can make mistakes (hallucinations)\nRequires domain knowledge to verify\nData privacy considerations\nNot a replacement for expertise"
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides-copy.html#best-practices",
+    "href": "seminars/seminar-2026-02/slides-copy.html#best-practices",
+    "title": "AI Agent-Assisted Workflow",
+    "section": "Best Practices",
+    "text": "Best Practices\n\nStart Small - Begin with simple tasks\nIterate - Refine prompts and outputs\nValidate - Always check results\nLearn - Understand the code generated\nShare - Contribute to team knowledge"
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides-copy.html#beyond-reproducibility-packages",
+    "href": "seminars/seminar-2026-02/slides-copy.html#beyond-reproducibility-packages",
+    "title": "AI Agent-Assisted Workflow",
+    "section": "Beyond Reproducibility Packages",
+    "text": "Beyond Reproducibility Packages\nOther Applications\n\nData cleaning pipelines\nStatistical analysis workflows\nVisualization generation\nReport automation\nCode refactoring and optimization"
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides-copy.html#getting-started",
+    "href": "seminars/seminar-2026-02/slides-copy.html#getting-started",
+    "title": "AI Agent-Assisted Workflow",
+    "section": "Getting Started",
+    "text": "Getting Started\n\nSet up your environment → Instructions\nStart with small experiments\nJoin our Community of Practice\nShare your experiences"
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides-copy.html#resources",
+    "href": "seminars/seminar-2026-02/slides-copy.html#resources",
+    "title": "AI Agent-Assisted Workflow",
+    "section": "Resources",
+    "text": "Resources\n\nSetup Guide: Workflow Setup Instructions\nGitHub: github.com/worldbank\nDocumentation: Project repository"
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides-copy.html#qa",
+    "href": "seminars/seminar-2026-02/slides-copy.html#qa",
+    "title": "AI Agent-Assisted Workflow",
+    "section": "Q&A",
+    "text": "Q&A\nQuestions?\nContact:\n\nEduard Bukin: ebukin@worldbank.org\nHenry Stemmler: hstemmler@worldbank.org"
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides-copy.html#thank-you",
+    "href": "seminars/seminar-2026-02/slides-copy.html#thank-you",
+    "title": "AI Agent-Assisted Workflow",
+    "section": "Thank You!",
+    "text": "Thank You!\nStay Connected\nNext in the GeoPov Series: - The geography of jobs in India - Survey representativeness methods - Mobile phone data for poverty analysis\n→ Visit our website for updates"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to GeoPov",
+    "section": "",
+    "text": "🌍 We are a group of development economists and geospatial enthusiasts working at the intersection of poverty, place, and policy. At GeoPov, we believe that where people live matters just as much as how they live — and we’re here to make sure that spatial realities are part of the poverty dialogue.",
+    "crumbs": [
+      "About Us"
+    ]
+  },
+  {
+    "objectID": "index.html#our-goal",
+    "href": "index.html#our-goal",
+    "title": "Welcome to GeoPov",
+    "section": "🎯 Our Goal",
+    "text": "🎯 Our Goal\nTo develop a global agenda that:\n\nEmpowers economists by integrating geospatial data and spatial analysis into country-level diagnostics and policy engagement.\nContributes to global knowledge that helps design local solutions grounded in data and spatial context.",
+    "crumbs": [
+      "About Us"
+    ]
+  },
+  {
+    "objectID": "index.html#what-we-do",
+    "href": "index.html#what-we-do",
+    "title": "Welcome to GeoPov",
+    "section": "🧭 What We Do",
+    "text": "🧭 What We Do\nOur work is organized around three main pillars:\n\nPillar 1: Spatial Analysis\nWe apply a geographic lens to pressing policy questions on poverty and inequality. Whether it’s identifying where jobs are (and aren’t) for the poor, mapping urban deprivation, or analyzing rural income dynamics, we use spatially disaggregated data to generate actionable insights. This includes household surveys, censuses, administrative records, private sector data, and satellite-based remote sensing — covering everything from climate and land use to infrastructure and conflict. We also develop and share open, reproducible code and tools that can be adapted across countries and topics.\nLearn more about our Spatial Analysis work →\n\n\nPillar 2: Knowledge and Data Center\nWe bring clarity to the what, why, and how of using geospatial data in poverty analysis. This pillar focuses on:\n\nBuilding a curated repository of geospatial data sources and methods, with clear guidance on how they can (and can’t) be used in applied work.\nShowcasing examples of microeconomic analyses that successfully integrate geospatial data to answer real-world policy questions.\n\nExplore our Knowledge and Data Center →\n\n\nPillar 3: Capacity Building\nWe help demystify geospatial data for microeconomists. Through hands-on trainings and peer-learning events, we build core skills for microeconomists to use geospatial methods with confidence. Whether you’re just getting started or looking to refine your toolkit, we’re here to support you through our growing Community of Practice.\nExplore our seminars and training events →",
+    "crumbs": [
+      "About Us"
+    ]
+  },
+  {
+    "objectID": "index.html#meet-the-team",
+    "href": "index.html#meet-the-team",
+    "title": "Welcome to GeoPov",
+    "section": "👥 Meet the Team",
+    "text": "👥 Meet the Team\nWe’re a global multi-disciplinary team in the Distributional Impact of Policy under the Prosperity Vice Presidency. We combine expertise in microeconomic analysis, spatial economics, and data engineering.\nWho we are:\n\nCurious minds who ask “where”, “who”, “what” and “why” together\nPassionate about open data, open code, and inclusive analytics\nBelievers in the power of maps and evidence to drive better policy\n\nMeet our team members →",
+    "crumbs": [
+      "About Us"
+    ]
+  },
+  {
+    "objectID": "team/henry-stemmler.html",
+    "href": "team/henry-stemmler.html",
+    "title": "Henry Stemmler",
+    "section": "",
+    "text": "Add Henry’s detailed biography here",
+    "crumbs": [
+      "Team",
+      "Henry Stemmler"
+    ]
+  },
+  {
+    "objectID": "team/henry-stemmler.html#bio",
+    "href": "team/henry-stemmler.html#bio",
+    "title": "Henry Stemmler",
+    "section": "",
+    "text": "Add Henry’s detailed biography here",
+    "crumbs": [
+      "Team",
+      "Henry Stemmler"
+    ]
+  },
+  {
+    "objectID": "team/henry-stemmler.html#expertise",
+    "href": "team/henry-stemmler.html#expertise",
+    "title": "Henry Stemmler",
+    "section": "Expertise",
+    "text": "Expertise\n\nArea of expertise 1\nArea of expertise 2\nArea of expertise 3",
+    "crumbs": [
+      "Team",
+      "Henry Stemmler"
+    ]
+  },
+  {
+    "objectID": "team/henry-stemmler.html#selected-publications",
+    "href": "team/henry-stemmler.html#selected-publications",
+    "title": "Henry Stemmler",
+    "section": "Selected Publications",
+    "text": "Selected Publications\nAdd publications here",
+    "crumbs": [
+      "Team",
+      "Henry Stemmler"
+    ]
+  },
+  {
+    "objectID": "team/ben-brunckhorst.html",
+    "href": "team/ben-brunckhorst.html",
+    "title": "Ben James Brunckhorst",
+    "section": "",
+    "text": "Add Ben’s detailed biography here",
+    "crumbs": [
+      "Team",
+      "Ben James Brunckhorst"
+    ]
+  },
+  {
+    "objectID": "team/ben-brunckhorst.html#bio",
+    "href": "team/ben-brunckhorst.html#bio",
+    "title": "Ben James Brunckhorst",
+    "section": "",
+    "text": "Add Ben’s detailed biography here",
+    "crumbs": [
+      "Team",
+      "Ben James Brunckhorst"
+    ]
+  },
+  {
+    "objectID": "team/ben-brunckhorst.html#expertise",
+    "href": "team/ben-brunckhorst.html#expertise",
+    "title": "Ben James Brunckhorst",
+    "section": "Expertise",
+    "text": "Expertise\n\nArea of expertise 1\nArea of expertise 2\nArea of expertise 3",
+    "crumbs": [
+      "Team",
+      "Ben James Brunckhorst"
+    ]
+  },
+  {
+    "objectID": "team/ben-brunckhorst.html#selected-publications",
+    "href": "team/ben-brunckhorst.html#selected-publications",
+    "title": "Ben James Brunckhorst",
+    "section": "Selected Publications",
+    "text": "Selected Publications\nAdd publications here",
+    "crumbs": [
+      "Team",
+      "Ben James Brunckhorst"
+    ]
+  },
+  {
+    "objectID": "team/nga-nguyen.html",
+    "href": "team/nga-nguyen.html",
+    "title": "Nga Thi Viet Nguyen",
+    "section": "",
+    "text": "A Senior Economist who is passionate about how policies shape people’s lives — and how where they live changes the story. She’s worked across Sub-Saharan Africa, Central Asia, and the EU, combining solid economic analysis with a growing love for using spatial data to uncover new insights into welfare outcomes.\nHer research has appeared in journals like the Journal of Economic Inequality, World Bank Economic Review, and Journal of Development Studies. These days, she’s especially excited about turning geospatial insights into smarter, more grounded policies that deliver real impact.",
+    "crumbs": [
+      "Team",
+      "Nga Thi Viet Nguyen"
+    ]
+  },
+  {
+    "objectID": "team/nga-nguyen.html#bio",
+    "href": "team/nga-nguyen.html#bio",
+    "title": "Nga Thi Viet Nguyen",
+    "section": "",
+    "text": "A Senior Economist who is passionate about how policies shape people’s lives — and how where they live changes the story. She’s worked across Sub-Saharan Africa, Central Asia, and the EU, combining solid economic analysis with a growing love for using spatial data to uncover new insights into welfare outcomes.\nHer research has appeared in journals like the Journal of Economic Inequality, World Bank Economic Review, and Journal of Development Studies. These days, she’s especially excited about turning geospatial insights into smarter, more grounded policies that deliver real impact.",
+    "crumbs": [
+      "Team",
+      "Nga Thi Viet Nguyen"
+    ]
+  },
+  {
+    "objectID": "team/nga-nguyen.html#expertise",
+    "href": "team/nga-nguyen.html#expertise",
+    "title": "Nga Thi Viet Nguyen",
+    "section": "Expertise",
+    "text": "Expertise\n\nPoverty and inequality analysis\nSpatial economics\nPolicy impact evaluation\nMicroeconomic analysis",
+    "crumbs": [
+      "Team",
+      "Nga Thi Viet Nguyen"
+    ]
+  },
+  {
+    "objectID": "projects/capacity-building.html",
+    "href": "projects/capacity-building.html",
+    "title": "Capacity Building",
+    "section": "",
+    "text": "We help demystify geospatial data for microeconomists. Through hands-on trainings and peer-learning events, we build core skills for microeconomists to use geospatial methods with confidence.",
+    "crumbs": [
+      "Projects",
+      "Capacity Building"
+    ]
+  },
+  {
+    "objectID": "projects/capacity-building.html#overview",
+    "href": "projects/capacity-building.html#overview",
+    "title": "Capacity Building",
+    "section": "",
+    "text": "We help demystify geospatial data for microeconomists. Through hands-on trainings and peer-learning events, we build core skills for microeconomists to use geospatial methods with confidence.",
+    "crumbs": [
+      "Projects",
+      "Capacity Building"
+    ]
+  },
+  {
+    "objectID": "projects/capacity-building.html#our-approach",
+    "href": "projects/capacity-building.html#our-approach",
+    "title": "Capacity Building",
+    "section": "Our Approach",
+    "text": "Our Approach\nWhether you’re just getting started or looking to refine your toolkit, we’re here to support you through our growing Community of Practice.",
+    "crumbs": [
+      "Projects",
+      "Capacity Building"
+    ]
+  },
+  {
+    "objectID": "projects/capacity-building.html#training-programs",
+    "href": "projects/capacity-building.html#training-programs",
+    "title": "Capacity Building",
+    "section": "Training Programs",
+    "text": "Training Programs\n\nIntroductory Workshops\nFor those new to geospatial analysis\n\n\nAdvanced Methods\nDeep dives into specific techniques\n\n\nApplied Case Studies\nLearning from real-world applications",
+    "crumbs": [
+      "Projects",
+      "Capacity Building"
+    ]
+  },
+  {
+    "objectID": "projects/capacity-building.html#community-of-practice",
+    "href": "projects/capacity-building.html#community-of-practice",
+    "title": "Capacity Building",
+    "section": "Community of Practice",
+    "text": "Community of Practice\nJoin our community to:\n\nShare experiences and challenges\nLearn from peers\nAccess ongoing support\nContribute to collective knowledge",
+    "crumbs": [
+      "Projects",
+      "Capacity Building"
+    ]
+  },
+  {
+    "objectID": "projects/capacity-building.html#upcoming-events",
+    "href": "projects/capacity-building.html#upcoming-events",
+    "title": "Capacity Building",
+    "section": "Upcoming Events",
+    "text": "Upcoming Events\nCheck the Seminars page for upcoming training events",
+    "crumbs": [
+      "Projects",
+      "Capacity Building"
+    ]
+  },
+  {
+    "objectID": "projects/capacity-building.html#resources",
+    "href": "projects/capacity-building.html#resources",
+    "title": "Capacity Building",
+    "section": "Resources",
+    "text": "Resources\n\nTraining materials\nCode examples\nSelf-paced tutorials\nCommunity forums",
+    "crumbs": [
+      "Projects",
+      "Capacity Building"
+    ]
+  },
+  {
+    "objectID": "projects/knowledge-data-center.html",
+    "href": "projects/knowledge-data-center.html",
+    "title": "Knowledge and Data Center",
+    "section": "",
+    "text": "We bring clarity to the what, why, and how of using geospatial data in poverty analysis.",
+    "crumbs": [
+      "Projects",
+      "Knowledge and Data Center"
+    ]
+  },
+  {
+    "objectID": "projects/knowledge-data-center.html#overview",
+    "href": "projects/knowledge-data-center.html#overview",
+    "title": "Knowledge and Data Center",
+    "section": "",
+    "text": "We bring clarity to the what, why, and how of using geospatial data in poverty analysis.",
+    "crumbs": [
+      "Projects",
+      "Knowledge and Data Center"
+    ]
+  },
+  {
+    "objectID": "projects/knowledge-data-center.html#what-we-provide",
+    "href": "projects/knowledge-data-center.html#what-we-provide",
+    "title": "Knowledge and Data Center",
+    "section": "What We Provide",
+    "text": "What We Provide\n\nData Repository\nBuilding a curated repository of geospatial data sources and methods, with clear guidance on how they can (and can’t) be used in applied work.\n\n\nPractical Examples\nShowcasing examples of microeconomic analyses that successfully integrate geospatial data to answer real-world policy questions.",
+    "crumbs": [
+      "Projects",
+      "Knowledge and Data Center"
+    ]
+  },
+  {
+    "objectID": "projects/knowledge-data-center.html#resources",
+    "href": "projects/knowledge-data-center.html#resources",
+    "title": "Knowledge and Data Center",
+    "section": "Resources",
+    "text": "Resources\n\nData Sources\nCurated list of geospatial data sources\n\n\nMethods and Guidelines\nBest practices and methodological guidance\n\n\nCase Studies\nExamples of successful applications",
+    "crumbs": [
+      "Projects",
+      "Knowledge and Data Center"
+    ]
+  },
+  {
+    "objectID": "projects/knowledge-data-center.html#how-to-use-this-resource",
+    "href": "projects/knowledge-data-center.html#how-to-use-this-resource",
+    "title": "Knowledge and Data Center",
+    "section": "How to Use This Resource",
+    "text": "How to Use This Resource\nGuidance for economists new to geospatial data",
+    "crumbs": [
+      "Projects",
+      "Knowledge and Data Center"
+    ]
+  },
+  {
+    "objectID": "projects/spatial-analysis.html",
+    "href": "projects/spatial-analysis.html",
+    "title": "Spatial Analysis",
+    "section": "",
+    "text": "We apply a geographic lens to pressing policy questions on poverty and inequality. Whether it’s identifying where jobs are (and aren’t) for the poor, mapping urban deprivation, or analyzing rural income dynamics, we use spatially disaggregated data to generate actionable insights.",
+    "crumbs": [
+      "Projects",
+      "Spatial Analysis"
+    ]
+  },
+  {
+    "objectID": "projects/spatial-analysis.html#overview",
+    "href": "projects/spatial-analysis.html#overview",
+    "title": "Spatial Analysis",
+    "section": "",
+    "text": "We apply a geographic lens to pressing policy questions on poverty and inequality. Whether it’s identifying where jobs are (and aren’t) for the poor, mapping urban deprivation, or analyzing rural income dynamics, we use spatially disaggregated data to generate actionable insights.",
+    "crumbs": [
+      "Projects",
+      "Spatial Analysis"
+    ]
+  },
+  {
+    "objectID": "projects/spatial-analysis.html#our-approach",
+    "href": "projects/spatial-analysis.html#our-approach",
+    "title": "Spatial Analysis",
+    "section": "Our Approach",
+    "text": "Our Approach\nWe work with diverse data sources including:\n\nHousehold surveys\nCensuses\nAdministrative records\nPrivate sector data\nSatellite-based remote sensing\n\nOur analysis covers everything from climate and land use to infrastructure and conflict.",
+    "crumbs": [
+      "Projects",
+      "Spatial Analysis"
+    ]
+  },
+  {
+    "objectID": "projects/spatial-analysis.html#tools-and-methods",
+    "href": "projects/spatial-analysis.html#tools-and-methods",
+    "title": "Spatial Analysis",
+    "section": "Tools and Methods",
+    "text": "Tools and Methods\nWe develop and share open, reproducible code and tools that can be adapted across countries and topics.",
+    "crumbs": [
+      "Projects",
+      "Spatial Analysis"
+    ]
+  },
+  {
+    "objectID": "projects/spatial-analysis.html#current-projects",
+    "href": "projects/spatial-analysis.html#current-projects",
+    "title": "Spatial Analysis",
+    "section": "Current Projects",
+    "text": "Current Projects\nProject examples will be added here",
+    "crumbs": [
+      "Projects",
+      "Spatial Analysis"
+    ]
+  },
+  {
+    "objectID": "projects/spatial-analysis.html#publications-and-outputs",
+    "href": "projects/spatial-analysis.html#publications-and-outputs",
+    "title": "Spatial Analysis",
+    "section": "Publications and Outputs",
+    "text": "Publications and Outputs\nKey outputs will be added here",
+    "crumbs": [
+      "Projects",
+      "Spatial Analysis"
+    ]
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Our work is organized around three main pillars that guide our approach to integrating geospatial data with poverty analysis.",
+    "crumbs": [
+      "Projects"
+    ]
+  },
+  {
+    "objectID": "projects/index.html#our-three-pillars",
+    "href": "projects/index.html#our-three-pillars",
+    "title": "Projects",
+    "section": "Our Three Pillars",
+    "text": "Our Three Pillars\n\nSpatial Analysis\nApplying a geographic lens to pressing policy questions on poverty and inequality.\n\n\nKnowledge and Data Center\nBuilding a curated repository of geospatial data sources and methods for poverty analysis.\n\n\nCapacity Building\nDemystifying geospatial data for microeconomists through hands-on training and peer-learning.",
+    "crumbs": [
+      "Projects"
+    ]
+  },
+  {
+    "objectID": "WB-IGO-RIDER.html",
+    "href": "WB-IGO-RIDER.html",
+    "title": "GeoPov",
+    "section": "",
+    "text": "WORLD BANK IGO RIDER - PROCEDURAL TERMS\nWhere the Licensor is an intergovernmental organization (IGO), the following additional terms shall apply: 1. Privileges and Immunities Nothing in this License shall constitute or be interpreted as a waiver, express or implied, of any privileges and immunities that apply to the Licensor pursuant to international law, treaties, or the Licensor’s constituent documents, including immunity from jurisdiction and execution. 2. Dispute Resolution Any dispute arising under this License that involves the Licensor shall be resolved, to the extent not settled amicably, through the following procedures: - First, by non-binding mediation conducted in accordance with rules designated by the Licensor, or, if none, the UNCITRAL Mediation Rules; - Failing settlement within 45 days, by final and binding arbitration in accordance with the UNCITRAL Arbitration Rules then in force, by a sole arbitrator, conducted in English, seated at the Licensor’s headquarters, and conducted remotely when practicable. 3. Interpretation under International Law This License shall be interpreted in accordance with general principles of international law, including those reflected in the Berne Convention (1971), the WIPO Copyright Treaty (1996), and the Universal Copyright Convention (1971). No provision shall be interpreted in a manner that derogates from the legal status of the Licensor under international law. 4. No Waiver No provision of this License shall be deemed waived and no breach consented to unless expressly agreed in writing and signed by the Licensor. 5. No Ongoing Support or Maintenance Nothing in this License shall be construed to create an obligation on the part of the Licensor to provide updates, maintenance, support or any form of continued service for the software once released. 6. Entire Agreement This License constitutes the entire agreement between the Licensee and the Licensor concerning the Work and supersedes any additional terms submitted by You. No modification shall be effective unless agreed in writing by both parties. 7. Severability If any provision of this License is held to be unenforceable, it shall be interpreted to give effect to its purpose to the extent permitted by applicable law, and the remainder of the License shall remain in full force and effect. 8. Precedence In the event of any inconsistency between these Additional Terms for IGOs and the terms of the MIT License, these Additional Terms for IGOs shall prevail."
+  },
+  {
+    "objectID": "team/index.html",
+    "href": "team/index.html",
+    "title": "Meet the Team",
+    "section": "",
+    "text": "We’re a global multi-disciplinary team in the Distributional Impact of Policy under the Prosperity Vice Presidency. We combine expertise in microeconomic analysis, spatial economics, and data engineering.",
+    "crumbs": [
+      "Team"
+    ]
+  },
+  {
+    "objectID": "team/index.html#who-we-are",
+    "href": "team/index.html#who-we-are",
+    "title": "Meet the Team",
+    "section": "Who We Are",
+    "text": "Who We Are\n\nCurious minds who ask “where”, “who”, “what” and “why” together\nPassionate about open data, open code, and inclusive analytics\nBelievers in the power of maps and evidence to drive better policy",
+    "crumbs": [
+      "Team"
+    ]
+  },
+  {
+    "objectID": "team/index.html#our-team",
+    "href": "team/index.html#our-team",
+    "title": "Meet the Team",
+    "section": "Our Team",
+    "text": "Our Team",
+    "crumbs": [
+      "Team"
+    ]
+  },
+  {
+    "objectID": "team/index.html#join-us",
+    "href": "team/index.html#join-us",
+    "title": "Meet the Team",
+    "section": "Join Us",
+    "text": "Join Us\nInterested in collaborating or learning more? Contact any team member directly.",
+    "crumbs": [
+      "Team"
+    ]
+  },
+  {
+    "objectID": "team/eduard-bukin.html",
+    "href": "team/eduard-bukin.html",
+    "title": "Eduard Bukin",
+    "section": "",
+    "text": "Eduard Bukin is an experienced economist, data scientist, and statistician spending the last decade at the World Bank, UN, and academia. His career has focused on econometrics, economic research, microeconomics, and statistics, with a strong emphasis on empowering non-specialists to extract insights from complex datasets and effectively communicate analyses through interactive web tools, and artificial intelligence.\nKey technical expertise lies in use of the modern data science technologies and programming languages such as R, Python, STATA, and GIS tools. He holds a Master’s degree in Rural Development from Ghent University and pursues a Ph.D. in Agricultural Economics from Justus Liebig University Giessen.\nHis research focuses on land and agricultural economics in transitional countries, such as Ukraine and Kazakhstan as well as on economic modelling of trade and climate policies impacts on welfare in developing countries. His work has contributed to several peer-reviewed publications published in the Land Use Policy Journal, Environmental Research Letters, Environmental and Resource Economics and other academic outlets as well as World Bank reports, Food and Agriculture Organization (FAO) publications, and internal documents.",
+    "crumbs": [
+      "Team",
+      "Eduard Bukin"
+    ]
+  },
+  {
+    "objectID": "team/eduard-bukin.html#bio",
+    "href": "team/eduard-bukin.html#bio",
+    "title": "Eduard Bukin",
+    "section": "",
+    "text": "Eduard Bukin is an experienced economist, data scientist, and statistician spending the last decade at the World Bank, UN, and academia. His career has focused on econometrics, economic research, microeconomics, and statistics, with a strong emphasis on empowering non-specialists to extract insights from complex datasets and effectively communicate analyses through interactive web tools, and artificial intelligence.\nKey technical expertise lies in use of the modern data science technologies and programming languages such as R, Python, STATA, and GIS tools. He holds a Master’s degree in Rural Development from Ghent University and pursues a Ph.D. in Agricultural Economics from Justus Liebig University Giessen.\nHis research focuses on land and agricultural economics in transitional countries, such as Ukraine and Kazakhstan as well as on economic modelling of trade and climate policies impacts on welfare in developing countries. His work has contributed to several peer-reviewed publications published in the Land Use Policy Journal, Environmental Research Letters, Environmental and Resource Economics and other academic outlets as well as World Bank reports, Food and Agriculture Organization (FAO) publications, and internal documents.",
+    "crumbs": [
+      "Team",
+      "Eduard Bukin"
+    ]
+  },
+  {
+    "objectID": "team/maria-davalos.html",
+    "href": "team/maria-davalos.html",
+    "title": "Maria Davalos",
+    "section": "",
+    "text": "Add Maria’s detailed biography here",
+    "crumbs": [
+      "Team",
+      "Maria Davalos"
+    ]
+  },
+  {
+    "objectID": "team/maria-davalos.html#bio",
+    "href": "team/maria-davalos.html#bio",
+    "title": "Maria Davalos",
+    "section": "",
+    "text": "Add Maria’s detailed biography here",
+    "crumbs": [
+      "Team",
+      "Maria Davalos"
+    ]
+  },
+  {
+    "objectID": "team/maria-davalos.html#expertise",
+    "href": "team/maria-davalos.html#expertise",
+    "title": "Maria Davalos",
+    "section": "Expertise",
+    "text": "Expertise\n\nArea of expertise 1\nArea of expertise 2\nArea of expertise 3",
+    "crumbs": [
+      "Team",
+      "Maria Davalos"
+    ]
+  },
+  {
+    "objectID": "team/maria-davalos.html#selected-publications",
+    "href": "team/maria-davalos.html#selected-publications",
+    "title": "Maria Davalos",
+    "section": "Selected Publications",
+    "text": "Selected Publications\nAdd publications here",
+    "crumbs": [
+      "Team",
+      "Maria Davalos"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#welcome",
+    "href": "seminars/seminar-2026-02/slides.html#welcome",
+    "title": "Revolutionize Your Analysis in Stata and R",
+    "section": "Welcome",
+    "text": "Welcome\nRevolutionize Your Analysis in Stata and R\nAI Agent-Assisted Workflow with GitHub Copilot and Claude\n\nWelcome to the first seminar in our series on AI-assisted analysis.\n\nSpeaker: Eduard Bukin",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#todays-agenda",
+    "href": "seminars/seminar-2026-02/slides.html#todays-agenda",
+    "title": "Revolutionize Your Analysis in Stata and R",
+    "section": "Today’s Agenda",
+    "text": "Today’s Agenda\n\nExample 1: From a messy code to a reproducible package\nKey Concepts:\n\nAI-Chat vs AI-Agent vs Inline Code Completion\nContext awareness\nModel communication protocol (MCP)\nIntegrated Development Environments (IDEs)\nLLMs for coding: GitHub Copilot, OpenAI GTP, Anthropic Claude, and others\n\nHow to start using AI in coding?\n\nSoftware Setup Overview\nTips and Best Practices\n\nExample 2: Develop analysis with AI assistance\nQ&A and Discussion",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#motivation-1",
+    "href": "seminars/seminar-2026-02/slides.html#motivation-1",
+    "title": "Revolutionize Your Analysis in Stata and R",
+    "section": "Motivation (1)",
+    "text": "Motivation (1)\nAI tools that we got used to over past years are impressive!\n\n\nTraditional Chat-Based Tools:\n\nWeb-based Open AI ChatGPT\nMicrosoft Copilot\nIsolated AI models, Google AI in search\nWB MAI\nare extremely useful and complement eachother.\nRely on conversational interface and manual copy-paste of code snippets.\n\n\nIntegrated Approach\n\nContext-aware AI Agents\nIntegrated development environment (IDE)\nProject-specific assistance",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#example-1-from-messy-code-to-reproducible-package",
+    "href": "seminars/seminar-2026-02/slides.html#example-1-from-messy-code-to-reproducible-package",
+    "title": "Revolutionize Your Analysis in Stata and R",
+    "section": "Example 1: From Messy Code to Reproducible Package",
+    "text": "Example 1: From Messy Code to Reproducible Package\nLive demonstration of building a reproducibility package with AI assistance",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#example-1-summary",
+    "href": "seminars/seminar-2026-02/slides.html#example-1-summary",
+    "title": "Revolutionize Your Analysis in Stata and R",
+    "section": "Example 1: Summary",
+    "text": "Example 1: Summary\n\nIntegrated Development Environment (IDE) - Positron\nGitHub Copilot that uses Anthropic Claude Sonnet 4.5 LLM to provide\n\nInline code completions\nChat: help and assistance\nAgent: active changes to my code and code execution\n\nUnder 5 mins we’ve created a well-structured reproducibility package from messy code running both: Stata and R and creating fully customized graphics and reports.",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#how-does-this-different-from-traditional-ai-chat",
+    "href": "seminars/seminar-2026-02/slides.html#how-does-this-different-from-traditional-ai-chat",
+    "title": "Revolutionize Your Analysis in Stata and R",
+    "section": "How does this different from traditional AI chat?",
+    "text": "How does this different from traditional AI chat?\n\nWe did not copy-paste anything from chat windows to our code.\nThe AI agent was fully aware of our project context, files, data, and code.\nThe AI agent was able to autonomously execute code, make changes to files, and create new files.\nThe AI agent was integrated into our development environment (IDE) and worked alongside us.\nThe AI agent did not have access to our data outside of our local machine and IDE.\n\nAll code was executed locally on our machine.",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#quick-question",
+    "href": "seminars/seminar-2026-02/slides.html#quick-question",
+    "title": "Revolutionize Your Analysis in Stata and R",
+    "section": "Quick question:",
+    "text": "Quick question:\nWhat AI tools and software do you use in your daily work so far?\n\nChat-based (in browser or an app):\n\nOpenAI GPT\nMicrosoft Copilot (Windows or Office/Word/Excel)\nWB MAI (Web-based tools)\nGitHub Copilot\nAnthropic Claude\nGoogle Gemini\nGrok\nOthers: ___________\n\nAgent-integrated software:\n\nPositron + GH Copilot / Other LLMs\nVS Code + GH Copilot / Other LLMs\nRStudio + GH Copilot / Other LLMs\nJupyterLab + GH Copilot / Other LLMs\nClaude Code + Anthropic LLMs\nCursor + LLMs\nGitHub Copilot Workspace (web-based)\nOthers: ___________",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#overview",
+    "href": "seminars/seminar-2026-02/slides.html#overview",
+    "title": "Revolutionize Your Analysis in Stata and R",
+    "section": "Overview",
+    "text": "Overview\n\nAI-Chat vs AI-Agent vs Inline Code Completion\nContext awareness\nModel Context Protocol (MCP)\nIntegrated Development Environments (IDEs)\nLLMs for coding: GitHub Copilot, OpenAI GTP, Anthropic Claude, and others",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#ai-chat-vs-ai-agent-vs-inline-code-completion-1",
+    "href": "seminars/seminar-2026-02/slides.html#ai-chat-vs-ai-agent-vs-inline-code-completion-1",
+    "title": "Revolutionize Your Analysis in Stata and R",
+    "section": "AI-Chat vs AI-Agent vs Inline Code Completion (1)",
+    "text": "AI-Chat vs AI-Agent vs Inline Code Completion (1)\nAI-Chat: Ask Mode\n\nConversational interface\nGeneral purpose assistance\nLimited context awareness: knows only what you provide\nOne‑off questions\nCode snippets\nExplanations of code/output\n\n. . .\n\n\n\n\n\n\nUsage\n\n\nUse Ask mode to think.",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#ai-chat-vs-ai-agent-vs-inline-code-completion-2",
+    "href": "seminars/seminar-2026-02/slides.html#ai-chat-vs-ai-agent-vs-inline-code-completion-2",
+    "title": "Revolutionize Your Analysis in Stata and R",
+    "section": "AI-Chat vs AI-Agent vs Inline Code Completion (2)",
+    "text": "AI-Chat vs AI-Agent vs Inline Code Completion (2)\nAI-Agent: Execute Mode\n\nAutonomous task execution\nFull project context awareness\nIntegrated with development tools\nCan read/write files, run code, and make changes (after user approval)\nMulti‑step workflows\nEnd‑to‑end tasks (clean → estimate → table → robustness)\n\n. . .\n\n\n\n\n\n\nUsage\n\n\nUse Agent mode to execute explicit instructions",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#ai-chat-vs-ai-agent-vs-inline-code-completion-3",
+    "href": "seminars/seminar-2026-02/slides.html#ai-chat-vs-ai-agent-vs-inline-code-completion-3",
+    "title": "Revolutionize Your Analysis in Stata and R",
+    "section": "AI-Chat vs AI-Agent vs Inline Code Completion (3)",
+    "text": "AI-Chat vs AI-Agent vs Inline Code Completion (3)\nInline Code Completion\n\nReal-time code suggestions while you type\nCan be context-aware or not\nSpeeds up coding by autocompleting:\n\nFunction names\nParameters\nCommon patterns",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#context-awareness",
+    "href": "seminars/seminar-2026-02/slides.html#context-awareness",
+    "title": "Revolutionize Your Analysis in Stata and R",
+    "section": "Context Awareness",
+    "text": "Context Awareness\nWhat AI “knows” when helping you code:\n\nYour files: All code files, documentation, and project structure\nYour data structure: Variable names, data types, relationships (without sending raw data to cloud)\nYour history: Recent edits, commands run, and conversations\nYour environment: Installed packages, dependencies, and configurations\nYour intent: Current task based on files you have open and recent actions\nResults of code execution: Output, errors, and logs from running code\n\nWhy it matters:\n\nAI gives relevant suggestions specific to your project\nNo need to copy-paste code context manually\nAI understands dependencies between files\nReduces hallucinations by grounding responses in your actual codebase\n\nReferences:\n\nGitHub Copilot Context\nAnthropic’s Claude Sonnet\nPositron Documentation on AI Context",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#model-context-protocol-mcp",
+    "href": "seminars/seminar-2026-02/slides.html#model-context-protocol-mcp",
+    "title": "Revolutionize Your Analysis in Stata and R",
+    "section": "Model Context Protocol (MCP)",
+    "text": "Model Context Protocol (MCP)\n\n\n\n\n\n\n“…a standardized, open framework for AI models (LLMs) to securely and efficiently connect with external applications, data sources, tools, and each-other — acting like a universal adapter (e.g., USB-C for AI)”\n— Google AI Search + Wikipedia\n\n\n\n\n\nEssential connections:\n\nExecution environments: Stata, R, Python\nEditors: Positron, VS Code, RStudio, JupyterLab",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#integrated-development-environments-ides",
+    "href": "seminars/seminar-2026-02/slides.html#integrated-development-environments-ides",
+    "title": "Revolutionize Your Analysis in Stata and R",
+    "section": "Integrated Development Environments (IDEs)",
+    "text": "Integrated Development Environments (IDEs)\nYour coding workspace:\n\n\nFor Data Science:\n\nPositron (Posit)\nRStudio\nJupyterLab\nVS Code\n\n\nKey Features:\n\nCode editor\nConsole/terminal\nFile browser\nVariable viewer\nPlot viewer",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#llms-for-coding",
+    "href": "seminars/seminar-2026-02/slides.html#llms-for-coding",
+    "title": "Revolutionize Your Analysis in Stata and R",
+    "section": "LLMs for Coding",
+    "text": "LLMs for Coding\nLarge Language Models powering AI assistants:\n\nGitHub Copilot: Uses OpenAI models (GPT-4) and Anthropic Claude\nOpenAI GPT: GPT-4, GPT-4 Turbo\nAnthropic Claude: Opus, Sonnet, Haiku\nOthers: Google Gemini, Meta Llama, Mistral\n\n\n\n\n\n\n\n\nSoftware Development vs Data Analysis\n\n\nWhile these tools were built for software development, they excel at data analysis tasks: data cleaning, statistical modeling, visualization, and report generation.",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#how-to-start",
+    "href": "seminars/seminar-2026-02/slides.html#how-to-start",
+    "title": "Revolutionize Your Analysis in Stata and R",
+    "section": "How to Start?",
+    "text": "How to Start?\n\nSet up your environment → Full Instructions\nStart with small experiments\nJoin our Community of Practice\nShare your experiences",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#resources",
+    "href": "seminars/seminar-2026-02/slides.html#resources",
+    "title": "Revolutionize Your Analysis in Stata and R",
+    "section": "Resources",
+    "text": "Resources\n\nSetup Guide: Workflow Setup Instructions\nGitHub: github.com/worldbank\nDocumentation: Project repository",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#qa",
+    "href": "seminars/seminar-2026-02/slides.html#qa",
+    "title": "Revolutionize Your Analysis in Stata and R",
+    "section": "Q&A",
+    "text": "Q&A\nQuestions?\nContact:\n\nEduard Bukin: ebukin@worldbank.org\nHenry Stemmler: hstemmler@worldbank.org",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#thank-you",
+    "href": "seminars/seminar-2026-02/slides.html#thank-you",
+    "title": "Revolutionize Your Analysis in Stata and R",
+    "section": "Thank You!",
+    "text": "Thank You!\nStay Connected\nNext in the GeoPov Series: - The geography of jobs in India - Survey representativeness methods - Mobile phone data for poverty analysis\n→ Visit our website for updates",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/setup-instructions.html",
+    "href": "seminars/seminar-2026-02/setup-instructions.html",
+    "title": "Positron + Github Copilot: Setup Instructions",
+    "section": "",
+    "text": "Setup software environment for AI agent-assisted analysis in Stata and R\nEnable GitHub Copilot or Claude AI integration\nBe able to reproduce AI-assisted coding workflow demonstrated in the seminar",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Setup instructions"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/setup-instructions.html#goals",
+    "href": "seminars/seminar-2026-02/setup-instructions.html#goals",
+    "title": "Positron + Github Copilot: Setup Instructions",
+    "section": "",
+    "text": "Setup software environment for AI agent-assisted analysis in Stata and R\nEnable GitHub Copilot or Claude AI integration\nBe able to reproduce AI-assisted coding workflow demonstrated in the seminar",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Setup instructions"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/setup-instructions.html#software-setup",
+    "href": "seminars/seminar-2026-02/setup-instructions.html#software-setup",
+    "title": "Positron + Github Copilot: Setup Instructions",
+    "section": "Software setup",
+    "text": "Software setup\n\nStep 1. Prerequisite Software: Stata, R, Python\nGo to the World Bank Software Center App and install the following software (if not already installed) :\n\n\n\n\n\n\n\n\n\nSoftware\nNotes\n\n\n\n\n\nStata 19 or higher (latest available)\n\n\n\n\nR 4.5.2 (latest)\n\n\n\n\nPython 3.13+ (latest)\n\n\n\n\nQuarto 1.3.343 (latest)\nMay require software installation request\n\n\n\nGit 2.52+ (latest)\n\n\n\n\nGitHub Desktop Latest\nOptional\n\n\n\n\n\nStep 2. Install Required Python Package\n\nOpen Command Prompt (cmd) or PowerShell:\n\nPress Win + R, type cmd or powershell, and hit Enter.\n\nType pip install uv and press Enter to install the uv package.\n\nuv is a package that allows environments management in python, see https://pypi.org/project/uv/\n\nCheck if UV is installed correctly by typing uv --version in the Command Prompt or PowerShell. You should see the version number displayed, something like this:\nuv 0.9.18 (0cee76417 2025-12-16)\n\n\n\nStep 3. Install Positron (IDE) 1\n\nDownload Positron from https://positron.posit.co/download.html\n\n\n\n\n\n\n\nWarning\n\n\n\nImportant: Use “Windows 10, 11 x64 (system level install)”, not the “user level install”\n\n\n\nMake a “Software Installation Request” on eservice.\n\nGo to eservices/\nSelect “Software Installation Request”\nSee KB0076748 for more details.\n\nOnce approved, you will have two options to install Positron:\n\nITS Personnel will connect to your computer remotely and install Positron using an admin password.\nYou will need an admin password to install Positron yourself.\n\nEither way, follow these installation instructions:\n\nStep 1: Copy the executable (exe) or installation folder to C:\\WBG.\nStep 2: Launch the command shell (cmd.exe) as an administrator.\nStep 3: Navigate to C:\\WBG in the command shell.\nStep 4: Set the user profile, TEMP, and TMP environments, and launch the executable from the shell prompt by typing:\nset userprofile=c:\\wbg\\temp\nset temp=c:\\wbg\\temp\\temp\nset tmp=c:\\wbg\\temp\\temp\nPositron-20XX.XX.X-XXX-Setup-x64.exe\nNote: Replace Positron-20XX.XX.X-XXX-Setup-x64.exe with the actual filename of the Positron installer you downloaded.\n\n\n\n\nStep 4. Install Extensions in Positron\nExtensions are add-ons that enhance Positron’s functionality. To install extensions, open the Extensions panel by clicking the square icon  on the left sidebar or pressing Ctrl+Shift+X. There are many extensions available for Positron. Below are the key extensions to install for AI-assisted analysis:\n\nStata MCP\nStata MCP Extension enables Model Communication Protocol (MCP) for Stata, providing better context awareness for AI agents and allowing you to run Stata code directly from Positron.\nTo install it:\n\n\n\n\n\n\n\n\nDescription\n\n\n\n\n\nOpen the Extensions panel in Positron\n\n\n\nSearch for “Stata MCP” in the Extensions panel\n\n\n\nClick “Install” to add the extension to Positron\n\n\n\nAfter installation, restart Positron or reload the window (Ctrl+Shift+P &gt; Developer: Reload Window &gt; Enter)\n\n\n\nOnce installed, configure the Stata MCP extension by setting up the path to the Stata executable and Stata edition.\n\nOpen stata-vscode.stataPath or press Ctrl+, &gt; search “Stata Path” (or stata-vscode.stataPath), and set it to your Stata executable folder: C:\\Program Files\\StataNow19\\ (for most WB laptops and VDIs). \nOpen stata-vscode.stataEdition\nor press Ctrl+, &gt; search “Stata Edition” (or stata-vscode.stataEdition), and\nset it to “mp” for Stata MP version.\n\n\n\nVerify Stata MCP is working:\n\nCreate and save a new Stata .do file\nType a simple command like: stata     sysuse auto     summarize price     display \"Stata is working!\"\nPress Ctrl+Shift+D in the .do file or Ctrl+Shift+P &gt; type Stata: Run Current File &gt; Enter to run the do file or click on the button \nResults from Stata should appear in the Output panel: Press Ctrl+Shift+P &gt; Output: Show Output Channels... &gt; Enter &gt; Stata. \n\n\n\nOther relevant extensions\nQuarto Extension enables Quarto document editing and rendering in Positron.",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Setup instructions"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/setup-instructions.html#connecting-github-copilot-to-positron",
+    "href": "seminars/seminar-2026-02/setup-instructions.html#connecting-github-copilot-to-positron",
+    "title": "Positron + Github Copilot: Setup Instructions",
+    "section": "Connecting GitHub Copilot to Positron",
+    "text": "Connecting GitHub Copilot to Positron\nThis step enables you to use the GitHub Copilot coding agent and other LLMs, such as ChatGPT or Anthropic Claude, with Positron.\nSee Positron Assistant: Getting Started for the full overview of what it does.\n\nStep 1. Connect GitHub to Positron\nThis requires a GitHub account linked to the World Bank organization. See GitHub Setup [@github-setup] instructions below if you don’t have an account or haven’t linked it to the WB organization. To connect GitHub to Positron:\n\n\n\n\n\n\n\n\nNote\n\n\n\n\n\nOpen Account menu\n\n\n\nClick Sign in to your GitHub account\n\n\n\nAuthorize GitHub in your browser\n\n\n\nConfirm the authorization request\n\n\n\nComplete the authentication process\n\n\n\nGrant necessary permissions\n\n\n\n\n\n\n\n\n\nStep 2. Enabling Positron Assistant in Positron Settings\n\nOpen settings positron.assistant.enable and check the box to enable it. or Ctrl+, &gt; positron.assistant.enable &gt; Check the box \nRestart Positron to apply the changes\nor reload the window (Ctrl+Shift+P &gt; Developer: Reload Window &gt; Enter) \n\nSee Enable Positron Assistant for more details.\n\n\nStep 3. Configure LLM Provider\nBy default, when logged into GitHub, Positron Assistant uses GitHub Copilot as the LLM provider. GitHub Copilot provides code completion, answers questions in chat, and operates in agent mode (able to run code directly).\n\n\n\n\n\n\nWarning\n\n\n\nNote: Within GitHub Copilot, you can also configure other LLM providers, such as Anthropic Claude, OpenAI GPT, etc.\n\n\nIf you want to use Anthropic Claude or other LLMs as the provider, follow instructions in Configure language model providers.\n\n\n\n\n\n\nWarning\n\n\n\nNote: Code completion will still be provided by the GitHub Copilot extension or will not work with Anthropic Claude.\n\n\n\n\nStep 4. Using Positron Assistant\n\nCtrl+Shift+P &gt; Help: Ask Positron Assistant &gt; Enter to open it.\nIn the input box that appears, type your question. For example: Write a Stata do file that loads the auto dataset and summarizes the price variable.     Open it.     Explain how to run it.\n\nTo learn more about using Positron Assistant, see Use Positron Assistant",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Setup instructions"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/setup-instructions.html#github-setup",
+    "href": "seminars/seminar-2026-02/setup-instructions.html#github-setup",
+    "title": "Positron + Github Copilot: Setup Instructions",
+    "section": "GitHub Setup",
+    "text": "GitHub Setup\nTo use GitHub Copilot in Positron, you need to have a GitHub account linked to the World Bank organization and obtain Copilot access.\n\nStep 1: Create a GitHub Account\nIf you don’t have a GitHub account yet, create one at https://github.com/signup\n\n\n\n\n\n\nWarning\n\n\n\nNote: Use your personal email address, not your World Bank email.\n\n\n\n\nStep 2: Join the World Bank GitHub Organization\n\nSubmit a “Join GitHub Organization Account Request” on eServices to join github.com/worldbank\nOnce your request is approved, you will receive an email invitation to join the World Bank GitHub organization\n\nEmail will be sent to the email address associated with your GitHub account\n\nAccept the invitation by clicking the link in the email\n\nYou need to confirm your membership in the World Bank organization on GitHub by following steps indicated in the email.\nIf you don’t confirm within a few days, the invitation will expire, and you will need to request again through eService.\n\n\n\n\nStep 3: Request GitHub Copilot Access\n\nAfter joining the World Bank organization, request GitHub Copilot access through your team lead or organization administrator\nYour request will be reviewed and approved by the GitHub organization administrators\n\nNote: Bryan Cahill leads the github.com/worldbank organization and can help with Copilot access requests\n\nOnce approved, you’ll be able to use GitHub Copilot in Positron\n\n\n\nStep 4: Verify GitHub Copilot Access\n\nOpen Positron and sign in to your GitHub account (see “Connecting GitHub Copilot to Positron” section above)\nCheck that the GitHub Copilot extension is active in the Extensions panel\nTry typing a comment in a code file to verify that Copilot suggestions appear",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Setup instructions"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/setup-instructions.html#additional-resources",
+    "href": "seminars/seminar-2026-02/setup-instructions.html#additional-resources",
+    "title": "Positron + Github Copilot: Setup Instructions",
+    "section": "Additional Resources",
+    "text": "Additional Resources\n\nPositron Documentation\nGitHub Copilot Documentation\nWorld Bank GitHub: https://github.com/worldbank",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Setup instructions"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/setup-instructions.html#support",
+    "href": "seminars/seminar-2026-02/setup-instructions.html#support",
+    "title": "Positron + Github Copilot: Setup Instructions",
+    "section": "Support",
+    "text": "Support\nFor help with setting up or troubleshooting the software, contact:\n\nIT Help: ITHelp@worldbankgroup.org\nHQ Walk-in center\n\nRemember to provide assiting person with these setup instructions.\nFor help with accessing GitHub.com/Worldbank or Github Copilot from the worldbank:\n\nCheck: GitHub Setup instructions above\nReach out to: github@worldbank.org",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Setup instructions"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/setup-instructions.html#footnotes",
+    "href": "seminars/seminar-2026-02/setup-instructions.html#footnotes",
+    "title": "Positron + Github Copilot: Setup Instructions",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nAlternatively, you can use Visual Studio Code (VS Code) as your IDE. We encourage using Positron for its better context awareness when developing R/Stata and analysis scripts. VS Code can be installed from the Software Center. Note that some steps below may differ when using VS Code instead of Positron. VS Code does not have many built-in R language features that Positron has out-of-the-box and lacks key bindings relevant to data science tasks.↩︎",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Setup instructions"
+    ]
+  },
+  {
+    "objectID": "seminars/index.html",
+    "href": "seminars/index.html",
+    "title": "GeoPov BBL Series",
+    "section": "",
+    "text": "This webinar series creates a platform for dialogue on how geospatial data can strengthen analysis and policy discussions aimed at reducing poverty and vulnerability. It has two main objectives:\n\nShowcasing impactful applications – highlighting country experiences and operational work where geospatial tools have improved poverty analysis, targeting, and decision-making. These cases illustrate models with potential for scaling up and replication in other contexts.\nSharing technical knowledge – presenting innovative geospatial data sources, tools, and methodologies relevant for economists and practitioners working at the country level, with a focus on practical skills.\n\nThrough these conversations, the series seeks to bridge the gap between cutting-edge technical innovations and their use in shaping policies that can make a measurable difference for the poorest and most vulnerable populations.\nSuggestions for future topics and speakers are warmly welcome – please reach out to Henry Stemmler (hstemmler@worldbank.org).",
+    "crumbs": [
+      "GeoPov BBL Series"
+    ]
+  },
+  {
+    "objectID": "seminars/index.html#about-the-geopov-series",
+    "href": "seminars/index.html#about-the-geopov-series",
+    "title": "GeoPov BBL Series",
+    "section": "",
+    "text": "This webinar series creates a platform for dialogue on how geospatial data can strengthen analysis and policy discussions aimed at reducing poverty and vulnerability. It has two main objectives:\n\nShowcasing impactful applications – highlighting country experiences and operational work where geospatial tools have improved poverty analysis, targeting, and decision-making. These cases illustrate models with potential for scaling up and replication in other contexts.\nSharing technical knowledge – presenting innovative geospatial data sources, tools, and methodologies relevant for economists and practitioners working at the country level, with a focus on practical skills.\n\nThrough these conversations, the series seeks to bridge the gap between cutting-edge technical innovations and their use in shaping policies that can make a measurable difference for the poorest and most vulnerable populations.\nSuggestions for future topics and speakers are warmly welcome – please reach out to Henry Stemmler (hstemmler@worldbank.org).",
+    "crumbs": [
+      "GeoPov BBL Series"
+    ]
+  },
+  {
+    "objectID": "seminars/index.html#past-talks-seminars-and-presentations",
+    "href": "seminars/index.html#past-talks-seminars-and-presentations",
+    "title": "GeoPov BBL Series",
+    "section": "Past talks, seminars, and presentations",
+    "text": "Past talks, seminars, and presentations",
+    "crumbs": [
+      "GeoPov BBL Series"
+    ]
+  }
+]

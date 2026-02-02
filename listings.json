@@ -1,0 +1,19 @@
+[
+  {
+    "listing": "/team/index.html",
+    "items": [
+      "/team/ben-brunckhorst.html",
+      "/team/eduard-bukin.html",
+      "/team/henry-stemmler.html",
+      "/team/maria-davalos.html",
+      "/team/nga-nguyen.html"
+    ]
+  },
+  {
+    "listing": "/seminars/index.html",
+    "items": [
+      "/seminars/seminar-2026-02/overview.html",
+      "/seminars/seminar-2025-10/overview.html"
+    ]
+  }
+]

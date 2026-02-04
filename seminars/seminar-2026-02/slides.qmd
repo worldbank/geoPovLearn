@@ -348,9 +348,7 @@ Download the demo project from here: [github.com/WBGGeoPov/seminar-coding-with-a
 
 ## Thank You! {.title}
 
-[→ Visit our website for updates](../../index.qmd)
-
-<https://wbggeopov.github.io/geoPovLearn/>
+[→ Visit our website for updates](../../index.qmd) \| <https://wbggeopov.github.io/geoPovLearn/>
 
 **Contact**:
 

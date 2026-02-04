@@ -11,7 +11,7 @@ subtitle: "AI Agent-Assisted Analysis with GitHub Copilot and Claude"
 
 ## Software setup
 
-### Step 1. Prerequisite Software: Stata, R, Python
+### Step 1. Prerequisite Software: Stata, R, Python {#prereq-software}
 
 Go to the World Bank Software Center App and install the following software (if not already installed) ![](images/software-center.png){width="255"}:
 
@@ -24,7 +24,7 @@ Go to the World Bank Software Center App and install the following software (if 
 | ![](images/git.png){width="48"} | **Git** 2.52+ (latest) |  |
 | ![](images/ghdesktop.png){width="46"} | **GitHub Desktop** Latest | Optional |
 
-### Step 2. Install Required Python Package
+### Step 2. Install Required Python Package {#python-uv}
 
 1.  Open Command Prompt (cmd) or PowerShell:
 
@@ -90,7 +90,7 @@ Extensions are add-ons that enhance Positron's functionality.
 To install extensions, open the Extensions panel by clicking the square icon ![](images/paste-2.png){width="28"} on the left sidebar or pressing `Ctrl+Shift+X`. There are many extensions available for Positron.
 Below are the key extensions to install for AI-assisted analysis:
 
-#### Stata MCP
+#### Stata MCP {#stata-mcp-extension}
 
 [`Stata MCP` Extension](https://open-vsx.org/extension/DeepEcon/stata-mcp){target="_blank"} enables Model Communication Protocol (MCP) for Stata, providing better context awareness for AI agents and allowing you to run Stata code directly from Positron.
 

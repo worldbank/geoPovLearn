@@ -105,16 +105,16 @@ In the next 30 minutes I will:
 
 **What do we need to know about modern analysis with AI?**
 
-1.  AI Integration: Chat \| Agent \| Inline Chat and Completion
-2.  Context awareness
-3.  Model Context Protocol (MCP)
-4.  GitHub Copilot \| Anthropic Claude and other LLMs
-5.  Efficient prompting
-6.  Caveats and limitations
+1. 💬 [**AI Integration**]{style="color:#1565c0;"}: Chat | Agent | Inline Completion
+2. 🧠 [**Context awareness**]{style="color:#6a1b9a;"}: How AI understands your project
+3. 🔌 [**Model Context Protocol (MCP)**]{style="color:#00695c;"}: Universal adapter for AI
+4. 🤖 [**GitHub Copilot | Claude**]{style="color:#e65100;"}: LLM providers
+5. ✍️ [**Efficient prompting**]{style="color:#2e7d32;"}: Getting the best results
+6. ⚠️ [**Caveats and limitations**]{style="color:#b00020;"}: What to watch out for
 
 ------------------------------------------------------------------------
 
-## AI Integration: Chat | Agent | Inline
+## 💬 [AI Integration]{style="color:#1565c0;"}: Chat | Agent | Inline
 
 {{< video https://positron.posit.co/videos/positron-assistant-copytoeditor.mp4 >}}
 
@@ -122,7 +122,7 @@ In the next 30 minutes I will:
 Source: [Positron: AI Features](https://positron.posit.co/features.html){target="_blank"}
 :::
 
-## AI: Chat
+## 💬 [AI: Chat]{style="color:#1565c0;"}
 
 ::: {style="max-width: 40%; font-size: 0.85em;"}
 
@@ -143,7 +143,7 @@ Source: [Positron: AI Features](https://positron.posit.co/features.html){target=
 :::
 
 
-## AI: Agent
+## 💬 [AI: Agent]{style="color:#1565c0;"}
 
 ::: {style="max-width: 30%; font-size: 0.8em;"}
 
@@ -157,17 +157,17 @@ Source: [Positron: AI Features](https://positron.posit.co/features.html){target=
 ::: r-stacked
 
 ![](images/positron-agent.png){.absolute .stacked-gif top=0 right=250 width="300"}
-![](images/positron-agent-small.gif){.fragment .absolute .stacked-gif top=50 right=0 width="700"}
+![](images/positron-agent-small.gif){.fragment .absolute .stacked-gif top=75 right=0 width="700"}
 
 :::
 
-## AI: Inline Completion
+## 💬 [AI: Inline Completion]{style="color:#1565c0;"}
 
 [Positron Inline Code Completion](https://positron.posit.co/assistant-completions.html){target="_blank"}: Suggests code snippets as you type.
 
 ![](images/positron-inline-small.gif){.fragment .absolute .stacked-gif top=180 right=150 width="650"}
 
-## Context Awareness
+## 🧠 [Context Awareness]{style="color:#6a1b9a;"}
 
 ::::: columns
 
@@ -175,21 +175,21 @@ Source: [Positron: AI Features](https://positron.posit.co/features.html){target=
 
 Positron accesses metadata about the project. Thus **AI 'knows':**
 
--   **Files str.**: Code, docs
--   **Data**: Var. names, types
--   **History**: Edits, commands
--   **Environment**: Packages
--   **Intent**: Current task
--   **Results**: Output, errors
+-   📁 **Files str.**: Code, docs
+-   📊 **Data**: Var. names, types
+-   ⏮️ **History**: Edits, commands
+-   📦 **Environment**: Packages
+-   🎯 **Intent**: Current task
+-   ✅ **Results**: Output, errors
 
 :::
 
 ::: {.column width="40%"}
-**Why does it matter?**
+[**Why does it matter?**]{style="color:#6a1b9a;"}
 
--   Project-specific suggestions
--   Understands dependencies
--   Reduces hallucinations
+-   🎯 Project-specific suggestions
+-   🔗 Understands dependencies
+-   🛡️ Reduces hallucinations
 
 :::
 
@@ -199,7 +199,7 @@ Positron accesses metadata about the project. Thus **AI 'knows':**
 **Read more:** [Positron: AI Context](https://positron.posit.co/assistant-chat-context.html){target="_blank"} | [GH Copilot](https://docs.github.com/en/copilot/using-github-copilot/getting-started-with-github-copilot#understanding-copilot-context){target="_blank"} | [Claude](https://www.anthropic.com/news/claude-sonnet-4-5){target="_blank"}
 :::
 
-## Model Context Protocol (MCP) {.smaller}
+## 🔌 [Model Context Protocol (MCP)]{style="color:#00695c;"} {.smaller}
 
 "MCP is a universal adapter for AI"—[Anthropic's invention](https://www.anthropic.com/news/model-context-protocol){target="_blank"}
 
@@ -211,25 +211,25 @@ MCP are essential to conect [everything](https://github.com/modelcontextprotocol
 **Read more:** [modelcontextprotocol.io](https://modelcontextprotocol.io/docs/getting-started/intro){target="_blank"}
 :::
 
-## GitHub Copilot \| Anthropic Claude {.smaller}
+## 🤖 [GitHub Copilot | Anthropic Claude]{style="color:#e65100;"} {.smaller}
 
 ::::: columns
 
 ::: {.column width="40%"}
 
-**GitHub Copilot**
+[**GitHub Copilot**]{style="color:#0366d6;"}
 
-- WB-approved
-- Accessed through [github.com/worldbank](https://github.com/worldbank){target="_blank"}
-- Uses other LLMs **OpenAI GPT**, **Anthropic Claude**
-- Integrates with Positron and other IDEs.
+- ✅ WB-approved
+- 🌐 Accessed through [github.com/worldbank](https://github.com/worldbank){target="_blank"}
+- 🤝 Uses [**OpenAI GPT**]{style="color:#10a37f;"}, [**Anthropic Claude**]{style="color:#d97757;"}
+- 🔌 Integrates with Positron and other IDEs
 
 ::: fragment
 
-Users are free to choose an optimal LLM:
+[**Choose your LLM:**]{style="color:#e65100;"}
 
-- Claude Sonnet/Haiku/Opus;
-- Open AI GPT...
+- 🧠 Claude Sonnet/Haiku/Opus
+- 💡 OpenAI GPT-4/o1...
 
 :::
 
@@ -247,11 +247,12 @@ Users are free to choose an optimal LLM:
 
 :::::
 
+
 ::: footer
 Sources: [Althropic Claude Sonnet 4.5](https://www.anthropic.com/news/claude-sonnet-4-5){target="_blank"}
 :::
 
-## Efficient Prompting
+## ✍️ [Efficient Prompting]{style="color:#2e7d32;"}
 
 ::: incremental
 ::: {style="font-size: 0.6em;"}
@@ -279,7 +280,7 @@ Sources: [Althropic Claude Sonnet 4.5](https://www.anthropic.com/news/claude-son
 **Tip:** Treat the assistant as a *collaborator*.
 :::
 
-## [Limitations]{style="color:#b00020;"} and [Remedies]{style="color:#1b5e20;"} {.smaller}
+## ⚠️ [Limitations]{style="color:#b00020;"} and [Remedies]{style="color:#1b5e20;"} {.smaller}
 
 ::: incremental
 - [⚠︎ **Wrong-but-plausible outputs / hallucinations**]{style="color:#b00020;"}: code runs but logic is wrong
@@ -315,7 +316,7 @@ Sources: [Althropic Claude Sonnet 4.5](https://www.anthropic.com/news/claude-son
 ## Summary
 
 ::: fragment
-[**Why AI in IDEs, not a web-browsers-based workflow?**]{style="color: blue;"}
+[**Why use an IDEs, not a web-browsers-based workflow?**]{style="color: blue;"}
 
 - Context-awareness
 - Streamlined workflow

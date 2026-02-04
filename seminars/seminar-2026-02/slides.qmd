@@ -2,8 +2,8 @@
 title: Revolutionize Your Analysis in Stata and R
 subtitle: "AI Agent-Assisted Workflow with GitHub Copilot and Claude"
 author: |
-  <p>**Eduard Bukin** [ebukin@worldbank.org](mailto:ebukin@worldbank.org)
-  <br/>Distributional Impact of Policies,
+  <p><br/>**Eduard Bukin** [ebukin@worldbank.org](mailto:ebukin@worldbank.org)
+  <br/>Distributional Impact of Policies
   <br/>Fiscal Policy and Growth Department<p/>
 date: "February 5, 2026"
 format:

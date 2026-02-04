@@ -12,7 +12,6 @@
 <link href="../../site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.27">
 
-  <meta name="author" content="Eduard Bukin">
   <meta name="dcterms.date" content="2026-02-05">
   <title>GeoPov – Revolutionize Your Analysis in Stata and R</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -33,7 +32,8 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-0fde88a82f0356838740f155f1088782.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
+  <link rel="stylesheet" href="custom.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -49,6 +49,7 @@
     }
     .reveal .slide:not(.center) {
       height: 100%;
+      overflow-y: auto;
     }
     .reveal .slide.scrollable {
       overflow-y: auto;
@@ -125,34 +126,64 @@
       margin-right: 0; 
     }
   </style>
-  <script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
-  <script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
-  <link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Revolutionize Your Analysis in Stata and R</h1>
-  <p class="subtitle">AI Agent-Assisted Workflow with GitHub Copilot and Claude</p>
-
-<div class="quarto-title-authors">
-<div class="quarto-title-author">
-<div class="quarto-title-author-name">
-Eduard Bukin 
-</div>
-</div>
-</div>
-
-  <p class="date">2026-02-05</p>
+<section id="" class="title slide level1 center" data-background-iframe="grid-worms/index.html">
+  <div class="semi-transparent-bg">
+    <div class="columns v-center-container">
+      <div class="column" style="width: 25%;">
+        <img src="images/prosp-logo.webp" style="width: 100%;">
+        <img src="images/geopov-logo.png" style="width: 100%;">
+        <!-- <img src="images/mml-logo.png" style="width: 100%;" /> -->
+      </div><div class="column" style="width: 75%;">
+                <h3 class="title">Revolutionize Your Analysis in Stata and R</h3>
+                        <p class="subtitle"><strong>AI Agent-Assisted Workflow with GitHub Copilot and Claude</strong></p>
+                        <p class="author" style="text-align: left;">Speaker:</p>
+                <p class="author" style="text-align: left;"></p><p>
+<strong>Eduard Bukin</strong> <a href="mailto:ebukin@worldbank.org">ebukin@worldbank.org</a> <br>Distributional Impact of Policies, <br>Fiscal Policy and Growth Department
+</p><p></p>
+                                <p class="date">2026-02-05</p>
+              </div></div>
+  </div>
 </section>
-<section id="welcome" class="slide level2 title">
-<h2>Welcome</h2>
-<h3 id="revolutionize-your-analysis-in-stata-and-r">Revolutionize Your Analysis in Stata and R</h3>
-<p><strong>AI Agent-Assisted Workflow with GitHub Copilot and Claude</strong></p>
+<section id="motivation" class="title-slide slide level1 center">
+<h1>Motivation</h1>
+<div style="max-width: 55%; font-size: 0.8em;">
+<p><strong>Chat and Web-Based AI tools</strong> are impressive!</p>
+<blockquote>
+<p><a href="https://chatgpt.com/">ChatGPT</a> | <a href="https://copilot.microsoft.com/">Copilot</a> | <a href="https://search.google/ai-in-search/">Gemini</a> | <a href="https://ai.worldbank.org/chat/mai">WB MAI</a></p>
+</blockquote>
+<div class="fragment">
+<p>Use familiar technologies: Web-Browser, Chat, Stata editor, <span style="background-color: yellow;"><strong>copy-paste</strong></span> …</p>
+</div>
+<div class="fragment">
+<p><strong>However: Is this the best way to use AI for data analysis?</strong></p>
+</div>
+<div class="fragment">
+<blockquote>
+<p>Why are there so many AI-powered <strong>Integrated Development Environments (IDEs)</strong> for coding and data science?</p>
+</blockquote>
+</div>
+</div>
+<div class="fragment">
+<p><img data-src="images/positron-small.gif" class="absolute stacked-gif" style="top: 0px; right: 0px; width: 380px; "></p>
+<p><img data-src="images/vscode-small.gif" class="absolute stacked-gif" style="top: 150px; right: 60px; width: 380px; "></p>
+<p><img data-src="images/cursor-small.gif" class="absolute stacked-gif" style="top: 300px; right: 0px; width: 380px; "></p>
+<p><img data-src="images/claude-small.gif" class="absolute stacked-gif" style="top: 450px; right: 60px; width: 380px; "></p>
+</div>
 <aside class="notes">
-<p>Welcome to the first seminar in our series on AI-assisted analysis.</p>
+<ul>
+<li><p>Integrated Development Environment (IDE) -</p></li>
+<li><p><a href="https://github.com/features/copilot" target="_blank">GitHub Copilot</a> that used Anthropic <a href="https://claude.com/">Claude Sonnet 4.5 LLM</a> to provide:</p>
+<ul>
+<li><a href="https://positron.posit.co/assistant-completions.html" target="_blank">Inline code completions</a></li>
+<li><a href="https://positron.posit.co/assistant-chat.html" target="_blank">Chat: help and assistance</a></li>
+<li><a href="https://positron.posit.co/assistant-chat-agents.html" target="_blank">Agent: active changes to my code and code execution</a></li>
+</ul></li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -164,479 +195,251 @@ Eduard Bukin
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<p>Speaker: <strong>Eduard Bukin</strong> <a href="mailto:ebukin@worldbank.org">ebukin@worldbank.org</a></p>
+<div class="footer">
+<p><strong>Sources:</strong> <a href="https://positron.posit.co/">Positron</a> | <a href="https://code.visualstudio.com/">VS Code</a> | <a href="https://www.cursor.com/">Cursor</a> | <a href="https://claude.ai/download">Claude Code</a></p>
+</div>
 </section>
-<section id="todays-agenda" class="slide level2">
-<h2>Today’s Agenda</h2>
+
+<section id="agenda" class="title-slide slide level1 center" data-background-iframe="logo-fall/index.html">
+<h1>Agenda</h1>
+<div class="semi-transparent-bg">
+<blockquote>
+<p>The goal of this seminar is to introduce you to AI-assisted data analysis workflow with <span style="color: blue;"><strong>Positron IDE</strong></span> and <a href="style=&quot;color: darkpurple;&quot;"><strong>GitHub Copilot/Anthropic Claude</strong></a>.</p>
+</blockquote>
+<div class="fragment">
+<div style="font-size: 0.8em;">
+<p>In the next 30 minutes I will:</p>
 <ul>
-<li><p>Example 1: From a messy code to a reproducible package</p></li>
-<li><p>Key Concepts:</p>
-<ul>
-<li><p>AI-Chat vs AI-Agent vs Inline Code Completion</p></li>
-<li><p>Context awareness</p></li>
-<li><p>MCP: Model communication protocol</p></li>
-<li><p>IDE: Integrated Development Environment</p></li>
-<li><p>LLMs for coding: GitHub Copilot, Anthropic Claude, OpenAI GTP, and others</p></li>
-</ul></li>
-<li><p>How to start using AI in coding?</p>
-<ul>
-<li><p>Software Setup Overview</p></li>
-<li><p>Tips and Best Practices</p></li>
-</ul></li>
-<li><p>Example 2: Develop analysis with AI assistance</p></li>
-<li><p>Q&amp;A and Discussion</p></li>
+<li>Introduce several AI-Concepts (vocabulary)</li>
+<li>Show AI-assisted workflow in Positron IDE with Stata and R</li>
+<li>Provide kick-off instructions and resources.</li>
 </ul>
+</div>
+</div>
+</div>
 </section>
-<section id="motivation-1" class="slide level2">
-<h2>Motivation (1)</h2>
-<p>AI tools that we got used to over past years are impressive!</p>
-<div class="columns">
-<div class="column" style="width:65%;">
-<p><strong>Traditional Chat-Based Tools:</strong></p>
-<ul>
-<li><p>Web-based <a href="https://chatgpt.com/">Open AI ChatGPT</a></p></li>
-<li><p><a href="https://copilot.microsoft.com/">Microsoft Copilot</a></p></li>
-<li><p>Isolated AI models, <a href="https://search.google/ai-in-search/">Google AI in search</a></p></li>
-<li><p><a href="https://ai.worldbank.org/chat/mai">WB MAI</a></p></li>
-<li><p><strong>Pros:</strong></p>
-<ul>
-<li>Uses familiar technologies: Browser, Chat, Stata editor, copy-paste…</li>
-</ul></li>
-</ul>
-</div><div class="column" style="width:35%;">
-<p><strong>Cons:</strong></p>
-<ul>
-<li class="fragment"><p>Not integrated with our analysis</p>
-<ul>
-<li class="fragment">Exception: Co-pilot in MS Office</li>
-</ul></li>
-<li class="fragment"><p>Not aware of the analysis context</p></li>
-<li class="fragment"><p>Provides generic answer, not project-specific</p></li>
-</ul>
-</div></div>
-</section>
-<section id="example-1-from-a-monstrosity-to-a-reproducible-package" class="slide level2 demo">
-<h2>Example 1: From a Monstrosity to a Reproducible Package</h2>
-<p><strong>Live demonstration of building a reproducibility package with AI assistance</strong></p>
-</section>
-<section id="example-1-summary" class="slide level2">
-<h2>Example 1: Summary</h2>
-<p>To do all this, we used:</p>
-<ul>
-<li class="fragment"><p>Integrated Development Environment (IDE) - <a href="https://positron.posit.co/" target="_blank">Positron</a></p></li>
-<li class="fragment"><p><a href="https://github.com/features/copilot" target="_blank">GitHub Copilot</a> that used Anthropic <a href="https://claude.com/">Claude Sonnet 4.5 LLM</a> to provide:</p>
-<ul>
-<li class="fragment"><a href="https://positron.posit.co/assistant-completions.html" target="_blank">Inline code completions</a></li>
-<li class="fragment"><a href="https://positron.posit.co/assistant-chat.html" target="_blank">Chat: help and assistance</a></li>
-<li class="fragment"><a href="https://positron.posit.co/assistant-chat-agents.html" target="_blank">Agent: active changes to my code and code execution</a></li>
-</ul></li>
-</ul>
-</section>
-<section id="how-does-this-different-from-a-familiar-ai-chat" class="slide level2">
-<h2>How does this different from a familiar AI-chat?</h2>
-<ul>
-<li><p><strong>AI-Agent</strong>: AI acted autonomously, execute code, changed files, etc.</p></li>
-<li><p><strong>Context aware</strong>: AI understood files, data, and code structures.</p></li>
-<li><p><strong>IDE</strong>: AI was <strong>integrated</strong> into our <strong>development environment</strong>, worked <strong>alongside us</strong>.</p></li>
-<li><p><strong>Privacy</strong>: AI <strong>did NOT have access to our data</strong>.</p>
-<ul>
-<li>All code was executed locally, AI has only seen the output structure.</li>
-</ul></li>
-</ul>
-</section>
-<section id="quick-question" class="slide level2">
-<h2>Quick question</h2>
-<h3 id="what-ai-tools-and-software-do-you-use-in-your-daily-work">What AI tools and software do you use in your daily work?</h3>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>Chat-based (in browser or an app):</strong></p>
-<ul>
-<li>OpenAI GPT</li>
-<li>Microsoft Copilot (Windows or Office/Word/Excel)</li>
-<li>WB MAI (Web-based tools)</li>
-<li>GitHub Copilot</li>
-<li>Anthropic Claude</li>
-<li>Google Gemini</li>
-<li>Grok</li>
-<li>Others: ___________</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p><strong>Agent-integrated software:</strong></p>
-<ul>
-<li>Positron + GH Copilot / Other LLMs</li>
-<li>VS Code + GH Copilot / Other LLMs</li>
-<li>RStudio + GH Copilot / Other LLMs</li>
-<li>JupyterLab + GH Copilot / Other LLMs</li>
-<li>Claude Code + Anthropic LLMs</li>
-<li>Cursor + LLMs</li>
-<li>GitHub Copilot Workspace (web-based)</li>
-<li>Others: ___________</li>
-</ul>
-</div></div>
-</section>
+
 <section>
-<section id="key-concepts" class="title-slide slide level1 center">
+<section id="key-concepts" class="title-slide slide level1 center scrollable">
 <h1>Key Concepts</h1>
-<p>What do we need to know about modern analysis with AI?</p>
+<p><strong>What do we need to know about modern analysis with AI?</strong></p>
 <ol type="1">
-<li>AI: Chat | Agent | Inline Completion</li>
-<li>Context awareness</li>
-<li>Model Context Protocol (MCP)</li>
-<li>Integrated Development Environments (IDEs)</li>
-<li>LLMs for coding: GitHub Copilot, OpenAI GTP, Anthropic Claude, and others</li>
-<li>Efficient prompting</li>
+<li>💬 <span style="color:#1565c0;"><strong>AI Integration</strong></span>: Chat | Agent | Inline Completion</li>
+<li>🧠 <span style="color:#6a1b9a;"><strong>Context awareness</strong></span>: How AI understands your project</li>
+<li>🔌 <span style="color:#00695c;"><strong>Model Context Protocol (MCP)</strong></span>: Universal adapter for AI</li>
+<li>🤖 <span style="color:#e65100;"><strong>GitHub Copilot | Claude</strong></span>: LLM providers</li>
+<li>✍️ <span style="color:#2e7d32;"><strong>Efficient prompting</strong></span>: Getting the best results</li>
+<li>⚠️ <span style="color:#b00020;"><strong>Caveats and limitations</strong></span>: What to watch out for</li>
 </ol>
 </section>
-<section id="ai-chat-agent-inline-code" class="slide level2">
-<h2>AI: Chat | Agent | Inline Code</h2>
-<div class="columns">
-<div class="column fragment" style="width:30%;">
-<p><strong>AI-Chat</strong></p>
+<section id="ai-integration-chat-agent-inline" class="slide level2">
+<h2>💬 <span style="color:#1565c0;">AI Integration</span>: Chat | Agent | Inline</h2>
+<video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="https://positron.posit.co/videos/positron-assistant-copytoeditor.mp4"></video>
+<div class="footer">
+<p>Source: <a href="https://positron.posit.co/features.html" target="_blank">Positron: AI Features</a></p>
+</div>
+</section>
+<section id="ai-chat" class="slide level2">
+<h2>💬 <span style="color:#1565c0;">AI: Chat</span></h2>
+<div style="max-width: 40%; font-size: 0.85em;">
+<p><a href="https://positron.posit.co/assistant-chat.html" target="_blank">Positron Assistant</a> or similar chats in other editors</p>
 <ul>
-<li>General assistance</li>
-<li>Limited context: only what you tell it</li>
-<li>Code snippets</li>
-<li>Explanations of code/output</li>
+<li><strong>Ask</strong> an LLM (Claude 4.5) through Github Copilot</li>
+<li>Provides explanations, suggestions, and code snippets.</li>
+<li>Integrates with project context, and code.</li>
+<li>Read more: <a href="https://positron.posit.co/assistant-chat.html" target="_blank">Positron Assistant Chat</a></li>
 </ul>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
 </div>
-<p><strong>Tip</strong></p>
+<div class="r-stacked">
+<p><img data-src="images/positron-assistant.png" class="absolute stacked-gif" style="top: 0px; right: 200px; width: 300px; "> <img data-src="images/positron-assistant-ask-small.gif" class="fragment absolute stacked-gif" style="top: 50px; right: 0px; width: 600px; "></p>
 </div>
-<div class="callout-content">
-<p>Use to <strong>Ask</strong> the model to think and reason.</p>
-</div>
-</div>
-</div>
-</div><div class="column fragment" style="width:40%;">
-<p><strong>AI-Agent</strong></p>
+</section>
+<section id="ai-agent" class="slide level2">
+<h2>💬 <span style="color:#1565c0;">AI: Agent</span></h2>
+<div style="max-width: 30%; font-size: 0.8em;">
+<p><a href="https://positron.posit.co/assistant-chat.html" target="_blank">Positron Assistant</a></p>
 <ul>
-<li>Execute Mode</li>
-<li>Context awareness</li>
-<li>Integrated with development</li>
-<li>Writes and runs after user’s approval</li>
-<li>End‑to‑end tasks (clean → estimate → table → robustness)</li>
+<li>Runs explicit instructions for you.</li>
+<li>Acts independently (if permitted).</li>
 </ul>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
 </div>
-<p><strong>Tip</strong></p>
+<div class="r-stacked">
+<p><img data-src="images/positron-agent.png" class="absolute stacked-gif" style="top: 0px; right: 250px; width: 300px; "> <img data-src="images/positron-agent-small.gif" class="fragment absolute stacked-gif" style="top: 75px; right: 0px; width: 700px; "></p>
 </div>
-<div class="callout-content">
-<p>Use <strong>Agent</strong> mode to execute explicit instructions.</p>
-</div>
-</div>
-</div>
-</div><div class="column fragment" style="width:30%;">
-<p><strong>Inline Code Completion</strong></p>
-<ul>
-<li>Real-time code suggestions while you type</li>
-</ul>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Tip</strong></p>
-</div>
-<div class="callout-content">
-<p>Use for quick code snippets.</p>
-</div>
-</div>
-</div>
-</div></div>
+</section>
+<section id="ai-inline-completion" class="slide level2">
+<h2>💬 <span style="color:#1565c0;">AI: Inline Completion</span></h2>
+<p><a href="https://positron.posit.co/assistant-completions.html" target="_blank">Positron Inline Code Completion</a>: Suggests code snippets as you type.</p>
+<p><img data-src="images/positron-inline-small.gif" class="fragment absolute stacked-gif" style="top: 180px; right: 150px; width: 650px; "></p>
 </section>
 <section id="context-awareness" class="slide level2">
-<h2>Context Awareness</h2>
+<h2>🧠 <span style="color:#6a1b9a;">Context Awareness</span></h2>
 <div class="columns">
 <div class="column" style="width:60%;">
-<p><strong>What AI “knows”:</strong></p>
+<p>Positron accesses metadata about the project. Thus <strong>AI ‘knows’:</strong></p>
 <ul>
-<li><strong>Files</strong>: Code, docs, structure</li>
-<li><strong>Data structure</strong>: Variable names, types</li>
-<li><strong>History</strong>: Edits, commands</li>
-<li><strong>Environment</strong>: Packages, dependencies</li>
-<li><strong>Intent</strong>: Current task</li>
-<li><strong>Execution results</strong>: Output, errors</li>
+<li>📁 <strong>Files str.</strong>: Code, docs</li>
+<li>📊 <strong>Data</strong>: Var. names, types</li>
+<li>⏮️ <strong>History</strong>: Edits, commands</li>
+<li>📦 <strong>Environment</strong>: Packages</li>
+<li>🎯 <strong>Intent</strong>: Current task</li>
+<li>✅ <strong>Results</strong>: Output, errors</li>
 </ul>
 </div><div class="column" style="width:40%;">
-<p><strong>Why it matters:</strong></p>
+<p><span style="color:#6a1b9a;"><strong>Why does it matter?</strong></span></p>
 <ul>
-<li>Project-specific suggestions</li>
-<li>Understands dependencies</li>
-<li>Reduces hallucinations</li>
+<li>🎯 Project-specific suggestions</li>
+<li>🔗 Understands dependencies</li>
+<li>🛡️ Reduces hallucinations</li>
 </ul>
 </div></div>
 <div class="footer">
-<p><strong>See:</strong> <a href="https://positron.posit.co/assistant-chat-context.html" target="_blank">Positron: AI Context</a>, or <a href="https://docs.github.com/en/copilot/using-github-copilot/getting-started-with-github-copilot#understanding-copilot-context" target="_blank">GHCopilot</a>, and <a href="https://www.anthropic.com/news/claude-sonnet-4-5" target="_blank">Claude</a></p>
+<p><strong>Read more:</strong> <a href="https://positron.posit.co/assistant-chat-context.html" target="_blank">Positron: AI Context</a> | <a href="https://docs.github.com/en/copilot/using-github-copilot/getting-started-with-github-copilot#understanding-copilot-context" target="_blank">GH Copilot</a> | <a href="https://www.anthropic.com/news/claude-sonnet-4-5" target="_blank">Claude</a></p>
 </div>
 </section>
-<section id="model-context-protocol-mcp" class="slide level2">
-<h2>Model Context Protocol (MCP)</h2>
+<section id="model-context-protocol-mcp" class="slide level2 smaller">
+<h2>🔌 <span style="color:#00695c;">Model Context Protocol (MCP)</span></h2>
+<p>“MCP is a universal adapter for AI”—<a href="https://www.anthropic.com/news/model-context-protocol" target="_blank">Anthropic’s invention</a></p>
+<p>MCP are essential to connect <a href="https://github.com/modelcontextprotocol/servers" target="_blank">everything</a>: <a href="https://github.com/sepinetam/stata-mcp" target="_blank">Stata-MCP</a> or <a href="https://tidyverse.org/blog/2025/07/mcptools-0-1-0/" target="_blank">R MCP</a> for Stata/R -&gt; Positron -&gt; Copilot -&gt; LLMs,</p>
+
+<img data-src="images/mcp-simple-diagram.avif" class="r-stretch"><div class="footer">
+<p><strong>Read more:</strong> <a href="https://modelcontextprotocol.io/docs/getting-started/intro" target="_blank">modelcontextprotocol.io</a></p>
+</div>
+</section>
+<section id="github-copilot-anthropic-claude" class="slide level2 smaller">
+<h2>🤖 <span style="color:#e65100;">GitHub Copilot | Anthropic Claude</span></h2>
 <div class="columns">
-<div class="column" style="width:15%;">
-<p><img data-src="images/mcp-logo.png" width="100"></p>
-</div><div class="column" style="width:85%;">
-<div class="callout callout-note callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-content">
-<p>“A universal adapter for AI: one standard protocol replacing fragmented data integrations, connecting assistants to any system where information lives.”— <a href="https://www.anthropic.com/news/model-context-protocol" target="_blank">Anthropic’s invention</a></p>
-</div>
-</div>
-</div>
-</div></div>
+<div class="column" style="width:40%;">
+<p><span style="color:#0366d6;"><strong>GitHub Copilot</strong></span></p>
+<ul>
+<li>✅ WB-approved</li>
+<li>🌐 Accessed through <a href="https://github.com/worldbank" target="_blank">github.com/worldbank</a></li>
+<li>🤝 Uses <span style="color:#10a37f;"><strong>OpenAI GPT</strong></span>, <span style="color:#d97757;"><strong>Anthropic Claude</strong></span></li>
+<li>🔌 Integrates with Positron and other IDEs</li>
+</ul>
 <div class="fragment">
-<p>There is a <a href="https://github.com/modelcontextprotocol/servers" target="_blank">growing ecosystem of MCPs</a> .</p>
+<p><span style="color:#e65100;"><strong>Choose your LLM:</strong></span></p>
+<ul>
+<li>🧠 Claude Sonnet/Haiku/Opus</li>
+<li>💡 OpenAI GPT-4/o1…</li>
+</ul>
 </div>
-<div class="columns">
-<div class="column fragment" style="width:75%;">
-<p><strong>MCP are essential to connect LLMs with:</strong></p>
-<ul>
-<li>Execution environments: <strong>Stata</strong>, R, Python</li>
-<li>Editors: Positron, VS Code, RStudio, JupyterLab</li>
-<li>Data sources: databases, APIs, files</li>
-<li>Tools: version control (GitHub), visualization, reporting</li>
-</ul>
-</div><div class="column fragment" style="width:25%;">
-<p>Relevant are:</p>
-<ul>
-<li><a href="https://github.com/sepinetam/stata-mcp" target="_blank">Stata-MCP extension</a></li>
-<li><a href="https://tidyverse.org/blog/2025/07/mcptools-0-1-0/" target="_blank">R MCP Tools</a></li>
-</ul>
+</div><div class="column" style="width:60%;">
+<div class="fragment">
+<p><img data-src="images/claude-preformace.webp" class="stacked-gif"></p>
+</div>
 </div></div>
-</section>
-<section id="integrated-development-environments-ides" class="slide level2">
-<h2>Integrated Development Environments (IDEs)</h2>
-<p><strong>Your all-in-one workspace for data analysis:</strong></p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li><strong>Positron</strong> (Posit) - Modern AI-native IDE for data science and any programming language</li>
-<li><strong>RStudio</strong> - R-focused environment</li>
-<li><strong>JupyterLab</strong> - Notebook-based interface</li>
-<li><strong>VS Code</strong> - General-purpose with extensions</li>
-<li><strong>Claude Code</strong> - Anthropic’s AI coding IDE</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p><strong>What IDEs provide:</strong></p>
-<ul>
-<li><strong>Code editor</strong> with syntax highlighting</li>
-<li><strong>Console/terminal</strong> for interactive execution</li>
-<li><strong>File browser</strong> and project management</li>
-<li><strong>Variable/data viewer</strong> to inspect objects</li>
-<li><strong>Plot viewer</strong> for visualizations</li>
-<li><strong>Integrated AI assistants</strong> (Chat, Agent, Completions)</li>
-</ul>
-</div></div>
-</section>
-<section id="llms-for-coding" class="slide level2">
-<h2>LLMs for Coding</h2>
-<p><strong>Large Language Models power AI assistants through coding agents:</strong></p>
-<div class="columns">
-<div class="column" style="width:35%;">
-<p><strong>GitHub Copilot</strong> uses: OpenAI GPT, Anthropic Claude, and others.</p>
-<p><strong>Chrome/Web-browser extensions</strong> also provide access to LLMs.</p>
-<p><strong>Claude Code</strong> IDE uses <strong>Anthropic Claude</strong> only models.</p>
-</div><div class="column" style="width:65%;">
-<p><img data-src="images/claude-preformace.webp"></p>
-</div></div>
-</section>
-<section id="question-2.-how-do-you-use-ai-tools-in-your-daily-work" class="slide level2">
-<h2>Question 2. How do you use AI tools in your daily work?</h2>
-<p>List top 3 use cases for the AI tools you use.</p>
-<ul>
-<li><p>Spell checking, grammar, and writing assistance</p></li>
-<li><p>Read and summarise text and documents</p></li>
-<li><p>Understand code and text</p></li>
-<li><p>Dumping data into LLM and asking for insights</p></li>
-<li><p>Other</p></li>
-</ul>
-</section>
-<section id="software-development-vs-data-analysis-different-ai-roles" class="slide level2">
-<h2>Software Development vs Data Analysis: Different AI Roles</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>Software Development</strong></p>
-<ul>
-<li><strong>Goal:</strong> Build functional systems</li>
-<li><strong>Success metric:</strong> Binary (works/breaks)</li>
-<li><strong>Central question:</strong> “Does it execute correctly?”</li>
-<li><strong>AI’s strength:</strong>
-<ul>
-<li>Generate boilerplate code</li>
-<li>Suggest syntax and patterns</li>
-<li>Automate testing</li>
-<li>Refactor code structure</li>
-</ul></li>
-<li><strong>Primary risk:</strong> Bugs, crashes, security flaws</li>
-<li><strong>Verification:</strong> Unit tests, integration tests</li>
-<li><strong>Trust level:</strong> High for implementation</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p><strong>Data Analysis</strong></p>
-<ul>
-<li><strong>Goal:</strong> Generate valid insights</li>
-<li><strong>Success metric:</strong></li>
-<li><strong>Central question:</strong> “Are these conclusions sound?”</li>
-<li><strong>AI’s strength:</strong>
-<ul>
-<li>Write data manipulation code</li>
-<li>Create visualizations</li>
-<li>Suggest statistical methods</li>
-<li>Automate repetitive tasks</li>
-</ul></li>
-<li><strong>Primary risk:</strong> Correct code producing invalid conclusions</li>
-<li><strong>Verification:</strong> Domain expertise, theoretical validity</li>
-<li><strong>Trust level:</strong> Low for interpretation</li>
-</ul>
-</div></div>
-<div class="callout callout-warning callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Warning</strong></p>
-</div>
-<div class="callout-content">
-<p><strong>Key insight:</strong> In analysis, syntactically correct code ≠ methodologically sound results. AI can produce perfect code that violates logic and common sense, or draws invalid inferences.</p>
-</div>
-</div>
-</div>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Note</strong></p>
-</div>
-<div class="callout-content">
-<p><strong>Bottom line:</strong> AI excels at the <em>mechanics</em> of analysis (data cleaning, computation, visualization). Researchers must retain ownership of <em>scientific judgment</em>: choosing appropriate methods, validating assumptions, and interpreting substantive meaning.</p>
-</div>
-</div>
+<div class="footer">
+<p>Sources: <a href="https://www.anthropic.com/news/claude-sonnet-4-5" target="_blank">Anthropic Claude Sonnet 4.5</a></p>
 </div>
 </section>
-<section id="integrated-workflow" class="slide level2 diagram">
-<h2>Integrated workflow</h2>
-<p><strong>Your all-in-one workspace for data analysis:</strong></p>
-<div class="cell" data-reveal="true" data-fig-width="14" data-fig-height="8" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class=""><p></p>
-<div>
-<pre class="mermaid mermaid-js">graph LR
-    subgraph IDE["🖥️ Local IDE Environment"]
-        direction TB
-
-        subgraph Editors["📝 Code Editors"]
-            direction LR
-            P["&lt;b&gt;Positron&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Posit&lt;/i&gt;"]
-            R["&lt;b&gt;RStudio&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Posit&lt;/i&gt;"]
-            V["&lt;b&gt;VS Code&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Microsoft&lt;/i&gt;"]
-            C["&lt;b&gt;Claude Code&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Anthropic&lt;/i&gt;"]
-            J["&lt;b&gt;JupyterLab&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Project Jupyter&lt;/i&gt;"]
-            CS["&lt;b&gt;Cursor&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Anysphere&lt;/i&gt;"]
-        end
-
-
-        AI["🤖 &lt;b&gt;AI Integration&lt;/b&gt;&lt;br/&gt;• Chat&lt;br/&gt;• Agent&lt;br/&gt;• Inline Code"]
-        MCP["🔌&lt;b&gt;Model Context Protocol&lt;/b&gt;&lt;br/&gt;• Stata MCP&lt;br/&gt;• R/Python MCP"]
-        Exec["⚙️ &lt;b&gt;Execution&lt;/b&gt;&lt;br/&gt;• Stata&lt;br/&gt;• R&lt;br/&gt;• Python"]
-
-        Editors &lt;==&gt; AI
-        Editors &lt;==&gt; MCP
-        Editors &lt;==&gt; Exec
-        AI &lt;==&gt; MCP
-        MCP &lt;==&gt; Exec
-    end
-
-    subgraph Cloud["☁️ Cloud Services"]
-        direction LR
-        subgraph AA[" "]
-            subgraph AIProviders["🌐 AI Platforms"]
-                direction LR
-                GHC["&lt;b&gt;GitHub Copilot&lt;/b&gt;"]
-                ANT["&lt;b&gt;Anthropic Claude&lt;/b&gt;"]
-            end
-            subgraph AIAgents["🌐 AI Agents"]
-                direction LR
-                MAI["&lt;b&gt;WB Mai&lt;/b&gt;"]
-                OTH["&lt;b&gt;Other&lt;/b&gt;"]
-            end
-        end
-
-        subgraph LLM["🧠 LLMs"]
-            direction LR
-            GPT["OpenAI&lt;br/&gt;GPT-4"]
-            Claude["Anthropic&lt;br/&gt;Claude"]
-            Google["Google&lt;br/&gt;Gemini"]
-
-        end
-    end
-
-    MCP &lt;===&gt;|"API Calls"| AIProviders
-    GHC &lt;===&gt;|"Chooses from"| LLM
-    ANT &lt;===&gt; Claude
-    AIAgents &lt;===&gt; LLM
-
-    classDef ideBox fill:#e8f4f8,stroke:#0277bd,stroke-width:3px,color:#000
-    classDef editorBox fill:#fff3e0,stroke:#ef6c00,stroke-width:2px,color:#000
-    classDef editorItem fill:#ffe0b2,stroke:#e65100,stroke-width:2px,color:#000
-    classDef aiBox fill:#f3e5f5,stroke:#8e24aa,stroke-width:2px,color:#000
-    classDef mcpBox fill:#e8f5e9,stroke:#43a047,stroke-width:2px,color:#000
-    classDef mcpItem fill:#c8e6c9,stroke:#2e7d32,stroke-width:1px,color:#000
-    classDef execBox fill:#fce4ec,stroke:#d81b60,stroke-width:2px,color:#000
-    classDef cloudBox fill:#e1f5fe,stroke:#0288d1,stroke-width:3px,color:#000
-    classDef providerBox fill:#b3e5fc,stroke:#0277bd,stroke-width:2px,color:#000
-    classDef providerItem fill:#81d4fa,stroke:#01579b,stroke-width:2px,color:#000
-    classDef llmBox fill:#fff9c4,stroke:#f9a825,stroke-width:2px,color:#000
-    classDef llmItem fill:#fff59d,stroke:#f57f17,stroke-width:1px,color:#000
-
-    class IDE ideBox
-    class Editors editorBox
-    class P,R,V,C,J,CS editorItem
-    class AI aiBox
-    class MCP mcpBox
-    class ST,RP,PY mcpItem
-    class Exec execBox
-    class Cloud cloudBox
-    class AA providerBox
-    class AIProviders providerBox
-    class AIAgents providerBox
-    class GHC,ANT providerItem
-    class MAI,OTH providerItem
-    class LLM llmBox
-    class GPT,Claude,Google llmItem
-</pre>
+<section id="efficient-prompting" class="slide level2">
+<h2>✍️ <span style="color:#2e7d32;">Efficient Prompting</span></h2>
+<div style="font-size: 0.6em;">
+<ul>
+<li class="fragment"><p><span style="color:#1b5e20;">🎯 <strong>Be specific about the task</strong></span>: “Write a Stata do-file to …” / “Refactor this R function to …”</p></li>
+<li class="fragment"><p><span style="color:#1b5e20;">🧩 <strong>Provide context</strong></span>: goal, dataset description, key variables, constraints (WB rules, packages, runtime)</p></li>
+<li class="fragment"><p><span style="color:#1b5e20;">📌 <strong>Define the expected output</strong></span>: table/figure format, file to modify, function signature, acceptance criteria</p></li>
+<li class="fragment"><p><span style="color:#1b5e20;">🔁 <strong>Ask AI to summarize + clarify first</strong></span>: “Restate the task in your own words and ask any clarifying questions before implementing.”</p></li>
+<li class="fragment"><p><span style="color:#1b5e20;">🔍 <strong>Ask for assumptions + checks</strong></span>: “List assumptions; add validation/tests; include edge cases”</p></li>
+<li class="fragment"><p><span style="color:#1b5e20;">🪜 <strong>Iterate in small steps</strong></span>: request a minimal working change, then refine (don’t “rewrite everything”)</p></li>
+<li class="fragment"><p><span style="color:#1b5e20;">🧠 <strong>Force transparency</strong></span>: “Explain <em>why</em> this approach; give 1–2 alternatives with trade-offs”</p></li>
+<li class="fragment"><p><span style="color:#1b5e20;">🧾 <strong>Make it reproducible</strong></span>: “Use set seed; pin versions; avoid randomness; write comments; ask LLM to write comments”</p></li>
+<li class="fragment"><p><span style="color:#1b5e20;">🛑 <strong>Set boundaries</strong></span>: “Don’t use external data; don’t print secrets; don’t change unrelated files”</p></li>
+</ul>
 </div>
-<p></p><figcaption> AI-Assisted Analysis Workflow</figcaption> </figure><p></p>
+<div class="footer">
+<p><strong>Tip:</strong> Treat the assistant as a <em>collaborator</em>.</p>
 </div>
+</section>
+<section id="limitations-and-remedies" class="slide level2 smaller">
+<h2>⚠️ <span style="color:#b00020;">Limitations</span> and <span style="color:#1b5e20;">Remedies</span></h2>
+<ul>
+<li class="fragment"><p><span style="color:#b00020;">⚠︎ <strong>Wrong-but-plausible outputs / hallucinations</strong></span>: code runs but logic is wrong</p>
+<p><span style="color:#1b5e20;">✓ <strong>Verify and validate</strong></span>: ask the model to <strong>explain and justify</strong> the solution</p></li>
+<li class="fragment"><p><span style="color:#b00020;">⚠︎ <strong>Context limits</strong></span>: not all files/data are in context; too large projects.</p>
+<p><span style="color:#1b5e20;">✓ <strong>Be explicit</strong></span>: state assumptions, expected inputs/outputs, and references</p></li>
+<li class="fragment"><p><span style="color:#b00020;">⚠︎ <strong>Outdated knowledge</strong></span>: suggested APIs/packages/options may have changed</p>
+<p><span style="color:#1b5e20;">✓ <strong>Teach the model</strong></span>: provide references/links; ask it to learn</p></li>
+<li class="fragment"><p><span style="color:#b00020;">⚠︎ <strong>Over-reliance</strong></span>: erodes fundamentals; mistakes slip through unchallenged</p>
+<p><span style="color:#1b5e20;">✓ <strong>Keep learning</strong></span>: ask for step-by-step reasoning; request alternatives and trade-offs</p></li>
+<li class="fragment"><p><span style="color:#b00020;">⚠︎ <strong>Confidentiality / security / privacy</strong></span></p>
+<p><span style="color:#1b5e20;">✓ <strong>Constrain context</strong></span>: exclude sensitive data; use <code>.copilot-ignore</code></p></li>
+<li class="fragment"><p><span style="color:#b00020;">⚠︎ <strong>Reproducibility</strong></span>: answers can vary across sessions/models/settings</p>
+<p><span style="color:#1b5e20;">✓ <strong>Make it reproducible</strong></span>: save prompts, use Git; create AI agents</p></li>
+</ul>
+<div class="footer">
+<p><strong>Read more:</strong> <a href="https://resources.github.com/copilot-trust-center/" target="_blank">GitHub Copilot Trust Center</a></p>
 </div>
+</section>
+<section id="summary" class="slide level2">
+<h2>Summary</h2>
+<div class="fragment">
+<p><span style="color: blue;"><strong>Why use IDEs, not a web-browser-based workflow?</strong></span></p>
+<ul>
+<li>Context-awareness</li>
+<li>Streamlined workflow</li>
+<li>Reduced friction</li>
+</ul>
+</div>
+<div class="fragment">
+<p><span style="color: blue;"><strong>Why Positron?</strong></span></p>
+<ul>
+<li>Built for data science, <span style="background-color: lightred;">not software development</span></li>
+<li>Integrated Stata, R, Python and more</li>
+<li>Advanced AI features for data analysis,</li>
+</ul>
 </div>
 </section></section>
 <section>
-<section id="how-to-start" class="title-slide slide level1 center">
-<h1>How to Start?</h1>
+<section id="where-to-start" class="title-slide slide level1 center">
+<h1>Where to Start?</h1>
 <ul>
-<li><p>Setup the software</p></li>
-<li><p>Challenge your usual workflow</p></li>
-<li><p>Experiment with AI assistance</p></li>
-<li><p>Learn by doing</p></li>
-<li><p>Keep learning new technologies: Git, GitHub, R, Python, etc.</p></li>
+<li><p>Setup the software: follow <a href="../../seminars/seminar-2026-02/setup-instructions.html">instructions</a></p></li>
+<li><p>Step out of your comfort zone.</p></li>
+<li><p>Experiment and learn by doing.</p></li>
+<li><p>Ask AI to explain how to use the software.</p></li>
+<li><p>Learn new technologies: <a href="https://positron.posit.co/git.html">Git</a>, GitHub, R, Python—they are there for a good reason!</p></li>
 </ul>
 </section>
-<section id="software-setup-overview" class="slide level2">
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="live-demo" class="title-slide slide level1 title center">
+<h1>Live Demo</h1>
+<ul>
+<li>From an old analysis in Stata to an upgraded Stata+R reproducibility package in under 10 minutes!</li>
+</ul>
+</section>
+<section id="live-demo-using-positron-ide" class="slide level2">
+<h2>Live Demo using Positron IDE</h2>
+
+<img data-src="images/user-interface-for-rstudio-migration.jpeg" class="r-stretch"></section>
+<section id="source-code-to-replicate-the-demo" class="slide level2">
+<h2>Source code to replicate the demo</h2>
+<p>TODO: Add link to GitHub repo with demo code</p>
+</section>
+<section id="questions" class="slide level2">
+<h2>Questions?</h2>
+<ul>
+<li>What would you like us to show you next time?</li>
+</ul>
+</section>
+<section id="thank-you" class="slide level2 title">
+<h2>Thank You!</h2>
+<p><a href="../../index.html">→ Visit our website for updates</a></p>
+<p><strong>Contact</strong>:</p>
+<ul>
+<li>Eduard Bukin: <a href="mailto:ebukin@worldbank.org">ebukin@worldbank.org</a></li>
+</ul>
+</section></section>
+<section>
+<section id="additional-materials" class="title-slide slide level1 title center">
+<h1>Additional materials</h1>
+
+</section>
+<section id="software-setup-overview" class="slide level2 scrollable">
 <h2>Software Setup Overview</h2>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
@@ -674,74 +477,48 @@ Eduard Bukin
 </ul></li>
 </ol>
 </section>
-<section id="positron-overview" class="slide level2">
-<h2>Positron overview</h2>
-
-<img data-src="images/user-interface-for-rstudio-migration.jpeg" class="r-stretch"></section>
-<section id="positron-assistant-features" class="slide level2">
-<h2>Positron Assistant Features</h2>
-<video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="https://positron.posit.co/videos/positron-assistant-copytoeditor.mp4"></video>
+<section id="positron-ide-self-learning" class="slide level2 smalled">
+<h2>Positron IDE: Self-learning</h2>
+<div class="columns">
+<div class="column" style="width:35%;">
+<p><a href="https://positron.posit.co/" target="_blank">Positron</a>: <strong>Modern AI-native IDE for data science</strong></p>
+<ul>
+<li><p>Built by <a href="https://posit.co/" target="_blank">Posit</a> (creators of RStudio)</p></li>
+<li><p>Supports Stata, R, Python, and others</p></li>
+<li><p>Watch the <a href="https://www.youtube.com/watch?v=MOpJYbhLgyc" target="_blank">introduction video</a> →</p></li>
+<li><p>Try it yourself with examples in R and Python:</p>
+<ul>
+<li><a href="https://github.com/posit-dev/posit-conf-2025-positron-assistant-demo">github.com/posit-dev/posit-conf-2025-positron-assistant-demo</a></li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:65%;">
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/MOpJYbhLgyc?si=rOYv9MDfTv4MAQ7B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+</div></div>
+</section>
+<section id="positron-assistant" class="slide level2">
+<h2>Positron: Assistant</h2>
+<video id="video_shortcode_videojs_video2" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="https://positron.posit.co/videos/positron-assistant-copytoeditor.mp4"></video>
 <div class="footer">
 <p>Source: <a href="https://positron.posit.co/features.html">positron.posit.co/features</a></p>
 </div>
 </section>
-<section id="starting-a-project-in-positron" class="slide level2">
-<h2>Starting a project in Positron</h2>
+<section id="positron-data-explorer" class="slide level2">
+<h2>Positron: Data explorer</h2>
+<video id="video_shortcode_videojs_video3" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="https://positron.posit.co/videos/data-explorer.mp4"></video>
 </section>
-<section id="creating-a-.do-file-and-writing-code-with-ai-assistance" class="slide level2">
-<h2>Creating a ‘.do’ file and writing code with AI assistance</h2>
-</section>
-<section id="running-stata-in-positron" class="slide level2">
-<h2>Running Stata in Positron</h2>
+<section id="positron-running-stata-setup" class="slide level2 scrollable">
+<h2>Positron: Running Stata: Setup</h2>
 <ol type="1">
-<li class="fragment">install Python</li>
-<li class="fragment">install uv extension in python: <code>pip install uv</code></li>
-<li class="fragment">install Stata MCP extension in Positron</li>
-<li class="fragment">configure Stata path in Positron settings</li>
+<li class="fragment">Install Python</li>
+<li class="fragment">Install uv extension in Python: <code>pip install uv</code></li>
+<li class="fragment">Install Stata MCP extension in Positron</li>
+<li class="fragment">Configure Stata path in Positron settings</li>
 </ol>
 </section>
-<section id="explore-further" class="slide level2">
-<h2>Explore further</h2>
-<ul>
-<li>Git</li>
-<li>GitHub</li>
-<li>R and Python</li>
-<li>Software development best practices</li>
-<li>Testing and validation</li>
-<li>Building applications</li>
-</ul>
-</section>
-<section id="question-3." class="slide level2">
-<h2>Question 3.</h2>
-<p>What use cases do you see for AI-assisted analysis in your work that you want to learn more about?</p>
-<ul>
-<li>Reproducible research packages</li>
-<li>Data cleaning and preparation</li>
-<li>Statistical analysis and modeling</li>
-<li>Visualization and reporting</li>
-<li>Mapping and spatial analysis</li>
-<li>Other</li>
-</ul>
-</section>
-<section id="resources" class="slide level2">
-<h2>Resources</h2>
-<ul>
-<li><strong>Setup Guide</strong>: <a href="../../seminars/seminar-2026-02/setup-instructions.html">Workflow Setup Instructions</a></li>
-<li><strong>GitHub</strong>: <a href="https://github.com/worldbank">github.com/worldbank</a></li>
-<li><strong>Documentation</strong>: Project repository</li>
-</ul>
-</section>
-<section id="qa" class="slide level2 discussion">
-<h2>Q&amp;A</h2>
-<h3 id="questions">Questions?</h3>
-<p><strong>Contact</strong>:</p>
-<ul>
-<li>Eduard Bukin: <a href="mailto:ebukin@worldbank.org">ebukin@worldbank.org</a></li>
-</ul>
-</section>
-<section id="thank-you" class="slide level2 title">
-<h2>Thank You!</h2>
-<p><a href="../../index.html">→ Visit our website for updates</a></p>
+<section id="positron-running-stata-execution" class="slide level2">
+<h2>Positron: Running Stata: Execution</h2>
+<p>TODO: Add a video showing Stata integration in Positron</p>
 
 
 </section></section>
@@ -749,7 +526,7 @@ Eduard Bukin
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="images/geopov-logo.png" class="slide-logo"></p>
 <div class="footer footer-default">
-<p>GeoPov BBL Series | Eduard Bukin | February 2026</p>
+<p>WKPEP Seminar Series | Eduard Bukin | February 2026</p>
 </div>
 </div></div>
 
@@ -782,7 +559,7 @@ Eduard Bukin
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'smaller': true,
+'smaller': false,
  
         // Display controls in the bottom right corner
         controls: false,
@@ -873,7 +650,7 @@ Eduard Bukin
         autoPlayMedia: null,
 
         // Global override for preloading lazy-loaded iframes (null/true/false)
-        preloadIframes: null,
+        preloadIframes: true,
 
         // Number of milliseconds between automatically proceeding to the
         // next slide, disabled when set to 0, this value can be overwritten
@@ -914,7 +691,7 @@ Eduard Bukin
 
         // Transition style for full page slide backgrounds
         // (none/fade/slide/convex/concave/zoom)
-        backgroundTransition: 'none',
+        backgroundTransition: 'zoom',
 
         // Number of slides away from the current that are visible
         viewDistance: 3,
@@ -1130,6 +907,8 @@ Eduard Bukin
       });
       </script>
     <script>videojs(video_shortcode_videojs_video1);</script>
+    <script>videojs(video_shortcode_videojs_video2);</script>
+    <script>videojs(video_shortcode_videojs_video3);</script>
     
 
 </body></html>

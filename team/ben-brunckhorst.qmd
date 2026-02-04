@@ -1,7 +1,7 @@
 ---
-title: "Ben James Brunckhorst"
+title: "Ben Brunckhorst"
 image: "ben-photo.jpg"
-image-alt: "Ben James Brunckhorst"
+image-alt: "Ben Brunckhorst"
 about:
   template: trestles
   image-width: 300px
@@ -11,19 +11,9 @@ about:
       href: mailto:bbrunckhorst@worldbank.org
     - icon: github
       text: GitHub
-      href: https://github.com/
+      href: https://github.com/bbrunckh
 ---
 
 ## Bio
 
-*Add Ben's detailed biography here*
-
-## Expertise
-
-- Area of expertise 1
-- Area of expertise 2
-- Area of expertise 3
-
-## Selected Publications
-
-*Add publications here*
+Ben Brunckhorst is a research analyst at the World Bank, where he contributes to the understanding of economic development and policy impact through interdisciplinary work spanning economics, climate change, and data science. He supports global welfare monitoring efforts with a particular focus on subnational spatial disparities in poverty and inequality. With a strong background in development economics and engineering, he utilizes tools such as R and Python to analyze large datasets and extract meaningful insights. His research has been published in academic journals and World Bank reports, and covered by the New York Times.

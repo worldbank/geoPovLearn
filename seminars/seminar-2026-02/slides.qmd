@@ -30,71 +30,86 @@ format:
       - logo-fall/**
 ---
 
-# Motivation
+# Motivation {background-iframe="grid-worms/index.html"}
 
-:::::: {style="max-width: 55%; font-size: 0.8em;"}
+:::::::::: semi-transparent-bg
+::::::::: columns
+:::::: {.column width="50%"}
+::::: {style="font-size: 0.8em;"}
 **Chat and Web-Based AI tools** are impressive!
 
 > [ChatGPT](https://chatgpt.com/) \| [Copilot](https://copilot.microsoft.com/) \| [Gemini](https://search.google/ai-in-search/) \| [WB MAI](https://ai.worldbank.org/chat/mai)
 
 ::: fragment
-Use familiar technologies: Web-Browser, Chat, Stata editor, [**copy-paste**]{style="background-color: yellow;"} ...
+Use familiar technologies:
+
+-   🌐 Web-Browser,
+-   💬 Chat,
+-   📝 Stata editor,
+-   [**📋 copy-paste**]{style="color: red;"} ...
 :::
 
 ::: fragment
-**However: Is this the best way to use AI for data analysis?**
+**Is this the best way to use AI for data analysis❓**
 :::
-
-::: fragment
-> Why are there so many AI-powered **Integrated Development Environments (IDEs)** for coding and data science?
-:::
+:::::
 ::::::
+
+:::: {.column width="50%"}
+::: fragment
+In fact, there are many 🚀AI-powered [**Integrated Development Environments (IDEs)**](style=%22color:%20blue;%22) for coding and data science 💻
+:::
+::::
+:::::::::
+::::::::::
+
+## The goal
+
+::::::: {style="max-width: 50%;"}
+:::: {.callout-tip icon="false" appearance="simple"}
+::: {style="font-size: 1.5em;"}
+of this seminar is to introduce you to AI-assisted data analysis with [**Positron IDE**]{style="color: blue;"} and [**GitHub Copilot \| Claude**](style=%22color:%20purple;%22).
+:::
+::::
+
+:::: fragment
+::: {style="font-size: 0.8em;"}
+There are many IDEs ➔
+:::
+::::
+:::::::
 
 ::: fragment
 ![](images/positron-small.gif){.absolute .stacked-gif top="0" right="0" width="380"}
 
-![](images/vscode-small.gif){.absolute .stacked-gif top="150" right="60" width="380"}
+![](images/vscode-small.gif){.absolute .stacked-gif top="140" right="60" width="380"}
 
-![](images/cursor-small.gif){.absolute .stacked-gif top="300" right="0" width="380"}
+![](images/cursor-small.gif){.absolute .stacked-gif top="280" right="0" width="380"}
 
-![](images/claude-small.gif){.absolute .stacked-gif top="450" right="60" width="380"}
-:::
-
-::: notes
--   Integrated Development Environment (IDE) -
-
--   [GitHub Copilot](https://github.com/features/copilot){target="_blank"} that used Anthropic [Claude Sonnet 4.5 LLM](https://claude.com/) to provide:
-
-    -   [Inline code completions](https://positron.posit.co/assistant-completions.html){target="_blank"}
-    -   [Chat: help and assistance](https://positron.posit.co/assistant-chat.html){target="_blank"}
-    -   [Agent: active changes to my code and code execution](https://positron.posit.co/assistant-chat-agents.html){target="_blank"}
+![](images/claude-small.gif){.absolute .stacked-gif top="420" right="60" width="380"}
 :::
 
 ::: footer
-**Sources:** [Positron](https://positron.posit.co/) \| [VS Code](https://code.visualstudio.com/) \| [Cursor](https://www.cursor.com/) \| [Claude Code](https://claude.ai/download)
+**Those are:** [Positron](https://positron.posit.co/) \| [VS Code](https://code.visualstudio.com/) \| [Cursor](https://www.cursor.com/) \| [Claude Code](https://claude.ai/download) \| and more...
 :::
 
 # Agenda {background-iframe="logo-fall/index.html"}
 
-::::: semi-transparent-bg
-> The goal of this seminar is to introduce you to AI-assisted data analysis workflow with [**Positron IDE**]{style="color: blue;"} and [**GitHub Copilot/Anthropic Claude**](style=%22color:%20darkpurple;%22).
-
-:::: fragment
+:::: semi-transparent-bg
 ::: {style="font-size: 0.8em;"}
-In the next 30 minutes I will:
-
 -   Introduce several AI-Concepts (vocabulary)
--   Show AI-assisted workflow in Positron IDE with Stata and R
+
+-   Sahre experience of using AI-assisted workflow in [Positron]{style="colour: blue;"} with Stata and R
+
 -   Provide kick-off instructions and resources.
 :::
 ::::
-:::::
 
 # Key Concepts
 
 **What do we need to know about modern analysis with AI?**
 
-1.  💬 [**AI Integration**]{style="color:#1565c0;"}: Chat \| Agent \| Inline Completion
+1.  💬 [**AI Integrated IDE**]{style="color:#1565c0;"}: Chat \| Agent \| Inline Completion
 2.  🧠 [**Context awareness**]{style="color:#6a1b9a;"}: How AI understands your project
 3.  🔌 [**Model Context Protocol (MCP)**]{style="color:#00695c;"}: Universal adapter for AI
 4.  🤖 [**GitHub Copilot \| Claude**]{style="color:#e65100;"}: LLM providers
@@ -103,7 +118,7 @@ In the next 30 minutes I will:
 
 ------------------------------------------------------------------------
 
-## 💬 [AI Integration]{style="color:#1565c0;"}: Chat \| Agent \| Inline
+## 💬 [AI Integrated IDE]{style="color:#1565c0;"}: Chat \| Agent \| Inline
 
 {{< video https://positron.posit.co/videos/positron-assistant-copytoeditor.mp4 >}}
 
@@ -119,7 +134,7 @@ Source: [Positron: AI Features](https://positron.posit.co/features.html){target=
 -   **Ask** an LLM (Claude 4.5) through Github Copilot
 -   Provides explanations, suggestions, and code snippets.
 -   Integrates with project context, and code.
--   Read more: [Positron Assistant Chat](https://positron.posit.co/assistant-chat.html){target="_blank"}
+-   Learn more: [Positron Assistant Chat](https://positron.posit.co/assistant-chat.html){target="_blank"}
 :::
 
 ::: r-stacked
@@ -131,8 +146,16 @@ Source: [Positron: AI Features](https://positron.posit.co/features.html){target=
 ::: {style="max-width: 30%; font-size: 0.8em;"}
 [Positron Assistant](https://positron.posit.co/assistant-chat.html){target="_blank"}
 
--   Runs explicit instructions for you.
--   Acts independently (if permitted).
+-   **Executes** instructions.
+
+-   Acts independently
+
+    -   Runs code
+    -   Fixes errors
+    -   Learns
+    -   Resons
+
+-   See live demo for more!
 :::
 
 ::: r-stacked
@@ -149,7 +172,7 @@ Source: [Positron: AI Features](https://positron.posit.co/features.html){target=
 
 ::::: columns
 ::: {.column width="60%"}
-Positron accesses metadata about the project.
+**Positron** accesses project metadata.
 Thus **AI 'knows':**
 
 -   📁 **Files str.**: Code, docs
@@ -171,16 +194,14 @@ Thus **AI 'knows':**
 :::::
 
 ::: footer
-**Read more:** [Positron: AI Context](https://positron.posit.co/assistant-chat-context.html){target="_blank"} \| [GH Copilot](https://docs.github.com/en/copilot/using-github-copilot/getting-started-with-github-copilot#understanding-copilot-context){target="_blank"} \| [Claude](https://www.anthropic.com/news/claude-sonnet-4-5){target="_blank"}
+**Read more:** [Positron: AI Context](https://positron.posit.co/assistant-chat-context.html){target="_blank"} \| [GH Copilot](https://docs.github.com/en/copilot/using-github-copilot/getting-started-with-github-copilot#understanding-copilot-context){target="_blank"} \| [Claude](https://www.anthropic.com/news/claude-sonnet-4-5){target="_blank"} \| [WB AI Responsible Use](https://ai.worldbank.org/responsible-use ){target="_blank"}
 :::
 
 ## 🔌 [Model Context Protocol (MCP)]{style="color:#00695c;"} {.smaller}
 
-"MCP is a universal adapter for AI"—[Anthropic's invention](https://www.anthropic.com/news/model-context-protocol){target="_blank"}
+MCP is a universal adapter for AI—[Anthropic](https://www.anthropic.com/news/model-context-protocol){target="_blank"}— that connects [data flows](https://github.com/modelcontextprotocol/servers){target="_blank"}:
 
-MCP are essential to connect [data flows](https://github.com/modelcontextprotocol/servers){target="_blank"}:
-
--   ![](images/stata-mcp-icon.png){width="25"} [Stata-MCP](https://github.com/sepinetam/stata-mcp){target="_blank"} or [R MCP](https://tidyverse.org/blog/2025/07/mcptools-0-1-0/){target="_blank"} for Stata/R -\> Positron -\> Copilot -\> LLMs,
+-   [Stata-MCP](https://github.com/sepinetam/stata-mcp){target="_blank"} or [R MCP](https://tidyverse.org/blog/2025/07/mcptools-0-1-0/){target="_blank"} for Stata/R ⟶ Positron ⟶ Copilot ⟶ LLMs.
 
 ![](images/mcp-simple-diagram.avif)
 
@@ -195,15 +216,18 @@ MCP are essential to connect [data flows](https://github.com/modelcontextprotoco
 [**GitHub Copilot**]{style="color:#0366d6;"}
 
 -   ✅ WB-approved
--   🌐 Accessed through [github.com/worldbank](https://github.com/worldbank){target="_blank"}
--   🤝 Uses [**OpenAI GPT**]{style="color:#10a37f;"}, [**Anthropic Claude**]{style="color:#d97757;"}
--   🔌 Integrates with Positron and other IDEs
+-   🌐 [github.com/worldbank](https://github.com/worldbank){target="_blank"}
+-   🤝 Uses [**Claude**]{style="color:#d97757;"} | [**GPT**]{style="color:#10a37f;"}
+-   🔌 Integrates with **IDEs**
+-    [github\@worldbank.org](mailto:github@worldbank.org)
+-    [**AI \@ WB**]{style="color:#b00020;"}: [ai.worldbank.org](https://ai.worldbank.org/responsible-use)
 
 ::: fragment
 [**Choose your LLM:**]{style="color:#e65100;"}
 
 -   🧠 Claude Sonnet/Haiku/Opus
 -   💡 OpenAI GPT-4/o1...
+
 :::
 ::::
 
@@ -222,23 +246,18 @@ Sources: [Anthropic Claude Sonnet 4.5](https://www.anthropic.com/news/claude-son
 
 :::: incremental
 ::: {style="font-size: 0.6em;"}
--   [🎯 **Be specific about the task**]{style="color:#1b5e20;"}: "Write a Stata do-file to …" / "Refactor this R function to …"
 
--   [🧩 **Provide context**]{style="color:#1b5e20;"}: goal, dataset description, key variables, constraints (WB rules, packages, runtime)
+-   [🎯 **Be specific**]{style="color:#1b5e20;"}: "Write a Stata do-file to …" / "Refactor this R function to …"
 
--   [📌 **Define the expected output**]{style="color:#1b5e20;"}: table/figure format, file to modify, function signature, acceptance criteria
+-   [🧩 **Provide context**]{style="color:#1b5e20;"}: "Goal: X; Dataset: Y variables; Constraints: Z (WB rules, packages, runtime)"
 
--   [🔁 **Ask AI to summarize + clarify first**]{style="color:#1b5e20;"}: "Restate the task in your own words and ask any clarifying questions before implementing."
+-   [📌 **Define expected output**]{style="color:#1b5e20;"}: "Save as regression_results.xlsx, format as APA table" / "Create bar chart with 95% CIs"
 
--   [🔍 **Ask for assumptions + checks**]{style="color:#1b5e20;"}: "List assumptions; add validation/tests; include edge cases"
+-   [🔁 **Summarize + clarify first**]{style="color:#1b5e20;"}: "Restate and ask clarifying questions before implementing", "Explain why ...", "Give alternatives with trade-offs..."
 
--   [🪜 **Iterate in small steps**]{style="color:#1b5e20;"}: request a minimal working change, then refine (don’t "rewrite everything")
+-   [🪜 **Iterate in small steps**]{style="color:#1b5e20;"}: minimal changes, then refine
 
--   [🧠 **Force transparency**]{style="color:#1b5e20;"}: "Explain *why* this approach; give 1–2 alternatives with trade-offs"
-
--   [🧾 **Make it reproducible**]{style="color:#1b5e20;"}: "Use set seed; pin versions; avoid randomness; write comments; ask LLM to write comments"
-
--   [🛑 **Set boundaries**]{style="color:#1b5e20;"}: "Don’t use external data; don’t print secrets; don’t change unrelated files"
+-   [🛑 **Set boundaries**]{style="color:#1b5e20;"}: "Don’t use ... data", "Don’t print secrets, ask if in doubt.", "Don’t change files".
 :::
 ::::
 
@@ -267,15 +286,15 @@ Sources: [Anthropic Claude Sonnet 4.5](https://www.anthropic.com/news/claude-son
 
 -   [⚠︎ **Confidentiality / security / privacy**]{style="color:#b00020;"}
 
-    [✓ **Constrain context**]{style="color:#1b5e20;"}: exclude sensitive data; use `.copilot-ignore`
+    [✓ **Constrain context**]{style="color:#1b5e20;"}: exclude sensitive data; use `.copilot-ignore`; Follow [WB AI guidelines](https://ai.worldbank.org/responsible-use)
 
 -   [⚠︎ **Reproducibility**]{style="color:#b00020;"}: answers can vary across sessions/models/settings
 
-    [✓ **Make it reproducible**]{style="color:#1b5e20;"}: save prompts, use Git; create AI agents
+    [✓ **Cutomize agents**]{style="color:#1b5e20;"}: save prompts, use Git; create AI agents
 :::
 
 ::: footer
-**Read more:** [GitHub Copilot Trust Center](https://resources.github.com/copilot-trust-center/){target="_blank"}
+**Read more:** [GitHub Copilot Trust Center](https://resources.github.com/copilot-trust-center/){target="_blank"} \| [AI \@ WB: ai.worldbank.org](https://ai.worldbank.org/){target="_blank"}
 :::
 
 ## Summary
@@ -301,17 +320,13 @@ Sources: [Anthropic Claude Sonnet 4.5](https://www.anthropic.com/news/claude-son
 ::: {style="max-width: 50%; font-size: 0.6em;"}
 -   Setup the software: follow [instructions](setup-instructions.qmd)
 
--   Reproduce these demos:
+-   Reproduce demos:
 
     -   [Live demo in Positron with Stata](#stata-demo)
 
     -   [Posit Conf 2025 Postron assistant Demo in R and Python](https://github.com/posit-dev/posit-conf-2025-positron-assistant-demo)
 
 -   Ask AI's help to learn.
-    Type in [MS Copilot](https://m365.cloud.microsoft/chat)
-
-    -   "Explain how to use this software: https://git-scm.com/."
-    -   "Why do I need it. How could it improve my workflow?"
 
 -   Step out of your comfort zone:
 
@@ -326,12 +341,14 @@ Sources: [Anthropic Claude Sonnet 4.5](https://www.anthropic.com/news/claude-son
 
 # Live Demo {#stata-demo .title}
 
-**From an old analysis in Stata to an upgraded Stata+R reproddatesucibility package in under 10 minutes!**
+**From an old analysis in Stata to an upgraded Stata+R reproducibility package in under 10 minutes!**
 
-Download the demo project from here: [github.com/WBGGeoPov/seminar-coding-with-ai-demo](https://github.com/WBGGeoPov/seminar-coding-with-ai-demo)
+-   Download materials here: [github.com/WBGGeoPov/seminar-coding-with-ai-demo](https://github.com/WBGGeoPov/seminar-coding-with-ai-demo)
+
+-   Watch pre-recorded demo video here: [youtube.com/watch](){target="_blank"}
 
 ::: {.callout-tip icon="true"}
-💡 **Ask AI for help**: "How do I download a project from GitHub and open it in Positron IDE?"
+💡 **Ask AI for help**: "How do I download a project from GitHub and open it in Positron IDE? The link is: ..."
 :::
 
 ------------------------------------------------------------------------
@@ -340,30 +357,43 @@ Download the demo project from here: [github.com/WBGGeoPov/seminar-coding-with-a
 
 ![](images/user-interface-for-rstudio-migration.jpeg)
 
-## Questions?
+## Thank You! Questins? {background-iframe="logo-fall/index.html"}
 
--   What would you like us to show you next?
-
-------------------------------------------------------------------------
-
-## Thank You! {.title}
+:::: {style="font-size: 0.8em;"}
+:::: semi-transparent-bg
+::: columns
+::: {.column width="60%"}
 
 **Resources & Source Code**
 
--   [→ Visit our website for updates](../../index.qmd) \| <https://wbggeopov.github.io/geoPovLearn/>
+-   [→ Visit our website for updates](../../index.qmd) \| <wbggeopov.github.io/geoPovLearn/>
 -   📖 [Presentation Source Code](https://github.com/WBGGeoPov/geoPovLearn/blob/main/seminars/seminar-2026-02/slides.qmd){target="_blank"}
 -   📚 [Setup Instructions](setup-instructions.qmd)
--   🎥 [Positron + Stata Demo Repository](https://github.com/WBGGeoPov/seminar-coding-with-ai-demo)
+-   🎥 [Stata Demo](https://github.com/WBGGeoPov/seminar-coding-with-ai-demo) \| [Recording](TODO)
 
 **Contact**:
 
--   Eduard Bukin: [ebukin\@worldbank.org](mailto:ebukin@worldbank.org)
+- Distributional Impact of Policies [poverty\@worldbank.org](mailto:poverty@worldbank.org)
+
+:::
+
+::: {.column width="40%"}
+Let us know your feedback and what you'd like to see in future sessions!:
+
+[**👉 Feedback Form**](){target="_blank"}
+
+QR Code
+
+:::
+:::
+::::
+::::
 
 # Additional materials {#additional-materials .title}
 
 ------------------------------------------------------------------------
 
-## Software Setup Overview
+## Software Setup Overview {.smaller}
 
 ::: callout-note
 **Full details:** [Setup Instructions](setup-instructions.qmd#setup)

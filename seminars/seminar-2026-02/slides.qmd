@@ -126,7 +126,7 @@ Source: [Positron: AI Features](https://positron.posit.co/features.html){target=
 
 ::: {style="max-width: 40%; font-size: 0.85em;"}
 
-[Positron Assistant](https://positron.posit.co/assistant-chat.html){target="_blank"} or similar chats in others editors
+[Positron Assistant](https://positron.posit.co/assistant-chat.html){target="_blank"} or similar chats in other editors
 
 - **Ask** an LLM (Claude 4.5) through Github Copilot
 - Provides explanations, suggestions, and code snippets.
@@ -203,7 +203,7 @@ Positron accesses metadata about the project. Thus **AI 'knows':**
 
 "MCP is a universal adapter for AI"—[Anthropic's invention](https://www.anthropic.com/news/model-context-protocol){target="_blank"}
 
-MCP are essential to conect [everything](https://github.com/modelcontextprotocol/servers){target="_blank"}: [Stata-MCP](https://github.com/sepinetam/stata-mcp){target="_blank"} or [R MCP](https://tidyverse.org/blog/2025/07/mcptools-0-1-0/){target="_blank"} for Stata/R -> Poitron -> Copilot -> LLMs,
+MCP are essential to connect [everything](https://github.com/modelcontextprotocol/servers){target="_blank"}: [Stata-MCP](https://github.com/sepinetam/stata-mcp){target="_blank"} or [R MCP](https://tidyverse.org/blog/2025/07/mcptools-0-1-0/){target="_blank"} for Stata/R -> Positron -> Copilot -> LLMs,
 
 ![](images/mcp-simple-diagram.avif)
 
@@ -249,7 +249,7 @@ MCP are essential to conect [everything](https://github.com/modelcontextprotocol
 
 
 ::: footer
-Sources: [Althropic Claude Sonnet 4.5](https://www.anthropic.com/news/claude-sonnet-4-5){target="_blank"}
+Sources: [Anthropic Claude Sonnet 4.5](https://www.anthropic.com/news/claude-sonnet-4-5){target="_blank"}
 :::
 
 ## ✍️ [Efficient Prompting]{style="color:#2e7d32;"}
@@ -316,7 +316,7 @@ Sources: [Althropic Claude Sonnet 4.5](https://www.anthropic.com/news/claude-son
 ## Summary
 
 ::: fragment
-[**Why use an IDEs, not a web-browsers-based workflow?**]{style="color: blue;"}
+[**Why use IDEs, not a web-browser-based workflow?**]{style="color: blue;"}
 
 - Context-awareness
 - Streamlined workflow
@@ -343,7 +343,41 @@ Sources: [Althropic Claude Sonnet 4.5](https://www.anthropic.com/news/claude-son
 
 -  Ask AI to explain how to use the software.
 
--  Learn new technologies: [Git](https://positron.posit.co/git.html), GitHub, R, Python, they are are there for a good reason!
+-  Learn new technologies: [Git](https://positron.posit.co/git.html), GitHub, R, Python—they are there for a good reason!
+
+----------------------------------------------------------------
+
+# Live Demo {.title}
+
+- From an old analysis in Stata to an upgraded Stata+R reproducibility package in under 10 minutes!
+
+------------------------------------------------------------------------
+
+## Live Demo using Positron IDE
+
+![](images/user-interface-for-rstudio-migration.jpeg)
+
+## Source code to replicate the demo
+
+TODO: Add link to GitHub repo with demo code
+
+## Questions?
+
+- What would you like us to show you next time?
+
+------------------------------------------------------------------------
+
+## Thank You! {.title}
+
+[→ Visit our website for updates](../../index.qmd)
+
+**Contact**:
+
+-   Eduard Bukin: [ebukin\@worldbank.org](mailto:ebukin@worldbank.org)
+
+# Additional materials {.title}
+
+------------------------------------------------------------------------
 
 ## Software Setup Overview
 
@@ -363,12 +397,6 @@ Sources: [Althropic Claude Sonnet 4.5](https://www.anthropic.com/news/claude-son
 5.  **Start experimenting!**
     -   Open assistant: `Ctrl+Shift+P` \> "Ask Positron Assistant"
     -   Try: chat, agent mode, inline code completion
-
-
-## Positron IDE: Overview
-
-![](images/user-interface-for-rstudio-migration.jpeg)
-
 
 ## Positron IDE: Self-learning {.smalled}
 
@@ -396,10 +424,6 @@ Sources: [Althropic Claude Sonnet 4.5](https://www.anthropic.com/news/claude-son
 
 ::::::
 
-## Positron: Starting new project
-
-TODO: Add a video showing how to start a new project in Positron with Stata/R
-
 ## Positron: Assistant
 
 {{< video https://positron.posit.co/videos/positron-assistant-copytoeditor.mp4 >}}
@@ -412,38 +436,15 @@ Source: [positron.posit.co/features](https://positron.posit.co/features.html)
 
 {{< video https://positron.posit.co/videos/data-explorer.mp4 >}}
 
-
-## Positron: Git integration
-
-TODO: Add a video showing Git integration in Positron
-
-## Positron: Running Stata
+## Positron: Running Stata: Setup
 
 ::: incremental
-1. install Python
-2. install uv extension in python: `pip install uv`
-3. install Stata MCP extension in Positron
-4. configure Stata path in Positron settings
+1. Install Python
+2. Install uv extension in Python: `pip install uv`
+3. Install Stata MCP extension in Positron
+4. Configure Stata path in Positron settings
 :::
 
-TODO: Add a video showing stata integration in Positron
+## Positron: Running Stata: Execution
 
-# Live Demo {.title}
-
-- From an old analysis in Stata to an uprgraded Stata+R reproducibility package in under 10 minutes!
-
-------------------------------------------------------------------------
-
-## Q&A {.discussion}
-
-### Questions?
-
-**Contact**:
-
--   Eduard Bukin: [ebukin\@worldbank.org](mailto:ebukin@worldbank.org)
-
-------------------------------------------------------------------------
-
-## Thank You! {.title}
-
-[→ Visit our website for updates](../../index.qmd)
+TODO: Add a video showing Stata integration in Positron

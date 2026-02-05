@@ -373,7 +373,7 @@ Sources: [Anthropic Claude Sonnet 4.5](https://www.anthropic.com/news/claude-son
 
 ## Thank You! Questins? {background-iframe="logo-fall/index.html"}
 
-::::::: {style="font-size: 0.7em;"}
+::::::: {style="font-size: 0.60em;"}
 :::::: semi-transparent-bg
 **Resources & Source Code**
 
@@ -381,7 +381,7 @@ Sources: [Anthropic Claude Sonnet 4.5](https://www.anthropic.com/news/claude-son
 
 -   [Recording](https://worldbankgroup.sharepoint.com/:v:/s/FPG/IQAP1iO3p3J_TYbLOsBn5UqtAeJUq3oW9ukcs1BlgLMRMRg?e=pkO3bL&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
--   [wbggeopov.github.io/geoPovLearn/](https://wbggeopov.github.io/geoPovLearn/)
+-   Demo example code and data: [wbggeopov.github.io/geoPovLearn/](https://wbggeopov.github.io/geoPovLearn/)
 
 -   [Slides and Supporting Materials](https://wbggeopov.github.io/geoPovLearn/seminars/seminar-2026-02/overview.html)
 

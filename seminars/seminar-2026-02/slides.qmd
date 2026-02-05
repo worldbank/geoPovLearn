@@ -387,7 +387,7 @@ Sources: [Anthropic Claude Sonnet 4.5](https://www.anthropic.com/news/claude-son
 
 -   [Slides and Supporting Materials](https://wbggeopov.github.io/geoPovLearn/seminars/seminar-2026-02/overview.html)
 
-    -   [Slides (web)](slides.qmd) + [Slides (PDF)](ai-for-coding-slides-2024-02-05.pdf)
+    -   [Slides (web)](slides.qmd) + [Slides (PDF)](https://raw.githubusercontent.com/WBGGeoPov/geoPovLearn/main/seminars/seminar-2026-02/ai-for-coding-slides-2026-02-05.pdf)
 
     -   📚 [Setup Instructions](setup-instructions.qmd)
 

@@ -58,7 +58,7 @@ During this first session, we will:
 
 -   Positron + Stata Live Demo materials: [github.com/WBGGeoPov/seminar-coding-with-ai-demo](https://github.com/WBGGeoPov/seminar-coding-with-ai-demo)
 
--   [Slides (web)](slides.qmd) + [Slides (PDF)](ai-for-coding-slides-2024-02-05.pdf)
+-   [Slides (web)](slides.qmd) + [Slides (PDF)](https://raw.githubusercontent.com/WBGGeoPov/geoPovLearn/main/seminars/seminar-2026-02/ai-for-coding-slides-2026-02-05.pdf)
 
 -   📚 [Setup Instructions](setup-instructions.qmd)
 
@@ -66,7 +66,7 @@ During this first session, we will:
 
 <iframe src="slides.html" width="100%" height="600px" style="border:1px solid #ccc;"></iframe>
 
-[View Slides](slides.qmd) | [Download PDF](ai-for-coding-slides-2024-02-05.pdf)
+[View Slides](slides.qmd) | [Download PDF](https://raw.githubusercontent.com/WBGGeoPov/geoPovLearn/main/seminars/seminar-2026-02/ai-for-coding-slides-2026-02-05.pdf)
 
 
 ## Additional Resources {#resources}

@@ -32,12 +32,10 @@ format:
 
 # Motivation {background-iframe="grid-worms/index.html"}
 
-<!-- :::::::::: semi-transparent-bg -->
-
 ::::::::::: columns
 :::::: {.column width="50%"}
 ::::: semi-transparent-bg
-:::: {style="font-size: 0.8em;"}
+:::: {style="font-size: 0.65em;"}
 **Chat and Web-Based AI tools** are impressive!
 
 > [ChatGPT](https://chatgpt.com/) \| [Copilot](https://copilot.microsoft.com/) \| [Gemini](https://search.google/ai-in-search/) \| [WB MAI](https://ai.worldbank.org/chat/mai)
@@ -50,15 +48,16 @@ Use familiar technologies:
 -   📝 Stata editor,
 -   [**📋 copy-paste**]{style="color: red;"} ...
 :::
+
+::: fragment
+**Is this the best way to use AI for data analysis❓**
+:::
 ::::
 :::::
 ::::::
 
 :::::: {.column width="50%"}
 ::::: semi-transparent-bg
-::: fragment
-**Is this the best way to use AI for data analysis❓**
-:::
 
 ::: fragment
 In fact, there are many <br/>AI-powered<br/> [**Integrated** <br/>Development <br/>Environments (IDEs)](style=%22color:%20blue;%22)<br/> for coding and data science!
@@ -66,8 +65,6 @@ In fact, there are many <br/>AI-powered<br/> [**Integrated** <br/>Development <b
 :::::
 ::::::
 :::::::::::
-
-<!-- :::::::::: -->
 
 ## The goal
 
@@ -78,14 +75,11 @@ of this seminar is to introduce you to AI-assisted data analysis with [**Positro
 :::
 ::::
 
-:::: fragment
 ::: {style="font-size: 0.8em;"}
 There are many IDEs ➔
 :::
-::::
 :::::::
 
-::: fragment
 ![](images/positron-small.gif){.absolute .stacked-gif top="0" right="0" width="380"}
 
 ![](images/vscode-small.gif){.absolute .stacked-gif top="140" right="60" width="380"}
@@ -93,7 +87,6 @@ There are many IDEs ➔
 ![](images/cursor-small.gif){.absolute .stacked-gif top="280" right="0" width="380"}
 
 ![](images/claude-small.gif){.absolute .stacked-gif top="420" right="60" width="380"}
-:::
 
 ::: footer
 **Those are:** [Positron](https://positron.posit.co/) \| [VS Code](https://code.visualstudio.com/) \| [Cursor](https://www.cursor.com/) \| [Claude Code](https://claude.ai/download) \| and more...

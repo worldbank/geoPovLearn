@@ -373,10 +373,8 @@ Sources: [Anthropic Claude Sonnet 4.5](https://www.anthropic.com/news/claude-son
 
 ## Thank You! Questins? {background-iframe="logo-fall/index.html"}
 
-::::::: {style="font-size: 0.8em;"}
+::::::: {style="font-size: 0.7em;"}
 :::::: semi-transparent-bg
-::::: columns
-::: {.column width="100%"}
 **Resources & Source Code**
 
 -   [Internal seminar page](https://worldbankgroup.sharepoint.com/:u:/r/sites/FPG/SitePages/SystemPages/Detail.aspx?csf=1&web=1&e=FpUcQU)
@@ -396,8 +394,6 @@ Sources: [Anthropic Claude Sonnet 4.5](https://www.anthropic.com/news/claude-son
 **Contact**:
 
 -   Distributional Impact of Policies [poverty\@worldbank.org](mailto:poverty@worldbank.org)
-:::
-:::::
 ::::::
 :::::::
 

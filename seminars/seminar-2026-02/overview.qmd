@@ -60,7 +60,7 @@ During this first session, we will:
 
 <iframe src="slides.html" width="100%" height="600px" style="border:1px solid #ccc;"></iframe>
 
-[View Slides](slides.qmd) | [Download PDF](slides.pdf)
+[View Slides](slides.qmd) | [Download PDF](ai-for-coding-slides-2024-02-05.pdf)
 
 
 ## Additional Resources {#resources}

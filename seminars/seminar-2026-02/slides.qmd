@@ -373,29 +373,28 @@ Sources: [Anthropic Claude Sonnet 4.5](https://www.anthropic.com/news/claude-son
 
 ## Thank You! Questins? {background-iframe="logo-fall/index.html"}
 
-::::::: {style="font-size: 0.60em;"}
 :::::: semi-transparent-bg
+:::: {style="font-size: 0.60em;"}
 **Resources & Source Code**
 
 -   [Internal seminar page](https://worldbankgroup.sharepoint.com/:u:/r/sites/FPG/SitePages/SystemPages/Detail.aspx?csf=1&web=1&e=FpUcQU)
 
--   [Recording](https://worldbankgroup.sharepoint.com/:v:/s/FPG/IQAP1iO3p3J_TYbLOsBn5UqtAeJUq3oW9ukcs1BlgLMRMRg?e=pkO3bL&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+-   🎥 [Recording](https://worldbankgroup.sharepoint.com/:v:/s/FPG/IQAP1iO3p3J_TYbLOsBn5UqtAeJUq3oW9ukcs1BlgLMRMRg?e=pkO3bL&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
--   Demo example code and data: [wbggeopov.github.io/geoPovLearn/](https://wbggeopov.github.io/geoPovLearn/)
+-   [Positron + Stata: Live Demo (code)](https://github.com/WBGGeoPov/seminar-coding-with-ai-demo)
 
 -   [Slides and Supporting Materials](https://wbggeopov.github.io/geoPovLearn/seminars/seminar-2026-02/overview.html)
 
--   📚 [Setup Instructions](setup-instructions.qmd)
+    -   [Slides](slides.qmd)
+    -   📚 [Setup Instructions](setup-instructions.qmd)
 
--   🎥 [Positron + Stata: Live Demo (code)](https://github.com/WBGGeoPov/seminar-coding-with-ai-demo)
+-   [Presentation Source Code](https://github.com/WBGGeoPov/geoPovLearn/blob/main/seminars/seminar-2026-02){target="_blank"}
 
--   📖 [Presentation Source Code](https://github.com/WBGGeoPov/geoPovLearn/blob/main/seminars/seminar-2026-02/slides.qmd){target="_blank"}
+-   [GeoPov learning resources](https://wbggeopov.github.io/geoPovLearn/){target="_blank"}
 
-**Contact**:
-
--   Distributional Impact of Policies [poverty\@worldbank.org](mailto:poverty@worldbank.org)
+**Contact**: Distributional Impact of Policies [poverty\@worldbank.org](mailto:poverty@worldbank.org)
+::::
 ::::::
-:::::::
 
 # Additional materials {#additional-materials .title}
 

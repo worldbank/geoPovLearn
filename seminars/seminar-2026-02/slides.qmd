@@ -336,7 +336,7 @@ Sources: [Anthropic Claude Sonnet 4.5](https://www.anthropic.com/news/claude-son
 
 -   Reproduce demos:
 
-    -   [Live demo in Positron with Stata](#stata-demo)
+    -   Live demo in [Positron with Stata (recording)](https://worldbankgroup.sharepoint.com/:v:/s/FPG/IQAP1iO3p3J_TYbLOsBn5UqtAeJUq3oW9ukcs1BlgLMRMRg?e=pkO3bL&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D) + [Materials](https://github.com/WBGGeoPov/seminar-coding-with-ai-demo)
 
     -   [Posit Conf 2025 Postron assistant Demo in R and Python](https://github.com/posit-dev/posit-conf-2025-positron-assistant-demo)
 
@@ -359,7 +359,9 @@ Sources: [Anthropic Claude Sonnet 4.5](https://www.anthropic.com/news/claude-son
 
 -   Download materials here: [github.com/WBGGeoPov/seminar-coding-with-ai-demo](https://github.com/WBGGeoPov/seminar-coding-with-ai-demo)
 
--   Watch the seminar recording: []()
+-   Watch the seminar recording: [Positron with Stata (recording)](https://worldbankgroup.sharepoint.com/:v:/s/FPG/IQAP1iO3p3J_TYbLOsBn5UqtAeJUq3oW9ukcs1BlgLMRMRg?e=pkO3bL&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+
+-   Seminar internal page: [link](https://worldbankgroup.sharepoint.com/:u:/r/sites/FPG/SitePages/SystemPages/Detail.aspx?csf=1&web=1&e=FpUcQU)
 
 ::: {.callout-tip icon="true"}
 💡 **Ask AI for help**: "How do I download a project from GitHub and open it in Positron IDE? The link is: ..."
@@ -385,7 +387,8 @@ Sources: [Anthropic Claude Sonnet 4.5](https://www.anthropic.com/news/claude-son
 
 -   [Slides and Supporting Materials](https://wbggeopov.github.io/geoPovLearn/seminars/seminar-2026-02/overview.html)
 
-    -   [Slides](slides.qmd)
+    -   [Slides (web)](slides.qmd) + [Slides (PDF)](ai-for-coding-slides-2024-02-05.pdf)
+
     -   📚 [Setup Instructions](setup-instructions.qmd)
 
 -   [Presentation Source Code](https://github.com/WBGGeoPov/geoPovLearn/blob/main/seminars/seminar-2026-02){target="_blank"}

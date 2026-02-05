@@ -56,6 +56,12 @@ During this first session, we will:
 
 -   [Recording](https://worldbankgroup.sharepoint.com/:v:/s/FPG/IQAP1iO3p3J_TYbLOsBn5UqtAeJUq3oW9ukcs1BlgLMRMRg?e=pkO3bL&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
+-   Positron + Stata Live Demo materials: [github.com/WBGGeoPov/seminar-coding-with-ai-demo](https://github.com/WBGGeoPov/seminar-coding-with-ai-demo)
+
+-   [Slides (web)](slides.qmd) + [Slides (PDF)](ai-for-coding-slides-2024-02-05.pdf)
+
+-   📚 [Setup Instructions](setup-instructions.qmd)
+
 ### Presentation Slides
 
 <iframe src="slides.html" width="100%" height="600px" style="border:1px solid #ccc;"></iframe>

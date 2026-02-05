@@ -50,15 +50,18 @@ During this first session, we will:
 
 ## Materials
 
+### Seminar
+
+-   [Internal seminar page](https://worldbankgroup.sharepoint.com/:u:/r/sites/FPG/SitePages/SystemPages/Detail.aspx?csf=1&web=1&e=FpUcQU)
+
+-   [Recording](https://worldbankgroup.sharepoint.com/:v:/s/FPG/IQAP1iO3p3J_TYbLOsBn5UqtAeJUq3oW9ukcs1BlgLMRMRg?e=pkO3bL&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+
 ### Presentation Slides
 
 <iframe src="slides.html" width="100%" height="600px" style="border:1px solid #ccc;"></iframe>
 
 [View Slides](slides.qmd) | [Download PDF](slides.pdf)
 
-## Recording
-
-*Recording will be added after the seminar*
 
 ## Additional Resources {#resources}
 

@@ -359,7 +359,7 @@ Sources: [Anthropic Claude Sonnet 4.5](https://www.anthropic.com/news/claude-son
 
 -   Download materials here: [github.com/WBGGeoPov/seminar-coding-with-ai-demo](https://github.com/WBGGeoPov/seminar-coding-with-ai-demo)
 
--   Watch pre-recorded demo video here: [youtu.be/V6NZUXUHviE](https://youtu.be/V6NZUXUHviE){target="_blank"}
+-   Watch the seminar recording: []()
 
 ::: {.callout-tip icon="true"}
 💡 **Ask AI for help**: "How do I download a project from GitHub and open it in Positron IDE? The link is: ..."
@@ -376,25 +376,26 @@ Sources: [Anthropic Claude Sonnet 4.5](https://www.anthropic.com/news/claude-son
 ::::::: {style="font-size: 0.8em;"}
 :::::: semi-transparent-bg
 ::::: columns
-::: {.column width="60%"}
+::: {.column width="100%"}
 **Resources & Source Code**
 
--   [→ Visit our website for updates](../../index.qmd) \| [wbggeopov.github.io/geoPovLearn/](https://wbggeopov.github.io/geoPovLearn/)
--   📖 [Presentation Source Code](https://github.com/WBGGeoPov/geoPovLearn/blob/main/seminars/seminar-2026-02/slides.qmd){target="_blank"}
+-   [Internal seminar page](https://worldbankgroup.sharepoint.com/:u:/r/sites/FPG/SitePages/SystemPages/Detail.aspx?csf=1&web=1&e=FpUcQU)
+
+-   [Recording](https://worldbankgroup.sharepoint.com/:v:/s/FPG/IQAP1iO3p3J_TYbLOsBn5UqtAeJUq3oW9ukcs1BlgLMRMRg?e=pkO3bL&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+
+-   [wbggeopov.github.io/geoPovLearn/](https://wbggeopov.github.io/geoPovLearn/)
+
+-   [Slides and Supporting Materials](https://wbggeopov.github.io/geoPovLearn/seminars/seminar-2026-02/overview.html)
+
 -   📚 [Setup Instructions](setup-instructions.qmd)
--   🎥 [Stata Demo](https://github.com/WBGGeoPov/seminar-coding-with-ai-demo) \| [youtu.be/V6NZUXUHviE](https://youtu.be/V6NZUXUHviE)
+
+-   🎥 [Positron + Stata: Live Demo (code)](https://github.com/WBGGeoPov/seminar-coding-with-ai-demo)
+
+-   📖 [Presentation Source Code](https://github.com/WBGGeoPov/geoPovLearn/blob/main/seminars/seminar-2026-02/slides.qmd){target="_blank"}
 
 **Contact**:
 
 -   Distributional Impact of Policies [poverty\@worldbank.org](mailto:poverty@worldbank.org)
-:::
-
-::: {.column width="40%"}
-Let us know your feedback and what you'd like to see in future sessions!:
-
-**👉 Feedback:** **slido.com \# 3802 578 \|** Passcode: **wkpep**
-
-![](images/QR Code for 20260205 BBL event.png){fig-align="center"}
 :::
 :::::
 ::::::

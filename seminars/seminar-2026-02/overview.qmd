@@ -6,7 +6,6 @@ description: "Learn how to harness the power of AI in your daily analytical work
 author: "Eduard Bukin"
 categories: [AI, coding, workflow, stata, R, Positron, GitHub Copilot]
 image: "images/mcp-logo.png"
-date: "February 5, 2026"
 ---
 
 ## Overview

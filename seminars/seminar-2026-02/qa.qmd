@@ -1,8 +1,10 @@
 ---
 title: "Q&A: AI-Assisted Data Analysis with Positron"
 subtitle: "Questions & Answers from February 5, 2026 Seminar"
+description: "A compilation of questions and answers from the seminar on using AI agents in Stata and R with Positron. Covers software setup, AI capabilities, confidentiality concerns, and best practices for microeconomists."
 date: "February 5, 2026"
-author: "Eduard Bukin, Fiscal Policy and Growth Department"
+author: "Henry Stemmler; Eduard Bukin"
+categories: [AI, coding, workflow, stata, R, Positron, GitHub Copilot]
 ---
 
 # A. Software

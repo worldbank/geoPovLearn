@@ -4,19 +4,16 @@ title-long: "Revolutionize Your Analysis in Stata and R: AI Agent-Assisted Workf
 date: "2026-02-05"
 description: "Learn how to harness the power of AI in your daily analytical work using Stata and R. Essential tools that can significantly improve your analysis and coding workflow are demonstrated."
 author: "Eduard Bukin"
-categories: [AI, coding, workflow, stata, R]
+categories: [AI, coding, workflow, stata, R, Positron, GitHub Copilot]
 image: "images/mcp-logo.png"
+date: "February 5, 2026"
 ---
 
 ## Overview
 
-This seminar provides an overview of how we can harness the power of AI in our daily analytical work. Essential tools that can significantly improve your analysis and coding workflow will be demonstrated.
+Many tasks in Stata or R/Python can be done more efficiently with support from AI tools (such as Anthropic Claude, ChatGPT, or GitHub Copilot). However, using AI only through a web browser (or Windows Copilot) captures only a small share of its potential.
 
-Any task involving coding in Stata or R/Python programming languages can be more efficiently performed with the help of AI (such as Anthropic Claude, ChatGPT, or GitHub Copilot). However, using AI solely through a web browser or Windows Copilot captures only a fraction of its potential.
-
-To enhance the efficiency and scope of your work, we can integrate WB-approved software (VS Code) that can incorporate AI-Agents and run Stata or R code directly. This will enable you to leverage AI in your daily analysis, make AI aware of your context, and prompt it to write code specifically to your data and objectives.
-
-The goal of this seminar is to introduce these tools, demonstrate their potential and limitations, and provide a starting point for you to explore AI assistance independently.
+This first seminar focuses on how microeconomists can use Positron which is an integrated development environment (IDE) designed for data analysis and statistical programming. It is developed by Posit (the company behind RStudio) and is built on Visual Studio Code, but tailored specifically for R, Python, and data-science workflows. In practical terms, Positron combines the flexibility of VS Code with features that are familiar to users of RStudio. This is a very powerful approach that uses World Bank–approved development environment that can run Stata or R code directly and integrate AI agents. It also makes AI more "aware" of your working context (your scripts, folders, and outputs), so it can help you write, debug, document, and validate code in a way that is specific to your data and objectives.
 
 ## Speaker
 
@@ -52,7 +49,7 @@ During this first session, we will:
 
 ### Seminar
 
--   [Internal seminar page](https://worldbankgroup.sharepoint.com/:u:/r/sites/FPG/SitePages/SystemPages/Detail.aspx?csf=1&web=1&e=FpUcQU)
+-   [Internal seminar page](https://worldbankgroup.sharepoint.com/sites/FPG/SitePages/SystemPages/Detail.aspx/Events/mode=view?_Id=2&SiteURL=/sites/FPG&xsdata=MDV8MDJ8fDVlY2ZlZmE0ODgxMTQ1NDQ2MWI3MDhkZTY1YmExZGM4fDMxYTJmZWMwMjY2YjRjNjdiNTZlMjc5NmQ4ZjU5YzM2fDB8MHw2MzkwNjAwNDcxNzExODMwMzF8VW5rbm93bnxWR1ZoYlhOVFpXTjFjbWwwZVZObGNuWnBZMlY4ZXlKRFFTSTZJbFJsWVcxelgwRlVVRk5sY25acFkyVmZVMUJQVEU5R0lpd2lWaUk2SWpBdU1DNHdNREF3SWl3aVVDSTZJbGRwYmpNeUlpd2lRVTRpT2lKUGRHaGxjaUlzSWxkVUlqb3hNWDA9fDF8TDJOb1lYUnpMekU1T2pVek9EaGpPVGN6TFdJeE9XUXRORGN5TXkxaE9XSmlMV000TXpRMU9ERm1OR05qTlY5ak5UQXpaR1ZsTnkwMllUaGpMVFExWmpBdE9ESXdNeTFrWmpCaE1UQmhPVFZoTVRoQWRXNXhMbWRpYkM1emNHRmpaWE12YldWemMyRm5aWE12TVRjM01EUXdOemt4TlRVM05RPT18MzRkMGI4NTAyMjhiNDYwOTYxYjcwOGRlNjViYTFkYzh8NjNmNDk4Y2EwM2NkNGY2MWFiYTI1YzI1MjBjMTFhNzY%3D&sdata=NzYwTnIvcUdjYzluakgwL0ZTNytmZTBxdTZYL2p5U1dXUTgvOTRDRU5WYz0%3D&ovuser=31a2fec0-266b-4c67-b56e-2796d8f59c36%2Cebukin%40worldbank.org)
 
 -   [Recording](https://worldbankgroup.sharepoint.com/:v:/s/FPG/IQAP1iO3p3J_TYbLOsBn5UqtAeJUq3oW9ukcs1BlgLMRMRg?e=pkO3bL&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
@@ -62,13 +59,13 @@ During this first session, we will:
 
 -   📚 [Setup Instructions](setup-instructions.qmd)
 
+-   [Q/A: Questions and Answers from the Seminar and Teams Chat](qa.qmd)
+
 ### Presentation Slides
 
 <iframe src="slides.html" width="100%" height="600px" style="border:1px solid #ccc;"></iframe>
 
 [View Slides](slides.qmd) | [Download PDF](https://raw.githubusercontent.com/WBGGeoPov/geoPovLearn/main/seminars/seminar-2026-02/ai-for-coding-slides-2026-02-05.pdf)
-
-[Q/A] | [Questions and Answers from the Seminar](qa.qmd)
 
 ## Additional Resources {#resources}
 

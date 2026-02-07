@@ -3,19 +3,11 @@ title: "Q&A: AI-Assisted Data Analysis with Positron"
 subtitle: "Questions & Answers from February 5, 2026 Seminar"
 date: "February 5, 2026"
 author: "Eduard Bukin, Fiscal Policy and Growth Department"
-format:
-  html:
-    toc: true
-    toc-depth: 3
-    toc-title: "Contents"
-    number-sections: true
 ---
 
-# 1. Questions & Answers
+# A. Software
 
-## A. Software
-
-### **1. How does Positron compare to VS Code, especially with Git?**
+## **1. How does Positron compare to VS Code, especially with Git?**
 
 **Answer:**
 
@@ -29,19 +21,19 @@ Key differences:
 
 - VS Code requires more extensions to replicate this functionality and integration is less seamless.
 
-### **2. Is the Positron set-up similar to AmazonQ for HTML in VS?**
+## **2. Is the Positron set-up similar to AmazonQ for HTML in VS?**
 
 **Answer:**
 
-Not directly comparable. We are not sure it AmazonQ is approved for use at the World Bank, please check with ITS.
+Not directly comparable. We are not sure if AmazonQ is approved for use at the World Bank, please check with ITS.
 
-### **3. What are your thoughts on PRISM (OpenAI) compared to the Positron+Copilot set-up?**
+## **3. What are your thoughts on PRISM (OpenAI) compared to the Positron+Copilot set-up?**
 
 **Answer:**
 
-These tools serve fundamentally different purposes. The latter onw is not on coding.
+These tools serve fundamentally different purposes. The latter one is not on coding.
 
-### **4. Does this work with code on Git and data on OneDrive?**
+## **4. Does this work with code on Git and data on OneDrive?**
 
 **Answer:**
 Yes. Git also could be developed on OneDrive.
@@ -51,7 +43,7 @@ Yes. Git also could be developed on OneDrive.
 - Confidential datasets can remain on OneDrive, a network drive, or another restricted folder outside the project
 - Your code references the data path, but the AI assistant never indexes or "sees" the raw data. AI sees the results of your code, not the underlying files, unless you explicitly share them as context.
 
-### **5. How do usage limits compare between Positron and VS Code?**
+## **5. How do usage limits compare between Positron and VS Code?**
 
 **Answer:**
 
@@ -59,13 +51,13 @@ Usage limits come from **GitHub Copilot**, not from the IDE itself.
 
 - If you use the same GitHub account in both Positron and VS Code, you have identical usage limits
 - The IDE is just the interface; GitHub's servers handle the AI requests
-- WB Girhub is currently on the **Copilot Business** plan, which offers generous limits suitable for heavy use in data science projects. Use Chat mode for casual use to conserve tokens and Agent when needed.
+- WB GitHub is currently on the **Copilot Business** plan, which offers generous limits suitable for heavy use in data science projects. Use Chat mode for casual use to conserve tokens and Agent when needed.
 
 ---
 
-## B. Setup, IT Requirements, Licensing
+# B. Setup, IT Requirements, Licensing
 
-### **6. How do you download and install Positron?**
+## **6. How do you download and install Positron?**
 
 **Answer:**
 
@@ -81,8 +73,7 @@ Usage limits come from **GitHub Copilot**, not from the IDE itself.
 3. Follow the prompts regarding licensing
 4. IT will install the application on your machine
 
-
-### **7. Do we have a license and what does it cost?**
+## **7. Do we have a license and what does it cost?**
 
 **Answer:**
 
@@ -92,9 +83,9 @@ Usage limits come from **GitHub Copilot**, not from the IDE itself.
 
 GitHub Copilot is a separate subscription. The World Bank provides Copilot Business licenses. Feel free to reach out to github\@worldbank.org
 
-## C. Prompting, Personalization, Code Structure
+# C. Prompting, Personalization, Code Structure
 
-### **8. Can the AI be personalized so instructions don't need repeating?**
+## **8. Can the AI be personalized so instructions don't need repeating?**
 
 **Answer:**
 Yes, through several mechanisms. Read more [positron.posit.co/assistant-chat-agents.html](https://positron.posit.co/assistant-chat-agents.html#custom-chat-agents)
@@ -109,7 +100,7 @@ Yes, through several mechanisms. Read more [positron.posit.co/assistant-chat-age
 
 ---
 
-### **9. Does Positron have persistent "project instructions" like ChatGPT?**
+## **9. Does Positron have persistent "project instructions" like ChatGPT?**
 
 **Answer:**
 Yes, effectively—through the **`.github/copilot-instructions.md`** file.
@@ -130,7 +121,7 @@ For personal, cross-project preferences, you can also configure Copilot settings
 
 ---
 
-### **10. When I "always allow" terminal commands, is that permanent?**
+## **10. When I "always allow" terminal commands, is that permanent?**
 
 **Answer:**
 It depends on the scope you select:
@@ -143,7 +134,7 @@ It depends on the scope you select:
 
 ---
 
-### **11. Can we set institutional rules so users do not accidentally allow unsafe actions?**
+## **11. Can we set institutional rules so users do not accidentally allow unsafe actions?**
 
 **Answer:**
 Yes, and this is strongly recommended for team environments.
@@ -160,9 +151,9 @@ Yes, and this is strongly recommended for team environments.
 
 ---
 
-## D. Confidentiality & Data Security
+# D. Confidentiality & Data Security
 
-### **12. What if I have confidential data on OneDrive?**
+## **12. What if I have confidential data on OneDrive?**
 
 **Answer:**
 The AI only processes files you explicitly provide as context. Several safeguards help protect confidential data:
@@ -185,16 +176,16 @@ The AI only processes files you explicitly provide as context. Several safeguard
 
 ---
 
-### **13. Can AI only see folders we grant access to?**
+## **13. Can AI only see folders we grant access to?**
 
 **Answer:**
 Yes. The AI has no access outside your Positron project directory unless you specifically direct it there.
 
 ---
 
-## E. Stata, R, and Error Handling
+# E. Stata, R, and Error Handling
 
-### **14. Can the integrated agent fix Stata errors like it does in R?**
+## **14. Can the integrated agent fix Stata errors like it does in R?**
 
 **Answer:**
 Not currently, due to technical and security constraints: WB imposes policy that forbids running MCP servers locally.
@@ -219,9 +210,9 @@ Not currently, due to technical and security constraints: WB imposes policy that
 
 ---
 
-## F. Additional Discussion & Comments
+# F. Additional Discussion & Comments
 
-### **15. Comment: "Data management must come first for AI to be effective."**
+## **15. Comment: "Data management must come first for AI to be effective."**
 
 **Response:**
 Agreed. AI amplifies your existing workflow—it cannot compensate for:
@@ -242,7 +233,7 @@ Well-organized projects get dramatically better AI assistance.
 
 ---
 
-### **16. Teams should establish prompt protocols to ensure quality.**
+## **16. Teams should establish prompt protocols to ensure quality.**
 
 **Response:**
 Agreed. Standardized prompting improves consistency, reproducibility, and code quality across team members.
@@ -261,7 +252,7 @@ The GPID workflow protocols provide an excellent foundation: https://gpid-wb.git
 
 # 2. All Links & Documents Shared
 
-### **Slides & Setup**
+## **Slides & Setup**
 
 - **Slides:**
   https://wbggeopov.github.io/geoPovLearn/seminars/seminar-2026-02/slides.html#/
@@ -274,19 +265,19 @@ The GPID workflow protocols provide an excellent foundation: https://gpid-wb.git
 
 ---
 
-### **Prompt Files Documentation**
+## **Prompt Files Documentation**
 
 - https://docs.github.com/en/copilot/tutorials/customization-library/prompt-files
 
 ---
 
-### **GPID Workflow Protocols**
+## **GPID Workflow Protocols**
 
 - https://gpid-wb.github.io/Pip-Technical-Guidelines/copilot_protocols.html
 
 ---
 
-### **Questions for the Audience**
+## **Questions for the Audience**
 
 - https://app.sli.do/event/oHXRPbFZJF8QubPLzHp85h
   *Event code: 3802578 — Passcode: wkpep*

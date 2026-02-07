@@ -6,11 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Eduard Bukin">
+<meta name="author" content="Henry Stemmler; Eduard Bukin">
 <meta name="dcterms.date" content="2026-02-05">
-<meta name="description" content="Learn how to harness the power of AI in your daily analytical work using Stata and R. Essential tools that can significantly improve your analysis and coding workflow are demonstrated.">
+<meta name="description" content="A compilation of questions and answers from the seminar on using AI agents in Stata and R with Positron. Covers software setup, AI capabilities, confidentiality concerns, and best practices for microeconomists.">
 
-<title>AI-Assisted Coding in Stata and R – GeoPov</title>
+<title>Q&amp;A: AI-Assisted Data Analysis with Positron – GeoPov</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +22,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -133,7 +168,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../seminars/index.html">GeoPov BBL Series</a></li><li class="breadcrumb-item"><a href="../../seminars/seminar-2026-02/overview.html">Revolutionizing Coding in Stata/R</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../seminars/index.html">GeoPov BBL Series</a></li><li class="breadcrumb-item"><a href="../../seminars/seminar-2026-02/overview.html">Revolutionizing Coding in Stata/R</a></li><li class="breadcrumb-item"><a href="../../seminars/seminar-2026-02/qa.html">Q/A</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -176,7 +211,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../seminars/seminar-2026-02/overview.html" class="sidebar-item-text sidebar-link active">
+            <a href="../../seminars/seminar-2026-02/overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Revolutionizing Coding in Stata/R</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -197,7 +232,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../seminars/seminar-2026-02/qa.html" class="sidebar-item-text sidebar-link">
+  <a href="../../seminars/seminar-2026-02/qa.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Q/A</span></a>
   </div>
 </li>
@@ -291,28 +326,57 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#speaker" id="toc-speaker" class="nav-link" data-scroll-target="#speaker">Speaker</a></li>
-  <li><a href="#what-you-will-learn" id="toc-what-you-will-learn" class="nav-link" data-scroll-target="#what-you-will-learn">What You Will Learn</a></li>
-  <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a>
+  <li><a href="#a.-software" id="toc-a.-software" class="nav-link active" data-scroll-target="#a.-software">A. Software</a>
   <ul class="collapse">
-  <li><a href="#seminar" id="toc-seminar" class="nav-link" data-scroll-target="#seminar">Seminar</a></li>
-  <li><a href="#presentation-slides" id="toc-presentation-slides" class="nav-link" data-scroll-target="#presentation-slides">Presentation Slides</a></li>
+  <li><a href="#how-does-positron-compare-to-vs-code-especially-with-git" id="toc-how-does-positron-compare-to-vs-code-especially-with-git" class="nav-link" data-scroll-target="#how-does-positron-compare-to-vs-code-especially-with-git"><strong>1. How does Positron compare to VS Code, especially with Git?</strong></a></li>
+  <li><a href="#is-the-positron-set-up-similar-to-amazonq-for-html-in-vs" id="toc-is-the-positron-set-up-similar-to-amazonq-for-html-in-vs" class="nav-link" data-scroll-target="#is-the-positron-set-up-similar-to-amazonq-for-html-in-vs"><strong>2. Is the Positron set-up similar to AmazonQ for HTML in VS?</strong></a></li>
+  <li><a href="#what-are-your-thoughts-on-prism-openai-compared-to-the-positroncopilot-set-up" id="toc-what-are-your-thoughts-on-prism-openai-compared-to-the-positroncopilot-set-up" class="nav-link" data-scroll-target="#what-are-your-thoughts-on-prism-openai-compared-to-the-positroncopilot-set-up"><strong>3. What are your thoughts on PRISM (OpenAI) compared to the Positron+Copilot set-up?</strong></a></li>
+  <li><a href="#does-this-work-with-code-on-git-and-data-on-onedrive" id="toc-does-this-work-with-code-on-git-and-data-on-onedrive" class="nav-link" data-scroll-target="#does-this-work-with-code-on-git-and-data-on-onedrive"><strong>4. Does this work with code on Git and data on OneDrive?</strong></a></li>
+  <li><a href="#how-do-usage-limits-compare-between-positron-and-vs-code" id="toc-how-do-usage-limits-compare-between-positron-and-vs-code" class="nav-link" data-scroll-target="#how-do-usage-limits-compare-between-positron-and-vs-code"><strong>5. How do usage limits compare between Positron and VS Code?</strong></a></li>
   </ul></li>
-  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Additional Resources</a>
+  <li><a href="#b.-setup-it-requirements-licensing" id="toc-b.-setup-it-requirements-licensing" class="nav-link" data-scroll-target="#b.-setup-it-requirements-licensing">B. Setup, IT Requirements, Licensing</a>
   <ul class="collapse">
-  <li><a href="#workflow-setup-instructions" id="toc-workflow-setup-instructions" class="nav-link" data-scroll-target="#workflow-setup-instructions">Workflow Setup Instructions</a></li>
-  <li><a href="#related-links" id="toc-related-links" class="nav-link" data-scroll-target="#related-links">Related Links</a></li>
+  <li><a href="#how-do-you-download-and-install-positron" id="toc-how-do-you-download-and-install-positron" class="nav-link" data-scroll-target="#how-do-you-download-and-install-positron"><strong>6. How do you download and install Positron?</strong></a></li>
+  <li><a href="#do-we-have-a-license-and-what-does-it-cost" id="toc-do-we-have-a-license-and-what-does-it-cost" class="nav-link" data-scroll-target="#do-we-have-a-license-and-what-does-it-cost"><strong>7. Do we have a license and what does it cost?</strong></a></li>
+  </ul></li>
+  <li><a href="#c.-prompting-personalization-code-structure" id="toc-c.-prompting-personalization-code-structure" class="nav-link" data-scroll-target="#c.-prompting-personalization-code-structure">C. Prompting, Personalization, Code Structure</a>
+  <ul class="collapse">
+  <li><a href="#can-the-ai-be-personalized-so-instructions-dont-need-repeating" id="toc-can-the-ai-be-personalized-so-instructions-dont-need-repeating" class="nav-link" data-scroll-target="#can-the-ai-be-personalized-so-instructions-dont-need-repeating"><strong>8. Can the AI be personalized so instructions don’t need repeating?</strong></a></li>
+  <li><a href="#does-positron-have-persistent-project-instructions-like-chatgpt" id="toc-does-positron-have-persistent-project-instructions-like-chatgpt" class="nav-link" data-scroll-target="#does-positron-have-persistent-project-instructions-like-chatgpt"><strong>9. Does Positron have persistent “project instructions” like ChatGPT?</strong></a></li>
+  <li><a href="#when-i-always-allow-terminal-commands-is-that-permanent" id="toc-when-i-always-allow-terminal-commands-is-that-permanent" class="nav-link" data-scroll-target="#when-i-always-allow-terminal-commands-is-that-permanent"><strong>10. When I “always allow” terminal commands, is that permanent?</strong></a></li>
+  <li><a href="#can-we-set-institutional-rules-so-users-do-not-accidentally-allow-unsafe-actions" id="toc-can-we-set-institutional-rules-so-users-do-not-accidentally-allow-unsafe-actions" class="nav-link" data-scroll-target="#can-we-set-institutional-rules-so-users-do-not-accidentally-allow-unsafe-actions"><strong>11. Can we set institutional rules so users do not accidentally allow unsafe actions?</strong></a></li>
+  </ul></li>
+  <li><a href="#d.-confidentiality-data-security" id="toc-d.-confidentiality-data-security" class="nav-link" data-scroll-target="#d.-confidentiality-data-security">D. Confidentiality &amp; Data Security</a>
+  <ul class="collapse">
+  <li><a href="#what-if-i-have-confidential-data-on-onedrive" id="toc-what-if-i-have-confidential-data-on-onedrive" class="nav-link" data-scroll-target="#what-if-i-have-confidential-data-on-onedrive"><strong>12. What if I have confidential data on OneDrive?</strong></a></li>
+  <li><a href="#can-ai-only-see-folders-we-grant-access-to" id="toc-can-ai-only-see-folders-we-grant-access-to" class="nav-link" data-scroll-target="#can-ai-only-see-folders-we-grant-access-to"><strong>13. Can AI only see folders we grant access to?</strong></a></li>
+  </ul></li>
+  <li><a href="#e.-stata-r-and-error-handling" id="toc-e.-stata-r-and-error-handling" class="nav-link" data-scroll-target="#e.-stata-r-and-error-handling">E. Stata, R, and Error Handling</a>
+  <ul class="collapse">
+  <li><a href="#can-the-integrated-agent-fix-stata-errors-like-it-does-in-r" id="toc-can-the-integrated-agent-fix-stata-errors-like-it-does-in-r" class="nav-link" data-scroll-target="#can-the-integrated-agent-fix-stata-errors-like-it-does-in-r"><strong>14. Can the integrated agent fix Stata errors like it does in R?</strong></a></li>
+  </ul></li>
+  <li><a href="#f.-additional-discussion-comments" id="toc-f.-additional-discussion-comments" class="nav-link" data-scroll-target="#f.-additional-discussion-comments">F. Additional Discussion &amp; Comments</a>
+  <ul class="collapse">
+  <li><a href="#comment-data-management-must-come-first-for-ai-to-be-effective." id="toc-comment-data-management-must-come-first-for-ai-to-be-effective." class="nav-link" data-scroll-target="#comment-data-management-must-come-first-for-ai-to-be-effective."><strong>15. Comment: “Data management must come first for AI to be effective.”</strong></a></li>
+  <li><a href="#teams-should-establish-prompt-protocols-to-ensure-quality." id="toc-teams-should-establish-prompt-protocols-to-ensure-quality." class="nav-link" data-scroll-target="#teams-should-establish-prompt-protocols-to-ensure-quality."><strong>16. Teams should establish prompt protocols to ensure quality.</strong></a></li>
+  </ul></li>
+  <li><a href="#all-links-documents-shared" id="toc-all-links-documents-shared" class="nav-link" data-scroll-target="#all-links-documents-shared">2. All Links &amp; Documents Shared</a>
+  <ul class="collapse">
+  <li><a href="#slides-setup" id="toc-slides-setup" class="nav-link" data-scroll-target="#slides-setup"><strong>Slides &amp; Setup</strong></a></li>
+  <li><a href="#prompt-files-documentation" id="toc-prompt-files-documentation" class="nav-link" data-scroll-target="#prompt-files-documentation"><strong>Prompt Files Documentation</strong></a></li>
+  <li><a href="#gpid-workflow-protocols" id="toc-gpid-workflow-protocols" class="nav-link" data-scroll-target="#gpid-workflow-protocols"><strong>GPID Workflow Protocols</strong></a></li>
+  <li><a href="#questions-for-the-audience" id="toc-questions-for-the-audience" class="nav-link" data-scroll-target="#questions-for-the-audience"><strong>Questions for the Audience</strong></a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/worldbank/geoPovLearn/edit/main/seminars/seminar-2026-02/overview.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/worldbank/geoPovLearn/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/worldbank/geoPovLearn/edit/main/seminars/seminar-2026-02/qa.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/worldbank/geoPovLearn/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../seminars/index.html">GeoPov BBL Series</a></li><li class="breadcrumb-item"><a href="../../seminars/seminar-2026-02/overview.html">Revolutionizing Coding in Stata/R</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../seminars/index.html">GeoPov BBL Series</a></li><li class="breadcrumb-item"><a href="../../seminars/seminar-2026-02/overview.html">Revolutionizing Coding in Stata/R</a></li><li class="breadcrumb-item"><a href="../../seminars/seminar-2026-02/qa.html">Q/A</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">AI-Assisted Coding in Stata and R</h1>
+<h1 class="title">Q&amp;A: AI-Assisted Data Analysis with Positron</h1>
+<p class="subtitle lead">Questions &amp; Answers from February 5, 2026 Seminar</p>
   <div class="quarto-categories">
     <div class="quarto-category">AI</div>
     <div class="quarto-category">coding</div>
@@ -326,7 +390,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    Learn how to harness the power of AI in your daily analytical work using Stata and R. Essential tools that can significantly improve your analysis and coding workflow are demonstrated.
+    A compilation of questions and answers from the seminar on using AI agents in Stata and R with Positron. Covers software setup, AI capabilities, confidentiality concerns, and best practices for microeconomists.
   </div>
 </div>
 
@@ -336,7 +400,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Eduard Bukin </p>
+             <p>Henry Stemmler; Eduard Bukin </p>
           </div>
   </div>
     
@@ -355,91 +419,265 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>Many tasks in Stata or R/Python can be done more efficiently with support from AI tools (such as Anthropic Claude, ChatGPT, or GitHub Copilot). However, using AI only through a web browser (or Windows Copilot) captures only a small share of its potential.</p>
-<p>This first seminar focuses on how microeconomists can use Positron which is an integrated development environment (IDE) designed for data analysis and statistical programming. It is developed by Posit (the company behind RStudio) and is built on Visual Studio Code, but tailored specifically for R, Python, and data-science workflows. In practical terms, Positron combines the flexibility of VS Code with features that are familiar to users of RStudio. This is a very powerful approach that uses World Bank–approved development environment that can run Stata or R code directly and integrate AI agents. It also makes AI more “aware” of your working context (your scripts, folders, and outputs), so it can help you write, debug, document, and validate code in a way that is specific to your data and objectives.</p>
-</section>
-<section id="speaker" class="level2">
-<h2 class="anchored" data-anchor-id="speaker">Speaker</h2>
-<p><strong>Eduard Bukin</strong> (<a href="mailto:ebukin@worldbank.org">ebukin@worldbank.org</a>)</p>
-<p><strong>Opening Remarks:</strong> Gabriela Inchauste</p>
-<p><strong>Series Lead:</strong> Maria Eugenia Genoni (<a href="mailto:mgenoni@worldbank.org">mgenoni@worldbank.org</a>)</p>
-<p><strong>Moderator:</strong> Henry Stemmler (<a href="mailto:hstemmler@worldbank.org">hstemmler@worldbank.org</a>)</p>
-</section>
-<section id="what-you-will-learn" class="level2">
-<h2 class="anchored" data-anchor-id="what-you-will-learn">What You Will Learn</h2>
-<p>During this first session, we will:</p>
+<section id="a.-software" class="level1">
+<h1>A. Software</h1>
+<section id="how-does-positron-compare-to-vs-code-especially-with-git" class="level2">
+<h2 class="anchored" data-anchor-id="how-does-positron-compare-to-vs-code-especially-with-git"><strong>1. How does Positron compare to VS Code, especially with Git?</strong></h2>
+<p><strong>Answer:</strong></p>
+<p>Both integrate well with Git—you get the same source control panel, diff viewer, and commit workflow in either IDE. For Git-heavy workflows, you will not notice any difference.</p>
+<p>Key differences:</p>
 <ul>
-<li><strong>Demonstrate how to use AI assistance in daily coding</strong></li>
-<li><strong>Briefly introduce key AI-relevant concepts:</strong>
-<ul>
-<li>AI-Chat versus AI-Agent</li>
-<li>Context awareness and model communication protocol (MCP)</li>
-<li>Integrated Development Environments (IDEs): VS Code</li>
-</ul></li>
-<li><strong>Explain the software setup needed to leverage AI agents in analysis:</strong>
-<ul>
-<li>Positron/VS Code</li>
-<li>GitHub and <a href="https://github.com/worldbank">https://github.com/worldbank</a></li>
-<li>GitHub Copilot and access to Claude LLM for coding models</li>
-</ul></li>
-<li><strong>Show step-by-step practical cases of AI application</strong> to produce high-quality analysis based on a general task of “reproducibility package preparation”:
-<ul>
-<li>How and where to start</li>
-<li>Effective prompt generation</li>
-<li>Performing analysis</li>
-<li>Quality control, validation and preventing hallucinations</li>
-</ul></li>
-<li><strong>Discuss further potential uses of AI-Agents</strong> in our everyday work</li>
+<li><p>Positron is built specifically for data science, so it includes a native Variables pane, Data Viewer, and Plots panel out of the box</p></li>
+<li><p>R and Python environment configuration is simpler in Positron (automatic interpreter detection, integrated console)</p></li>
+<li><p>VS Code requires more extensions to replicate this functionality and integration is less seamless.</p></li>
 </ul>
 </section>
-<section id="materials" class="level2">
-<h2 class="anchored" data-anchor-id="materials">Materials</h2>
-<section id="seminar" class="level3">
-<h3 class="anchored" data-anchor-id="seminar">Seminar</h3>
+<section id="is-the-positron-set-up-similar-to-amazonq-for-html-in-vs" class="level2">
+<h2 class="anchored" data-anchor-id="is-the-positron-set-up-similar-to-amazonq-for-html-in-vs"><strong>2. Is the Positron set-up similar to AmazonQ for HTML in VS?</strong></h2>
+<p><strong>Answer:</strong></p>
+<p>Not directly comparable. We are not sure if AmazonQ is approved for use at the World Bank, please check with ITS.</p>
+</section>
+<section id="what-are-your-thoughts-on-prism-openai-compared-to-the-positroncopilot-set-up" class="level2">
+<h2 class="anchored" data-anchor-id="what-are-your-thoughts-on-prism-openai-compared-to-the-positroncopilot-set-up"><strong>3. What are your thoughts on PRISM (OpenAI) compared to the Positron+Copilot set-up?</strong></h2>
+<p><strong>Answer:</strong></p>
+<p>These tools serve fundamentally different purposes. The latter one is not on coding.</p>
+</section>
+<section id="does-this-work-with-code-on-git-and-data-on-onedrive" class="level2">
+<h2 class="anchored" data-anchor-id="does-this-work-with-code-on-git-and-data-on-onedrive"><strong>4. Does this work with code on Git and data on OneDrive?</strong></h2>
+<p><strong>Answer:</strong> Yes. Git also could be developed on OneDrive.</p>
 <ul>
-<li><p><a href="https://worldbankgroup.sharepoint.com/sites/FPG/SitePages/SystemPages/Detail.aspx/Events/mode=view?_Id=2&amp;SiteURL=/sites/FPG&amp;xsdata=MDV8MDJ8fDVlY2ZlZmE0ODgxMTQ1NDQ2MWI3MDhkZTY1YmExZGM4fDMxYTJmZWMwMjY2YjRjNjdiNTZlMjc5NmQ4ZjU5YzM2fDB8MHw2MzkwNjAwNDcxNzExODMwMzF8VW5rbm93bnxWR1ZoYlhOVFpXTjFjbWwwZVZObGNuWnBZMlY4ZXlKRFFTSTZJbFJsWVcxelgwRlVVRk5sY25acFkyVmZVMUJQVEU5R0lpd2lWaUk2SWpBdU1DNHdNREF3SWl3aVVDSTZJbGRwYmpNeUlpd2lRVTRpT2lKUGRHaGxjaUlzSWxkVUlqb3hNWDA9fDF8TDJOb1lYUnpMekU1T2pVek9EaGpPVGN6TFdJeE9XUXRORGN5TXkxaE9XSmlMV000TXpRMU9ERm1OR05qTlY5ak5UQXpaR1ZsTnkwMllUaGpMVFExWmpBdE9ESXdNeTFrWmpCaE1UQmhPVFZoTVRoQWRXNXhMbWRpYkM1emNHRmpaWE12YldWemMyRm5aWE12TVRjM01EUXdOemt4TlRVM05RPT18MzRkMGI4NTAyMjhiNDYwOTYxYjcwOGRlNjViYTFkYzh8NjNmNDk4Y2EwM2NkNGY2MWFiYTI1YzI1MjBjMTFhNzY%3D&amp;sdata=NzYwTnIvcUdjYzluakgwL0ZTNytmZTBxdTZYL2p5U1dXUTgvOTRDRU5WYz0%3D&amp;ovuser=31a2fec0-266b-4c67-b56e-2796d8f59c36%2Cebukin%40worldbank.org">Internal seminar page</a></p></li>
-<li><p><a href="https://worldbankgroup.sharepoint.com/:v:/s/FPG/IQAP1iO3p3J_TYbLOsBn5UqtAeJUq3oW9ukcs1BlgLMRMRg?e=pkO3bL&amp;nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D">Recording</a></p></li>
-<li><p>Positron + Stata Live Demo materials: <a href="https://github.com/WBGGeoPov/seminar-coding-with-ai-demo">github.com/WBGGeoPov/seminar-coding-with-ai-demo</a></p></li>
-<li><p><a href="../../seminars/seminar-2026-02/slides.html">Slides (web)</a> + <a href="https://raw.githubusercontent.com/WBGGeoPov/geoPovLearn/main/seminars/seminar-2026-02/ai-for-coding-slides-2026-02-05.pdf">Slides (PDF)</a></p></li>
-<li><p>📚 <a href="../../seminars/seminar-2026-02/setup-instructions.html">Setup Instructions</a></p></li>
-<li><p><a href="../../seminars/seminar-2026-02/qa.html">Q/A: Questions and Answers from the Seminar and Teams Chat</a></p></li>
+<li>Positron only sees files inside your opened project folder unless you explicitly instruct it to look elsewhere</li>
+<li>You can keep your Git repository (code, documentation, prompt files) in one location</li>
+<li>Confidential datasets can remain on OneDrive, a network drive, or another restricted folder outside the project</li>
+<li>Your code references the data path, but the AI assistant never indexes or “sees” the raw data. AI sees the results of your code, not the underlying files, unless you explicitly share them as context.</li>
 </ul>
 </section>
-<section id="presentation-slides" class="level3">
-<h3 class="anchored" data-anchor-id="presentation-slides">Presentation Slides</h3>
-<iframe src="slides.html" width="100%" height="600px" style="border:1px solid #ccc;">
-</iframe>
-<p><a href="../../seminars/seminar-2026-02/slides.html">View Slides</a> | <a href="https://raw.githubusercontent.com/WBGGeoPov/geoPovLearn/main/seminars/seminar-2026-02/ai-for-coding-slides-2026-02-05.pdf">Download PDF</a></p>
+<section id="how-do-usage-limits-compare-between-positron-and-vs-code" class="level2">
+<h2 class="anchored" data-anchor-id="how-do-usage-limits-compare-between-positron-and-vs-code"><strong>5. How do usage limits compare between Positron and VS Code?</strong></h2>
+<p><strong>Answer:</strong></p>
+<p>Usage limits come from <strong>GitHub Copilot</strong>, not from the IDE itself.</p>
+<ul>
+<li>If you use the same GitHub account in both Positron and VS Code, you have identical usage limits</li>
+<li>The IDE is just the interface; GitHub’s servers handle the AI requests</li>
+<li>WB GitHub is currently on the <strong>Copilot Business</strong> plan, which offers generous limits suitable for heavy use in data science projects. Use Chat mode for casual use to conserve tokens and Agent when needed.</li>
+</ul>
+<hr>
 </section>
 </section>
-<section id="resources" class="level2">
-<h2 class="anchored" data-anchor-id="resources">Additional Resources</h2>
-<section id="workflow-setup-instructions" class="level3">
-<h3 class="anchored" data-anchor-id="workflow-setup-instructions">Workflow Setup Instructions</h3>
-<p><a href="../../seminars/seminar-2026-02/setup-instructions.html">View full setup instructions</a></p>
-<p>To follow along with the seminar, complete these setup steps:</p>
+<section id="b.-setup-it-requirements-licensing" class="level1">
+<h1>B. Setup, IT Requirements, Licensing</h1>
+<section id="how-do-you-download-and-install-positron" class="level2">
+<h2 class="anchored" data-anchor-id="how-do-you-download-and-install-positron"><strong>6. How do you download and install Positron?</strong></h2>
+<p><strong>Answer:</strong></p>
+<ul>
+<li><strong>Installation instructions:</strong> https://wbggeopov.github.io/geoPovLearn/seminars/seminar-2026-02/setup-instructions.html</li>
+<li>Currently requires IT installation via <strong>eServices</strong> until Positron becomes available in Software Center</li>
+<li>When submitting the eServices request, you will be asked about licensing (see next question)</li>
+<li>Could be installed by any ITS associate with software installation permissions. Now it is being tested for being included on Software Center for self-service installation.</li>
+</ul>
+<p><strong>Steps summary:</strong></p>
 <ol type="1">
-<li><strong>Install prerequisite software</strong> from the World Bank Software Center: Stata 19+, R, Python, Git, Quarto</li>
-<li><strong>Install the <code>uv</code> Python package</strong> for environment management</li>
-<li><strong>Install Positron IDE</strong> (requires Software Installation Request)</li>
-<li><strong>Install extensions</strong> in Positron: Stata MCP, Quarto</li>
-<li><strong>Connect GitHub to Positron</strong>, if you do not have a GitHub account
-<ul>
-<li><strong>set up a GitHub account</strong>,</li>
-<li>linked it to <a href="https://github.com/worldbank">github.com/worldbank</a>,</li>
-<li>request Copilot access</li>
-</ul></li>
-<li><strong>Enable Positron Assistant</strong> in Positron settings</li>
+<li>Go to eServices and request software installation</li>
+<li>Search for “Positron” or submit a custom software request</li>
+<li>Follow the prompts regarding licensing</li>
+<li>IT will install the application on your machine</li>
 </ol>
 </section>
-<section id="related-links" class="level3">
-<h3 class="anchored" data-anchor-id="related-links">Related Links</h3>
+<section id="do-we-have-a-license-and-what-does-it-cost" class="level2">
+<h2 class="anchored" data-anchor-id="do-we-have-a-license-and-what-does-it-cost"><strong>7. Do we have a license and what does it cost?</strong></h2>
+<p><strong>Answer:</strong></p>
 <ul>
-<li><a href="https://github.com/worldbank">GitHub World Bank Organization</a></li>
-<li><a href="https://github.com/posit-dev/positron">Positron IDE</a></li>
-<li><a href="https://docs.github.com/en/copilot">GitHub Copilot Documentation</a></li>
+<li><strong>Cost is $0</strong> — Positron is free, open-source software (built by Posit, the company behind RStudio)</li>
+<li>When the eServices form asks “Does your unit have a license?”, enter <strong>“Yes”</strong></li>
+<li>This confirms that no paid license is required.</li>
+</ul>
+<p>GitHub Copilot is a separate subscription. The World Bank provides Copilot Business licenses. Feel free to reach out to github@worldbank.org</p>
+</section>
+</section>
+<section id="c.-prompting-personalization-code-structure" class="level1">
+<h1>C. Prompting, Personalization, Code Structure</h1>
+<section id="can-the-ai-be-personalized-so-instructions-dont-need-repeating" class="level2">
+<h2 class="anchored" data-anchor-id="can-the-ai-be-personalized-so-instructions-dont-need-repeating"><strong>8. Can the AI be personalized so instructions don’t need repeating?</strong></h2>
+<p><strong>Answer:</strong> Yes, through several mechanisms. Read more <a href="https://positron.posit.co/assistant-chat-agents.html#custom-chat-agents">positron.posit.co/assistant-chat-agents.html</a></p>
+<ol type="1">
+<li><p><strong>Prompt Files (<code>.prompt.md</code>):</strong> Create reusable instruction files that you attach as context when starting a chat. See: https://docs.github.com/en/copilot/tutorials/customization-library/prompt-files</p></li>
+<li><p><strong>Copilot Instructions File:</strong> Create <code>.github/copilot-instructions.md</code> in your repository root. Copilot automatically reads this file and applies the instructions to all interactions within that workspace.</p></li>
+<li><p><strong>Agent files (<code>agent.md</code>):</strong> For complex workflows, maintain a markdown file describing your project structure, coding conventions, and common tasks. Attach it as context when needed.</p></li>
+</ol>
+<p><strong>Example <code>.github/copilot-instructions.md</code>:</strong></p>
+<hr>
+</section>
+<section id="does-positron-have-persistent-project-instructions-like-chatgpt" class="level2">
+<h2 class="anchored" data-anchor-id="does-positron-have-persistent-project-instructions-like-chatgpt"><strong>9. Does Positron have persistent “project instructions” like ChatGPT?</strong></h2>
+<p><strong>Answer:</strong> Yes, effectively—through the <strong><code>.github/copilot-instructions.md</code></strong> file.</p>
+<ul>
+<li>Create this file in your repository’s <code>.github/</code> folder</li>
+<li>Copilot reads it automatically for every chat and completion in that workspace</li>
+<li>Instructions persist across sessions without manual attachment</li>
+</ul>
+<p>This is functionally equivalent to ChatGPT’s “Custom Instructions” or “Memory” features, but scoped to a specific project rather than your entire account.</p>
+<p><strong>Limitations:</strong></p>
+<ul>
+<li>Instructions only apply within that workspace/repository</li>
+<li>Very long instruction files may reduce context available for your actual queries</li>
+<li>Keep instructions concise and focused (recommended: under 500 words)</li>
+</ul>
+<p>For personal, cross-project preferences, you can also configure Copilot settings in your GitHub account.</p>
+<hr>
+</section>
+<section id="when-i-always-allow-terminal-commands-is-that-permanent" class="level2">
+<h2 class="anchored" data-anchor-id="when-i-always-allow-terminal-commands-is-that-permanent"><strong>10. When I “always allow” terminal commands, is that permanent?</strong></h2>
+<p><strong>Answer:</strong> It depends on the scope you select:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Scope</th>
+<th>Duration</th>
+<th>Risk level</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>This action only</strong></td>
+<td>One-time</td>
+<td>Low</td>
+</tr>
+<tr class="even">
+<td><strong>This session</strong></td>
+<td>Until you close Positron</td>
+<td>Medium</td>
+</tr>
+<tr class="odd">
+<td><strong>This workspace</strong></td>
+<td>Permanent for this project</td>
+<td>Higher</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="can-we-set-institutional-rules-so-users-do-not-accidentally-allow-unsafe-actions" class="level2">
+<h2 class="anchored" data-anchor-id="can-we-set-institutional-rules-so-users-do-not-accidentally-allow-unsafe-actions"><strong>11. Can we set institutional rules so users do not accidentally allow unsafe actions?</strong></h2>
+<p><strong>Answer:</strong> Yes, and this is strongly recommended for team environments.</p>
+<p><strong>Approaches:</strong></p>
+<ol type="1">
+<li><p><strong>Workspace settings (<code>.vscode/settings.json</code>):</strong> Pre-configure which commands are allowed or blocked, then commit this file to your shared repository</p></li>
+<li><p><strong>Documentation and training:</strong> Establish team protocols specifying which permissions are acceptable</p></li>
+<li><p><strong>Prompt protocols:</strong> Check the GPID workflow protocols: https://gpid-wb.github.io/Pip-Technical-Guidelines/copilot_protocols.html</p></li>
+<li><p><strong>Code review:</strong> Require review of any AI-generated code that interacts with file systems or external services</p></li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="d.-confidentiality-data-security" class="level1">
+<h1>D. Confidentiality &amp; Data Security</h1>
+<section id="what-if-i-have-confidential-data-on-onedrive" class="level2">
+<h2 class="anchored" data-anchor-id="what-if-i-have-confidential-data-on-onedrive"><strong>12. What if I have confidential data on OneDrive?</strong></h2>
+<p><strong>Answer:</strong> The AI only processes files you explicitly provide as context. Several safeguards help protect confidential data:</p>
+<ol type="1">
+<li><p><strong>Project isolation:</strong> AI only sees files in your Positron project folder—OneDrive folders outside the project are invisible</p></li>
+<li><p><strong>Ignore files:</strong> Create <code>.copilotignore</code> and/or <code>.aidigestignore</code> in your project root to exclude sensitive files:</p>
+<pre><code># .copilotignore
+data/raw/*
+*.dta
+*confidential*</code></pre></li>
+<li><p><strong>Folder structure:</strong> Keep confidential data in separate restricted folders, outside your code repository entirely</p></li>
+<li><p><strong>Explicit context:</strong> AI only processes files you attach to a chat or that are open in your editor</p></li>
+<li><p><strong>Anonymization assistance:</strong> You can ask the AI to help write code that anonymizes data <em>before</em> you expose any real values</p></li>
+</ol>
+<hr>
+</section>
+<section id="can-ai-only-see-folders-we-grant-access-to" class="level2">
+<h2 class="anchored" data-anchor-id="can-ai-only-see-folders-we-grant-access-to"><strong>13. Can AI only see folders we grant access to?</strong></h2>
+<p><strong>Answer:</strong> Yes. The AI has no access outside your Positron project directory unless you specifically direct it there.</p>
+<hr>
+</section>
+</section>
+<section id="e.-stata-r-and-error-handling" class="level1">
+<h1>E. Stata, R, and Error Handling</h1>
+<section id="can-the-integrated-agent-fix-stata-errors-like-it-does-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="can-the-integrated-agent-fix-stata-errors-like-it-does-in-r"><strong>14. Can the integrated agent fix Stata errors like it does in R?</strong></h2>
+<p><strong>Answer:</strong> Not currently, due to technical and security constraints: WB imposes policy that forbids running MCP servers locally.</p>
+<p><strong>Why R works but Stata does not:</strong></p>
+<ul>
+<li><p>Positron has the <strong>Model Context Protocol (MCP)</strong> server for R that allows Copilot to interact directly with the R console—reading errors, inspecting objects, and running diagnostic code. It also has it for python.</p></li>
+<li><p>Stata lacks an MCP implementation, and World Bank security policies restrict the installation of custom protocol servers.</p></li>
+<li><p>This means Copilot cannot “see” your Stata console output or automatically diagnose errors</p></li>
+</ul>
+<p><strong>Workarounds:</strong></p>
+<ol type="1">
+<li><p><strong>Manual error copying:</strong> Copy the Stata error message and paste it into Copilot chat with your code. The AI can still diagnose and suggest fixes.</p></li>
+<li><p><strong>Log files:</strong> Direct Stata output to a log file in your project folder:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span> <span class="kw">using</span> <span class="st">"output/analysis_log.log"</span>, <span class="bn">text</span> <span class="kw">replace</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Then attach the log file as context for debugging.</p></li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="f.-additional-discussion-comments" class="level1">
+<h1>F. Additional Discussion &amp; Comments</h1>
+<section id="comment-data-management-must-come-first-for-ai-to-be-effective." class="level2">
+<h2 class="anchored" data-anchor-id="comment-data-management-must-come-first-for-ai-to-be-effective."><strong>15. Comment: “Data management must come first for AI to be effective.”</strong></h2>
+<p><strong>Response:</strong> Agreed. AI amplifies your existing workflow—it cannot compensate for:</p>
+<ul>
+<li>Missing documentation</li>
+<li>Unclear data structures</li>
+<li>Inconsistent variable naming</li>
+<li>Irregular file organization</li>
+</ul>
+<p><strong>Practical implications:</strong></p>
+<ul>
+<li>Invest time in READMEs, codebooks, and data dictionaries</li>
+<li>Use consistent naming conventions the AI can learn from</li>
+<li>Structure projects logically (e.g., <code>data/</code>, <code>code/</code>, <code>output/</code>)</li>
+<li>Document your workflow before asking AI to help optimize it</li>
+</ul>
+<p>Well-organized projects get dramatically better AI assistance.</p>
+<hr>
+</section>
+<section id="teams-should-establish-prompt-protocols-to-ensure-quality." class="level2">
+<h2 class="anchored" data-anchor-id="teams-should-establish-prompt-protocols-to-ensure-quality."><strong>16. Teams should establish prompt protocols to ensure quality.</strong></h2>
+<p><strong>Response:</strong> Agreed. Standardized prompting improves consistency, reproducibility, and code quality across team members.</p>
+<p><strong>Recommended starting point:</strong> The GPID workflow protocols provide an excellent foundation: https://gpid-wb.github.io/Pip-Technical-Guidelines/copilot_protocols.html</p>
+<p><strong>Key elements of good prompt protocols:</strong></p>
+<ul>
+<li>Standard prompt templates for common tasks (data cleaning, merging, visualization)</li>
+<li>Required context to include (data structure, variable definitions, expected output)</li>
+<li>Review requirements for AI-generated code</li>
+<li>Documentation standards for AI-assisted work</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="all-links-documents-shared" class="level1">
+<h1>2. All Links &amp; Documents Shared</h1>
+<section id="slides-setup" class="level2">
+<h2 class="anchored" data-anchor-id="slides-setup"><strong>Slides &amp; Setup</strong></h2>
+<ul>
+<li><p><strong>Slides:</strong> https://wbggeopov.github.io/geoPovLearn/seminars/seminar-2026-02/slides.html#/</p></li>
+<li><p><strong>Overview:</strong> https://wbggeopov.github.io/geoPovLearn/seminars/seminar-2026-02/overview.html</p></li>
+<li><p><strong>Setup Instructions:</strong> https://wbggeopov.github.io/geoPovLearn/seminars/seminar-2026-02/setup-instructions.html</p></li>
+</ul>
+<hr>
+</section>
+<section id="prompt-files-documentation" class="level2">
+<h2 class="anchored" data-anchor-id="prompt-files-documentation"><strong>Prompt Files Documentation</strong></h2>
+<ul>
+<li>https://docs.github.com/en/copilot/tutorials/customization-library/prompt-files</li>
+</ul>
+<hr>
+</section>
+<section id="gpid-workflow-protocols" class="level2">
+<h2 class="anchored" data-anchor-id="gpid-workflow-protocols"><strong>GPID Workflow Protocols</strong></h2>
+<ul>
+<li>https://gpid-wb.github.io/Pip-Technical-Guidelines/copilot_protocols.html</li>
+</ul>
+<hr>
+</section>
+<section id="questions-for-the-audience" class="level2">
+<h2 class="anchored" data-anchor-id="questions-for-the-audience"><strong>Questions for the Audience</strong></h2>
+<ul>
+<li>https://app.sli.do/event/oHXRPbFZJF8QubPLzHp85h <em>Event code: 3802578 — Passcode: wkpep</em></li>
 </ul>
 
 
@@ -852,4 +1090,4 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/worldbank/geoPovLearn/edit/main/seminars/seminar-2026-02/overview.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/worldbank/geoPovLearn/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/worldbank/geoPovLearn/edit/main/seminars/seminar-2026-02/qa.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/worldbank/geoPovLearn/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

@@ -96,7 +96,7 @@ Verify Stata MCP is working:
 
 [`Quarto` Extension](https://open-vsx.org/extension/quarto/quarto){target="_blank"} enables Quarto document editing and rendering in Positron.
 
-## Connecting GitHub Copilot to Positron
+## Connecting GitHub Copilot to Positron {#connect-ghc-positron}
 
 This step enables you to use the GitHub Copilot coding agent and other LLMs, such as ChatGPT or Anthropic Claude, with Positron.
 
@@ -190,7 +190,7 @@ If you don't have a GitHub account yet, create one at [https://github.com/signup
 
 ### Step 4: Verify GitHub Copilot Access
 
-1.  Open Positron and sign in to your GitHub account (see "Connecting GitHub Copilot to Positron" section above)
+1.  Open Positron and sign in to your GitHub account (see [Connecting GitHub Copilot to Positron]{#connect-ghc-positron} section above, may require logging out and back in [as referenced on Positron Forum](https://forum.posit.co/t/github-copilot-issue-after-update/209899))
 
 2.  Check that the GitHub Copilot extension is active in the Extensions panel
 
@@ -201,6 +201,7 @@ If you don't have a GitHub account yet, create one at [https://github.com/signup
 -   [Positron Documentation](https://positron.posit.co/){target="_blank"}
 -   [GitHub Copilot Documentation](https://docs.github.com/en/copilot){target="_blank"}
 -   World Bank GitHub: [https://github.com/worldbank](https://github.com/worldbank){target="_blank"}
+-   [Introductory video: Use GitHub Copilot with Positron Assistant](https://www.youtube.com/watch?v=T8dCQ6iIFXo&t=236s)
 
 ## Support {#support}
 

@@ -678,6 +678,16 @@
     ]
   },
   {
+    "objectID": "index.html#latest-news",
+    "href": "index.html#latest-news",
+    "title": "Welcome to GeoPov",
+    "section": "Latest News",
+    "text": "Latest News\n\nFeb 2026: Seminar on AI-Assisted Data Analysis workflow with Positron and Copilot—materials and slides now available in seminars/seminar-2026-02.\nNovember 2025: GeoPov team seminar on Geocoding GMD.",
+    "crumbs": [
+      "About Us"
+    ]
+  },
+  {
     "objectID": "index.html#what-we-do",
     "href": "index.html#what-we-do",
     "title": "Welcome to GeoPov",
@@ -693,6 +703,16 @@
     "title": "Welcome to GeoPov",
     "section": "👥 Meet the Team",
     "text": "👥 Meet the Team\nWe’re a global multi-disciplinary team in the Distributional Impact of Policy under the Prosperity Vice Presidency. We combine expertise in microeconomic analysis, spatial economics, and data engineering.\nWho we are:\n\nCurious minds who ask “where”, “who”, “what” and “why” together\nPassionate about open data, open code, and inclusive analytics\nBelievers in the power of maps and evidence to drive better policy\n\nMeet our team members →",
+    "crumbs": [
+      "About Us"
+    ]
+  },
+  {
+    "objectID": "index.html#get-involved",
+    "href": "index.html#get-involved",
+    "title": "Welcome to GeoPov",
+    "section": "🤝 Get Involved",
+    "text": "🤝 Get Involved\n\nBrowse our seminars for recordings and materials\nReach out to our team\nReport issues or suggest improvements to our code and materials on GitHub issues",
     "crumbs": [
       "About Us"
     ]

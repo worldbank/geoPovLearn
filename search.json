@@ -143,228 +143,133 @@
     "href": "seminars/seminar-2026-02/slides.html#the-goal",
     "title": "GeoPov",
     "section": "The goal",
-    "text": "The goal\n\n\n\n\n\nof this seminar is to introduce you to AI-assisted data analysis with Positron IDE and GitHub Copilot | Claude.\n\n\n\n\n\nThere are many IDEs ➔\n\n\n\n\n\n\n\nThose are: Positron | VS Code | Cursor | Claude Code | and more…",
-    "crumbs": [
-      "GeoPov BBL Series",
-      "Revolutionizing Coding in Stata/R",
-      "Slides"
-    ]
+    "text": "The goal\n\n\n\n\n\nof this seminar is to introduce you to AI-assisted data analysis with Positron IDE and GitHub Copilot | Claude.\n\n\n\n\n\nThere are many IDEs ➔\n\n\n\n\n\n\n\nThose are: Positron | VS Code | Cursor | Claude Code | and more…"
   },
   {
     "objectID": "seminars/seminar-2026-02/slides.html#ai-integrated-ide",
     "href": "seminars/seminar-2026-02/slides.html#ai-integrated-ide",
     "title": "GeoPov",
     "section": "💬 AI Integrated IDE",
-    "text": "💬 AI Integrated IDE\n\n\nSource: Positron: AI Features",
-    "crumbs": [
-      "GeoPov BBL Series",
-      "Revolutionizing Coding in Stata/R",
-      "Slides"
-    ]
+    "text": "💬 AI Integrated IDE\n\n\nSource: Positron: AI Features"
   },
   {
     "objectID": "seminars/seminar-2026-02/slides.html#ai-chat",
     "href": "seminars/seminar-2026-02/slides.html#ai-chat",
     "title": "GeoPov",
     "section": "💬 AI: Chat",
-    "text": "💬 AI: Chat\n\nPositron Assistant\n\nAsk AI (Claude 4.5) through Github Copilot\nProvides explanations, suggestions, and code snippets.\nIntegrates with project context, and code.\nLearn more:\nAssistant Chat",
-    "crumbs": [
-      "GeoPov BBL Series",
-      "Revolutionizing Coding in Stata/R",
-      "Slides"
-    ]
+    "text": "💬 AI: Chat\n\nPositron Assistant\n\nAsk AI (Claude 4.5) through Github Copilot\nProvides explanations, suggestions, and code snippets.\nIntegrates with project context, and code.\nLearn more:\nAssistant Chat"
   },
   {
     "objectID": "seminars/seminar-2026-02/slides.html#ai-agent",
     "href": "seminars/seminar-2026-02/slides.html#ai-agent",
     "title": "GeoPov",
     "section": "💬 AI: Agent",
-    "text": "💬 AI: Agent\n\nPositron Assistant\n\nExecutes instructions.\nActs independently\n\nRuns code\nFixes errors\nLearns\nReasons\n\nSee more in the live demo!",
-    "crumbs": [
-      "GeoPov BBL Series",
-      "Revolutionizing Coding in Stata/R",
-      "Slides"
-    ]
+    "text": "💬 AI: Agent\n\nPositron Assistant\n\nExecutes instructions.\nActs independently\n\nRuns code\nFixes errors\nLearns\nReasons\n\nSee more in the live demo!"
   },
   {
     "objectID": "seminars/seminar-2026-02/slides.html#ai-inline-completion",
     "href": "seminars/seminar-2026-02/slides.html#ai-inline-completion",
     "title": "GeoPov",
     "section": "💬 AI: Inline Completion",
-    "text": "💬 AI: Inline Completion\nPositron Inline Code Completion: Suggests code snippets as you type.",
-    "crumbs": [
-      "GeoPov BBL Series",
-      "Revolutionizing Coding in Stata/R",
-      "Slides"
-    ]
+    "text": "💬 AI: Inline Completion\nPositron Inline Code Completion: Suggests code snippets as you type."
   },
   {
     "objectID": "seminars/seminar-2026-02/slides.html#context-awareness",
     "href": "seminars/seminar-2026-02/slides.html#context-awareness",
     "title": "GeoPov",
     "section": "🧠 Context Awareness",
-    "text": "🧠 Context Awareness\n\n\nPositron accesses project metadata. Thus AI ‘knows’:\n\n📁 Files str.: Code, docs\n📊 Data: Var. names, types\n⏮️ History: Edits, commands\n📦 Environment: Packages\n🎯 Intent: Current task\n✅ Results: Output, errors\n\n\nWhy does it matter?\n\n🎯 Project-specific suggestions\n🔗 Understands dependencies\n🛡️ Reduces hallucinations\n⏱️ Improves efficiency\n\n\n\nRead more: Positron: AI Context | GH Copilot | Claude | WB AI Responsible Use",
-    "crumbs": [
-      "GeoPov BBL Series",
-      "Revolutionizing Coding in Stata/R",
-      "Slides"
-    ]
+    "text": "🧠 Context Awareness\n\n\nPositron accesses project metadata. Thus AI ‘knows’:\n\n📁 Files str.: Code, docs\n📊 Data: Var. names, types\n⏮️ History: Edits, commands\n📦 Environment: Packages\n🎯 Intent: Current task\n✅ Results: Output, errors\n\n\nWhy does it matter?\n\n🎯 Project-specific suggestions\n🔗 Understands dependencies\n🛡️ Reduces hallucinations\n⏱️ Improves efficiency\n\n\n\nRead more: Positron: AI Context | GH Copilot | Claude | WB AI Responsible Use"
   },
   {
     "objectID": "seminars/seminar-2026-02/slides.html#model-context-protocol-mcp",
     "href": "seminars/seminar-2026-02/slides.html#model-context-protocol-mcp",
     "title": "GeoPov",
     "section": "🔌 Model Context Protocol (MCP)",
-    "text": "🔌 Model Context Protocol (MCP)\nMCP is a universal adapter for AI—Anthropic— that connects data flows:\n\nStata-MCP or R MCP for Stata/R ⟶ Positron ⟶ Copilot ⟶ LLMs.\n\n\n\nRead more: modelcontextprotocol.io",
-    "crumbs": [
-      "GeoPov BBL Series",
-      "Revolutionizing Coding in Stata/R",
-      "Slides"
-    ]
+    "text": "🔌 Model Context Protocol (MCP)\nMCP is a universal adapter for AI—Anthropic— that connects data flows:\n\nStata-MCP or R MCP for Stata/R ⟶ Positron ⟶ Copilot ⟶ LLMs.\n\n\n\nRead more: modelcontextprotocol.io"
   },
   {
     "objectID": "seminars/seminar-2026-02/slides.html#github-copilot-anthropic-claude",
     "href": "seminars/seminar-2026-02/slides.html#github-copilot-anthropic-claude",
     "title": "GeoPov",
     "section": "🤖 GitHub Copilot | Anthropic Claude",
-    "text": "🤖 GitHub Copilot | Anthropic Claude\n\n\nGitHub Copilot\n\n✅ WB-approved\n🌐 github.com/worldbank\n🤝 Uses Claude | GPT\n🔌 Integrates with IDEs\ngithub@worldbank.org\nAI @ WB: ai.worldbank.org\n\n\nChoose your LLM:\n\n🧠 Claude Sonnet/Haiku/Opus\n💡 OpenAI GPT-4/o1…\n\n\n\n\n\n\n\n\nSources: Anthropic Claude Sonnet 4.5",
-    "crumbs": [
-      "GeoPov BBL Series",
-      "Revolutionizing Coding in Stata/R",
-      "Slides"
-    ]
+    "text": "🤖 GitHub Copilot | Anthropic Claude\n\n\nGitHub Copilot\n\n✅ WB-approved\n🌐 github.com/worldbank\n🤝 Uses Claude | GPT\n🔌 Integrates with IDEs\ngithub@worldbank.org\nAI @ WB: ai.worldbank.org\n\n\nChoose your LLM:\n\n🧠 Claude Sonnet/Haiku/Opus\n💡 OpenAI GPT-4/o1…\n\n\n\n\n\n\n\n\nSources: Anthropic Claude Sonnet 4.5"
   },
   {
     "objectID": "seminars/seminar-2026-02/slides.html#efficient-prompting",
     "href": "seminars/seminar-2026-02/slides.html#efficient-prompting",
     "title": "GeoPov",
     "section": "✍️ Efficient Prompting",
-    "text": "✍️ Efficient Prompting\n\n\n🎯 Be specific:\n“Write a Stata do-file to …” / “Refactor this R function to …”\n🧩 Provide context:\n“Goal: X; Dataset: Y variables; Constraints: Z (WB rules, packages, runtime)”\n📌 Define expected output:\n“Save as regression_results.xlsx, format as APA table” / “Create bar chart with 95% CIs”\n🔁 Summarize + clarify first:\n“Restate and ask clarifying questions before implementing”, “Explain why …”, “Give alternatives with trade-offs…”\n🪜 Iterate in small steps:\n“minimal changes”, “refine”\n🛑 Set boundaries:\n“Don’t use … data”, “Don’t print secrets, ask if in doubt.”, “Don’t change files”.\n\n\n\nTip: Treat the assistant as a collaborator.",
-    "crumbs": [
-      "GeoPov BBL Series",
-      "Revolutionizing Coding in Stata/R",
-      "Slides"
-    ]
+    "text": "✍️ Efficient Prompting\n\n\n🎯 Be specific:\n“Write a Stata do-file to …” / “Refactor this R function to …”\n🧩 Provide context:\n“Goal: X; Dataset: Y variables; Constraints: Z (WB rules, packages, runtime)”\n📌 Define expected output:\n“Save as regression_results.xlsx, format as APA table” / “Create bar chart with 95% CIs”\n🔁 Summarize + clarify first:\n“Restate and ask clarifying questions before implementing”, “Explain why …”, “Give alternatives with trade-offs…”\n🪜 Iterate in small steps:\n“minimal changes”, “refine”\n🛑 Set boundaries:\n“Don’t use … data”, “Don’t print secrets, ask if in doubt.”, “Don’t change files”.\n\n\n\nTip: Treat the assistant as a collaborator."
   },
   {
     "objectID": "seminars/seminar-2026-02/slides.html#limitations-and-remedies",
     "href": "seminars/seminar-2026-02/slides.html#limitations-and-remedies",
     "title": "GeoPov",
     "section": "⚠️ Limitations and Remedies",
-    "text": "⚠️ Limitations and Remedies\n\n⚠︎ Wrong-but-plausible outputs / hallucinations: code runs but logic is wrong\n✓ Verify and validate: ask the model to explain and justify the solution\n⚠︎ Context limits: not all files/data are in context; too large projects.\n✓ Be explicit: state assumptions, expected inputs/outputs, and references\n⚠︎ Outdated knowledge: suggested APIs/packages/options may have changed\n✓ Teach the model: provide references/links; ask it to learn\n⚠︎ Over-reliance: erodes fundamentals; mistakes slip through unchallenged\n✓ Keep learning: ask for step-by-step reasoning; request alternatives and trade-offs\n⚠︎ Confidentiality / security / privacy\n✓ Constrain context: exclude sensitive data; use .copilot-ignore; AI @ WB\n⚠︎ Reproducibility: answers can vary across sessions/models/settings\n✓ Cutomize agents: save prompts, use Git; create AI agents\n\n\nRead more: GitHub Copilot Trust Center | AI @ WB: ai.worldbank.org",
-    "crumbs": [
-      "GeoPov BBL Series",
-      "Revolutionizing Coding in Stata/R",
-      "Slides"
-    ]
+    "text": "⚠️ Limitations and Remedies\n\n⚠︎ Wrong-but-plausible outputs / hallucinations: code runs but logic is wrong\n✓ Verify and validate: ask the model to explain and justify the solution\n⚠︎ Context limits: not all files/data are in context; too large projects.\n✓ Be explicit: state assumptions, expected inputs/outputs, and references\n⚠︎ Outdated knowledge: suggested APIs/packages/options may have changed\n✓ Teach the model: provide references/links; ask it to learn\n⚠︎ Over-reliance: erodes fundamentals; mistakes slip through unchallenged\n✓ Keep learning: ask for step-by-step reasoning; request alternatives and trade-offs\n⚠︎ Confidentiality / security / privacy\n✓ Constrain context: exclude sensitive data; use .copilot-ignore; AI @ WB\n⚠︎ Reproducibility: answers can vary across sessions/models/settings\n✓ Cutomize agents: save prompts, use Git; create AI agents\n\n\nRead more: GitHub Copilot Trust Center | AI @ WB: ai.worldbank.org"
   },
   {
     "objectID": "seminars/seminar-2026-02/slides.html#summary",
     "href": "seminars/seminar-2026-02/slides.html#summary",
     "title": "GeoPov",
     "section": "Summary",
-    "text": "Summary\n\nWhy use IDEs, not a web-browser-based workflow?\n\nContext-awareness\nStreamlined workflow\nReduced friction\n\n\n\nWhy Positron?\n\nBuilt for data science, not software development\nIntegrates with Stata, R, and Python seamlessly\nAdvanced AI features for data analysis",
-    "crumbs": [
-      "GeoPov BBL Series",
-      "Revolutionizing Coding in Stata/R",
-      "Slides"
-    ]
+    "text": "Summary\n\nWhy use IDEs, not a web-browser-based workflow?\n\nContext-awareness\nStreamlined workflow\nReduced friction\n\n\n\nWhy Positron?\n\nBuilt for data science, not software development\nIntegrates with Stata, R, and Python seamlessly\nAdvanced AI features for data analysis"
   },
   {
     "objectID": "seminars/seminar-2026-02/slides.html#where-to-start",
     "href": "seminars/seminar-2026-02/slides.html#where-to-start",
     "title": "GeoPov",
     "section": "Where to Start?",
-    "text": "Where to Start?\n\n\nSetup the software: follow instructions\nReproduce demos:\n\nLive demo in Positron with Stata (recording) + Materials\nPosit Conf 2025 Postron assistant Demo in R and Python\n\nAsk AI’s help to learn.\nStep out of your comfort zone:\n\nlearn and experiment with new technologies: Git, GitHub, R, Python—they are there for a good reason!\n\nSee more slides with additional materials below.",
-    "crumbs": [
-      "GeoPov BBL Series",
-      "Revolutionizing Coding in Stata/R",
-      "Slides"
-    ]
+    "text": "Where to Start?\n\n\nSetup the software: follow instructions\nReproduce demos:\n\nLive demo in Positron with Stata (recording) + Materials\nPosit Conf 2025 Postron assistant Demo in R and Python\n\nAsk AI’s help to learn.\nStep out of your comfort zone:\n\nlearn and experiment with new technologies: Git, GitHub, R, Python—they are there for a good reason!\n\nSee more slides with additional materials below."
   },
   {
     "objectID": "seminars/seminar-2026-02/slides.html#live-demo-positron-ide-overview",
     "href": "seminars/seminar-2026-02/slides.html#live-demo-positron-ide-overview",
     "title": "GeoPov",
     "section": "Live Demo: Positron IDE overview",
-    "text": "Live Demo: Positron IDE overview",
-    "crumbs": [
-      "GeoPov BBL Series",
-      "Revolutionizing Coding in Stata/R",
-      "Slides"
-    ]
+    "text": "Live Demo: Positron IDE overview"
   },
   {
     "objectID": "seminars/seminar-2026-02/slides.html#thank-you-questins",
     "href": "seminars/seminar-2026-02/slides.html#thank-you-questins",
     "title": "GeoPov",
     "section": "Thank You! Questins?",
-    "text": "Thank You! Questins?\n\n\nResources & Source Code\n\nInternal seminar page\n🎥 Recording\nPositron + Stata: Live Demo (code)\nSlides and Supporting Materials\n\nSlides (web) + Slides (PDF)\n📚 Setup Instructions\n\nPresentation Source Code\nGeoPov learning resources\n\nContact: Distributional Impact of Policies poverty@worldbank.org",
-    "crumbs": [
-      "GeoPov BBL Series",
-      "Revolutionizing Coding in Stata/R",
-      "Slides"
-    ]
+    "text": "Thank You! Questins?\n\n\nResources & Source Code\n\nInternal seminar page\n🎥 Recording\nPositron + Stata: Live Demo (code)\nSlides and Supporting Materials\n\nSlides (web) + Slides (PDF)\n📚 Setup Instructions\n\nPresentation Source Code\nGeoPov learning resources\n\nContact: Distributional Impact of Policies poverty@worldbank.org"
   },
   {
     "objectID": "seminars/seminar-2026-02/slides.html#software-setup-overview",
     "href": "seminars/seminar-2026-02/slides.html#software-setup-overview",
     "title": "GeoPov",
     "section": "Software Setup Overview",
-    "text": "Software Setup Overview\n\n\n\n\n\n\nNote\n\n\nFull details: Setup Instructions\n\n\n\n\nInstall prerequisite software (via WB Software Center)\n\nStata 19+, R 4.5+, Python 3.13+, Quarto, Git\nInstall Python uv package: pip install uv\n\nInstall Positron IDE (system-level install): Request help from IT if needed\nInstall key extensions in Positron\n\nStata MCP, Quarto\n\nConnect GitHub and configure Positron Assistant\nStart experimenting!\n\nOpen assistant: Ctrl+Shift+P &gt; “Ask Positron Assistant”\nTry: chat, agent mode, inline code completion",
-    "crumbs": [
-      "GeoPov BBL Series",
-      "Revolutionizing Coding in Stata/R",
-      "Slides"
-    ]
+    "text": "Software Setup Overview\n\n\n\n\n\n\nNote\n\n\nFull details: Setup Instructions\n\n\n\n\nInstall prerequisite software (via WB Software Center)\n\nStata 19+, R 4.5+, Python 3.13+, Quarto, Git\nInstall Python uv package: pip install uv\n\nInstall Positron IDE (system-level install): Request help from IT if needed\nInstall key extensions in Positron\n\nStata MCP, Quarto\n\nConnect GitHub and configure Positron Assistant\nStart experimenting!\n\nOpen assistant: Ctrl+Shift+P &gt; “Ask Positron Assistant”\nTry: chat, agent mode, inline code completion"
   },
   {
     "objectID": "seminars/seminar-2026-02/slides.html#positron-ide-self-learning",
     "href": "seminars/seminar-2026-02/slides.html#positron-ide-self-learning",
     "title": "GeoPov",
     "section": "Positron IDE: Self-learning",
-    "text": "Positron IDE: Self-learning\n\n\nPositron: Modern AI-native IDE for data science\n\nBuilt by Posit (creators of RStudio)\nSupports Stata, R, Python, and others\nWatch the introduction video →\nTry it yourself with examples in R and Python:\n\ngithub.com/posit-dev/posit-conf-2025-positron-assistant-demo",
-    "crumbs": [
-      "GeoPov BBL Series",
-      "Revolutionizing Coding in Stata/R",
-      "Slides"
-    ]
+    "text": "Positron IDE: Self-learning\n\n\nPositron: Modern AI-native IDE for data science\n\nBuilt by Posit (creators of RStudio)\nSupports Stata, R, Python, and others\nWatch the introduction video →\nTry it yourself with examples in R and Python:\n\ngithub.com/posit-dev/posit-conf-2025-positron-assistant-demo"
   },
   {
     "objectID": "seminars/seminar-2026-02/slides.html#positron-assistant",
     "href": "seminars/seminar-2026-02/slides.html#positron-assistant",
     "title": "GeoPov",
     "section": "Positron: Assistant",
-    "text": "Positron: Assistant\n\n\nSource: positron.posit.co/features",
-    "crumbs": [
-      "GeoPov BBL Series",
-      "Revolutionizing Coding in Stata/R",
-      "Slides"
-    ]
+    "text": "Positron: Assistant\n\n\nSource: positron.posit.co/features"
   },
   {
     "objectID": "seminars/seminar-2026-02/slides.html#positron-data-explorer",
     "href": "seminars/seminar-2026-02/slides.html#positron-data-explorer",
     "title": "GeoPov",
     "section": "Positron: Data explorer",
-    "text": "Positron: Data explorer",
-    "crumbs": [
-      "GeoPov BBL Series",
-      "Revolutionizing Coding in Stata/R",
-      "Slides"
-    ]
+    "text": "Positron: Data explorer"
   },
   {
     "objectID": "seminars/seminar-2026-02/slides.html#positron-stata",
     "href": "seminars/seminar-2026-02/slides.html#positron-stata",
     "title": "GeoPov",
     "section": "Positron + Stata",
-    "text": "Positron + Stata\n\n\nMake sure prerequisite software is installed (Stata, R, Positron)\nInstall Python after that the uv package: pip install uv\nInstall Stata MCP in Positron and configure Stata path and Edition\nCreate a new Stata do-file, write some code, save it and press run it.",
-    "crumbs": [
-      "GeoPov BBL Series",
-      "Revolutionizing Coding in Stata/R",
-      "Slides"
-    ]
+    "text": "Positron + Stata\n\n\nMake sure prerequisite software is installed (Stata, R, Positron)\nInstall Python after that the uv package: pip install uv\nInstall Stata MCP in Positron and configure Stata path and Edition\nCreate a new Stata do-file, write some code, save it and press run it."
   },
   {
     "objectID": "team/maria-davalos.html",
@@ -1069,11 +974,11 @@
     ]
   },
   {
-    "objectID": "seminars/seminar-2026-02/setup-instructions.html#software-setup",
-    "href": "seminars/seminar-2026-02/setup-instructions.html#software-setup",
+    "objectID": "seminars/seminar-2026-02/setup-instructions.html#overview",
+    "href": "seminars/seminar-2026-02/setup-instructions.html#overview",
     "title": "Positron + Github Copilot: Setup Instructions",
-    "section": "Software setup",
-    "text": "Software setup\n\nStep 1. Prerequisite Software: Stata, R, Python\nGo to the World Bank Software Center App and install the following software (if not already installed) :\n\n\n\n\n\n\n\n\n\nSoftware\nNotes\n\n\n\n\n\nStata 19 or higher (latest available)\n\n\n\n\nPositron Latest\n\n\n\n\nR 4.5.2 (latest)\n\n\n\n\nPython 3.13+ (latest)\n\n\n\n\nQuarto 1.3.343 (latest)\nMay require software installation request\n\n\n\nGit 2.52+ (latest)\n\n\n\n\nGitHub Desktop Latest\nOptional\n\n\n\n\n\nStep 2. Install Required Python Package\n\nOpen Command Prompt (cmd) or PowerShell:\n\nPress Win + R, type cmd or powershell, and hit Enter.\n\nType pip install uv and press Enter to install the uv package.\n\nuv is a package that allows environments management in python, see https://pypi.org/project/uv/\n\nCheck if UV is installed correctly by typing uv --version in the Command Prompt or PowerShell. You should see the version number displayed, something like this:\nuv 0.9.18 (0cee76417 2025-12-16)\n\n\n\nStep 3. Install Positron (IDE) from the software center\nThe positron is now available for installation at the World Bank through the Software Center. No requests or administrative privelages are required. Big thank you ton our ITS colleagues for making this possible!\n\n\nStep 4. Install Extensions in Positron\nExtensions are add-ons that enhance Positron’s functionality. To install extensions, open the Extensions panel by clicking the square icon  on the left sidebar or pressing Ctrl+Shift+X. There are many extensions available for Positron. Below are the key extensions to install for AI-assisted analysis:\n\nStata MCP\nStata MCP Extension enables Model Communication Protocol (MCP) for Stata, providing better context awareness for AI agents and allowing you to run Stata code directly from Positron.\nTo install it:\n\n\n\n\n\n\n\n\nDescription\n\n\n\n\n\nOpen the Extensions panel in Positron\n\n\n\nSearch for “Stata MCP” in the Extensions panel\n\n\n\nClick “Install” to add the extension to Positron\n\n\n\nAfter installation, restart Positron or reload the window (Ctrl+Shift+P &gt; Developer: Reload Window &gt; Enter)\n\n\n\nOnce installed, configure the Stata MCP extension by setting up the path to the Stata executable and Stata edition.\n\nOpen stata-vscode.stataPath or press Ctrl+, &gt; search “Stata Path” (or stata-vscode.stataPath), and set it to your Stata executable folder: C:\\Program Files\\StataNow19\\ (for most WB laptops and VDIs). \nOpen stata-vscode.stataEdition\nor press Ctrl+, &gt; search “Stata Edition” (or stata-vscode.stataEdition), and\nset it to “mp” for Stata MP version.\n\n\n\nVerify Stata MCP is working:\n\nCreate and save a new Stata .do file\nType a simple command like: stata     sysuse auto     summarize price     display \"Stata is working!\"\nPress Ctrl+Shift+D in the .do file or Ctrl+Shift+P &gt; type Stata: Run Current File &gt; Enter to run the do file or click on the button \nResults from Stata should appear in the Output panel: Press Ctrl+Shift+P &gt; Output: Show Output Channels... &gt; Enter &gt; Stata. \n\n\n\nOther relevant extensions\nQuarto Extension enables Quarto document editing and rendering in Positron.",
+    "section": "Overview",
+    "text": "Overview\nTo be able to run positron and use GitHub Copilot or Anthropic Claude for AI-assisted analysis, you need to complete the following steps:\n\nSoftware setup:\n\nStata, R, Python, Positron, Git &gt; Python package uv &gt; extensions in Positron (Stata MCP, Quarto)\n\nGithub account setup:\n\nCreate a github account using private email (not WB email).\nJoin World Bank github organization.\nRequest GitHub Copilot access from World Bank GitHub organization administrators.\n\nConnect GitHub Copilot to Positron and enable Positron Assistant in Positron settings.",
     "crumbs": [
       "GeoPov BBL Series",
       "Revolutionizing Coding in Stata/R",
@@ -1081,11 +986,23 @@
     ]
   },
   {
-    "objectID": "seminars/seminar-2026-02/setup-instructions.html#connecting-github-copilot-to-positron",
-    "href": "seminars/seminar-2026-02/setup-instructions.html#connecting-github-copilot-to-positron",
+    "objectID": "seminars/seminar-2026-02/setup-instructions.html#troubleshooting",
+    "href": "seminars/seminar-2026-02/setup-instructions.html#troubleshooting",
     "title": "Positron + Github Copilot: Setup Instructions",
-    "section": "Connecting GitHub Copilot to Positron",
-    "text": "Connecting GitHub Copilot to Positron\nThis step enables you to use the GitHub Copilot coding agent and other LLMs, such as ChatGPT or Anthropic Claude, with Positron.\nSee Positron Assistant: Getting Started for the full overview of what it does.\n\nStep 1. Connect GitHub to Positron\nThis requires a GitHub account linked to the World Bank organization. See GitHub Setup [@github-setup] instructions below if you don’t have an account or haven’t linked it to the WB organization. To connect GitHub to Positron:\n\n\n\n\n\n\n\n\nNote\n\n\n\n\n\nOpen Account menu\n\n\n\nClick Sign in to your GitHub account\n\n\n\nAuthorize GitHub in your browser\n\n\n\nConfirm the authorization request\n\n\n\nComplete the authentication process\n\n\n\nGrant necessary permissions\n\n\n\n\n\n\n\nSee also Positron Assistant Guide for more details on connecting GitHub and using the assistant.\n\n\nStep 2. Enabling Positron Assistant in Positron Settings\n\nOpen settings positron.assistant.enable and check the box to enable it. or Ctrl+, &gt; positron.assistant.enable &gt; Check the box \nRestart Positron to apply the changes\nor reload the window (Ctrl+Shift+P &gt; Developer: Reload Window &gt; Enter) \n\nSee Enable Positron Assistant for more details.\n\n\nStep 3. Configure LLM Provider\nBy default, when logged into GitHub, Positron Assistant uses GitHub Copilot as the LLM provider. GitHub Copilot provides code completion, answers questions in chat, and operates in agent mode (able to run code directly).\n\n\n\n\n\n\nWarning\n\n\n\nNote: Within GitHub Copilot, you can also configure other LLM providers, such as Anthropic Claude, OpenAI GPT, etc.\n\n\nIf you want to use Anthropic Claude or other LLMs as the provider, follow instructions in Configure language model providers.\n\n\n\n\n\n\nWarning\n\n\n\nNote: Code completion will still be provided by the GitHub Copilot extension or will not work with Anthropic Claude.\n\n\n\n\nStep 4. Using Positron Assistant\n\nCtrl+Shift+P &gt; Help: Ask Positron Assistant &gt; Enter to open it.\nIn the input box that appears, type your question. For example: Write a Stata do file that loads the auto dataset and summarizes the price variable.     Open it.     Explain how to run it.\n\nTo learn more about using Positron Assistant, see Use Positron Assistant",
+    "section": "Known Issues and Troubleshooting",
+    "text": "Known Issues and Troubleshooting\n\nIf you have trouble installing software from the Software Center, contact IT Help: ITHelp@worldbankgroup.org or use Walk-in center.\nIf you have trouble with GitHub World Bank or Github Copilot access from World Bank GitHub setup instructions or contact github@worldbank.org.\nGithub copilot does not work in Positron after installation:\n\nMake sure you set-up Github account properly\nMake sure that you have enabled Positron Assistant in Positron settings\nMake sure you are signed into GitHub in Positron\nReload Positron after installation and setup: Ctrl+Shift+P &gt; Developer: Reload Window &gt; Enter or close it and open again.\n\nStata-MCP extension does not run code from the OneDrive.\nThis is a known issue with Stata MCP extension when running code from OneDrive folder. It happens because our one drive folder has a space in the name (“OneDrive - WBG”). A workaround is to move the code to a different folder without spaces in the path, for example C:\\Users\\wbXXXXXXX\\code, and run it from there. Once this issue it resolved on the Stata MCP extension side, it will update in positron automatically and you will be able to run code from the OneDrive folder again.",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Setup instructions"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/setup-instructions.html#software-setup",
+    "href": "seminars/seminar-2026-02/setup-instructions.html#software-setup",
+    "title": "Positron + Github Copilot: Setup Instructions",
+    "section": "Software setup",
+    "text": "Software setup\n\nStep 1. Prerequisite Software: Stata, R, Python\nGo to the World Bank Software Center App and install the following software (if not already installed) :\n\n\n\n\n\n\n\n\n\nSoftware\nNotes\n\n\n\n\n\nStata 19 or higher (latest available)\n\n\n\n\nPositron Latest\n\n\n\n\nR 4.5.2 (latest)\n\n\n\n\nPython 3.13+ (latest)\n\n\n\n\nQuarto 1.3.343 (latest)\nMay require software installation request\n\n\n\nGit 2.52+ (latest)\n\n\n\n\nGitHub Desktop Latest\nOptional\n\n\n\n\n\nStep 2. Install Required Python Package\n\nOpen Command Prompt (cmd) or PowerShell:\n\nPress Win + R, type cmd or powershell, and hit Enter.\n\nType pip install uv and press Enter to install the uv package.\n\nuv is a package that allows environments management in python, see https://pypi.org/project/uv/\n\nCheck if UV is installed correctly by typing uv --version in the Command Prompt or PowerShell. You should see the version number displayed, something like this:\nuv 0.9.18 (0cee76417 2025-12-16)\n\n\n\nStep 3. Install Positron (IDE) from the software center\nThe positron is now available for installation at the World Bank through the Software Center. No requests or administrative privileges are required. Big thank you to our ITS colleagues for making this possible!\n\n\nStep 4. Install Extensions in Positron\nExtensions are add-ons that enhance Positron’s functionality. To install extensions, open the Extensions panel by clicking the square icon  on the left sidebar or pressing Ctrl+Shift+X. There are many extensions available for Positron. Below are the key extensions to install for AI-assisted analysis:\n\nStata MCP\nStata MCP Extension enables Model Communication Protocol (MCP) for Stata, providing better context awareness for AI agents and allowing you to run Stata code directly from Positron.\nTo install it:\n\n\n\n\n\n\n\n\nDescription\n\n\n\n\n\nOpen the Extensions panel in Positron\n\n\n\nSearch for “Stata MCP” in the Extensions panel\n\n\n\nClick “Install” to add the extension to Positron\n\n\n\nAfter installation, restart Positron or reload the window (Ctrl+Shift+P &gt; Developer: Reload Window &gt; Enter)\n\n\n\nOnce installed, configure the Stata MCP extension by setting up the path to the Stata executable and Stata edition.\n\nOpen stata-vscode.stataPath or press Ctrl+, &gt; search “Stata Path” (or stata-vscode.stataPath), and set it to your Stata executable folder: C:\\Program Files\\StataNow19\\ (for most WB laptops and VDIs). \nOpen stata-vscode.stataEdition\nor press Ctrl+, &gt; search “Stata Edition” (or stata-vscode.stataEdition), and\nset it to “mp” for Stata MP version.\n\n\n\n\nVerify Stata MCP is working:\n\nCreate and save a new Stata .do file\nType a simple command like: stata     sysuse auto     summarize price     display \"Stata is working!\"\nPress Ctrl+Shift+D in the .do file or Ctrl+Shift+P &gt; type Stata: Run Current File &gt; Enter to run the do file or click on the button \nResults from Stata should appear in the Output panel: Press Ctrl+Shift+P &gt; Output: Show Output Channels... &gt; Enter &gt; Stata. \n\n\n\nOther relevant extensions\nQuarto Extension enables Quarto document editing and rendering in Positron.",
     "crumbs": [
       "GeoPov BBL Series",
       "Revolutionizing Coding in Stata/R",
@@ -1097,7 +1014,19 @@
     "href": "seminars/seminar-2026-02/setup-instructions.html#github-setup",
     "title": "Positron + Github Copilot: Setup Instructions",
     "section": "GitHub Setup",
-    "text": "GitHub Setup\nTo use GitHub Copilot in Positron, you need to have a GitHub account linked to the World Bank organization and obtain Copilot access.\n\nStep 1: Create a GitHub Account\nIf you don’t have a GitHub account yet, create one at https://github.com/signup\n\n\n\n\n\n\nWarning\n\n\n\nNote: Use your personal email address, not your World Bank email.\n\n\n\n\nStep 2: Join the World Bank GitHub Organization\n\nSubmit a “Join GitHub Organization Account Request” on eServices to join github.com/worldbank\nOnce your request is approved, you will receive an email invitation to join the World Bank GitHub organization\n\nEmail will be sent to the email address associated with your GitHub account\n\nAccept the invitation by clicking the link in the email\n\nYou need to confirm your membership in the World Bank organization on GitHub by following steps indicated in the email.\nIf you don’t confirm within a few days, the invitation will expire, and you will need to request again through eService.\n\n\n\n\nStep 3: Request GitHub Copilot Access\n\nAfter joining the World Bank organization, request GitHub Copilot access through your team lead or organization administrator\nYour request will be reviewed and approved by the GitHub organization administrators\n\nNote: Bryan Cahill leads the github.com/worldbank organization and can help with Copilot access requests\n\nOnce approved, you’ll be able to use GitHub Copilot in Positron\n\n\n\nStep 4: Verify GitHub Copilot Access\n\nOpen Positron and sign in to your GitHub account (see “Connecting GitHub Copilot to Positron” section above)\nCheck that the GitHub Copilot extension is active in the Extensions panel\nTry typing a comment in a code file to verify that Copilot suggestions appear",
+    "text": "GitHub Setup\nGitHub setup includes (1) creating a GitHub account, (2) joining the World Bank GitHub organization, and (3) requesting access to GitHub Copilot. These steps can be done independently and give different privileges to users, see table below.\n\n\n\nAccess Level\nGH Permissions\nGitHub Copilot / AI Assistance\ngithub.com/worldbank\n\n\n\n\nNo GitHub Account\n❌ No: view public repos only\n❌ No\n❌ No (only view public repositories)\n\n\nPersonal GH Account(created at github.com)\n✅ Everything: Create personal repos, collaborate\n⚠️ Usage limit on all services. No access to Claude\n❌ No\n\n\n+ GH Copilot subscription (Copilot Pro or Pro+)\n✅ Everything\n✅ Unlimited code completion + Chat. ⚠️ Limit on Agent✅ Access to premium models (Claude, GPT-4.5)\n❌ No\n\n\nWB Organization Member(join via eServices)\nAccess WB public and internal repos; Create repos under WB org\n⚠️ Limited (depends on GH Copilot subscription)\n✅ Yes (view / contribute)\n\n\nWB Org + Copilot Access(request Copilot via GitHub Settings and email to github@worldbank.org)\n✅ Unlimited code completion + Chat. ⚠️ Limit on Agent (300 requests/month)✅ Access to premium models (Claude, GPT-4.5)\n✅ Yes (Claude, GPT-4, etc.)\n✅ Yes\n\n\n\nKey takeaways:\n\nFor AI-assisted coding: You need at minimum “Private GH account + WB Org + Copilot Access (private Pro subscription or from World Bank GitHub)”\nTo be able to use GitHub Copilot with Claude: You need Copilot Access (private Pro subscription or from World Bank GitHub)\nEmail matters: Always use your personal email, not your WB email, when creating your GitHub account\n\n\nStep 1: Create a GitHub Account\nIf you don’t have a GitHub account yet, create one at https://github.com/signup or read more GH: get-started\n\n\n\n\n\n\nWarning\n\n\n\nNote: Use your personal email address, not your World Bank email.\n\n\n\n\nStep 2: Join the World Bank GitHub Organization\n\nSubmit a “Join GitHub Organization Account Request” on eServices to join github.com/worldbank\nOnce your request is approved, you will receive an email invitation to join the World Bank GitHub organization\n\nEmail will be sent to the email address associated with your GitHub account\n\nAccept the invitation by clicking the link in the email\n\nYou need to confirm your membership in the World Bank organization on GitHub by following steps indicated in the email.\nIf you don’t confirm within a few days, the invitation will expire, and you will need to request again through eService.\n\n\n\n\nStep 3: Request GitHub Copilot Access from World Bank GitHub Organization\nAfter joining the World Bank organization, request GitHub Copilot access. To do this:\n\n\nGo to GitHub &gt; Settings &gt; Copilot settings.\n\n\n\n\n\n\n\nScroll all the down to the “Get Copilot from an organization” section and click the “Request access” button from worldbank organization.\nSending an email to github@worldbank.org with the subject line: “Request GitHub Copilot Access”. In the email body, include your GitHub username and a brief reason for requesting access. Copy manager or team lead for approval.\n\n\n\n\n\nYour request will be reviewed and approved by the GitHub organization administrators.\n\n\n\n\n\n\nTip\n\n\n\nTip: Bryan Cahill and github@worldbank.org lead the github.com/worldbank organization and can help with Copilot access requests.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nWarning: If you don’t see the “Request access” button or worldbank organization, it means you haven’t been added to the World Bank GitHub organization yet. Please complete Step 2 above, wait for the confirmation email, and accept the invitation before requesting access.\n\n\nOnce approved, you’ll be able to use GitHub Copilot in Positron\n\n\nStep 4: Verify GitHub Copilot Access\nIn github.com, go to GitHub &gt; Settings &gt; Copilot settings and verify that you have access to GitHub Copilot through the World Bank organization. Your usage statistics will looks like this:\n\n\nNo access to Copilot from World Bank GitHub organization or personal plan Pro or Pro+\n\n\nAccess to Copilot from World Bank GitHub organization or personal plan Pro or Pro+\n\n\n\nAnother way is to check if you have access to premium models like Anthropic Claude or GPT-4.5 in the Positron Assistant settings (see instructions below).\n\nOpen Positron and sign in to your GitHub account (see “Connecting GitHub Copilot to Positron” section above)\nCheck that the GitHub Copilot extension is active in the Extensions panel\nTry typing a comment in a code file to verify that Copilot suggestions appear\n\nNote: If you have access to GitHub Copilot but don’t see suggestions in Positron, make sure you are signed into GitHub in Positron and that the GitHub Copilot extension is installed and enabled.",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Setup instructions"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/setup-instructions.html#positron-copilot-setup",
+    "href": "seminars/seminar-2026-02/setup-instructions.html#positron-copilot-setup",
+    "title": "Positron + Github Copilot: Setup Instructions",
+    "section": "Positron + GitHub Copilot / Anthropic Claude Setup",
+    "text": "Positron + GitHub Copilot / Anthropic Claude Setup\nThis step enables you to use the GitHub Copilot coding agent and other LLMs, such as ChatGPT or Anthropic Claude, with Positron.\nSee Positron Assistant: Getting Started for the full overview of what it does.\n\n\n\n\n\n\nWarning\n\n\n\nWarning: Sometimes it is needed to reload Positron after installing software or extensions for the changes to take effect.\n\n\n\nStep 1. Connect GitHub to Positron\nThis requires a GitHub account linked to the World Bank organization. See GitHub Setup [@github-setup] instructions below if you don’t have an account or haven’t linked it to the WB organization. To connect GitHub to Positron:\n\n\n\n\n\n\n\n\nNote\n\n\n\n\n\nOpen Account menu\n\n\n\nClick Sign in to your GitHub account\n\n\n\nAuthorize GitHub in your browser\n\n\n\nConfirm the authorization request\n\n\n\nComplete the authentication process\n\n\n\nGrant necessary permissions\n\n\n\n\n\n\n\nSee also Positron Assistant Guide for more details on connecting GitHub and using the assistant.\n\n\nStep 2. Enabling Positron Assistant in Positron Settings\n\nOpen settings positron.assistant.enable and check the box to enable it. or Ctrl+, &gt; positron.assistant.enable &gt; Check the box \nRestart Positron to apply the changes\nor reload the window (Ctrl+Shift+P &gt; Developer: Reload Window &gt; Enter) \n\nSee Enable Positron Assistant for more details.\n\n\nStep 3. Configure LLM Provider\nBy default, when logged into GitHub, Positron Assistant uses GitHub Copilot as the LLM provider. GitHub Copilot provides code completion, answers questions in chat, and operates in agent mode (able to run code directly).\n\n\n\n\n\n\nWarning\n\n\n\nNote: Within GitHub Copilot, you can also configure other LLM providers, such as Anthropic Claude, OpenAI GPT, etc.\n\n\nIf you want to use Anthropic Claude or other LLMs as the provider, follow instructions in Configure language model providers.\n\n\n\n\n\n\nWarning\n\n\n\nNote: Code completion will still be provided by the GitHub Copilot extension or will not work with Anthropic Claude.\n\n\n\n\nStep 4. Using Positron Assistant\n\nCtrl+Shift+P &gt; Help: Ask Positron Assistant &gt; Enter to open it.\nIn the input box that appears, type your question. For example: Write a Stata do file that loads the auto dataset and summarizes the price variable.     Open it.     Explain how to run it.\n\nTo learn more about using Positron Assistant, see Use Positron Assistant",
     "crumbs": [
       "GeoPov BBL Series",
       "Revolutionizing Coding in Stata/R",
@@ -1121,7 +1050,7 @@
     "href": "seminars/seminar-2026-02/setup-instructions.html#support",
     "title": "Positron + Github Copilot: Setup Instructions",
     "section": "Support",
-    "text": "Support\nFor help with setting up or troubleshooting the software, contact:\n\nIT Help: ITHelp@worldbankgroup.org\nHQ Walk-in center\n\nRemember to provide assiting person with these setup instructions.\nFor help with accessing GitHub.com/Worldbank or Github Copilot from the worldbank:\n\nCheck: GitHub Setup instructions above\nReach out to: github@worldbank.org",
+    "text": "Support\nFor help with setting up or troubleshooting the software, contact:\n\nIT Help: ITHelp@worldbankgroup.org\nHQ Walk-in center\n\nRemember to provide assisting person with these setup instructions.\nFor help with accessing GitHub.com/Worldbank or Github Copilot from the worldbank:\n\nCheck: GitHub Setup instructions above\nReach out to: github@worldbank.org",
     "crumbs": [
       "GeoPov BBL Series",
       "Revolutionizing Coding in Stata/R",

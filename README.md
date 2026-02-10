@@ -4,11 +4,6 @@
 
 This repository hosts learning materials developed and maintained by the GeoPov team - a global multi-disciplinary team in the Distributional Impact of Policy under the Prosperity Vice Presidency at the World Bank.
 
-## News
-
-- **Feb 2026:** Seminar on AI-Assisted Data Analysis with Positron and Copilot—materials and slides now available in [seminars/seminar-2026-02](seminars/seminar-2026-02/).
-- **Jan 2026:** GeoPov team contributed to the World Bank Data Science Week with a workshop on spatial poverty mapping.
-
 ## 🌍 About GeoPov
 
 We are development economists and geospatial enthusiasts working at the intersection of poverty, place, and policy. We believe that where people live matters just as much as how they live — and we're here to make sure that spatial realities are part of the poverty dialogue.
@@ -26,11 +21,6 @@ This repository contains materials from our:
 1. **Spatial Analysis** - Applying geographic lens to poverty and inequality questions
 2. **Knowledge and Data Center** - Curated repository of geospatial data sources and methods
 3. **Capacity Building** - Training and peer-learning events for microeconomists
-
-## 🤝 Get Involved
-
-- Browse our [seminars](seminars/overview.qmd) for recordings and materials
-- Reach out to our [team](team/)
 
 ## License
 

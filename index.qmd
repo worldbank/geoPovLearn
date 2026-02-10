@@ -11,6 +11,13 @@ To develop a global agenda that:
 - **Empowers economists** by integrating geospatial data and spatial analysis into country-level diagnostics and policy engagement.
 - **Contributes to global knowledge** that helps design local solutions grounded in data and spatial context.
 
+
+## Latest News
+
+- **Feb 2026:** Seminar on AI-Assisted Data Analysis workflow with Positron and Copilot—materials and slides now available in [seminars/seminar-2026-02](seminars/seminar-2026-02/overview.qmd).
+
+- **November 2025:** GeoPov team seminar on [Geocoding GMD](seminars/seminar-2025-10/overview.qmd).
+
 ## 🧭 What We Do
 
 Our work is organized around three main pillars:
@@ -47,3 +54,9 @@ We're a global multi-disciplinary team in the Distributional Impact of Policy un
 - Believers in the power of maps and evidence to drive better policy
 
 [Meet our team members →](team/index.qmd)
+
+## 🤝 Get Involved
+
+- Browse our [seminars](seminars/index.qmd) for recordings and materials
+- Reach out to our [team](team/index.qmd)
+- Report issues or suggest improvements to our code and materials on [GitHub issues](https://github.com/worldbank/geoPovLearn/issues/new)

@@ -1,0 +1,182 @@
+---
+title: "AI-Assisted Coding for Economists"
+title-long: "AI-Agent-Assisted Data Analysis and Coding with GitHub Copilot and Claude"
+date: "2026-04-20"
+description: ""
+author: "Eduard Bukin"
+categories: [AI, coding, workflow, stata, R, Positron, GitHub Copilot]
+image: "img/logo.png"
+format: docx
+---
+
+
+## Course Overview
+
+Generative AI (Gen AI) and foundational large language models (LLM)
+offer extraordinary opportunities to improve our analytical workflow and
+daily life. By their design, LLMs are probabilistic: they predict the
+most probable combination of characters, words, and sentences that could
+follow a **prompt** like a human had written the prompt and what follows
+it. Probabilistic nature implies that a single prompt could yield an
+infinite number of completions. Therefore, user's objective is to make
+AI's responses as deterministic as possible. Precision and accuracy of
+the AI's answers determines its usefulness. Therefore, to harness full
+power of the AI-Agents, we need to acquire new skills of:
+
+-   Writing effective prompts;
+-   Curating model context, and
+-   Using right **interfaces/software** for different tasks with AI.
+
+The **objective of this course** is to enable economists who perform
+micro-data analysis with Stata/R (Python) to **revolutionize their
+workflow** by leveraging context-aware AI assistance and agents. To
+achieve this objective, this course will consist of short presentations
+and, mostly, practical demonstrations, exercises, and self-study
+materials, where we will:
+
+-   Introduce WB-approved software and solutions:
+    -   Integrated Development Environment (IDE): Positron
+    -   Github.com/Worldbank: Collaboration platform and WB Open Source
+        initiative for analysis development
+    -   Github Copilot: WB-approved way of using AI assistance
+        (GPT/Claude) for coding.
+-   Help troubleshoot their installation and use.
+-   Discuss key principles and shortcomings of AI assistance in daily
+    coding work.
+    -   Overview about the technology, its strength and limitations.
+    -   Responsible use of AI: securing sensitive data and limiting the
+        context.
+    -   Effective prompting.
+-   Practice key skills of the context-aware use of AI:
+    -   In-line code completion: instant boost to your work
+    -   AI Assistance: almost a replacement to google with the
+        context-aware answer
+    -   AI Agents: delegate complex tasks to AI to perform independently
+        on your behalf.
+    -   Planning coding with AI.
+    -   Advanced topics: Custom AI-Agents, Instructions and Skills.
+-   Practice AI use on typical use-cases:
+    -   Code refactoring, cleaning and commenting.
+    -   Reproducibility package preparation.
+    -   Reproducing old code using new data.
+
+The course is structured in two 3-hours sessions of (preferably)
+in-person and/or hybrid work at the beginning and the end of the week,
+and a period of self-study between two sessions with the structured
+exercises.
+
+-   **1st session** covers key concepts, troubleshoot software setup
+    and usage, and provide a kick-off demonstration on AI capabilities
+    for coding and ways of using it. By the end of this first session
+    participants should be capable of using AI on their computers
+    independently and be enabled to learn it further.
+
+-   **Self-Study period** is meant to provide space and time for
+    participants to practice AI use in analysis and get comfortable with
+    the software interface and coding workflow. Using clearly defined
+    case-studies and examples, course participants are expected to
+    resolve problems independently and accumulate questions for second
+    session, where these problems will be addressed.
+
+-   **2nd session** is dedicated to practicing specific skills and
+    use-cases as well as addressing questions. We will demonstrate use
+    of AI for planning and executing complex tasks; practice this with
+    the participants, answer their questions, and conclude with the
+    demonstration of the more advanced: cutting-edge use cases such as
+    agentic code development, testing, and debugging.
+
+To consider the course completed, participants are expected to demonstrate
+the ability to use AI assistance for coding independently, and submit
+two short case studies on the use of AI assistance for coding during the
+self-study period, and in a week after the second session. Their successful
+submission is a requirement, which will be used as deliverables for
+assessing the course completion.
+
+## Detailed plan
+
+### Prerequisites
+
+- Basic familiarity with Stata/R (Python) and micro-data analysis.
+
+- Installation of Positron IDE and GitHub Copilot (instructions will be
+  provided before the course).
+
+  - Engaging with the ITS helpdesk for any software installation issues.
+
+- Setting up a GitHub account, joining the WorldBank organization and
+  requesting the access to the GitHub Copilot for WorldBank (instructions
+  will be provided before the course).
+
+  - Engaging with [github@worldbank.org](mailto:github@worldbank.org)
+    for any issues related to GitHub account setup, access to GitHub Copilot.
+
+### Session 1: Introduction to AI-Assisted Coding
+
+- Live demonstration of a code refactoring task with and without
+  AI assistance to show the difference in workflow and output quality.
+
+- Walkthrough of the software interface and usage workflow: troubleshooting
+  common issues.
+
+- Overview presentation:
+
+  - AI-assistance technology;
+  - strengths and limitations: when DO and DO NOT use/expect AI to be helpful,
+  - responsible use of AI;
+  - basics of prompting: how to write effective prompts;
+  - curating context for AI: how to limit the context;
+  - secure sensitive data.
+  - Set expectations right: Stata support vs other languages - R and Python.
+
+- Case studies:
+
+  - Refactoring code with AI assistance.
+  - Writing with AI: preparing a reproducibility package and documenting code.
+
+- Q&A and discussion.
+
+
+### Self-Study Period: Practice and Exploration
+
+- During a 2-3 day self-study period, participants will be encouraged
+  to perform structured exercises to practice AI-assisted coding,
+  document their experiences, challenges, and questions during this period
+  to bring to the second session.
+
+- Live Teams channel will be available for participants to ask questions and
+  share insights during the self-study period.
+
+- Participants will be asked to submit a case study completed with
+  the help of the AI assistance during the self-study period, which will be
+  used as one of the deliverables for assessing the course completion.
+
+  Selected case studies for self-study:
+
+  - Reproducing old code using new data with AI assistance.
+
+  - Reproducing analysis following an example with AI assistance.
+
+  - Trying a different language: R or Python instead of Stata with AI assistance.
+
+### Session 2: Every day AI-Assisted Coding and Use Cases
+
+- Addressing questions and challenges from the self-study period.
+
+- Demonstration of planning and executing complex tasks with AI assistance.
+
+- Overview presentation
+
+  - prompt engineering for complex tasks
+  - prompt patterns as reusable templates.
+  - when to stop using AI and think: recognizing when AI is leading you in circles
+  - cost of AI use and token awareness
+  - Enhancing the workflow with GitHub and Git-versioning: how to start using
+    with the help from AI.
+
+- Practical case studies:
+
+  - Planning and executing complex tasks with AI assistance.
+  - Advanced use cases: agentic code development, testing, and debugging.
+  - Positron DataBot: agent for fast exploratory data analysis.
+
+- Q&A and discussion.

@@ -1,5 +1,5 @@
 ---
-title: "Positron + Github Copilot: Setup Instructions"
+title: "Positron + GitHub Copilot: Setup Instructions"
 subtitle: "AI Agent-Assisted Analysis with GitHub Copilot and Claude"
 ---
 
@@ -20,7 +20,7 @@ To be able to use AI in daily coding and data analysis we need to:
     - Python package `uv`
     - Extensions in Positron (Stata MCP)
 
-2.  Github setup:
+2.  GitHub setup:
 
     - Create a GitHub account using private email (not WB email).
     - Join World Bank GitHub organization.
@@ -45,9 +45,9 @@ To be able to use AI in daily coding and data analysis we need to:
   from World Bank [GitHub setup instructions](#github-setup) or contact
   [github\@worldbank.org](mailto:github@worldbank.org).
 
-- Github copilot does not work in Positron after installation:
+- GitHub Copilot does not work in Positron after installation:
 
-  - Make sure you [set-up Github account properly](#github-setup)
+  - Make sure you [set-up GitHub account properly](#github-setup)
 
   - Make sure that you have [**enabled Positron Assistant in Positron
     settings**](#enable-positron-assistant)
@@ -214,13 +214,13 @@ GitHub setup includes
 These steps can be done independently and give different privileges to
 users, see table below.
 
-| Access Level | GitHub Permissions | GitHub Copilot / AI Assistance | [github.com/worldbank](https://github.com/worldbank) |
+| Access Level | GitHub Permissions | GitHub Copilot / AI Assistance | WB GitHub Org Access |
 |-----------------|-----------------|--------------------|------------------|
 | **No GitHub Account** | ❌ No: view public repos only | ❌ No | ❌ No (only view public repositories) |
 | **Personal GH Account**<br/>(created at github.com) | ✅ Everything: Create personal repos, collaborate | ⚠️ **Usage limit**. **No access to Claude** | ❌ No |
 | **+ GH Copilot subscription** ([Copilot Pro or Pro+](https://github.com/features/copilot/plans){target="_blank"}) | ✅ Everything | ✅ **Unlimited code completion + Chat**. ⚠️ Monthly use limit on **Agent**<br/>Private budget for over-limit use.<br/>✅ **Premium models (Claude)** | ❌ No |
-| **WB Organization Member**<br/>(join via eServices) | Access WB public and internal repos.<br/> Create repos under WB org | ⚠️ Limited. | ✅ Yes (view / contribute) |
-| **WB Org + WB Copilot Access**<br/>(request Copilot via GitHub Settings and email to github\@worldbank.org) | ✅ **Unlimited code completion + Chat**. ⚠️ Limit on **Agent** (300 requests/month)<br/>✅ **Access to premium models (Claude, GPT-4.5)** <br/> Manager-approved budget for overuse. | ✅ Yes (Claude, etc.) | ✅ Yes |
+| **WB Organization Member**<br/>(join via eServices) | ✅ Access WB public and internal repos.<br/>Create repos under WB org | ⚠️ Limited (basic completions only; no premium models). | ✅ Yes (view / contribute) |
+| **WB Org + WB Copilot Access**<br/>(request Copilot via GitHub Settings and email to github\@worldbank.org) | ✅ Everything: personal repos + WB org repos | ✅ **Unlimited code completion + Chat**. ⚠️ Limit on **Agent** (300 requests/month)<br/>✅ **Premium models (Claude, GPT-4.5)**<br/>Manager-approved budget for overuse. | ✅ Yes |
 
 **Key takeaways:**
 
@@ -282,14 +282,15 @@ settings](https://github.com/settings/copilot){target="_blank"}.
 
 ::::: columns
 ::: {.column width="50%"}
-- Scroll all the down to the "Get Copilot from an organization" section
-  and click the "**Request access**" button from worldbank organization.
+- Scroll all the way down to the "Get Copilot from an organization"
+  section and click the "**Request access**" button from the worldbank
+  organization.
 
-- Sending an email to
+- Send an email to
   [github\@worldbank.org](mailto:github@worldbank.org) with the subject
   line: "Request GitHub Copilot Access". In the email body, include your
   **GitHub username** and a **brief reason for requesting access**. Copy
-  manager or team lead for approval.
+  your manager or team lead for approval.
 :::
 
 ::: {.column width="50%"}
@@ -325,7 +326,7 @@ Once approved, you'll be able to use GitHub Copilot in Positron
 In github.com, go to [GitHub \> Settings \> Copilot
 settings](https://github.com/settings/copilot){target="_blank"} and
 verify that you have access to GitHub Copilot through the World Bank
-organization. Your usage statistics will looks like this:
+organization. Your usage statistics will look like this:
 
 ::::: columns
 ::: {.column width="50%"}
@@ -362,7 +363,7 @@ GitHub Copilot extension is installed and enabled.
 
 ### Step 5: To enable overuse of GitHub Copilot Agent
 
-1.  Ask you manager for a permission to use a budget code for overuse of
+1.  Ask your manager for permission to use a budget code for overuse of
     GitHub Copilot Agent
 2.  Set up a monthly limit of usage (you will be charged only for what
     you use)
@@ -385,11 +386,11 @@ for the full overview of what it does.
 software or extensions for the changes to take effect.
 :::
 
-### Step 1. Connect GitHub to Positron
+### Step 1: Connect GitHub to Positron
 
 This requires a GitHub account linked to the World Bank organization.
-See GitHub Setup [@github-setup] instructions below if you don't have an
-account or haven't linked it to the WB organization. To connect GitHub
+See [GitHub Setup](#github-setup) instructions above if you don't have
+an account or haven't linked it to the WB organization. To connect GitHub
 to Positron:
 
 |   | Note |
@@ -406,7 +407,7 @@ See also [Positron Assistant
 Guide](https://positron.posit.co/assistant.html) for more details on
 connecting GitHub and using the assistant.
 
-### Step 2. Enabling Positron Assistant in Positron Settings {#enable-positron-assistant}
+### Step 2: Enable Positron Assistant in Positron Settings {#enable-positron-assistant}
 
 1.  Open settings
     [positron.assistant.enable](positron://settings/positron.assistant.enable)
@@ -422,7 +423,7 @@ See [Enable Positron
 Assistant](https://positron.posit.co/assistant-getting-started.html#step-1-enable-positron-assistant)
 for more details.
 
-### Step 3. Configure LLM Provider
+### Step 3: Configure LLM Provider
 
 By default, when logged into GitHub, Positron Assistant uses GitHub
 Copilot as the LLM provider. GitHub Copilot provides code completion,
@@ -443,7 +444,7 @@ Code completion will still be provided by the GitHub Copilot extension
 or will not work with Anthropic Claude.
 :::
 
-### Step 4. Using Positron Assistant
+### Step 4: Use Positron Assistant
 
 1.  `Ctrl+Shift+P` \> `Help: Ask Positron Assistant` \> `Enter` to open
     it.
@@ -479,7 +480,7 @@ For help with setting up or troubleshooting the software, contact:
 
 Remember to provide assisting person with these setup instructions.
 
-For help with accessing GitHub.com/Worldbank or Github Copilot from the
+For help with accessing GitHub.com/Worldbank or GitHub Copilot from the
 worldbank:
 
 - Check: [GitHub Setup](#github-setup) instructions above

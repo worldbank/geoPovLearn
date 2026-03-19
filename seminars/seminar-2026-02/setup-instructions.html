@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -283,21 +318,22 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#goals" id="toc-goals" class="nav-link active" data-scroll-target="#goals">Goals:</a></li>
-  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a>
+  <ul class="collapse">
   <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Known Issues and Troubleshooting</a></li>
+  </ul></li>
   <li><a href="#software-setup" id="toc-software-setup" class="nav-link" data-scroll-target="#software-setup">Software setup</a>
   <ul class="collapse">
-  <li><a href="#prereq-software" id="toc-prereq-software" class="nav-link" data-scroll-target="#prereq-software">Step 1. Prerequisite Software: Stata, R, Python</a></li>
-  <li><a href="#python-uv" id="toc-python-uv" class="nav-link" data-scroll-target="#python-uv">Step 2. Install Required Python Package</a></li>
-  <li><a href="#step-3.-install-positron-ide-from-the-software-center" id="toc-step-3.-install-positron-ide-from-the-software-center" class="nav-link" data-scroll-target="#step-3.-install-positron-ide-from-the-software-center">Step 3. Install Positron (IDE) from the software center</a></li>
-  <li><a href="#step-4.-install-extensions-in-positron" id="toc-step-4.-install-extensions-in-positron" class="nav-link" data-scroll-target="#step-4.-install-extensions-in-positron">Step 4. Install Extensions in Positron</a></li>
+  <li><a href="#step-1-install-the-software" id="toc-step-1-install-the-software" class="nav-link" data-scroll-target="#step-1-install-the-software">Step 1: Install the software</a></li>
+  <li><a href="#step-2-configure-the-software-and-install-extensions" id="toc-step-2-configure-the-software-and-install-extensions" class="nav-link" data-scroll-target="#step-2-configure-the-software-and-install-extensions">Step 2: Configure the software and install extensions</a></li>
   </ul></li>
-  <li><a href="#github-setup" id="toc-github-setup" class="nav-link" data-scroll-target="#github-setup">GitHub Setup</a>
+  <li><a href="#github-setup" id="toc-github-setup" class="nav-link" data-scroll-target="#github-setup">GitHub and GitHub Copilot Setup</a>
   <ul class="collapse">
   <li><a href="#step-1-create-a-github-account" id="toc-step-1-create-a-github-account" class="nav-link" data-scroll-target="#step-1-create-a-github-account">Step 1: Create a GitHub Account</a></li>
   <li><a href="#step-2-join-the-world-bank-github-organization" id="toc-step-2-join-the-world-bank-github-organization" class="nav-link" data-scroll-target="#step-2-join-the-world-bank-github-organization">Step 2: Join the World Bank GitHub Organization</a></li>
   <li><a href="#step-3-request-github-copilot-access-from-world-bank-github-organization" id="toc-step-3-request-github-copilot-access-from-world-bank-github-organization" class="nav-link" data-scroll-target="#step-3-request-github-copilot-access-from-world-bank-github-organization">Step 3: Request GitHub Copilot Access from World Bank GitHub Organization</a></li>
   <li><a href="#step-4-verify-github-copilot-access" id="toc-step-4-verify-github-copilot-access" class="nav-link" data-scroll-target="#step-4-verify-github-copilot-access">Step 4: Verify GitHub Copilot Access</a></li>
+  <li><a href="#step-5-to-enable-overuse-of-github-copilot-agent" id="toc-step-5-to-enable-overuse-of-github-copilot-agent" class="nav-link" data-scroll-target="#step-5-to-enable-overuse-of-github-copilot-agent">Step 5: To enable overuse of GitHub Copilot Agent</a></li>
   </ul></li>
   <li><a href="#positron-copilot-setup" id="toc-positron-copilot-setup" class="nav-link" data-scroll-target="#positron-copilot-setup">Positron + GitHub Copilot / Anthropic Claude Setup</a>
   <ul class="collapse">
@@ -308,10 +344,6 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional Resources</a></li>
   <li><a href="#support" id="toc-support" class="nav-link" data-scroll-target="#support">Support</a></li>
-  <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix">Appendix</a>
-  <ul class="collapse">
-  <li><a href="#positron1-installation-instructions-when-it-is-not-available-in-the-software-center" id="toc-positron1-installation-instructions-when-it-is-not-available-in-the-software-center" class="nav-link" data-scroll-target="#positron1-installation-instructions-when-it-is-not-available-in-the-software-center">Positron installation instructions, when it is not available in the Software Center</a></li>
-  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/worldbank/geoPovLearn/edit/main/seminars/seminar-2026-02/setup-instructions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/worldbank/geoPovLearn/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -341,30 +373,32 @@ ul.task-list li input[type="checkbox"] {
 <section id="goals" class="level2">
 <h2 class="anchored" data-anchor-id="goals">Goals:</h2>
 <ul>
-<li>Setup software environment for AI agent-assisted analysis in Stata and R</li>
-<li>Enable GitHub Copilot or Claude AI integration</li>
+<li>Setup software for AI agent-assisted analysis in Stata and R</li>
+<li>Enable AI-assistance with GitHub Copilot or Claude AI integration</li>
 <li>Be able to reproduce AI-assisted coding workflow demonstrated in the seminar</li>
 </ul>
 </section>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>To be able to run positron and use GitHub Copilot or Anthropic Claude for AI-assisted analysis, you need to complete the following steps:</p>
+<p>To be able to use AI in daily coding and data analysis we need to:</p>
 <ol type="1">
 <li><p><span id="software-setup">Software setup</span>:</p>
 <ul>
-<li>Stata, R, Python, Positron, Git &gt; Python package <code>uv</code> &gt; extensions in Positron (Stata MCP, Quarto)</li>
+<li>Stata, R, Python, Positron, Quarto, Git</li>
+<li>Python package <code>uv</code></li>
+<li>Extensions in Positron (Stata MCP)</li>
 </ul></li>
-<li><p>Github account setup:</p>
+<li><p>Github setup:</p>
 <ul>
-<li>Create a github account using private email (not WB email).</li>
-<li>Join World Bank github organization.</li>
+<li>Create a GitHub account using private email (not WB email).</li>
+<li>Join World Bank GitHub organization.</li>
 <li>Request GitHub Copilot access from World Bank GitHub organization administrators.</li>
+<li>For a private setup, you need to make a <a href="https://github.com/features/copilot/plans" target="_blank">subscription</a> to GitHub Copilot Pro or Pro+ plan.</li>
 </ul></li>
 <li><p>Connect GitHub Copilot to Positron and enable Positron Assistant in Positron settings.</p></li>
 </ol>
-</section>
-<section id="troubleshooting" class="level2">
-<h2 class="anchored" data-anchor-id="troubleshooting">Known Issues and Troubleshooting</h2>
+<section id="troubleshooting" class="level3">
+<h3 class="anchored" data-anchor-id="troubleshooting">Known Issues and Troubleshooting</h3>
 <ul>
 <li><p>If you have trouble installing software from the Software Center, contact IT Help: <a href="mailto:mailto:ITHelp@worldbankgroup.org">ITHelp@worldbankgroup.org</a> or use <a href="https://worldbankgroup.sharepoint.com/sites/itsupport/SitePages/PublishingPages/Walk-in-Centers-in-Washington-DC--05042021-1608401_new.aspx">Walk-in center</a>.</p></li>
 <li><p>If you have trouble with GitHub World Bank or Github Copilot access from World Bank <a href="#github-setup">GitHub setup instructions</a> or contact <a href="mailto:github@worldbank.org">github@worldbank.org</a>.</p></li>
@@ -375,15 +409,16 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Make sure you are <a href="#positron-copilot-setup">signed into GitHub in Positron</a></p></li>
 <li><p>Reload Positron after installation and setup: <code>Ctrl+Shift+P</code> &gt; <code>Developer: Reload Window</code> &gt; <code>Enter</code> or close it and open again.</p></li>
 </ul></li>
-<li><p>Stata-MCP extension does not run code from the OneDrive.</p>
-<p>This is a known issue with Stata MCP extension when running code from OneDrive folder. It happens because our one drive folder has a space in the name (“OneDrive - WBG”). A workaround is to move the code to a different folder without spaces in the path, for example <code>C:\Users\wbXXXXXXX\code</code>, and run it from there. Once this issue it resolved on the Stata MCP extension side, it will update in positron automatically and you will be able to run code from the OneDrive folder again.</p></li>
+<li><p>Stata-MCP extension does not run Stata code from the OneDrive.</p>
+<p>This was a known issue with Stata MCP extension that <strong>has been resolved</strong> after <a href="https://github.com/hanlulong/stata-mcp/issues/52">this GitHub issue</a>. It happened when running code from OneDrive folder because our one drive folder has a space in the name (“OneDrive - WBG”). A workaround is to move the code to a different folder without spaces in the path, for example <code>C:\Users\wbXXXXXXX\code</code>, and run it from there. Once this issue it resolved on the Stata MCP extension side, it will update in positron automatically and you will be able to run code from the OneDrive folder again.</p></li>
 </ul>
+</section>
 </section>
 <section id="software-setup" class="level2">
 <h2 class="anchored" data-anchor-id="software-setup">Software setup</h2>
-<section id="prereq-software" class="level3">
-<h3 class="anchored" data-anchor-id="prereq-software">Step 1. Prerequisite Software: Stata, R, Python</h3>
-<p>Go to the World Bank Software Center App and install the following software (if not already installed) <img src="images/software-center.png" class="img-fluid" width="255">:</p>
+<section id="step-1-install-the-software" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-install-the-software">Step 1: Install the software</h3>
+<p>First you need to install the required software on your computer. The table below summarizes the software needed and instructions for installation.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
@@ -394,50 +429,69 @@ ul.task-list li input[type="checkbox"] {
 <tr class="header">
 <th></th>
 <th>Software</th>
-<th>Notes</th>
+<th>Note for self-installation</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><img src="images/stata.png" class="img-fluid" width="47"></td>
-<td><strong>Stata</strong> 19 or higher (latest available)</td>
-<td></td>
+<td><strong>Stata</strong> 19 or higher</td>
+<td>Use regular installation</td>
 </tr>
 <tr class="even">
 <td><img src="images/positron-swc.png" class="img-fluid" width="40"></td>
 <td><strong>Positron</strong> Latest</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><img src="images/R.png" class="img-fluid" width="52"></td>
-<td><strong>R</strong> 4.5.2 (latest)</td>
-<td></td>
-</tr>
-<tr class="even">
-<td><img src="images/python.png" class="img-fluid" width="47"></td>
-<td><strong>Python</strong> 3.13+ (latest)</td>
-<td></td>
+<td>Use user-level installation</td>
 </tr>
 <tr class="odd">
 <td><img src="images/quarto.png" class="img-fluid" width="40"></td>
-<td><strong>Quarto</strong> 1.3.343 (latest)</td>
-<td>May require software installation request</td>
+<td><strong>Quarto</strong> 1.9.+ (latest)</td>
+<td>Use admin-level (for all users) installation</td>
+</tr>
+<tr class="even">
+<td><img src="images/R.png" class="img-fluid" width="52"></td>
+<td><strong>R</strong> 4.5.2 (latest)</td>
+<td>Use regular installation</td>
+</tr>
+<tr class="odd">
+<td><img src="images/python.png" class="img-fluid" width="47"></td>
+<td><strong>Python</strong> 3.13+ (latest)</td>
+<td>Use regular installation</td>
 </tr>
 <tr class="even">
 <td><img src="images/git.png" class="img-fluid" width="48"></td>
 <td><strong>Git</strong> 2.52+ (latest)</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><img src="images/ghdesktop.png" class="img-fluid" width="46"></td>
-<td><strong>GitHub Desktop</strong> Latest</td>
-<td>Optional</td>
+<td>Use regular installation</td>
 </tr>
 </tbody>
 </table>
+<p>All software listed above is available for installation at the World Bank through the Software Center. Go to the Software Center and install it (if not already installed) <img src="images/software-center.png" class="img-fluid" width="255">. If some is not available in the Software Center, make a <a href="https://worldbankgroup.service-now.com/wbg/en/software-installation-request?id=wbg_sc_catalog&amp;sys_id=bd1e71b86f16d340db112d232e3ee4b7&amp;table=sc_cat_item&amp;searchTerm=Software%20installation" target="_blank">Software Installation Request</a> or contact IT Help: <a href="mailto:ITHelp@worldbankgroup.org">ITHelp@worldbankgroup.org</a>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you had an older version of Positron installed, please reinstall it as the one on the software center is more up to date and capable of self-updating.</p>
+<p>Private laptop setup</p>
+<ul>
+<li>R: Install R from <a href="https://cran.r-project.org/" target="_blank">https://cran.r-project.org/</a></li>
+<li>Python: Install Python from <a href="https://www.python.org/downloads/" target="_blank">https://www.python.org/downloads/</a></li>
+<li>Positron: Install user-level Positron from <a href="https://positron.posit.co/download.html" target="_blank">https://positron.posit.co/download.html</a></li>
+<li>Quarto: Install Quarto from <a href="https://quarto.org/docs/get-started/" target="_blank">https://quarto.org/docs/get-started/</a></li>
+<li>Git: Install Git from <a href="https://git-scm.com/download/win" target="_blank">https://git-scm.com/download/win</a></li>
+</ul>
+</div>
+</div>
 </section>
-<section id="python-uv" class="level3">
-<h3 class="anchored" data-anchor-id="python-uv">Step 2. Install Required Python Package</h3>
+<section id="step-2-configure-the-software-and-install-extensions" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-configure-the-software-and-install-extensions">Step 2: Configure the software and install extensions</h3>
+<section id="python-uv" class="level4">
+<h4 class="anchored" data-anchor-id="python-uv">UV: Required Python Package</h4>
 <ol type="1">
 <li><p>Open Command Prompt (cmd) or PowerShell:</p>
 <ul>
@@ -451,17 +505,11 @@ ul.task-list li input[type="checkbox"] {
 <pre class="pwsh"><code>uv 0.9.18 (0cee76417 2025-12-16)</code></pre></li>
 </ol>
 </section>
-<section id="step-3.-install-positron-ide-from-the-software-center" class="level3">
-<h3 class="anchored" data-anchor-id="step-3.-install-positron-ide-from-the-software-center">Step 3. Install Positron (IDE) from the software center</h3>
-<p>The positron is now available for installation at the World Bank through the Software Center. No requests or administrative privileges are required. Big thank you to our ITS colleagues for making this possible!</p>
-</section>
-<section id="step-4.-install-extensions-in-positron" class="level3">
-<h3 class="anchored" data-anchor-id="step-4.-install-extensions-in-positron">Step 4. Install Extensions in Positron</h3>
-<p>Extensions are add-ons that enhance Positron’s functionality. To install extensions, open the Extensions panel by clicking the square icon <img src="images/paste-2.png" class="img-fluid" width="28"> on the left sidebar or pressing <code>Ctrl+Shift+X</code>. There are many extensions available for Positron. Below are the key extensions to install for AI-assisted analysis:</p>
 <section id="stata-mcp-extension" class="level4">
-<h4 class="anchored" data-anchor-id="stata-mcp-extension">Stata MCP</h4>
+<h4 class="anchored" data-anchor-id="stata-mcp-extension">Stata-MCP: Extensions in Positron for Stata</h4>
+<p>Extensions in Positron are add-ons that enhance functionality. To install extensions, open the Extensions panel by clicking the square icon <img src="images/paste-2.png" class="img-fluid" width="28"> on the left sidebar or pressing <code>Ctrl+Shift+X</code>. There are many extensions available for Positron. Below are the key extensions to install for AI-assisted analysis:</p>
 <p><a href="https://open-vsx.org/extension/DeepEcon/stata-mcp" target="_blank"><code>Stata MCP</code> Extension</a> enables Model Communication Protocol (MCP) for Stata, providing better context awareness for AI agents and allowing you to run Stata code directly from Positron.</p>
-<p>To install it:</p>
+<p><strong>To install it</strong>:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 54%">
@@ -479,51 +527,97 @@ ul.task-list li input[type="checkbox"] {
 <td>Open the Extensions panel in Positron</td>
 </tr>
 <tr class="even">
-<td><img src="images/stata-mcp.png" class="img-fluid" width="315"></td>
+<td><img src="images/stata-mcp.png" class="img-fluid" width="300"></td>
 <td>Search for “Stata MCP” in the Extensions panel</td>
 </tr>
 <tr class="odd">
-<td><img src="images/stata-mcp-install.png" class="img-fluid" width="675"></td>
+<td><img src="images/stata-mcp-install.png" class="img-fluid" width="300"></td>
 <td>Click “Install” to add the extension to Positron</td>
 </tr>
 <tr class="even">
-<td><img src="images/positron-reload.png" width="400" height="43"></td>
+<td><img src="images/positron-reload.png" class="img-fluid" width="300"></td>
 <td>After installation, restart Positron or reload the window (<code>Ctrl+Shift+P</code> &gt; <code>Developer: Reload Window</code> &gt; <code>Enter</code>)</td>
 </tr>
 </tbody>
 </table>
-<p>Once installed, configure the Stata MCP extension by setting up the path to the Stata executable and Stata edition.</p>
-<ol type="1">
-<li><p>Open <a href="positron://settings/stata-vscode.stataPath">stata-vscode.stataPath</a> or press <code>Ctrl+,</code> &gt; search “Stata Path” (or <code>stata-vscode.stataPath</code>), and set it to your Stata executable folder: <code>C:\Program Files\StataNow19\</code> (for most WB laptops and VDIs). <img src="images/stata-path.png" class="img-fluid" width="350"></p></li>
-<li><p>Open <a href="positron://settings/stata-vscode.stataEdition">stata-vscode.stataEdition</a><br>
-or press <code>Ctrl+,</code> &gt; search “Stata Edition” (or <code>stata-vscode.stataEdition</code>), and<br>
-set it to “mp” for Stata MP version.<br>
-</p>
-<p><img src="images/stata-edition.png" class="img-fluid" width="281"><br>
-</p></li>
-</ol>
-<p>Verify Stata MCP is working:</p>
-<ol type="1">
-<li><p>Create and save a new Stata <code>.do</code> file</p></li>
-<li><p>Type a simple command like: <code>stata     sysuse auto     summarize price     display "Stata is working!"</code></p></li>
-<li><p>Press <code>Ctrl+Shift+D</code> in the <code>.do</code> file or <code>Ctrl+Shift+P</code> &gt; type <code>Stata: Run Current File</code> &gt; <code>Enter</code> to run the do file or click on the button <img src="images/stata-run.png" class="img-fluid" width="40"></p></li>
-<li><p>Results from Stata should appear in the <code>Output</code> panel: Press <code>Ctrl+Shift+P</code> &gt; <code>Output: Show Output Channels...</code> &gt; <code>Enter</code> &gt; <code>Stata</code>. <img src="images/stata-output.png" class="img-fluid" width="600"></p></li>
-</ol>
-</section>
-<section id="other-relevant-extensions" class="level4">
-<h4 class="anchored" data-anchor-id="other-relevant-extensions">Other relevant extensions</h4>
-<p><a href="https://open-vsx.org/extension/quarto/quarto" target="_blank"><code>Quarto</code> Extension</a> enables Quarto document editing and rendering in Positron.</p>
+<p><strong>Once installed</strong>, configure the Stata MCP extension by setting up the path to the Stata executable and Stata edition.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><img src="images/stata-path.png" class="img-fluid" width="350"></td>
+<td>Open <a href="positron://settings/stata-vscode.stataPath">stata-vscode.stataPath</a> or press <code>Ctrl+,</code> &gt; search “Stata Path” (or <code>stata-vscode.stataPath</code>), and set it to your Stata executable folder: <code>C:\Program Files\StataNow19\</code> (for most WB laptops and VDIs).</td>
+</tr>
+<tr class="even">
+<td><img src="images/stata-edition.png" class="img-fluid" width="281"></td>
+<td>Open <a href="positron://settings/stata-vscode.stataEdition">stata-vscode.stataEdition</a> or press <code>Ctrl+,</code> &gt; search “Stata Edition” (or <code>stata-vscode.stataEdition</code>), and set it to “mp” for Stata MP version.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Verify Stata MCP is working</strong></p>
+<p>Create and save a new Stata <code>.do</code> file with a simple command like:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">sysuse</span> auto</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">summarize</span> price</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">display</span> <span class="st">"Stata is working!"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td>Save the file (<code>Ctrl+S</code>) before running — any unsaved edits will not be executed.</td>
+</tr>
+<tr class="even">
+<td><img src="images/stata-run.png" class="img-fluid" width="40"></td>
+<td>Press <code>Ctrl+Shift+D</code> in the <code>.do</code> file, or <code>Ctrl+Shift+P</code> &gt; <code>Stata: Run Current File</code> &gt; <code>Enter</code>, or click the run button.</td>
+</tr>
+<tr class="odd">
+<td><img src="images/stata-output.png" class="img-fluid" width="400"></td>
+<td>Results appear in the <code>Output</code> panel: <code>Ctrl+Shift+P</code> &gt; <code>Output: Show Output Channels...</code> &gt; <code>Enter</code> &gt; <code>Stata</code>.</td>
+</tr>
+<tr class="even">
+<td><img src="images/output-window.png" class="img-fluid" width="400"></td>
+<td>You can move the Output panel to a different location in Positron using the button shown.</td>
+</tr>
+</tbody>
+</table>
 </section>
 </section>
 </section>
 <section id="github-setup" class="level2">
-<h2 class="anchored" data-anchor-id="github-setup">GitHub Setup</h2>
-<p>GitHub setup includes (1) creating a GitHub account, (2) joining the World Bank GitHub organization, and (3) requesting access to GitHub Copilot. These steps can be done independently and give different privileges to users, see table below.</p>
+<h2 class="anchored" data-anchor-id="github-setup">GitHub and GitHub Copilot Setup</h2>
+<p>GitHub setup includes</p>
+<ol type="1">
+<li><p>creating a GitHub account,</p></li>
+<li><p>joining the World Bank GitHub organization, and</p></li>
+<li><p>requesting access to GitHub Copilot.</p></li>
+<li><p>for private developers, instead of joining the World Bank GitHub organization, you can get access to GitHub Copilot through a private <a href="https://github.com/features/copilot/plans" target="_blank">subscription</a> to GitHub Copilot Pro or Pro+ plan.</p></li>
+<li><p>Monitor your usage of premium requests in GitHub Copilot:</p>
+<ol type="1">
+<li>Go to: <a href="https://github.com/settings/copilot/features" target="_blank">GitHub &gt; Settings &gt; Copilot settings</a></li>
+<li>Scroll down to the “Usage” section to see your usage of premium requests.</li>
+<li>100% is the monthly limit of 300 premium requests from GH Copilot from the WB. If you have a private Pro or Pro+ subscription, you have 500 and 1500 requests respectively.</li>
+</ol></li>
+</ol>
+<p>These steps can be done independently and give different privileges to users, see table below.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
 <th>Access Level</th>
-<th>GH Permissions</th>
+<th>GitHub Permissions</th>
 <th>GitHub Copilot / AI Assistance</th>
 <th><a href="https://github.com/worldbank">github.com/worldbank</a></th>
 </tr>
@@ -538,32 +632,32 @@ set it to “mp” for Stata MP version.<br>
 <tr class="even">
 <td><strong>Personal GH Account</strong><br>(created at github.com)</td>
 <td>✅ Everything: Create personal repos, collaborate</td>
-<td>⚠️ <strong>Usage limit</strong> on all services. <strong>No access to Claude</strong></td>
+<td>⚠️ <strong>Usage limit</strong>. <strong>No access to Claude</strong></td>
 <td>❌ No</td>
 </tr>
 <tr class="odd">
-<td><strong>+ GH Copilot subscription</strong> (<a href="https://github.com/features/copilot/plans">Copilot Pro or Pro+</a>)</td>
+<td><strong>+ GH Copilot subscription</strong> (<a href="https://github.com/features/copilot/plans" target="_blank">Copilot Pro or Pro+</a>)</td>
 <td>✅ Everything</td>
-<td>✅ <strong>Unlimited code completion + Chat</strong>. ⚠️ Limit on <strong>Agent</strong><br>✅ <strong>Access to premium models (Claude, GPT-4.5)</strong></td>
+<td>✅ <strong>Unlimited code completion + Chat</strong>. ⚠️ Monthly use limit on <strong>Agent</strong><br>Private budget for over-limit use.<br>✅ <strong>Premium models (Claude)</strong></td>
 <td>❌ No</td>
 </tr>
 <tr class="even">
 <td><strong>WB Organization Member</strong><br>(join via eServices)</td>
-<td>Access WB public and internal repos; Create repos under WB org</td>
-<td>⚠️ Limited (depends on GH Copilot subscription)</td>
+<td>Access WB public and internal repos.<br> Create repos under WB org</td>
+<td>⚠️ Limited.</td>
 <td>✅ Yes (view / contribute)</td>
 </tr>
 <tr class="odd">
-<td><strong>WB Org + Copilot Access</strong><br>(request Copilot via GitHub Settings and email to github@worldbank.org)</td>
-<td>✅ <strong>Unlimited code completion + Chat</strong>. ⚠️ Limit on <strong>Agent</strong> (300 requests/month)<br>✅ <strong>Access to premium models (Claude, GPT-4.5)</strong></td>
-<td>✅ Yes (Claude, GPT-4, etc.)</td>
+<td><strong>WB Org + WB Copilot Access</strong><br>(request Copilot via GitHub Settings and email to github@worldbank.org)</td>
+<td>✅ <strong>Unlimited code completion + Chat</strong>. ⚠️ Limit on <strong>Agent</strong> (300 requests/month)<br>✅ <strong>Access to premium models (Claude, GPT-4.5)</strong> <br> Manager-approved budget for overuse.</td>
+<td>✅ Yes (Claude, etc.)</td>
 <td>✅ Yes</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Key takeaways:</strong></p>
 <ul>
-<li><strong>For AI-assisted coding:</strong> You need <em>at minimum</em> “Private GH account + WB Org + Copilot Access (private Pro subscription or from World Bank GitHub)”</li>
+<li><strong>For AI-assisted coding:</strong> You need <em>at minimum</em> “Private GH account + Copilot Access (private Pro subscription or from World Bank GitHub)”</li>
 <li><strong>To be able to use GitHub Copilot with Claude:</strong> You need Copilot Access (private Pro subscription or from World Bank GitHub)</li>
 <li><strong>Email matters:</strong> Always use your personal email, not your WB email, when creating your GitHub account</li>
 </ul>
@@ -580,7 +674,7 @@ Warning
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Note:</strong> Use your personal email address, <strong>not your World Bank email</strong>.</p>
+<p><strong>Note: Use your personal email address, not your World Bank email</strong>.</p>
 </div>
 </div>
 </section>
@@ -643,7 +737,12 @@ Warning
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Warning:</strong> If you don’t see the “Request access” button or worldbank organization, it means you haven’t been added to the World Bank GitHub organization yet. Please complete Step 2 above, wait for the confirmation email, and accept the invitation before requesting access.</p>
+<p><strong>Warning:</strong> If you don’t see the “Request access” button or worldbank organization, it means you either:</p>
+<ul>
+<li>were not added to the World Bank GitHub organization yet, or</li>
+<li>did not accept the invitation in due time.</li>
+</ul>
+<p>Please complete Step 2 above, wait for the invitation email, and accept it before requesting GH Copilot access.</p>
 </div>
 </div>
 <p>Once approved, you’ll be able to use GitHub Copilot in Positron</p>
@@ -654,10 +753,10 @@ Warning
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><strong>No access to Copilot from World Bank GitHub organization or personal plan Pro or Pro+</strong></p>
-<p><img src="images/gh-copilot-access-3.png" class="img-fluid" style="width:100.0%"></p>
+<p><img src="images/gh-copilot-access-3a.png" class="img-fluid" style="width:100.0%"></p>
 </div><div class="column" style="width:50%;">
 <p><strong>Access to Copilot from World Bank GitHub organization or personal plan Pro or Pro+</strong></p>
-<p><img src="images/gh-copilot-access-4.png" class="img-fluid" style="width:100.0%"></p>
+<p><img src="images/gh-copilot-access-4a.png" class="img-fluid" style="width:100.0%"></p>
 </div>
 </div>
 <p>Another way is to check if you have access to premium models like Anthropic Claude or GPT-4.5 in the Positron Assistant settings (see instructions below).</p>
@@ -667,6 +766,14 @@ Warning
 <li><p>Try typing a comment in a code file to verify that Copilot suggestions appear</p></li>
 </ol>
 <p>Note: If you have access to GitHub Copilot but don’t see suggestions in Positron, make sure you are signed into GitHub in Positron and that the GitHub Copilot extension is installed and enabled.</p>
+</section>
+<section id="step-5-to-enable-overuse-of-github-copilot-agent" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-to-enable-overuse-of-github-copilot-agent">Step 5: To enable overuse of GitHub Copilot Agent</h3>
+<ol type="1">
+<li>Ask you manager for a permission to use a budget code for overuse of GitHub Copilot Agent</li>
+<li>Set up a monthly limit of usage (you will be charged only for what you use)</li>
+<li>Contact <a href="mailto:github@worldbank.org">github@worldbank.org</a> asking to set a budget for your account and provide the budget code approved by your manager (copy manager in the email for approval confirmation).</li>
+</ol>
 </section>
 </section>
 <section id="positron-copilot-setup" class="level2">
@@ -706,19 +813,19 @@ Warning
 <td>Open <code>Account</code> menu</td>
 </tr>
 <tr class="even">
-<td><img src="images/sign-in.png" class="img-fluid" width="350"></td>
+<td><img src="images/sign-in.png" class="img-fluid" width="300"></td>
 <td>Click <code>Sign in to your GitHub account</code></td>
 </tr>
 <tr class="odd">
-<td><img src="images/paste-1.png" class="img-fluid" width="450"></td>
+<td><img src="images/paste-1.png" class="img-fluid" width="430"></td>
 <td>Authorize GitHub in your browser</td>
 </tr>
 <tr class="even">
-<td><img src="images/gh-auth-2.png" class="img-fluid" width="450"></td>
+<td><img src="images/gh-auth-2.png" class="img-fluid" width="300"></td>
 <td>Confirm the authorization request</td>
 </tr>
 <tr class="odd">
-<td><img src="images/gh-auth-3.png" class="img-fluid" width="450"></td>
+<td><img src="images/gh-auth-3.png" class="img-fluid" width="300"></td>
 <td>Complete the authentication process</td>
 </tr>
 <tr class="even">
@@ -745,31 +852,31 @@ or reload the window (<code>Ctrl+Shift+P</code> &gt; <code>Developer: Reload Win
 <section id="step-3.-configure-llm-provider" class="level3">
 <h3 class="anchored" data-anchor-id="step-3.-configure-llm-provider">Step 3. Configure LLM Provider</h3>
 <p>By default, when logged into GitHub, Positron Assistant uses GitHub Copilot as the LLM provider. GitHub Copilot provides code completion, answers questions in chat, and operates in agent mode (able to run code directly).</p>
-<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Warning
+Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Note:</strong> Within GitHub Copilot, you can also configure other LLM providers, such as Anthropic Claude, OpenAI GPT, etc.</p>
+<p>Within GitHub Copilot, you can also configure other LLM providers, such as Anthropic Claude, OpenAI GPT, etc.</p>
 </div>
 </div>
 <p>If you want to use Anthropic Claude or other LLMs as the provider, follow instructions in <a href="https://positron.posit.co/assistant-getting-started.html#step-3-use-positron-assistant" target="_blank">Configure language model providers</a>.</p>
-<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Warning
+Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Note:</strong> Code completion will still be provided by the GitHub Copilot extension or will not work with Anthropic Claude.</p>
+<p>Code completion will still be provided by the GitHub Copilot extension or will not work with Anthropic Claude.</p>
 </div>
 </div>
 </section>
@@ -777,7 +884,10 @@ Warning
 <h3 class="anchored" data-anchor-id="step-4.-using-positron-assistant">Step 4. Using Positron Assistant</h3>
 <ol type="1">
 <li><p><code>Ctrl+Shift+P</code> &gt; <code>Help: Ask Positron Assistant</code> &gt; <code>Enter</code> to open it.</p></li>
-<li><p>In the input box that appears, type your question. For example: <code>Write a Stata do file that loads the auto dataset and summarizes the price variable.     Open it.     Explain how to run it.</code></p></li>
+<li><p>In the input box that appears, type your question. For example:</p>
+<pre><code>Write a Stata do file that loads the auto dataset and summarizes the price variable.
+Open it.
+Explain how to run it.</code></pre></li>
 </ol>
 <p>To learn more about using Positron Assistant, see <a href="https://positron.posit.co/assistant-getting-started.html#step-3-use-positron-assistant" target="_blank">Use Positron Assistant</a></p>
 </section>
@@ -803,64 +913,11 @@ Warning
 <li><p>Check: <a href="#github-setup">GitHub Setup</a> instructions above</p></li>
 <li><p>Reach out to: <a href="mailto:github@worldbank.org">github@worldbank.org</a></p></li>
 </ul>
-</section>
-<section id="appendix" class="level2">
-<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
-<section id="positron1-installation-instructions-when-it-is-not-available-in-the-software-center" class="level3">
-<h3 class="anchored" data-anchor-id="positron1-installation-instructions-when-it-is-not-available-in-the-software-center">Positron<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> installation instructions, when it is not available in the Software Center</h3>
-<ol type="1">
-<li>Download Positron from <a href="https://positron.posit.co/download.html" target="_blank">https://positron.posit.co/download.html</a></li>
-</ol>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Important:</strong> Use “Windows 10, 11 x64 (system level install)”, not the “user level install”</p>
-</div>
-</div>
-<ol start="2" type="1">
-<li><p>Make a “Software Installation Request” on eservice.</p>
-<ul>
-<li>Go to <a href="http://eservices/" target="_blank">eservices/</a></li>
-<li>Select “<a href="https://worldbankgroup.service-now.com/wbg/en/software-installation-request?id=wbg_sc_catalog&amp;sys_id=bd1e71b86f16d340db112d232e3ee4b7&amp;table=sc_cat_item&amp;searchTerm=Software%20installation" target="_blank">Software Installation Request</a>”</li>
-<li>See <a href="https://worldbankgroup.service-now.com/wbg?id=wbg_knowledge_article&amp;sys_id=50a6a237971b6a500b41bf07f053af30&amp;table=kb_knowledge&amp;searchTerm=Software%20installation" target="_blank">KB0076748</a> for more details.</li>
-</ul></li>
-<li><p>Once approved, you will have two options to install Positron:</p>
-<ul>
-<li>ITS Personnel will connect to your computer remotely and install Positron using an admin password.</li>
-<li>You will need an admin password to install Positron yourself.</li>
-</ul>
-<p>Either way, follow these installation instructions:</p>
-<ul>
-<li><p>Step 1: Copy the executable (exe) or installation folder to <code>C:\WBG</code>.</p></li>
-<li><p>Step 2: Launch the command shell (cmd.exe) as an administrator.</p></li>
-<li><p>Step 3: Navigate to <code>C:\WBG</code> in the command shell.</p></li>
-<li><p>Step 4: Set the user profile, TEMP, and TMP environments, and launch the executable from the shell prompt by typing:</p>
-<pre class="pwsh"><code>set userprofile=c:\wbg\temp
-set temp=c:\wbg\temp\temp
-set tmp=c:\wbg\temp\temp
-Positron-20XX.XX.X-XXX-Setup-x64.exe</code></pre>
-<p>Note: Replace <code>Positron-20XX.XX.X-XXX-Setup-x64.exe</code> with the actual filename of the Positron installer you downloaded.</p></li>
-</ul></li>
-</ol>
 
 
 </section>
-</section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>Alternatively, you can use Visual Studio Code (VS Code) as your IDE. We encourage using Positron for its better context awareness when developing R/Stata and analysis scripts. VS Code can be installed from the Software Center. Note that some steps below may differ when using VS Code instead of Positron. VS Code does not have many built-in R language features that Positron has out-of-the-box and lacks key bindings relevant to data science tasks.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

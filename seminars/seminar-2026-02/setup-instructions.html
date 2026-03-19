@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Positron + Github Copilot: Setup Instructions – GeoPov</title>
+<title>Positron + GitHub Copilot: Setup Instructions – GeoPov</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -337,10 +337,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#positron-copilot-setup" id="toc-positron-copilot-setup" class="nav-link" data-scroll-target="#positron-copilot-setup">Positron + GitHub Copilot / Anthropic Claude Setup</a>
   <ul class="collapse">
-  <li><a href="#step-1.-connect-github-to-positron" id="toc-step-1.-connect-github-to-positron" class="nav-link" data-scroll-target="#step-1.-connect-github-to-positron">Step 1. Connect GitHub to Positron</a></li>
-  <li><a href="#enable-positron-assistant" id="toc-enable-positron-assistant" class="nav-link" data-scroll-target="#enable-positron-assistant">Step 2. Enabling Positron Assistant in Positron Settings</a></li>
-  <li><a href="#step-3.-configure-llm-provider" id="toc-step-3.-configure-llm-provider" class="nav-link" data-scroll-target="#step-3.-configure-llm-provider">Step 3. Configure LLM Provider</a></li>
-  <li><a href="#step-4.-using-positron-assistant" id="toc-step-4.-using-positron-assistant" class="nav-link" data-scroll-target="#step-4.-using-positron-assistant">Step 4. Using Positron Assistant</a></li>
+  <li><a href="#step-1-connect-github-to-positron" id="toc-step-1-connect-github-to-positron" class="nav-link" data-scroll-target="#step-1-connect-github-to-positron">Step 1: Connect GitHub to Positron</a></li>
+  <li><a href="#enable-positron-assistant" id="toc-enable-positron-assistant" class="nav-link" data-scroll-target="#enable-positron-assistant">Step 2: Enable Positron Assistant in Positron Settings</a></li>
+  <li><a href="#step-3-configure-llm-provider" id="toc-step-3-configure-llm-provider" class="nav-link" data-scroll-target="#step-3-configure-llm-provider">Step 3: Configure LLM Provider</a></li>
+  <li><a href="#step-4-use-positron-assistant" id="toc-step-4-use-positron-assistant" class="nav-link" data-scroll-target="#step-4-use-positron-assistant">Step 4: Use Positron Assistant</a></li>
   </ul></li>
   <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional Resources</a></li>
   <li><a href="#support" id="toc-support" class="nav-link" data-scroll-target="#support">Support</a></li>
@@ -352,7 +352,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../seminars/index.html">GeoPov BBL Series</a></li><li class="breadcrumb-item"><a href="../../seminars/seminar-2026-02/overview.html">Revolutionizing Coding in Stata/R</a></li><li class="breadcrumb-item"><a href="../../seminars/seminar-2026-02/setup-instructions.html">Setup instructions</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Positron + Github Copilot: Setup Instructions</h1>
+<h1 class="title">Positron + GitHub Copilot: Setup Instructions</h1>
 <p class="subtitle lead">AI Agent-Assisted Analysis with GitHub Copilot and Claude</p>
 </div>
 
@@ -388,7 +388,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Python package <code>uv</code></li>
 <li>Extensions in Positron (Stata MCP)</li>
 </ul></li>
-<li><p>Github setup:</p>
+<li><p>GitHub setup:</p>
 <ul>
 <li>Create a GitHub account using private email (not WB email).</li>
 <li>Join World Bank GitHub organization.</li>
@@ -402,9 +402,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><p>If you have trouble installing software from the Software Center, contact IT Help: <a href="mailto:mailto:ITHelp@worldbankgroup.org">ITHelp@worldbankgroup.org</a> or use <a href="https://worldbankgroup.sharepoint.com/sites/itsupport/SitePages/PublishingPages/Walk-in-Centers-in-Washington-DC--05042021-1608401_new.aspx">Walk-in center</a>.</p></li>
 <li><p>If you have trouble with GitHub World Bank or Github Copilot access from World Bank <a href="#github-setup">GitHub setup instructions</a> or contact <a href="mailto:github@worldbank.org">github@worldbank.org</a>.</p></li>
-<li><p>Github copilot does not work in Positron after installation:</p>
+<li><p>GitHub Copilot does not work in Positron after installation:</p>
 <ul>
-<li><p>Make sure you <a href="#github-setup">set-up Github account properly</a></p></li>
+<li><p>Make sure you <a href="#github-setup">set-up GitHub account properly</a></p></li>
 <li><p>Make sure that you have <a href="#enable-positron-assistant"><strong>enabled Positron Assistant in Positron settings</strong></a></p></li>
 <li><p>Make sure you are <a href="#positron-copilot-setup">signed into GitHub in Positron</a></p></li>
 <li><p>Reload Positron after installation and setup: <code>Ctrl+Shift+P</code> &gt; <code>Developer: Reload Window</code> &gt; <code>Enter</code> or close it and open again.</p></li>
@@ -421,8 +421,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>First you need to install the required software on your computer. The table below summarizes the software needed and instructions for installation.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 25%">
-<col style="width: 43%">
+<col style="width: 26%">
+<col style="width: 42%">
 <col style="width: 31%">
 </colgroup>
 <thead>
@@ -619,7 +619,7 @@ Note
 <th>Access Level</th>
 <th>GitHub Permissions</th>
 <th>GitHub Copilot / AI Assistance</th>
-<th><a href="https://github.com/worldbank">github.com/worldbank</a></th>
+<th>WB GitHub Org Access</th>
 </tr>
 </thead>
 <tbody>
@@ -643,14 +643,14 @@ Note
 </tr>
 <tr class="even">
 <td><strong>WB Organization Member</strong><br>(join via eServices)</td>
-<td>Access WB public and internal repos.<br> Create repos under WB org</td>
-<td>⚠️ Limited.</td>
+<td>✅ Access WB public and internal repos.<br>Create repos under WB org</td>
+<td>⚠️ Limited (basic completions only; no premium models).</td>
 <td>✅ Yes (view / contribute)</td>
 </tr>
 <tr class="odd">
 <td><strong>WB Org + WB Copilot Access</strong><br>(request Copilot via GitHub Settings and email to github@worldbank.org)</td>
-<td>✅ <strong>Unlimited code completion + Chat</strong>. ⚠️ Limit on <strong>Agent</strong> (300 requests/month)<br>✅ <strong>Access to premium models (Claude, GPT-4.5)</strong> <br> Manager-approved budget for overuse.</td>
-<td>✅ Yes (Claude, etc.)</td>
+<td>✅ Everything: personal repos + WB org repos</td>
+<td>✅ <strong>Unlimited code completion + Chat</strong>. ⚠️ Limit on <strong>Agent</strong> (300 requests/month)<br>✅ <strong>Premium models (Claude, GPT-4.5)</strong><br>Manager-approved budget for overuse.</td>
 <td>✅ Yes</td>
 </tr>
 </tbody>
@@ -706,8 +706,8 @@ Warning
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
-<li><p>Scroll all the down to the “Get Copilot from an organization” section and click the “<strong>Request access</strong>” button from worldbank organization.</p></li>
-<li><p>Sending an email to <a href="mailto:github@worldbank.org">github@worldbank.org</a> with the subject line: “Request GitHub Copilot Access”. In the email body, include your <strong>GitHub username</strong> and a <strong>brief reason for requesting access</strong>. Copy manager or team lead for approval.</p></li>
+<li><p>Scroll all the way down to the “Get Copilot from an organization” section and click the “<strong>Request access</strong>” button from the worldbank organization.</p></li>
+<li><p>Send an email to <a href="mailto:github@worldbank.org">github@worldbank.org</a> with the subject line: “Request GitHub Copilot Access”. In the email body, include your <strong>GitHub username</strong> and a <strong>brief reason for requesting access</strong>. Copy your manager or team lead for approval.</p></li>
 </ul>
 </div><div class="column" style="width:50%;">
 <p><img src="images/gh-copilot-access-2.png" class="img-fluid" style="width:100.0%"></p>
@@ -749,7 +749,7 @@ Warning
 </section>
 <section id="step-4-verify-github-copilot-access" class="level3">
 <h3 class="anchored" data-anchor-id="step-4-verify-github-copilot-access">Step 4: Verify GitHub Copilot Access</h3>
-<p>In github.com, go to <a href="https://github.com/settings/copilot" target="_blank">GitHub &gt; Settings &gt; Copilot settings</a> and verify that you have access to GitHub Copilot through the World Bank organization. Your usage statistics will looks like this:</p>
+<p>In github.com, go to <a href="https://github.com/settings/copilot" target="_blank">GitHub &gt; Settings &gt; Copilot settings</a> and verify that you have access to GitHub Copilot through the World Bank organization. Your usage statistics will look like this:</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><strong>No access to Copilot from World Bank GitHub organization or personal plan Pro or Pro+</strong></p>
@@ -770,7 +770,7 @@ Warning
 <section id="step-5-to-enable-overuse-of-github-copilot-agent" class="level3">
 <h3 class="anchored" data-anchor-id="step-5-to-enable-overuse-of-github-copilot-agent">Step 5: To enable overuse of GitHub Copilot Agent</h3>
 <ol type="1">
-<li>Ask you manager for a permission to use a budget code for overuse of GitHub Copilot Agent</li>
+<li>Ask your manager for permission to use a budget code for overuse of GitHub Copilot Agent</li>
 <li>Set up a monthly limit of usage (you will be charged only for what you use)</li>
 <li>Contact <a href="mailto:github@worldbank.org">github@worldbank.org</a> asking to set a budget for your account and provide the budget code approved by your manager (copy manager in the email for approval confirmation).</li>
 </ol>
@@ -793,13 +793,13 @@ Warning
 <p><strong>Warning:</strong> Sometimes it is needed to reload Positron after installing software or extensions for the changes to take effect.</p>
 </div>
 </div>
-<section id="step-1.-connect-github-to-positron" class="level3">
-<h3 class="anchored" data-anchor-id="step-1.-connect-github-to-positron">Step 1. Connect GitHub to Positron</h3>
-<p>This requires a GitHub account linked to the World Bank organization. See GitHub Setup <span class="citation" data-cites="github-setup">[@github-setup]</span> instructions below if you don’t have an account or haven’t linked it to the WB organization. To connect GitHub to Positron:</p>
+<section id="step-1-connect-github-to-positron" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-connect-github-to-positron">Step 1: Connect GitHub to Positron</h3>
+<p>This requires a GitHub account linked to the World Bank organization. See <a href="#github-setup">GitHub Setup</a> instructions above if you don’t have an account or haven’t linked it to the WB organization. To connect GitHub to Positron:</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 66%">
-<col style="width: 33%">
+<col style="width: 65%">
+<col style="width: 34%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -841,7 +841,7 @@ Warning
 <p>See also <a href="https://positron.posit.co/assistant.html">Positron Assistant Guide</a> for more details on connecting GitHub and using the assistant.</p>
 </section>
 <section id="enable-positron-assistant" class="level3">
-<h3 class="anchored" data-anchor-id="enable-positron-assistant">Step 2. Enabling Positron Assistant in Positron Settings</h3>
+<h3 class="anchored" data-anchor-id="enable-positron-assistant">Step 2: Enable Positron Assistant in Positron Settings</h3>
 <ol type="1">
 <li><p>Open settings <a href="positron://settings/positron.assistant.enable">positron.assistant.enable</a> and check the box to enable it. or <code>Ctrl+,</code> &gt; <code>positron.assistant.enable</code> &gt; Check the box <img src="images/positron-assistant-enable.png" class="img-fluid" width="300"></p></li>
 <li><p>Restart Positron to apply the changes<br>
@@ -849,8 +849,8 @@ or reload the window (<code>Ctrl+Shift+P</code> &gt; <code>Developer: Reload Win
 </ol>
 <p>See <a href="https://positron.posit.co/assistant-getting-started.html#step-1-enable-positron-assistant">Enable Positron Assistant</a> for more details.</p>
 </section>
-<section id="step-3.-configure-llm-provider" class="level3">
-<h3 class="anchored" data-anchor-id="step-3.-configure-llm-provider">Step 3. Configure LLM Provider</h3>
+<section id="step-3-configure-llm-provider" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-configure-llm-provider">Step 3: Configure LLM Provider</h3>
 <p>By default, when logged into GitHub, Positron Assistant uses GitHub Copilot as the LLM provider. GitHub Copilot provides code completion, answers questions in chat, and operates in agent mode (able to run code directly).</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -880,8 +880,8 @@ Note
 </div>
 </div>
 </section>
-<section id="step-4.-using-positron-assistant" class="level3">
-<h3 class="anchored" data-anchor-id="step-4.-using-positron-assistant">Step 4. Using Positron Assistant</h3>
+<section id="step-4-use-positron-assistant" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-use-positron-assistant">Step 4: Use Positron Assistant</h3>
 <ol type="1">
 <li><p><code>Ctrl+Shift+P</code> &gt; <code>Help: Ask Positron Assistant</code> &gt; <code>Enter</code> to open it.</p></li>
 <li><p>In the input box that appears, type your question. For example:</p>
@@ -908,7 +908,7 @@ Explain how to run it.</code></pre></li>
 <li><p>HQ <a href="https://worldbankgroup.sharepoint.com/sites/itsupport/SitePages/PublishingPages/Walk-in-Centers-in-Washington-DC--05042021-1608401_new.aspx">Walk-in center</a></p></li>
 </ul>
 <p>Remember to provide assisting person with these setup instructions.</p>
-<p>For help with accessing GitHub.com/Worldbank or Github Copilot from the worldbank:</p>
+<p>For help with accessing GitHub.com/Worldbank or GitHub Copilot from the worldbank:</p>
 <ul>
 <li><p>Check: <a href="#github-setup">GitHub Setup</a> instructions above</p></li>
 <li><p>Reach out to: <a href="mailto:github@worldbank.org">github@worldbank.org</a></p></li>

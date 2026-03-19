@@ -1,6 +1,6 @@
 ---
 title: "AI-Assisted Coding for Economists"
-title-long: "AI-Agent-Assisted Data Analysis and Coding with GitHub Copilot and Claude"
+title-long: "AI-Agent-Assisted Data Analysis and Coding with GitHub Copilot and Claude for Economists."
 date: "2026-04-20"
 description: ""
 author: "Eduard Bukin"

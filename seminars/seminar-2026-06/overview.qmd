@@ -1,0 +1,152 @@
+---
+title: "Fast & Big Data in R"
+title-long: "Fast & Big Data in R: Serialization, collapse, and Out-of-Memory Computing"
+date: "2026-06-DD"   # TODO: confirm seminar date
+description: "A fast tour of the R toolkit for development data work: serializing objects and data frames (RDS, qs2, fst), lightning-fast in-memory computation with collapse, and working with data larger than RAM using Parquet/Arrow and DuckDB."
+author: "Eduard Bukin"   # TODO: confirm speaker
+categories: [R, performance, data, collapse, arrow, duckdb, serialization]
+# image: "images/cover.png"
+---
+
+## Overview
+
+Development data work keeps getting bigger — harmonized household surveys (GMD),
+census microdata, gridded geospatial layers, and panels that no longer fit
+comfortably in memory. R is excellent for this work, but by default it holds
+everything in RAM and leans on convenient-but-slow defaults for reading,
+writing, and aggregating data.
+
+This 10-minute lightning talk maps the modern R toolkit for going **fast** and
+going **big**, organized around the three friction points you actually hit:
+
+1. **Storing and loading** R objects and data frames quickly and compactly.
+2. **Computing** on data — especially grouped aggregations — at C/C++ speed.
+3. Working with data that is **larger than RAM**, without leaving familiar
+   `dplyr`-style syntax.
+
+The goal is not to crown a single winner, but to give you a mental map and a
+short list of packages worth adopting in everyday analysis.
+
+## Speaker
+
+**Eduard Bukin** ([ebukin@worldbank.org](mailto:ebukin@worldbank.org))
+
+**Series Lead:** Maria Eugenia Genoni ([mgenoni@worldbank.org](mailto:mgenoni@worldbank.org))
+
+**Moderator:** Henry Stemmler ([hstemmler@worldbank.org](mailto:hstemmler@worldbank.org))
+
+## What You Will Learn
+
+In this session, we will:
+
+- See why **R's default `saveRDS()` / data import** is often the slowest part of
+  a workflow, and how **`qs2`** (arbitrary objects) and **`fst`** (data frames)
+  make serialization dramatically faster and smaller.
+- Meet **`collapse`** — a C/C++ statistical-computing toolkit for very fast
+  grouped calculations and transformations — and compare it to **`dplyr`** and
+  **`data.table`**.
+- Learn the **Parquet** columnar format and how **`arrow`** lets you query
+  partitioned, on-disk datasets lazily with `dplyr` verbs.
+- Use **DuckDB** (and **`duckplyr`**) to run SQL-grade analytics over
+  larger-than-RAM data directly from R, keeping `dplyr` syntax.
+- Walk away with a **"which tool when"** decision guide.
+
+## Presentation Outline (~10 min)
+
+| # | Segment | ~Time | Key points |
+|---|---------|:-----:|------------|
+| 1 | **Motivation — fast & big** | 1:00 | R works in RAM; I/O, grouped computation, and larger-than-RAM data are the three friction points in development data work. |
+| 2 | **Roadmap: three bottlenecks** | 0:30 | (1) store/load, (2) compute, (3) data > RAM. |
+| 3 | **Serialize R objects fast** | 2:00 | `saveRDS()` baseline (gzip, slow) → **`qs2`** for any object, **`fst`** for data frames (columnar, random access, multithreaded). Size vs. speed trade-offs. |
+| 4 | **Fast in-memory compute: `collapse`** | 2:30 | Fast statistical functions; `fgroup_by()` / `fsummarise()` / `collap()`; side-by-side with `dplyr`; the `fastverse` bundle. |
+| 5 | **Columnar on disk: Parquet + Arrow** | 1:30 | Parquet = columnar, compressed, cross-language; `arrow::open_dataset()` for lazy `dplyr` over partitioned datasets — read only the columns/rows you need. |
+| 6 | **Beyond RAM: DuckDB / duckplyr** | 1:30 | DuckDB queries Parquet/CSV in place; **`duckplyr`** runs `dplyr` pipelines on the DuckDB engine; `data.table` as the in-memory workhorse (`fread`/`fwrite`). |
+| 7 | **Which tool when + resources** | 1:00 | Decision guide and pointers to docs and benchmarks. |
+
+::: callout-note
+This is a survey/lightning format — each tool gets a slide or two and a tiny
+code snippet, not a deep benchmark. A few code cells will be executed live;
+heavy benchmarking is intentionally avoided.
+:::
+
+## Decision guide (draft)
+
+| If you need to… | Reach for | Notes |
+|-----------------|-----------|-------|
+| Save/load an arbitrary R object fast | **`qs2`** | Drop-in for `saveRDS`/`readRDS`; much faster, smaller. |
+| Save/load a big **data frame**, maybe a few columns at a time | **`fst`** | Columnar, random row/column access, multithreaded. |
+| Fast grouped stats / transforms in memory | **`collapse`** (or `data.table`) | C/C++ speed, tidy-ish syntax, integrates with `data.table`. |
+| Readable pipelines on medium data | **`dplyr`** | The baseline; reach for the above when it gets slow. |
+| Cross-language, compressed, partitioned on-disk storage | **Parquet** via **`arrow`** | `open_dataset()` + lazy `dplyr`; share with Python/Stata/DuckDB. |
+| Query data **bigger than RAM** with SQL or `dplyr` | **DuckDB** / **`duckplyr`** | Reads Parquet/CSV in place; spills to disk as needed. |
+
+## Materials
+
+<!-- Add links/embeds as they become available -->
+
+- Slides: TBD (`slides.qmd`)
+- Recording: TBD
+- Supporting materials / repo: TBD
+- Code snippets / demo: TBD (a few small executed examples — see resources below)
+
+## Resources by topic
+
+### Fast in-memory computation
+
+- **collapse** — Advanced and fast data transformation:
+  [docs](https://sebkrantz.github.io/collapse/) ·
+  [CRAN](https://CRAN.R-project.org/package=collapse) ·
+  [intro vignette](https://sebkrantz.github.io/collapse/articles/collapse_intro.html)
+- **fastverse** — meta-package bundling `collapse`, `data.table`, `kit`, etc.:
+  [site](https://fastverse.github.io/fastverse/)
+- **data.table** — fast in-memory ops and `fread`/`fwrite`:
+  [docs](https://rdatatable.gitlab.io/data.table/) ·
+  [GitHub](https://github.com/Rdatatable/data.table)
+- **dplyr** — the readable baseline for comparison:
+  [docs](https://dplyr.tidyverse.org/)
+
+### Serialization — storing & loading R objects / tables
+
+- **base R** — `saveRDS()` / `readRDS()`, `save()` / `load()`:
+  [`?saveRDS`](https://stat.ethz.ch/R-manual/R-devel/library/base/html/readRDS.html)
+- **qs2** — fast serialization of *arbitrary* R objects (zstd/lz4):
+  [GitHub](https://github.com/qsbase/qs2) ·
+  [CRAN](https://CRAN.R-project.org/package=qs2)
+- **fst** — fast, columnar serialization of *data frames* with random access:
+  [site](https://www.fstpackage.org/) ·
+  [GitHub](https://github.com/fstpackage/fst)
+
+### Columnar & cross-language storage
+
+- **Apache Parquet** — columnar, compressed file format:
+  [parquet.apache.org](https://parquet.apache.org/)
+- **arrow (R)** — read/write Parquet & Feather, Arrow datasets:
+  [docs](https://arrow.apache.org/docs/r/) ·
+  [larger-than-memory datasets](https://arrow.apache.org/docs/r/articles/dataset.html)
+
+### Out-of-memory / database engines
+
+- **DuckDB (R API)** — in-process OLAP engine; query Parquet/CSV in place:
+  [docs](https://duckdb.org/docs/stable/clients/r) ·
+  [r.duckdb.org](https://r.duckdb.org/)
+- **duckplyr** — `dplyr` backend powered by DuckDB (larger-than-RAM, lazy):
+  [docs](https://duckplyr.tidyverse.org/)
+- **arrow ↔ duckdb** — hand a dataset to DuckDB with `to_duckdb()`:
+  [reference](https://arrow.apache.org/docs/r/reference/to_duckdb.html)
+
+### Benchmarks & background
+
+- **Database-like ops benchmark** (DuckDB Labs revival) — `data.table`,
+  `dplyr`, `collapse`, DuckDB, Polars, pandas, …:
+  [duckdblabs.github.io/db-benchmark](https://duckdblabs.github.io/db-benchmark/)
+
+### Datasets for demos (candidates)
+
+- `nycflights13` (small, familiar) for the `collapse`/`dplyr` comparison.
+- A larger CSV/Parquet (e.g., GMD-like microdata or the public NYC taxi
+  dataset used in the Arrow tutorial) for the Parquet/DuckDB section.
+
+## Additional Resources
+
+- Prior seminar: [AI-Assisted Coding in Stata and R](../seminar-2026-02/overview.qmd)
+- [GeoPov learning resources](https://worldbank.github.io/geoPovLearn/)

@@ -440,8 +440,6 @@ cat("100k rows:", format(object.size(data_100k), units = "MB"), "\n")
 
 #### Benchmarking Results
 
-::: {.panel-tabset}
-
 ##### 100k Rows
 
 ```{r}
@@ -450,109 +448,154 @@ cat("100k rows:", format(object.size(data_100k), units = "MB"), "\n")
 #| message: false
 #| warning: false
 
-# Helper to safely measure file size
-safe_size <- function(x) {
-  s <- file.size(x)
-  if (is.na(s)) 0 else round(s / 1024^2, 2)
+# Create single temp directory for all benchmarks
+bench_dir <- tempfile()
+dir.create(bench_dir)
+
+# Simple benchmark wrapper
+bench_write_read <- function(data, write_fn, read_fn, filename) {
+  fpath <- file.path(bench_dir, filename)
+  
+  # Benchmark write
+  write_times <- replicate(10, {
+    start <- Sys.time()
+    write_fn(data, fpath)
+    as.numeric(difftime(Sys.time(), start, units = "secs")) * 1000
+  })
+  
+  # Benchmark read  
+  read_times <- replicate(10, {
+    start <- Sys.time()
+    result <- read_fn(fpath)
+    as.numeric(difftime(Sys.time(), start, units = "secs")) * 1000
+  })
+  
+  # Get file size
+  fsize <- if(file.exists(fpath)) round(file.size(fpath) / 1024^2, 2) else 0
+  
+  list(
+    write_ms = round(median(write_times), 1),
+    read_ms = round(median(read_times), 1),
+    size_mb = fsize
+  )
 }
 
-# Benchmark function
-bench_method <- function(data, method_name) {
-  tmp_dir <- tempfile()
-  dir.create(tmp_dir)
-  
-  
-  
-  result <- list()
-  
-  if (method_name == "saveRDS") {
-    b <- microbenchmark(
-      write = saveRDS(data, file.path(tmp_dir, "f.rds")), 
-      read = readRDS(file.path(tmp_dir, "f.rds")), times = 10
-    )
-    result$size <- safe_size(file.path(tmp_dir, "f.rds"))
-  } else if (method_name == "qs2") {
-    b <- microbenchmark(
-      write = qs_save(data, file.path(tmp_dir, "f.qs2")),
-      read = qs_read(file.path(tmp_dir, "f.qs2")), times = 10
-    )
-    result$size <- safe_size(file.path(tmp_dir, "f.qs2"))
-  } else if (method_name == "fst") {
-    b <- microbenchmark(
-      write = write_fst(data, file.path(tmp_dir, "f.fst")),
-      read = read_fst(file.path(tmp_dir, "f.fst")), times = 10
-    )
-    result$size <- safe_size(file.path(tmp_dir, "f.fst"))
-  } else if (method_name == "data.table") {
-    b <- microbenchmark(
-      write = fwrite(data, file.path(tmp_dir, "f.csv")),
-      read = fread(file.path(tmp_dir, "f.csv")), times = 10
-    )
-    result$size <- safe_size(file.path(tmp_dir, "f.csv"))
-  } else if (method_name == "feather") {
-    b <- microbenchmark(
-      write = write_feather(data, file.path(tmp_dir, "f.feather")),
-      read = read_feather(file.path(tmp_dir, "f.feather")), times = 10
-    )
-    result$size <- safe_size(file.path(tmp_dir, "f.feather"))
-  } else if (method_name == "parquet") {
-    b <- microbenchmark(
-      write = write_parquet(data, file.path(tmp_dir, "f.parquet")),
-      read = read_parquet(file.path(tmp_dir, "f.parquet")), times = 10
-    )
-    result$size <- safe_size(file.path(tmp_dir, "f.parquet"))
-  } else if (method_name == "duckdb") {
-    con <- dbConnect(duckdb::duckdb(), file.path(tmp_dir, "f.duckdb"))
-    b <- microbenchmark(
-      write = { dbWriteTable(con, "data", data, overwrite = TRUE) },
-      read = dbReadTable(con, "data"), times = 10
-    )
-    dbDisconnect(con, shutdown = TRUE)
-    result$size <- safe_size(file.path(tmp_dir, "f.duckdb"))
-  }
-  
-  result$write_ms <- round(median(subset(b, expr == "write")$time) / 1e6, 1)
-  result$read_ms <- round(median(subset(b, expr == "read")$time) / 1e6, 1)
-  result
-  
-  unlink(tmp_dir, recursive = TRUE)
-}
+# Benchmark all methods
+results_100k <- list(
+  saveRDS = bench_write_read(
+    data_100k,
+    function(d, f) saveRDS(d, f),
+    readRDS,
+    "test.rds"
+  ),
+  qs2 = bench_write_read(
+    data_100k,
+    qs_save,
+    qs_read,
+    "test.qs2"
+  ),
+  fst = bench_write_read(
+    data_100k,
+    write_fst,
+    read_fst,
+    "test.fst"
+  ),
+  data.table = bench_write_read(
+    data_100k,
+    fwrite,
+    fread,
+    "test.csv"
+  ),
+  feather = bench_write_read(
+    data_100k,
+    write_feather,
+    read_feather,
+    "test.feather"
+  ),
+  parquet = bench_write_read(
+    data_100k,
+    write_parquet,
+    read_parquet,
+    "test.parquet"
+  )
+)
 
-methods <- c("saveRDS", "qs2", "fst", "data.table", "feather", "parquet", "duckdb")
-results_100k <- lapply(methods, function(m) bench_method(data_100k, m))
-names(results_100k) <- methods
+# DuckDB special case
+fpath_db <- file.path(bench_dir, "test.duckdb")
+con <- dbConnect(duckdb::duckdb(), fpath_db)
 
+write_times_db <- replicate(10, {
+  start <- Sys.time()
+  dbWriteTable(con, "data", data_100k, overwrite = TRUE)
+  as.numeric(difftime(Sys.time(), start, units = "secs")) * 1000
+})
+
+read_times_db <- replicate(10, {
+  start <- Sys.time()
+  result <- dbReadTable(con, "data")
+  as.numeric(difftime(Sys.time(), start, units = "secs")) * 1000
+})
+
+dbDisconnect(con, shutdown = TRUE)
+
+results_100k$duckdb <- list(
+  write_ms = round(median(write_times_db), 1),
+  read_ms = round(median(read_times_db), 1),
+  size_mb = round(file.size(fpath_db) / 1024^2, 2)
+)
+
+# Create results table
 df_100k <- data.frame(
-  Method = methods,
+  Method = names(results_100k),
   `Write (ms)` = sapply(results_100k, function(x) x$write_ms),
   `Read (ms)` = sapply(results_100k, function(x) x$read_ms),
-  `File Size (MB)` = sapply(results_100k, function(x) x$size),
+  `File Size (MB)` = sapply(results_100k, function(x) x$size_mb),
   check.names = FALSE
 )
 
 knitr::kable(df_100k, caption = "Performance comparison for 100k rows")
+
+# Cleanup
+unlink(bench_dir, recursive = TRUE)
 ```
 
 ##### 10k Rows
 
 ```{r}
-#| label: benchmark-10k
+#| label: benchmark-10k  
 #| cache: true
 #| message: false
 #| warning: false
 
-results_10k <- lapply(methods, function(m) bench_method(data_10k, m))
-names(results_10k) <- methods
+bench_dir <- tempfile()
+dir.create(bench_dir)
+
+results_10k <- list(
+  saveRDS = bench_write_read(data_10k, function(d, f) saveRDS(d, f), readRDS, "test.rds"),
+  qs2 = bench_write_read(data_10k, qs_save, qs_read, "test.qs2"),
+  fst = bench_write_read(data_10k, write_fst, read_fst, "test.fst"),
+  data.table = bench_write_read(data_10k, fwrite, fread, "test.csv"),
+  feather = bench_write_read(data_10k, write_feather, read_feather, "test.feather"),
+  parquet = bench_write_read(data_10k, write_parquet, read_parquet, "test.parquet")
+)
+
+fpath_db <- file.path(bench_dir, "test.duckdb")
+con <- dbConnect(duckdb::duckdb(), fpath_db)
+write_times_db <- replicate(10, { start <- Sys.time(); dbWriteTable(con, "data", data_10k, overwrite = TRUE); as.numeric(difftime(Sys.time(), start, units = "secs")) * 1000 })
+read_times_db <- replicate(10, { start <- Sys.time(); result <- dbReadTable(con, "data"); as.numeric(difftime(Sys.time(), start, units = "secs")) * 1000 })
+dbDisconnect(con, shutdown = TRUE)
+results_10k$duckdb <- list(write_ms = round(median(write_times_db), 1), read_ms = round(median(read_times_db), 1), size_mb = round(file.size(fpath_db) / 1024^2, 2))
 
 df_10k <- data.frame(
-  Method = methods,
+  Method = names(results_10k),
   `Write (ms)` = sapply(results_10k, function(x) x$write_ms),
   `Read (ms)` = sapply(results_10k, function(x) x$read_ms),
-  `File Size (MB)` = sapply(results_10k, function(x) x$size),
+  `File Size (MB)` = sapply(results_10k, function(x) x$size_mb),
   check.names = FALSE
 )
 
 knitr::kable(df_10k, caption = "Performance comparison for 10k rows")
+unlink(bench_dir, recursive = TRUE)
 ```
 
 ##### 1k Rows
@@ -563,80 +606,35 @@ knitr::kable(df_10k, caption = "Performance comparison for 10k rows")
 #| message: false
 #| warning: false
 
-results_1k <- lapply(methods, function(m) bench_method(data_1k, m))
-names(results_1k) <- methods
+bench_dir <- tempfile()
+dir.create(bench_dir)
+
+results_1k <- list(
+  saveRDS = bench_write_read(data_1k, function(d, f) saveRDS(d, f), readRDS, "test.rds"),
+  qs2 = bench_write_read(data_1k, qs_save, qs_read, "test.qs2"),
+  fst = bench_write_read(data_1k, write_fst, read_fst, "test.fst"),
+  data.table = bench_write_read(data_1k, fwrite, fread, "test.csv"),
+  feather = bench_write_read(data_1k, write_feather, read_feather, "test.feather"),
+  parquet = bench_write_read(data_1k, write_parquet, read_parquet, "test.parquet")
+)
+
+fpath_db <- file.path(bench_dir, "test.duckdb")
+con <- dbConnect(duckdb::duckdb(), fpath_db)
+write_times_db <- replicate(10, { start <- Sys.time(); dbWriteTable(con, "data", data_1k, overwrite = TRUE); as.numeric(difftime(Sys.time(), start, units = "secs")) * 1000 })
+read_times_db <- replicate(10, { start <- Sys.time(); result <- dbReadTable(con, "data"); as.numeric(difftime(Sys.time(), start, units = "secs")) * 1000 })
+dbDisconnect(con, shutdown = TRUE)
+results_1k$duckdb <- list(write_ms = round(median(write_times_db), 1), read_ms = round(median(read_times_db), 1), size_mb = round(file.size(fpath_db) / 1024^2, 2))
 
 df_1k <- data.frame(
-  Method = methods,
+  Method = names(results_1k),
   `Write (ms)` = sapply(results_1k, function(x) x$write_ms),
   `Read (ms)` = sapply(results_1k, function(x) x$read_ms),
-  `File Size (MB)` = sapply(results_1k, function(x) x$size),
+  `File Size (MB)` = sapply(results_1k, function(x) x$size_mb),
   check.names = FALSE
 )
 
 knitr::kable(df_1k, caption = "Performance comparison for 1k rows")
+unlink(bench_dir, recursive = TRUE)
 ```
 
 :::
-
-#### Summary Features Comparison
-
-```{r}
-#| label: features-matrix
-#| echo: false
-
-features_matrix <- data.frame(
-  Method = c("saveRDS", "qs2", "fst", "fwrite/fread", "Feather", "Parquet", "DuckDB"),
-  `Write Speed` = c("Slow", "Fast", "Very Fast", "Very Fast", "Very Fast", "Fast", "Fast"),
-  `Read Speed` = c("Medium", "Very Fast", "Very Fast", "Very Fast", "Very Fast", "Very Fast", "Very Fast"),
-  `File Size` = c("Small", "Smallest", "Medium", "Large", "Medium", "Small", "Small"),
-  `RAM Usage` = c("Full object", "Full object", "Full object", "Full object", "Can stream", "Can stream", "Larger-than-RAM"),
-  `CPU` = c("Single-thread", "Multi-thread", "Multi-thread", "Multi-thread", "Multi-thread", "Multi-thread", "Multi-thread"),
-  `Random Access` = c("No", "No", "Cols + Row#", "No", "Columns", "Cols + Predicates", "SQL queries"),
-  `Object Types` = c("Any R object", "Any R object", "Data frames", "Data frames", "Data frames", "Data frames", "Data frames"),
-  `Cross-platform` = c("R only", "R only", "Limited", "Universal", "Universal", "Universal", "Universal"),
-  `Best For` = c("Legacy/default", "Fast R objects", "Fast data frames", "CSV alternative", "Cross-lang speed", "Big data/analytics", "Data warehouse"),
-  check.names = FALSE
-)
-
-knitr::kable(features_matrix, caption = "Serialization methods feature comparison")
-```
-
-#### Parquet Advanced Capabilities
-
-Parquet excels at efficient data access through several mechanisms:
-
-**Capabilities**:
-
-- ✅ **Column selection**: Only load needed columns
-- ✅ **Predicate pushdown**: Filter by values reads only relevant row groups  
-- ✅ **Partition pruning**: Skip entire files based on partition keys
-- ✅ **HTTP/S3 streaming**: Read from cloud without full download
-- ❌ **Row-number access**: Cannot jump to specific row numbers
-
-**Example**: Partitioned Parquet with filtering
-
-```{r}
-#| label: parquet-partitioning-demo
-#| eval: false
-
-# Write partitioned dataset
-write_dataset(data_100k, "partitioned", partitioning = "region")
-
-# Read with filtering - only reads relevant partitions
-efficient_read <- open_dataset("partitioned") |>
-  filter(region == "A", year >= 2023) |>
-  select(id, income, employed) |>
-  collect()
-```
-
-**Advantages**:
-- Excellent for columnar analytics
-- Cloud-native (S3/HTTP streaming)
-- Partition pruning dramatically reduces I/O
-- Cross-language standard (Python, Spark, etc.)
-
-**Limitations**:
-- Factor ordering may be lost (converts to Arrow categorical)
-- Row-number random access not supported
-- Requires understanding partitioning for optimal performance

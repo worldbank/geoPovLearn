@@ -8,6 +8,516 @@ categories: [R, performance, data, collapse, arrow, duckdb, serialization]
 # image: "images/cover.png"
 ---
 
+```{css, echo=FALSE}
+.collapsible-code-toggle {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+  color: #495057;
+  transition: all 0.2s ease;
+}
+
+.collapsible-code-toggle:hover {
+  background-color: #e9ecef;
+  border-color: #adb5bd;
+}
+
+.collapsible-code-toggle::before {
+  content: "▶ ";
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.collapsible-code-toggle[aria-expanded="true"]::before {
+  transform: rotate(90deg);
+}
+
+.collapsible-code-content {
+  margin-top: 10px;
+}
+```
+
+#### Circle 1. Falling into the Floating  {.unnumbered .unlisted style="font-family: 'Times New Roman', serif; font-size: 0.85em;"}
+
+> Once we had crossed the Acheron, we arrived in the first Circle, home of the
+> virtuous pagans. These are people who live in ignorance of the Floating Point
+> Gods. These pagans expect
+>
+> `.1 == .3 / 3`
+>
+> to be true.
+> The virtuous pagans will
+> also expect
+>
+> `seq(0, 1, by=.1) == .3`
+>
+> to have exactly one value that is true.
+> But you should not expect something like:
+>
+>
+> `unique(c(.3, .4 - .1, .5 - .2, .6 - .3, .7 - .4))`
+>
+> to have length one.
+>
+> — Burns, P. (2011). *The R Inferno* (§ 1, p. 9). burns-stat.com.
+
+
+
+::: {.collapsible-code-wrapper}
+<a class="collapsible-code-toggle" data-bs-toggle="collapse" href="#floating-point-results" role="button" aria-expanded="false" aria-controls="floating-point-results">
+Show code results
+</a>
+
+::: {#floating-point-results .collapse .collapsible-code-content}
+```{r}
+#| label: floating-point-trap
+.1 == .3 / 3
+seq(0, 1, by=.1) == .3
+unique(c(.3, .4 - .1, .5 - .2, .6 - .3, .7 - .4))
+```
+:::
+:::
+
+## Introduciton
+
+R (and other statistical programming languages) are bounded by the same fundamental
+constraints:
+
+1. Floating point trap `.1 == .3 / 3`
+2. Random Access Memory (RAM) size
+3. Computation speed and the use of the CPU parallelization
+
+We look into the last two problems here to show how these limitations are overcome by the modern R toolkit for fast and big data work.
+
+## RAM to Disk: Serialization and Out-of-Memory Computing
+
+Any data operations in R require the complete data set being loaded into the memory.
+
+
+### Imperfection of writing then reading
+
+::: {.unnumbered .unlisted style="font-family: 'Times New Roman', serif; font-size: 0.85em;"}
+
+> Do not expect to write data to a file (such as with `write.table`), read the
+> data back into R and have that be precisely the same as the original. That is
+> doing two translations, and there is often something lost in translation. You
+> do have some choices to get the behavior that you want:
+>
+> — Burns, P. (2011). *The R Inferno* (§ 8.3.10, p 105). burns-stat.com.
+
+:::
+
+### Serialization
+
+Serialization in R is the process of converting R objects (like data frames)
+into a byte stream that can be stored or transmitted, and later reconstructed.
+
+#### 1. Native R Serialization Functions
+
+R has built-in serialization with `saveRDS()` and `readRDS()`:
+
+```{r}
+#| label: basic-serialization
+# Create a sample data frame
+df <- data.frame(
+  id = 1:3,
+  name = c("Alice", "Bob", "Charlie"),
+  score = c(95.5, 87.3, 92.1)
+)
+
+# Serialize to a file
+saveRDS(df, "temp_df.rds")
+
+# Deserialize (read back)
+df_restored <- readRDS("temp_df.rds")
+
+# Verify they're identical
+identical(df, df_restored)
+```
+
+#### 2. Binary vs Text Formats
+
+```{r}
+#| label: binary-vs-text
+# serialize() creates raw bytes - more low-level
+raw_bytes <- serialize(df, connection = NULL)
+head(raw_bytes, 50)
+
+# You can also specify ASCII mode (text-based, but less efficient)
+ascii_bytes <- serialize(df, connection = NULL, ascii = TRUE)
+head(ascii_bytes, 50)
+
+# Compare sizes
+cat("Binary format:", length(raw_bytes), "bytes\n")
+cat("ASCII format:", length(ascii_bytes), "bytes\n")
+```
+
+#### 3. Format Versions
+
+R's serialization format has evolved with versions:
+
+```{r}
+#| label: format-versions
+# You can specify the serialization version
+# Version 2 (R >= 1.4.0) - default for most uses
+# Version 3 (R >= 3.5.0) - supports ALTREP and custom serialization
+
+saveRDS(df, "temp_v2.rds", version = 2)
+saveRDS(df, "temp_v3.rds", version = 3)
+
+# Check file sizes
+cat("Version 2:", file.size("temp_v2.rds"), "bytes\n")
+cat("Version 3:", file.size("temp_v3.rds"), "bytes\n")
+```
+
+#### 4. Compression
+
+```{r}
+#| label: compression-comparison
+# Create a larger data frame to see compression benefits
+large_df <- data.frame(
+  x = rep(1:100, 100),
+  y = rnorm(10000),
+  z = sample(letters, 10000, replace = TRUE)
+)
+
+# Different compression methods
+saveRDS(large_df, "temp_none.rds", compress = FALSE)
+saveRDS(large_df, "temp_gzip.rds", compress = "gzip")
+saveRDS(large_df, "temp_bzip2.rds", compress = "bzip2")
+saveRDS(large_df, "temp_xz.rds", compress = "xz")
+
+# Compare sizes
+cat("No compression:", file.size("temp_none.rds"), "bytes\n")
+cat("gzip:", file.size("temp_gzip.rds"), "bytes\n")
+cat("bzip2:", file.size("temp_bzip2.rds"), "bytes\n")
+cat("xz:", file.size("temp_xz.rds"), "bytes\n")
+```
+
+#### 5. Special Attributes Are Preserved
+
+```{r}
+#| label: attributes-preserved
+# Data frames can have special attributes
+df_special <- df
+attr(df_special, "created_date") <- Sys.Date()
+attr(df_special, "source") <- "example data"
+class(df_special) <- c("my_special_df", "data.frame")
+
+# Serialize and restore
+saveRDS(df_special, "temp_special.rds")
+df_restored <- readRDS("temp_special.rds")
+
+# Check that attributes are preserved
+attributes(df_restored)
+```
+
+#### 6. Column Types Matter
+
+```{r}
+#| label: column-types
+# Different column types serialize differently
+df_types <- data.frame(
+  int_col = 1:3,
+  dbl_col = c(1.1, 2.2, 3.3),
+  chr_col = c("a", "b", "c"),
+  fct_col = factor(c("low", "high", "medium")),
+  date_col = as.Date(c("2026-01-01", "2026-01-02", "2026-01-03")),
+  stringsAsFactors = FALSE
+)
+
+# Check structure
+str(df_types)
+
+# Serialize and restore
+saveRDS(df_types, "temp_types.rds")
+df_types_restored <- readRDS("temp_types.rds")
+
+# Verify types are preserved
+str(df_types_restored)
+```
+
+```{r}
+#| label: cleanup-temp-files
+#| include: false
+# Clean up temporary files
+file.remove(c("temp_df.rds", "temp_v2.rds", "temp_v3.rds",
+              "temp_none.rds", "temp_gzip.rds", "temp_bzip2.rds", "temp_xz.rds",
+              "temp_special.rds", "temp_types.rds"))
+```
+
+#### Key Takeaways on Serialization
+
+1. **Exact Reconstruction**: Serialization preserves the complete object structure, including column types, factor levels, attributes, and class
+2. **Binary Format**: Default is binary (more compact), but ASCII mode available for text-based storage
+3. **Versioning**: Format has evolved across R versions (v2, v3) with backward compatibility
+4. **Compression**: Supports gzip, bzip2, and xz compression (xz typically gives best compression)
+5. **Single Object**: `saveRDS()`/`readRDS()` handle one object at a time; use `save()`/`load()` for multiple objects
+6. **Platform Independent**: RDS files can be read across different operating systems
+7. **R-Specific**: The `.rds` format is R-specific; use CSV, Parquet, or Arrow for cross-language compatibility
+
+The serialization format is designed to be a perfect "snapshot" of the R object, making it ideal for caching intermediate results, sharing data between R sessions, or storing complex objects that CSV can't handle well (like factors, dates, or nested structures).
+
+### Limitations of saveRDS Serialization
+
+While `saveRDS()` provides perfect object reconstruction, it has important limitations:
+
+#### 1. RAM Usage - Must Load Entire Object
+
+```{r}
+#| label: ram-limitations
+# Create a test data frame
+test_df <- data.frame(
+  id = 1:100000,
+  value = rnorm(100000),
+  category = sample(LETTERS[1:5], 100000, replace = TRUE)
+)
+
+cat("Object size in memory:", format(object.size(test_df), units = "MB"), "\n")
+
+# saveRDS requires the entire object to be in memory
+saveRDS(test_df, "test_large.rds")
+cat("File size on disk:", file.size("test_large.rds") / 1024^2, "MB\n")
+
+# Key limitation: Cannot read just one column or subset of rows
+# You must load the entire object into RAM
+test_read <- readRDS("test_large.rds")
+```
+
+**Key limitation**: No partial reads — you must load the entire object into RAM, even if you only need specific columns or rows.
+
+#### 2. CPU Usage - Single-Threaded Compression
+
+```{r}
+#| label: cpu-limitations
+library(microbenchmark)
+
+# Compare compression methods - all single-threaded in saveRDS
+compression_bench <- microbenchmark(
+  no_compress = saveRDS(test_df, "temp_none.rds", compress = FALSE),
+  gzip = saveRDS(test_df, "temp_gzip.rds", compress = "gzip"),
+  bzip2 = saveRDS(test_df, "temp_bzip2.rds", compress = "bzip2"),
+  xz = saveRDS(test_df, "temp_xz.rds", compress = "xz"),
+  times = 5
+)
+
+print(compression_bench)
+
+cat("\nFile sizes:\n")
+cat("No compression:", file.size("temp_none.rds") / 1024^2, "MB\n")
+cat("gzip:", file.size("temp_gzip.rds") / 1024^2, "MB\n")
+cat("bzip2:", file.size("temp_bzip2.rds") / 1024^2, "MB\n")
+cat("xz:", file.size("temp_xz.rds") / 1024^2, "MB\n")
+```
+
+**Key limitation**: All compression in `saveRDS()` is single-threaded and can be slow, especially with stronger compression algorithms like `xz`.
+
+#### 3. Other Limitations
+
+- **No cross-language support**: RDS format is R-specific
+- **No random access**: Cannot read specific columns without loading entire object
+- **Version compatibility**: Older R versions cannot read newer format versions
+- **Large file handling**: Inefficient for very large objects (multi-GB)
+
+### Alternative Serialization Approaches in R
+
+Modern R offers several alternatives that overcome these limitations:
+
+#### 1. qs2 - Fast Serialization for Any R Object
+
+`qs2` is a drop-in replacement for `saveRDS()` with multi-threaded compression:
+
+```{r}
+#| label: qs2-demo
+library(qs2)
+
+# Basic usage - similar to saveRDS but much faster
+qs_save(test_df, "test_df.qs2")
+test_qs2 <- qs_read("test_df.qs2")
+
+# Verify identical reconstruction
+identical(test_df, test_qs2)
+```
+
+**Advantages**: 5-10x faster than `saveRDS`, smaller files, multi-threaded, handles any R object
+
+**Use when**: You need fast serialization of R objects (models, lists, environments, functions)
+
+#### 2. fst - Fast Columnar Storage for Data Frames
+
+`fst` provides random access to columns and rows:
+
+```{r}
+#| label: fst-demo
+library(fst)
+
+# Write data frame
+write_fst(test_df, "test_df.fst")
+
+# Read only specific columns (random access!)
+partial_read <- read_fst("test_df.fst", columns = c("id", "value"))
+head(partial_read, 3)
+
+cat("\nPartial read size:", format(object.size(partial_read), units = "MB"), "\n")
+cat("vs full object size:", format(object.size(test_df), units = "MB"), "\n")
+
+# Read specific row ranges
+row_subset <- read_fst("test_df.fst", from = 1, to = 1000)
+cat("Read only first 1000 rows:", format(object.size(row_subset), units = "MB"), "\n")
+```
+
+**Advantages**: Very fast, multi-threaded, random access to columns/rows, no decompression needed for unused columns
+
+**Use when**: Working with large data frames where you often need subsets
+
+#### 3. data.table - Fast CSV Alternative
+
+`data.table` provides blazing-fast CSV read/write:
+
+```{r}
+#| label: datatable-demo
+library(data.table)
+
+# fwrite is much faster than write.csv
+csv_bench <- microbenchmark(
+  base_write = write.csv(test_df, "base.csv", row.names = FALSE),
+  fwrite = fwrite(test_df, "fwrite.csv"),
+  times = 5
+)
+
+print(csv_bench)
+
+# fread is much faster than read.csv
+csv_read_bench <- microbenchmark(
+  base_read = read.csv("base.csv"),
+  fread = fread("fwrite.csv"),
+  times = 5
+)
+
+cat("\n")
+print(csv_read_bench)
+```
+
+**Advantages**: Universal format (any tool can read CSV), multi-threaded, automatic type detection
+
+**Use when**: Need cross-platform compatibility or sharing with non-R users
+
+#### 4. arrow - Parquet for Big Data
+
+Apache Parquet provides columnar storage with compression:
+
+```{r}
+#| label: parquet-demo
+library(arrow)
+
+# Write parquet file
+write_parquet(test_df, "test.parquet")
+
+# Read parquet file
+test_parquet <- read_parquet("test.parquet")
+
+# Parquet supports column selection
+partial_parquet <- read_parquet("test.parquet", col_select = c("id", "value"))
+cat("Parquet file size:", file.size("test.parquet") / 1024^2, "MB\n")
+cat("Partial column read:", format(object.size(partial_parquet), units = "MB"), "\n")
+```
+
+**Advantages**: Cross-language, compressed, columnar, works with Python/Pandas/Spark, can handle larger-than-RAM datasets
+
+**Use when**: Working with big data, need cross-language compatibility, or using distributed systems
+
+### Comprehensive Speed Comparison
+
+```{r}
+#| label: comprehensive-comparison
+# Write speed comparison
+all_writes <- microbenchmark(
+  saveRDS_gzip = saveRDS(test_df, "all_rds.rds", compress = "gzip"),
+  qs2 = qs_save(test_df, "all_qs2.qs2"),
+  fst = write_fst(test_df, "all_fst.fst"),
+  csv_fwrite = fwrite(test_df, "all_fwrite.csv"),
+  parquet = write_parquet(test_df, "all_parquet.parquet"),
+  times = 10
+)
+
+cat("=== WRITE SPEEDS ===\n")
+print(all_writes)
+
+# Read speed comparison
+cat("\n=== READ SPEEDS ===\n")
+all_reads <- microbenchmark(
+  readRDS_gzip = readRDS("all_rds.rds"),
+  qs2 = qs_read("all_qs2.qs2"),
+  fst = read_fst("all_fst.fst"),
+  csv_fread = fread("all_fwrite.csv"),
+  parquet = read_parquet("all_parquet.parquet"),
+  times = 10
+)
+
+print(all_reads)
+```
+
+### File Size and Feature Comparison
+
+```{r}
+#| label: size-feature-comparison
+# File size comparison
+file_sizes <- data.frame(
+  Format = c("saveRDS (gzip)", "qs2", "fst", "CSV (fwrite)", "Parquet"),
+  Size_MB = c(
+    file.size("all_rds.rds") / 1024^2,
+    file.size("all_qs2.qs2") / 1024^2,
+    file.size("all_fst.fst") / 1024^2,
+    file.size("all_fwrite.csv") / 1024^2,
+    file.size("all_parquet.parquet") / 1024^2
+  ),
+  stringsAsFactors = FALSE
+)
+
+file_sizes <- file_sizes[order(file_sizes$Size_MB), ]
+cat("=== FILE SIZES ===\n")
+print(file_sizes, row.names = FALSE)
+
+# Feature comparison
+cat("\n=== KEY FEATURES ===\n")
+features <- data.frame(
+  Format = c("saveRDS", "qs2", "fst", "CSV (data.table)", "Parquet"),
+  `Random Access` = c("No", "No", "Cols + Rows", "No", "Columns"),
+  `Multi-threaded` = c("No", "Yes", "Yes", "Yes", "Yes"),
+  `Arbitrary Objects` = c("Yes", "Yes", "Data frames", "Data frames", "Data frames"),
+  `Cross-language` = c("R only", "R only", "Limited", "Universal", "Universal"),
+  `Best For` = c("Legacy", "Fast R objects", "Fast data frames", "CSV alternative", "Big data"),
+  check.names = FALSE
+)
+
+print(features, row.names = FALSE)
+```
+
+```{r}
+#| label: cleanup-comparison-files
+#| include: false
+# Clean up temporary files
+file.remove(c("test_large.rds", "temp_none.rds", "temp_gzip.rds", "temp_bzip2.rds", "temp_xz.rds",
+              "test_df.fst", "test_df.qs2", "base.csv", "fwrite.csv", "test.parquet",
+              "all_rds.rds", "all_qs2.qs2", "all_fst.fst", "all_fwrite.csv", "all_parquet.parquet"))
+```
+
+### Summary: Choosing the Right Serialization Method
+
+| Scenario | Recommended Method | Why |
+|----------|-------------------|-----|
+| **Quick R object save** (models, lists) | `qs2` | 5-10x faster than `saveRDS`, smaller files |
+| **Large data frames** with frequent partial reads | `fst` | Random access, multi-threaded, very fast |
+| **Share with non-R users** | CSV via `fwrite`/`fread` | Universal format, still fast |
+| **Big data / cross-language** | Parquet via `arrow` | Columnar, compressed, works with Python/Spark |
+| **Legacy code / simple use** | `saveRDS` | Built-in, perfect for small objects |
+
+
 ## Overview
 
 Development data work keeps getting bigger — harmonized household surveys (GMD),

@@ -1,5 +1,14 @@
 [
   {
+    "listing": "/seminars/index.html",
+    "items": [
+      "/seminars/course-2026-04/overview.docx",
+      "/seminars/seminar-2026-02/overview.html",
+      "/seminars/seminar-2025-10/overview.html",
+      "/seminars/seminar-2026-06/overview.html"
+    ]
+  },
+  {
     "listing": "/team/index.html",
     "items": [
       "/team/ben-brunckhorst.html",
@@ -7,14 +16,6 @@
       "/team/henry-stemmler.html",
       "/team/maria-davalos.html",
       "/team/nga-nguyen.html"
-    ]
-  },
-  {
-    "listing": "/seminars/index.html",
-    "items": [
-      "/seminars/course-2026-04/overview.docx",
-      "/seminars/seminar-2026-02/overview.html",
-      "/seminars/seminar-2025-10/overview.html"
     ]
   }
 ]

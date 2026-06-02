@@ -1,10 +1,621 @@
 [
   {
+    "objectID": "projects/capacity-building.html",
+    "href": "projects/capacity-building.html",
+    "title": "Capacity Building",
+    "section": "",
+    "text": "We help demystify geospatial data for microeconomists. Through hands-on trainings and peer-learning events, we build core skills for microeconomists to use geospatial methods with confidence.",
+    "crumbs": [
+      "Projects",
+      "Capacity Building"
+    ]
+  },
+  {
+    "objectID": "projects/capacity-building.html#overview",
+    "href": "projects/capacity-building.html#overview",
+    "title": "Capacity Building",
+    "section": "",
+    "text": "We help demystify geospatial data for microeconomists. Through hands-on trainings and peer-learning events, we build core skills for microeconomists to use geospatial methods with confidence.",
+    "crumbs": [
+      "Projects",
+      "Capacity Building"
+    ]
+  },
+  {
+    "objectID": "projects/capacity-building.html#our-approach",
+    "href": "projects/capacity-building.html#our-approach",
+    "title": "Capacity Building",
+    "section": "Our Approach",
+    "text": "Our Approach\nWhether you’re just getting started or looking to refine your toolkit, we’re here to support you through our growing Community of Practice.",
+    "crumbs": [
+      "Projects",
+      "Capacity Building"
+    ]
+  },
+  {
+    "objectID": "projects/capacity-building.html#training-programs",
+    "href": "projects/capacity-building.html#training-programs",
+    "title": "Capacity Building",
+    "section": "Training Programs",
+    "text": "Training Programs\n\nIntroductory Workshops\nFor those new to geospatial analysis\n\n\nAdvanced Methods\nDeep dives into specific techniques\n\n\nApplied Case Studies\nLearning from real-world applications",
+    "crumbs": [
+      "Projects",
+      "Capacity Building"
+    ]
+  },
+  {
+    "objectID": "projects/capacity-building.html#community-of-practice",
+    "href": "projects/capacity-building.html#community-of-practice",
+    "title": "Capacity Building",
+    "section": "Community of Practice",
+    "text": "Community of Practice\nJoin our community to:\n\nShare experiences and challenges\nLearn from peers\nAccess ongoing support\nContribute to collective knowledge",
+    "crumbs": [
+      "Projects",
+      "Capacity Building"
+    ]
+  },
+  {
+    "objectID": "projects/capacity-building.html#upcoming-events",
+    "href": "projects/capacity-building.html#upcoming-events",
+    "title": "Capacity Building",
+    "section": "Upcoming Events",
+    "text": "Upcoming Events\nCheck the Seminars page for upcoming training events",
+    "crumbs": [
+      "Projects",
+      "Capacity Building"
+    ]
+  },
+  {
+    "objectID": "projects/capacity-building.html#resources",
+    "href": "projects/capacity-building.html#resources",
+    "title": "Capacity Building",
+    "section": "Resources",
+    "text": "Resources\n\nTraining materials\nCode examples\nSelf-paced tutorials\nCommunity forums",
+    "crumbs": [
+      "Projects",
+      "Capacity Building"
+    ]
+  },
+  {
+    "objectID": "projects/spatial-analysis.html",
+    "href": "projects/spatial-analysis.html",
+    "title": "Spatial Analysis",
+    "section": "",
+    "text": "We apply a geographic lens to pressing policy questions on poverty and inequality. Whether it’s identifying where jobs are (and aren’t) for the poor, mapping urban deprivation, or analyzing rural income dynamics, we use spatially disaggregated data to generate actionable insights.",
+    "crumbs": [
+      "Projects",
+      "Spatial Analysis"
+    ]
+  },
+  {
+    "objectID": "projects/spatial-analysis.html#overview",
+    "href": "projects/spatial-analysis.html#overview",
+    "title": "Spatial Analysis",
+    "section": "",
+    "text": "We apply a geographic lens to pressing policy questions on poverty and inequality. Whether it’s identifying where jobs are (and aren’t) for the poor, mapping urban deprivation, or analyzing rural income dynamics, we use spatially disaggregated data to generate actionable insights.",
+    "crumbs": [
+      "Projects",
+      "Spatial Analysis"
+    ]
+  },
+  {
+    "objectID": "projects/spatial-analysis.html#our-approach",
+    "href": "projects/spatial-analysis.html#our-approach",
+    "title": "Spatial Analysis",
+    "section": "Our Approach",
+    "text": "Our Approach\nWe work with diverse data sources including:\n\nHousehold surveys\nCensuses\nAdministrative records\nPrivate sector data\nSatellite-based remote sensing\n\nOur analysis covers everything from climate and land use to infrastructure and conflict.",
+    "crumbs": [
+      "Projects",
+      "Spatial Analysis"
+    ]
+  },
+  {
+    "objectID": "projects/spatial-analysis.html#tools-and-methods",
+    "href": "projects/spatial-analysis.html#tools-and-methods",
+    "title": "Spatial Analysis",
+    "section": "Tools and Methods",
+    "text": "Tools and Methods\nWe develop and share open, reproducible code and tools that can be adapted across countries and topics.",
+    "crumbs": [
+      "Projects",
+      "Spatial Analysis"
+    ]
+  },
+  {
+    "objectID": "projects/spatial-analysis.html#current-projects",
+    "href": "projects/spatial-analysis.html#current-projects",
+    "title": "Spatial Analysis",
+    "section": "Current Projects",
+    "text": "Current Projects\nProject examples will be added here",
+    "crumbs": [
+      "Projects",
+      "Spatial Analysis"
+    ]
+  },
+  {
+    "objectID": "projects/spatial-analysis.html#publications-and-outputs",
+    "href": "projects/spatial-analysis.html#publications-and-outputs",
+    "title": "Spatial Analysis",
+    "section": "Publications and Outputs",
+    "text": "Publications and Outputs\nKey outputs will be added here",
+    "crumbs": [
+      "Projects",
+      "Spatial Analysis"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to GeoPov",
+    "section": "",
+    "text": "🌍 We are a group of development economists and geospatial enthusiasts working at the intersection of poverty, place, and policy. At GeoPov, we believe that where people live matters just as much as how they live — and we’re here to make sure that spatial realities are part of the poverty dialogue.",
+    "crumbs": [
+      "About Us"
+    ]
+  },
+  {
+    "objectID": "index.html#our-goal",
+    "href": "index.html#our-goal",
+    "title": "Welcome to GeoPov",
+    "section": "🎯 Our Goal",
+    "text": "🎯 Our Goal\nTo develop a global agenda that:\n\nEmpowers economists by integrating geospatial data and spatial analysis into country-level diagnostics and policy engagement.\nContributes to global knowledge that helps design local solutions grounded in data and spatial context.",
+    "crumbs": [
+      "About Us"
+    ]
+  },
+  {
+    "objectID": "index.html#latest-news",
+    "href": "index.html#latest-news",
+    "title": "Welcome to GeoPov",
+    "section": "Latest News",
+    "text": "Latest News\n\nFeb 2026: Seminar on AI-Assisted Data Analysis workflow with Positron and Copilot—materials and slides now available in seminars/seminar-2026-02.\nNovember 2025: GeoPov team seminar on Geocoding GMD.",
+    "crumbs": [
+      "About Us"
+    ]
+  },
+  {
+    "objectID": "index.html#what-we-do",
+    "href": "index.html#what-we-do",
+    "title": "Welcome to GeoPov",
+    "section": "🧭 What We Do",
+    "text": "🧭 What We Do\nOur work is organized around three main pillars:\n\nPillar 1: Spatial Analysis\nWe apply a geographic lens to pressing policy questions on poverty and inequality. Whether it’s identifying where jobs are (and aren’t) for the poor, mapping urban deprivation, or analyzing rural income dynamics, we use spatially disaggregated data to generate actionable insights. This includes household surveys, censuses, administrative records, private sector data, and satellite-based remote sensing — covering everything from climate and land use to infrastructure and conflict. We also develop and share open, reproducible code and tools that can be adapted across countries and topics.\nLearn more about our Spatial Analysis work →\n\n\nPillar 2: Knowledge and Data Center\nWe bring clarity to the what, why, and how of using geospatial data in poverty analysis. This pillar focuses on:\n\nBuilding a curated repository of geospatial data sources and methods, with clear guidance on how they can (and can’t) be used in applied work.\nShowcasing examples of microeconomic analyses that successfully integrate geospatial data to answer real-world policy questions.\n\nExplore our Knowledge and Data Center →\n\n\nPillar 3: Capacity Building\nWe help demystify geospatial data for microeconomists. Through hands-on trainings and peer-learning events, we build core skills for microeconomists to use geospatial methods with confidence. Whether you’re just getting started or looking to refine your toolkit, we’re here to support you through our growing Community of Practice.\nExplore our seminars and training events →",
+    "crumbs": [
+      "About Us"
+    ]
+  },
+  {
+    "objectID": "index.html#meet-the-team",
+    "href": "index.html#meet-the-team",
+    "title": "Welcome to GeoPov",
+    "section": "👥 Meet the Team",
+    "text": "👥 Meet the Team\nWe’re a global multi-disciplinary team in the Distributional Impact of Policy under the Prosperity Vice Presidency. We combine expertise in microeconomic analysis, spatial economics, and data engineering.\nWho we are:\n\nCurious minds who ask “where”, “who”, “what” and “why” together\nPassionate about open data, open code, and inclusive analytics\nBelievers in the power of maps and evidence to drive better policy\n\nMeet our team members →",
+    "crumbs": [
+      "About Us"
+    ]
+  },
+  {
+    "objectID": "index.html#get-involved",
+    "href": "index.html#get-involved",
+    "title": "Welcome to GeoPov",
+    "section": "🤝 Get Involved",
+    "text": "🤝 Get Involved\n\nBrowse our seminars for recordings and materials\nReach out to our team\nReport issues or suggest improvements to our code and materials on GitHub issues",
+    "crumbs": [
+      "About Us"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/setup-instructions.html",
+    "href": "seminars/seminar-2026-02/setup-instructions.html",
+    "title": "Positron + GitHub Copilot: Setup Instructions",
+    "section": "",
+    "text": "Setup software for AI agent-assisted analysis in Stata and R\nEnable AI-assistance with GitHub Copilot or Claude AI integration\nBe able to reproduce AI-assisted coding workflow demonstrated in the seminar",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Setup instructions"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/setup-instructions.html#goals",
+    "href": "seminars/seminar-2026-02/setup-instructions.html#goals",
+    "title": "Positron + GitHub Copilot: Setup Instructions",
+    "section": "",
+    "text": "Setup software for AI agent-assisted analysis in Stata and R\nEnable AI-assistance with GitHub Copilot or Claude AI integration\nBe able to reproduce AI-assisted coding workflow demonstrated in the seminar",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Setup instructions"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/setup-instructions.html#overview",
+    "href": "seminars/seminar-2026-02/setup-instructions.html#overview",
+    "title": "Positron + GitHub Copilot: Setup Instructions",
+    "section": "Overview",
+    "text": "Overview\nTo be able to use AI in daily coding and data analysis we need to:\n\nSoftware setup:\n\nStata, R, Python, Positron, Quarto, Git\nPython package uv\nExtensions in Positron (Stata MCP)\n\nGitHub setup:\n\nCreate a GitHub account using private email (not WB email).\nJoin World Bank GitHub organization.\nRequest GitHub Copilot access from World Bank GitHub organization administrators.\nFor a private setup, you need to make a subscription to GitHub Copilot Pro or Pro+ plan.\n\nConnect GitHub Copilot to Positron and enable Positron Assistant in Positron settings.\n\n\nKnown Issues and Troubleshooting\n\nIf you have trouble installing software from the Software Center, contact IT Help: ITHelp@worldbankgroup.org or use Walk-in center.\nIf you have trouble with GitHub World Bank or Github Copilot access from World Bank GitHub setup instructions or contact github@worldbank.org.\nGitHub Copilot does not work in Positron after installation:\n\nMake sure you set-up GitHub account properly\nMake sure that you have enabled Positron Assistant in Positron settings\nMake sure you are signed into GitHub in Positron\nReload Positron after installation and setup: Ctrl+Shift+P &gt; Developer: Reload Window &gt; Enter or close it and open again.\n\nStata-MCP extension does not run Stata code from the OneDrive.\nThis was a known issue with Stata MCP extension that has been resolved after this GitHub issue. It happened when running code from OneDrive folder because our one drive folder has a space in the name (“OneDrive - WBG”). A workaround is to move the code to a different folder without spaces in the path, for example C:\\Users\\wbXXXXXXX\\code, and run it from there. Once this issue it resolved on the Stata MCP extension side, it will update in positron automatically and you will be able to run code from the OneDrive folder again.",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Setup instructions"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/setup-instructions.html#software-setup",
+    "href": "seminars/seminar-2026-02/setup-instructions.html#software-setup",
+    "title": "Positron + GitHub Copilot: Setup Instructions",
+    "section": "Software setup",
+    "text": "Software setup\n\nStep 1: Install the software\nFirst you need to install the required software on your computer. The table below summarizes the software needed and instructions for installation.\n\n\n\n\n\n\n\n\n\nSoftware\nNote for self-installation\n\n\n\n\n\nStata 19 or higher\nUse regular installation\n\n\n\nPositron Latest\nUse user-level installation\n\n\n\nQuarto 1.9.+ (latest)\nUse admin-level (for all users) installation\n\n\n\nR 4.5.2 (latest)\nUse regular installation\n\n\n\nPython 3.13+ (latest)\nUse regular installation\n\n\n\nGit 2.52+ (latest)\nUse regular installation\n\n\n\nAll software listed above is available for installation at the World Bank through the Software Center. Go to the Software Center and install it (if not already installed) . If some is not available in the Software Center, make a Software Installation Request or contact IT Help: ITHelp@worldbankgroup.org.\n\n\n\n\n\n\nNote\n\n\n\nIf you had an older version of Positron installed, please reinstall it as the one on the software center is more up to date and capable of self-updating.\nPrivate laptop setup\n\nR: Install R from https://cran.r-project.org/\nPython: Install Python from https://www.python.org/downloads/\nPositron: Install user-level Positron from https://positron.posit.co/download.html\nQuarto: Install Quarto from https://quarto.org/docs/get-started/\nGit: Install Git from https://git-scm.com/download/win\n\n\n\n\n\nStep 2: Configure the software and install extensions\n\nUV: Required Python Package\n\nOpen Command Prompt (cmd) or PowerShell:\n\nPress Win + R, type cmd or powershell, and hit Enter.\n\nType pip install uv and press Enter to install the uv package.\n\nuv is a package that allows environments management in python, see https://pypi.org/project/uv/\n\nCheck if UV is installed correctly by typing uv --version in the Command Prompt or PowerShell. You should see the version number displayed, something like this:\nuv 0.9.18 (0cee76417 2025-12-16)\n\n\n\nStata-MCP: Extensions in Positron for Stata\nExtensions in Positron are add-ons that enhance functionality. To install extensions, open the Extensions panel by clicking the square icon  on the left sidebar or pressing Ctrl+Shift+X. There are many extensions available for Positron. Below are the key extensions to install for AI-assisted analysis:\nStata MCP Extension enables Model Communication Protocol (MCP) for Stata, providing better context awareness for AI agents and allowing you to run Stata code directly from Positron.\nTo install it:\n\n\n\n\n\n\n\n\nDescription\n\n\n\n\n\nOpen the Extensions panel in Positron\n\n\n\nSearch for “Stata MCP” in the Extensions panel\n\n\n\nClick “Install” to add the extension to Positron\n\n\n\nAfter installation, restart Positron or reload the window (Ctrl+Shift+P &gt; Developer: Reload Window &gt; Enter)\n\n\n\nOnce installed, configure the Stata MCP extension by setting up the path to the Stata executable and Stata edition.\n\n\n\n\nDescription\n\n\n\n\n\nOpen stata-vscode.stataPath or press Ctrl+, &gt; search “Stata Path” (or stata-vscode.stataPath), and set it to your Stata executable folder: C:\\Program Files\\StataNow19\\ (for most WB laptops and VDIs).\n\n\n\nOpen stata-vscode.stataEdition or press Ctrl+, &gt; search “Stata Edition” (or stata-vscode.stataEdition), and set it to “mp” for Stata MP version.\n\n\n\nVerify Stata MCP is working\nCreate and save a new Stata .do file with a simple command like:\nsysuse auto\nsummarize price\ndisplay \"Stata is working!\"\n\n\n\n\n\n\n\n\nDescription\n\n\n\n\n\nSave the file (Ctrl+S) before running — any unsaved edits will not be executed.\n\n\n\nPress Ctrl+Shift+D in the .do file, or Ctrl+Shift+P &gt; Stata: Run Current File &gt; Enter, or click the run button.\n\n\n\nResults appear in the Output panel: Ctrl+Shift+P &gt; Output: Show Output Channels... &gt; Enter &gt; Stata.\n\n\n\nYou can move the Output panel to a different location in Positron using the button shown.",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Setup instructions"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/setup-instructions.html#github-setup",
+    "href": "seminars/seminar-2026-02/setup-instructions.html#github-setup",
+    "title": "Positron + GitHub Copilot: Setup Instructions",
+    "section": "GitHub and GitHub Copilot Setup",
+    "text": "GitHub and GitHub Copilot Setup\nGitHub setup includes\n\ncreating a GitHub account,\njoining the World Bank GitHub organization, and\nrequesting access to GitHub Copilot.\nfor private developers, instead of joining the World Bank GitHub organization, you can get access to GitHub Copilot through a private subscription to GitHub Copilot Pro or Pro+ plan.\nMonitor your usage of premium requests in GitHub Copilot:\n\nGo to: GitHub &gt; Settings &gt; Copilot settings\nScroll down to the “Usage” section to see your usage of premium requests.\n100% is the monthly limit of 300 premium requests from GH Copilot from the WB. If you have a private Pro or Pro+ subscription, you have 500 and 1500 requests respectively.\n\n\nThese steps can be done independently and give different privileges to users, see table below.\n\n\n\nAccess Level\nGitHub Permissions\nGitHub Copilot / AI Assistance\nWB GitHub Org Access\n\n\n\n\nNo GitHub Account\n❌ No: view public repos only\n❌ No\n❌ No (only view public repositories)\n\n\nPersonal GH Account(created at github.com)\n✅ Everything: Create personal repos, collaborate\n⚠️ Usage limit. No access to Claude\n❌ No\n\n\n+ GH Copilot subscription (Copilot Pro or Pro+)\n✅ Everything\n✅ Unlimited code completion + Chat. ⚠️ Monthly use limit on AgentPrivate budget for over-limit use.✅ Premium models (Claude)\n❌ No\n\n\nWB Organization Member(join via eServices)\n✅ Access WB public and internal repos.Create repos under WB org\n⚠️ Limited (basic completions only; no premium models).\n✅ Yes (view / contribute)\n\n\nWB Org + WB Copilot Access(request Copilot via GitHub Settings and email to github@worldbank.org)\n✅ Everything: personal repos + WB org repos\n✅ Unlimited code completion + Chat. ⚠️ Limit on Agent (300 requests/month)✅ Premium models (Claude, GPT-4.5)Manager-approved budget for overuse.\n✅ Yes\n\n\n\nKey takeaways:\n\nFor AI-assisted coding: You need at minimum “Private GH account + Copilot Access (private Pro subscription or from World Bank GitHub)”\nTo be able to use GitHub Copilot with Claude: You need Copilot Access (private Pro subscription or from World Bank GitHub)\nEmail matters: Always use your personal email, not your WB email, when creating your GitHub account\n\n\nStep 1: Create a GitHub Account\nIf you don’t have a GitHub account yet, create one at https://github.com/signup or read more GH: get-started\n\n\n\n\n\n\nWarning\n\n\n\nNote: Use your personal email address, not your World Bank email.\n\n\n\n\nStep 2: Join the World Bank GitHub Organization\n\nSubmit a “Join GitHub Organization Account Request” on eServices to join github.com/worldbank\nOnce your request is approved, you will receive an email invitation to join the World Bank GitHub organization\n\nEmail will be sent to the email address associated with your GitHub account\n\nAccept the invitation by clicking the link in the email\n\nYou need to confirm your membership in the World Bank organization on GitHub by following steps indicated in the email.\nIf you don’t confirm within a few days, the invitation will expire, and you will need to request again through eService.\n\n\n\n\nStep 3: Request GitHub Copilot Access from World Bank GitHub Organization\nAfter joining the World Bank organization, request GitHub Copilot access. To do this:\n\n\nGo to GitHub &gt; Settings &gt; Copilot settings.\n\n\n\n\n\n\n\nScroll all the way down to the “Get Copilot from an organization” section and click the “Request access” button from the worldbank organization.\nSend an email to github@worldbank.org with the subject line: “Request GitHub Copilot Access”. In the email body, include your GitHub username and a brief reason for requesting access. Copy your manager or team lead for approval.\n\n\n\n\n\nYour request will be reviewed and approved by the GitHub organization administrators.\n\n\n\n\n\n\nTip\n\n\n\nTip: Bryan Cahill and github@worldbank.org lead the github.com/worldbank organization and can help with Copilot access requests.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nWarning: If you don’t see the “Request access” button or worldbank organization, it means you either:\n\nwere not added to the World Bank GitHub organization yet, or\ndid not accept the invitation in due time.\n\nPlease complete Step 2 above, wait for the invitation email, and accept it before requesting GH Copilot access.\n\n\nOnce approved, you’ll be able to use GitHub Copilot in Positron\n\n\nStep 4: Verify GitHub Copilot Access\nIn github.com, go to GitHub &gt; Settings &gt; Copilot settings and verify that you have access to GitHub Copilot through the World Bank organization. Your usage statistics will look like this:\n\n\nNo access to Copilot from World Bank GitHub organization or personal plan Pro or Pro+\n\n\nAccess to Copilot from World Bank GitHub organization or personal plan Pro or Pro+\n\n\n\nAnother way is to check if you have access to premium models like Anthropic Claude or GPT-4.5 in the Positron Assistant settings (see instructions below).\n\nOpen Positron and sign in to your GitHub account (see “Connecting GitHub Copilot to Positron” section above)\nCheck that the GitHub Copilot extension is active in the Extensions panel\nTry typing a comment in a code file to verify that Copilot suggestions appear\n\nNote: If you have access to GitHub Copilot but don’t see suggestions in Positron, make sure you are signed into GitHub in Positron and that the GitHub Copilot extension is installed and enabled.\n\n\nStep 5: To enable overuse of GitHub Copilot Agent\n\nAsk your manager for permission to use a budget code for overuse of GitHub Copilot Agent\nSet up a monthly limit of usage (you will be charged only for what you use)\nContact github@worldbank.org asking to set a budget for your account and provide the budget code approved by your manager (copy manager in the email for approval confirmation).",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Setup instructions"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/setup-instructions.html#positron-copilot-setup",
+    "href": "seminars/seminar-2026-02/setup-instructions.html#positron-copilot-setup",
+    "title": "Positron + GitHub Copilot: Setup Instructions",
+    "section": "Positron + GitHub Copilot / Anthropic Claude Setup",
+    "text": "Positron + GitHub Copilot / Anthropic Claude Setup\nThis step enables you to use the GitHub Copilot coding agent and other LLMs, such as ChatGPT or Anthropic Claude, with Positron.\nSee Positron Assistant: Getting Started for the full overview of what it does.\n\n\n\n\n\n\nWarning\n\n\n\nWarning: Sometimes it is needed to reload Positron after installing software or extensions for the changes to take effect.\n\n\n\nStep 1: Connect GitHub to Positron\nThis requires a GitHub account linked to the World Bank organization. See GitHub Setup instructions above if you don’t have an account or haven’t linked it to the WB organization. To connect GitHub to Positron:\n\n\n\n\n\n\n\n\nNote\n\n\n\n\n\nOpen Account menu\n\n\n\nClick Sign in to your GitHub account\n\n\n\nAuthorize GitHub in your browser\n\n\n\nConfirm the authorization request\n\n\n\nComplete the authentication process\n\n\n\nGrant necessary permissions\n\n\n\n\n\n\n\nSee also Positron Assistant Guide for more details on connecting GitHub and using the assistant.\n\n\nStep 2: Enable Positron Assistant in Positron Settings\n\nOpen settings positron.assistant.enable and check the box to enable it. or Ctrl+, &gt; positron.assistant.enable &gt; Check the box \nRestart Positron to apply the changes\nor reload the window (Ctrl+Shift+P &gt; Developer: Reload Window &gt; Enter) \n\nSee Enable Positron Assistant for more details.\n\n\nStep 3: Configure LLM Provider\nBy default, when logged into GitHub, Positron Assistant uses GitHub Copilot as the LLM provider. GitHub Copilot provides code completion, answers questions in chat, and operates in agent mode (able to run code directly).\n\n\n\n\n\n\nTip\n\n\n\nWithin GitHub Copilot, you can also configure other LLM providers, such as Anthropic Claude, OpenAI GPT, etc.\n\n\nIf you want to use Anthropic Claude or other LLMs as the provider, follow instructions in Configure language model providers.\n\n\n\n\n\n\nNote\n\n\n\nCode completion will still be provided by the GitHub Copilot extension or will not work with Anthropic Claude.\n\n\n\n\nStep 4: Use Positron Assistant\n\nCtrl+Shift+P &gt; Help: Ask Positron Assistant &gt; Enter to open it.\nIn the input box that appears, type your question. For example:\nWrite a Stata do file that loads the auto dataset and summarizes the price variable.\nOpen it.\nExplain how to run it.\n\nTo learn more about using Positron Assistant, see Use Positron Assistant",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Setup instructions"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/setup-instructions.html#additional-resources",
+    "href": "seminars/seminar-2026-02/setup-instructions.html#additional-resources",
+    "title": "Positron + GitHub Copilot: Setup Instructions",
+    "section": "Additional Resources",
+    "text": "Additional Resources\n\nPositron Documentation\nGitHub Copilot Documentation\nWorld Bank GitHub: https://github.com/worldbank",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Setup instructions"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/setup-instructions.html#support",
+    "href": "seminars/seminar-2026-02/setup-instructions.html#support",
+    "title": "Positron + GitHub Copilot: Setup Instructions",
+    "section": "Support",
+    "text": "Support\nFor help with setting up or troubleshooting the software, contact:\n\nIT Help: ITHelp@worldbankgroup.org\nHQ Walk-in center\n\nRemember to provide assisting person with these setup instructions.\nFor help with accessing GitHub.com/Worldbank or GitHub Copilot from the worldbank:\n\nCheck: GitHub Setup instructions above\nReach out to: github@worldbank.org",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Revolutionizing Coding in Stata/R",
+      "Setup instructions"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#the-goal",
+    "href": "seminars/seminar-2026-02/slides.html#the-goal",
+    "title": "GeoPov",
+    "section": "The goal",
+    "text": "The goal\n\n\n\n\n\nof this seminar is to introduce you to AI-assisted data analysis with Positron IDE and GitHub Copilot | Claude.\n\n\n\n\n\nThere are many IDEs ➔\n\n\n\n\n\n\n\nThose are: Positron | VS Code | Cursor | Claude Code | and more…"
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#ai-integrated-ide",
+    "href": "seminars/seminar-2026-02/slides.html#ai-integrated-ide",
+    "title": "GeoPov",
+    "section": "💬 AI Integrated IDE",
+    "text": "💬 AI Integrated IDE\n\n\nSource: Positron: AI Features"
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#ai-chat",
+    "href": "seminars/seminar-2026-02/slides.html#ai-chat",
+    "title": "GeoPov",
+    "section": "💬 AI: Chat",
+    "text": "💬 AI: Chat\n\nPositron Assistant\n\nAsk AI (Claude 4.5) through Github Copilot\nProvides explanations, suggestions, and code snippets.\nIntegrates with project context, and code.\nLearn more:\nAssistant Chat"
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#ai-agent",
+    "href": "seminars/seminar-2026-02/slides.html#ai-agent",
+    "title": "GeoPov",
+    "section": "💬 AI: Agent",
+    "text": "💬 AI: Agent\n\nPositron Assistant\n\nExecutes instructions.\nActs independently\n\nRuns code\nFixes errors\nLearns\nReasons\n\nSee more in the live demo!"
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#ai-inline-completion",
+    "href": "seminars/seminar-2026-02/slides.html#ai-inline-completion",
+    "title": "GeoPov",
+    "section": "💬 AI: Inline Completion",
+    "text": "💬 AI: Inline Completion\nPositron Inline Code Completion: Suggests code snippets as you type."
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#context-awareness",
+    "href": "seminars/seminar-2026-02/slides.html#context-awareness",
+    "title": "GeoPov",
+    "section": "🧠 Context Awareness",
+    "text": "🧠 Context Awareness\n\n\nPositron accesses project metadata. Thus AI ‘knows’:\n\n📁 Files str.: Code, docs\n📊 Data: Var. names, types\n⏮️ History: Edits, commands\n📦 Environment: Packages\n🎯 Intent: Current task\n✅ Results: Output, errors\n\n\nWhy does it matter?\n\n🎯 Project-specific suggestions\n🔗 Understands dependencies\n🛡️ Reduces hallucinations\n⏱️ Improves efficiency\n\n\n\nRead more: Positron: AI Context | GH Copilot | Claude | WB AI Responsible Use"
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#model-context-protocol-mcp",
+    "href": "seminars/seminar-2026-02/slides.html#model-context-protocol-mcp",
+    "title": "GeoPov",
+    "section": "🔌 Model Context Protocol (MCP)",
+    "text": "🔌 Model Context Protocol (MCP)\nMCP is a universal adapter for AI—Anthropic— that connects data flows:\n\nStata-MCP or R MCP for Stata/R ⟶ Positron ⟶ Copilot ⟶ LLMs.\n\n\n\nRead more: modelcontextprotocol.io"
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#github-copilot-anthropic-claude",
+    "href": "seminars/seminar-2026-02/slides.html#github-copilot-anthropic-claude",
+    "title": "GeoPov",
+    "section": "🤖 GitHub Copilot | Anthropic Claude",
+    "text": "🤖 GitHub Copilot | Anthropic Claude\n\n\nGitHub Copilot\n\n✅ WB-approved\n🌐 github.com/worldbank\n🤝 Uses Claude | GPT\n🔌 Integrates with IDEs\ngithub@worldbank.org\nAI @ WB: ai.worldbank.org\n\n\nChoose your LLM:\n\n🧠 Claude Sonnet/Haiku/Opus\n💡 OpenAI GPT-4/o1…\n\n\n\n\n\n\n\n\nSources: Anthropic Claude Sonnet 4.5"
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#efficient-prompting",
+    "href": "seminars/seminar-2026-02/slides.html#efficient-prompting",
+    "title": "GeoPov",
+    "section": "✍️ Efficient Prompting",
+    "text": "✍️ Efficient Prompting\n\n\n🎯 Be specific:\n“Write a Stata do-file to …” / “Refactor this R function to …”\n🧩 Provide context:\n“Goal: X; Dataset: Y variables; Constraints: Z (WB rules, packages, runtime)”\n📌 Define expected output:\n“Save as regression_results.xlsx, format as APA table” / “Create bar chart with 95% CIs”\n🔁 Summarize + clarify first:\n“Restate and ask clarifying questions before implementing”, “Explain why …”, “Give alternatives with trade-offs…”\n🪜 Iterate in small steps:\n“minimal changes”, “refine”\n🛑 Set boundaries:\n“Don’t use … data”, “Don’t print secrets, ask if in doubt.”, “Don’t change files”.\n\n\n\nTip: Treat the assistant as a collaborator."
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#limitations-and-remedies",
+    "href": "seminars/seminar-2026-02/slides.html#limitations-and-remedies",
+    "title": "GeoPov",
+    "section": "⚠️ Limitations and Remedies",
+    "text": "⚠️ Limitations and Remedies\n\n⚠︎ Wrong-but-plausible outputs / hallucinations: code runs but logic is wrong\n✓ Verify and validate: ask the model to explain and justify the solution\n⚠︎ Context limits: not all files/data are in context; too large projects.\n✓ Be explicit: state assumptions, expected inputs/outputs, and references\n⚠︎ Outdated knowledge: suggested APIs/packages/options may have changed\n✓ Teach the model: provide references/links; ask it to learn\n⚠︎ Over-reliance: erodes fundamentals; mistakes slip through unchallenged\n✓ Keep learning: ask for step-by-step reasoning; request alternatives and trade-offs\n⚠︎ Confidentiality / security / privacy\n✓ Constrain context: exclude sensitive data; use .copilot-ignore; AI @ WB\n⚠︎ Reproducibility: answers can vary across sessions/models/settings\n✓ Cutomize agents: save prompts, use Git; create AI agents\n\n\nRead more: GitHub Copilot Trust Center | AI @ WB: ai.worldbank.org"
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#summary",
+    "href": "seminars/seminar-2026-02/slides.html#summary",
+    "title": "GeoPov",
+    "section": "Summary",
+    "text": "Summary\n\nWhy use IDEs, not a web-browser-based workflow?\n\nContext-awareness\nStreamlined workflow\nReduced friction\n\n\n\nWhy Positron?\n\nBuilt for data science, not software development\nIntegrates with Stata, R, and Python seamlessly\nAdvanced AI features for data analysis"
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#where-to-start",
+    "href": "seminars/seminar-2026-02/slides.html#where-to-start",
+    "title": "GeoPov",
+    "section": "Where to Start?",
+    "text": "Where to Start?\n\n\nSetup the software: follow instructions\nReproduce demos:\n\nLive demo in Positron with Stata (recording) + Materials\nPosit Conf 2025 Postron assistant Demo in R and Python\n\nAsk AI’s help to learn.\nStep out of your comfort zone:\n\nlearn and experiment with new technologies: Git, GitHub, R, Python—they are there for a good reason!\n\nSee more slides with additional materials below."
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#live-demo-positron-ide-overview",
+    "href": "seminars/seminar-2026-02/slides.html#live-demo-positron-ide-overview",
+    "title": "GeoPov",
+    "section": "Live Demo: Positron IDE overview",
+    "text": "Live Demo: Positron IDE overview"
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#thank-you-questins",
+    "href": "seminars/seminar-2026-02/slides.html#thank-you-questins",
+    "title": "GeoPov",
+    "section": "Thank You! Questins?",
+    "text": "Thank You! Questins?\n\n\nResources & Source Code\n\nInternal seminar page\n🎥 Recording\nPositron + Stata: Live Demo (code)\nSlides and Supporting Materials\n\nSlides (web) + Slides (PDF)\n📚 Setup Instructions\n\nPresentation Source Code\nGeoPov learning resources\n\nContact: Distributional Impact of Policies poverty@worldbank.org"
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#software-setup-overview",
+    "href": "seminars/seminar-2026-02/slides.html#software-setup-overview",
+    "title": "GeoPov",
+    "section": "Software Setup Overview",
+    "text": "Software Setup Overview\n\n\n\n\n\n\nNote\n\n\nFull details: Setup Instructions\n\n\n\n\nInstall prerequisite software (via WB Software Center)\n\nStata 19+, R 4.5+, Python 3.13+, Quarto, Git\nInstall Python uv package: pip install uv\n\nInstall Positron IDE (system-level install): Request help from IT if needed\nInstall key extensions in Positron\n\nStata MCP, Quarto\n\nConnect GitHub and configure Positron Assistant\nStart experimenting!\n\nOpen assistant: Ctrl+Shift+P &gt; “Ask Positron Assistant”\nTry: chat, agent mode, inline code completion"
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#positron-ide-self-learning",
+    "href": "seminars/seminar-2026-02/slides.html#positron-ide-self-learning",
+    "title": "GeoPov",
+    "section": "Positron IDE: Self-learning",
+    "text": "Positron IDE: Self-learning\n\n\nPositron: Modern AI-native IDE for data science\n\nBuilt by Posit (creators of RStudio)\nSupports Stata, R, Python, and others\nWatch the introduction video →\nTry it yourself with examples in R and Python:\n\ngithub.com/posit-dev/posit-conf-2025-positron-assistant-demo"
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#positron-assistant",
+    "href": "seminars/seminar-2026-02/slides.html#positron-assistant",
+    "title": "GeoPov",
+    "section": "Positron: Assistant",
+    "text": "Positron: Assistant\n\n\nSource: positron.posit.co/features"
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#positron-data-explorer",
+    "href": "seminars/seminar-2026-02/slides.html#positron-data-explorer",
+    "title": "GeoPov",
+    "section": "Positron: Data explorer",
+    "text": "Positron: Data explorer"
+  },
+  {
+    "objectID": "seminars/seminar-2026-02/slides.html#positron-stata",
+    "href": "seminars/seminar-2026-02/slides.html#positron-stata",
+    "title": "GeoPov",
+    "section": "Positron + Stata",
+    "text": "Positron + Stata\n\n\nMake sure prerequisite software is installed (Stata, R, Positron)\nInstall Python after that the uv package: pip install uv\nInstall Stata MCP in Positron and configure Stata path and Edition\nCreate a new Stata do-file, write some code, save it and press run it."
+  },
+  {
+    "objectID": "seminars/index.html",
+    "href": "seminars/index.html",
+    "title": "GeoPov BBL Series",
+    "section": "",
+    "text": "This webinar series creates a platform for dialogue on how geospatial data can strengthen analysis and policy discussions aimed at reducing poverty and vulnerability. It has two main objectives:\n\nShowcasing impactful applications – highlighting country experiences and operational work where geospatial tools have improved poverty analysis, targeting, and decision-making. These cases illustrate models with potential for scaling up and replication in other contexts.\nSharing technical knowledge – presenting innovative geospatial data sources, tools, and methodologies relevant for economists and practitioners working at the country level, with a focus on practical skills.\n\nThrough these conversations, the series seeks to bridge the gap between cutting-edge technical innovations and their use in shaping policies that can make a measurable difference for the poorest and most vulnerable populations.\nSuggestions for future topics and speakers are warmly welcome – please reach out to Henry Stemmler (hstemmler@worldbank.org).",
+    "crumbs": [
+      "GeoPov BBL Series"
+    ]
+  },
+  {
+    "objectID": "seminars/index.html#about-the-geopov-series",
+    "href": "seminars/index.html#about-the-geopov-series",
+    "title": "GeoPov BBL Series",
+    "section": "",
+    "text": "This webinar series creates a platform for dialogue on how geospatial data can strengthen analysis and policy discussions aimed at reducing poverty and vulnerability. It has two main objectives:\n\nShowcasing impactful applications – highlighting country experiences and operational work where geospatial tools have improved poverty analysis, targeting, and decision-making. These cases illustrate models with potential for scaling up and replication in other contexts.\nSharing technical knowledge – presenting innovative geospatial data sources, tools, and methodologies relevant for economists and practitioners working at the country level, with a focus on practical skills.\n\nThrough these conversations, the series seeks to bridge the gap between cutting-edge technical innovations and their use in shaping policies that can make a measurable difference for the poorest and most vulnerable populations.\nSuggestions for future topics and speakers are warmly welcome – please reach out to Henry Stemmler (hstemmler@worldbank.org).",
+    "crumbs": [
+      "GeoPov BBL Series"
+    ]
+  },
+  {
+    "objectID": "seminars/index.html#past-talks-seminars-and-presentations",
+    "href": "seminars/index.html#past-talks-seminars-and-presentations",
+    "title": "GeoPov BBL Series",
+    "section": "Past talks, seminars, and presentations",
+    "text": "Past talks, seminars, and presentations",
+    "crumbs": [
+      "GeoPov BBL Series"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-06/overview.html#introduction",
+    "href": "seminars/seminar-2026-06/overview.html#introduction",
+    "title": "Fast & Big Data in R",
+    "section": "Introduction",
+    "text": "Introduction\nR is bounded by three fundamental constraints:\n\nFloating point arithmetic — .1 == .3 / 3 is FALSE\nRandom Access Memory (RAM) — all data operations require the full dataset in memory\nComputation speed — single-threaded code leaves most of the CPU idle\n\nThis session addresses the last two. The modern R toolkit largely solves both: new binary formats serialize data faster and smaller than ever, out-of-memory engines (Arrow, DuckDB) process files larger than RAM without loading them, and packages like collapse and data.table extract the full performance of modern multi-core hardware for in-memory work.\nThe session is split into two parts:",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Fast & Big Data in R"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-06/overview.html#part-1-serialization",
+    "href": "seminars/seminar-2026-06/overview.html#part-1-serialization",
+    "title": "Fast & Big Data in R",
+    "section": "Part 1 — Serialization",
+    "text": "Part 1 — Serialization\nGetting data in and out of R fast.\nWhen you need to cache results between sessions, share large files, or store data too large to keep in RAM, the choice of format matters enormously. Part 1 covers the full spectrum — from base R’s saveRDS() to columnar, compressed, cross-language formats — with benchmarks across 1k to 1M rows and a recommendations table to guide format selection.\nTopics covered:\n\nRDS and qs2 — binary R-native formats that preserve any R object exactly\nfst — columnar binary with random column/row access\nfwrite / fread (data.table) — fastest CSV for sharing with non-R users\nFeather and Parquet (Arrow) — columnar, cross-language, cloud-native\nDuckDB — embedded SQL database, reads Parquet, works larger-than-RAM\n\n→ Read Part 1: Data Serialization in R",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Fast & Big Data in R"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-06/overview.html#part-2-data-wrangling",
+    "href": "seminars/seminar-2026-06/overview.html#part-2-data-wrangling",
+    "title": "Fast & Big Data in R",
+    "section": "Part 2 — Data Wrangling",
+    "text": "Part 2 — Data Wrangling\nComputing on data fast — in RAM and beyond.\nOnce data is in memory, the choice of computation tool determines how fast the analysis runs. More importantly, some operations can stream over data without ever loading all of it into RAM; others must materialize entire columns or partitions. Part 2 explains the distinction and benchmarks the tools against each other.\nTopics covered:\n\ndplyr as the readability baseline\ndata.table and collapse for maximum in-memory speed\nArrow and DuckDB for filtering, aggregation, and joins larger-than-RAM\nWhich operations can stream out-of-memory (filter, sum, join) vs. which must materialize in RAM (exact median, window functions, global sort)\n\n→ Read Part 2: Fast Data Wrangling in R",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Fast & Big Data in R"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-06/data-wrangling.html",
+    "href": "seminars/seminar-2026-06/data-wrangling.html",
+    "title": "Fast Data Wrangling in R",
+    "section": "",
+    "text": "Note\n\n\n\nThis is Part 2 of Fast & Big Data in R. Part 1 was about getting data in and out of RAM — serialization (RDS, qs2, fst) and out-of-memory storage (Parquet/Arrow, DuckDB). This part is about computing on data: the fast R toolkit for wrangling, and which operations you can push out-of-memory versus which ones must be pulled into RAM.",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Fast & Big Data in R",
+      "Part 2 — Data Wrangling"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-06/data-wrangling.html#sec-fastverse",
+    "href": "seminars/seminar-2026-06/data-wrangling.html#sec-fastverse",
+    "title": "Fast Data Wrangling in R",
+    "section": "Where to start: the fast-R ecosystem",
+    "text": "Where to start: the fast-R ecosystem\nA good map of the high-performance R ecosystem is the fastverse — a meta-package (and a loose “verse”) that bundles and version-manages the packages built for speed through heavy use of compiled C/C++ code. Its four core packages are:\n\ndata.table — an enhanced data.frame with a terse dt[i, j, by] grammar: aggregation, update-by-reference, reshaping, (rolling) joins, and the fastest CSV reader/writer in R.\ncollapse — fast grouped and weighted statistical computations, time-series/panel transforms, joins and pivots, working on vectors, matrices, and data frames alike.\nkit — parallel row-wise statistics and vectorized switch/nif (the fast case_when).\nmagrittr — the pipe.\n\nThe fastverse positions these as performance-oriented complements to the tidyverse. For this seminar we treat dplyr as the readability baseline and compare four faster or bigger-than-RAM routes against it:\n\n\n\nTable 1: The five wrangling routes compared in this seminar\n\n\n\n\n\n\n\n\n\n\nTool\nLives where\nReach for it when…\n\n\n\n\ndplyr\nin RAM\nreadability is the priority; data fits comfortably\n\n\ndata.table\nin RAM\nyou want maximum in-memory speed and concise code\n\n\ncollapse\nin RAM\ngrouped/weighted statistics and panel data, composable with the above\n\n\nArrow / Parquet\non disk\ndata is larger than RAM and the work is filter + aggregate + join\n\n\nDuckDB\non disk\ndata is larger than RAM and you need full SQL, including windows and sorting",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Fast & Big Data in R",
+      "Part 2 — Data Wrangling"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-06/data-wrangling.html#sec-five-ways",
+    "href": "seminars/seminar-2026-06/data-wrangling.html#sec-five-ways",
+    "title": "Fast Data Wrangling in R",
+    "section": "The same job, five ways",
+    "text": "The same job, five ways\nTo make the starting points concrete, here is one small task — average income and record count by region, sorted — written in each tool. The data is the survey-like frame from Part 1 (region, country, year, income, employed, …).\n\ndplyr — the readability baseline\n\nlibrary(dplyr)\n\nsurvey |&gt;\n  group_by(region) |&gt;\n  summarise(avg_income = mean(income), n = n()) |&gt;\n  arrange(desc(avg_income))\n\n\nStart here: https://dplyr.tidyverse.org.\n\n\n\ndata.table — maximum in-memory speed\n\nlibrary(data.table)\nsetDT(survey)                 # convert in place, no copy\n\nsurvey[, .(avg_income = mean(income), n = .N), by = region][order(-avg_income)]\n\nThe [i, j, by] form reads as “rows i, compute j, grouped by by”, and chains with [...][...]. Updates can happen by reference (:=) with no copy.\n\nStart here: the Introduction to data.table vignette.\n\n\n\ncollapse — fast grouped statistics\n\nlibrary(collapse)\n\nsurvey |&gt;\n  fgroup_by(region) |&gt;\n  fsummarise(avg_income = fmean(income), n = fnobs(income)) |&gt;\n  roworder(-avg_income)\n\ncollapse exposes a family of f* functions (fmean, fsum, fmedian, fnobs, …) that are grouped-aware and vectorized in C++. It also plays nicely as a backend — e.g. fastplyr and timeplyr give a tidyverse-style API on top.\n\nStart here: https://sebkrantz.github.io/collapse/.\n\n\n\nArrow / Parquet — out-of-memory, on the fly\narrow lets you write dplyr against a Parquet file (or a folder of them) that is never fully loaded into RAM. The query is streamed over the file; only the small result is materialized when you call collect().\n\nlibrary(arrow)\nlibrary(dplyr)\n\nds &lt;- open_dataset(\"survey_parquet/\")   # a lazy view over files on disk\n\nds |&gt;\n  group_by(region) |&gt;\n  summarise(avg_income = mean(income), n = n()) |&gt;\n  arrange(desc(avg_income)) |&gt;\n  collect()                              # only the small summary enters RAM\n\n\nStart here: the Working with Arrow Datasets and dplyr vignette.\n\n\n\nDuckDB — out-of-memory SQL engine\nDuckDB is an embedded analytical database. It reads Parquet directly, spills to disk when data exceeds RAM, and speaks both SQL and dplyr.\n\nlibrary(duckdb)\nlibrary(dplyr)\n\ncon &lt;- dbConnect(duckdb())\n\n# Pure SQL — reads Parquet directly, larger-than-RAM\ndbGetQuery(con, \"\n  SELECT region, AVG(income) AS avg_income, COUNT(*) AS n\n  FROM read_parquet('survey_parquet/*.parquet')\n  GROUP BY region\n  ORDER BY avg_income DESC\n\")\n\n# …or the same query through dplyr, via a view\ndbExecute(con, \"CREATE VIEW survey AS\n                SELECT * FROM read_parquet('survey_parquet/*.parquet')\")\n\ntbl(con, \"survey\") |&gt;\n  group_by(region) |&gt;\n  summarise(avg_income = mean(income), n = n()) |&gt;\n  arrange(desc(avg_income)) |&gt;\n  collect()\n\ndbDisconnect(con, shutdown = TRUE)\n\n\nStart here: the DuckDB R API. For a zero-friction drop-in dplyr backend powered by DuckDB, see duckplyr.",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Fast & Big Data in R",
+      "Part 2 — Data Wrangling"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-06/data-wrangling.html#sec-taxonomy",
+    "href": "seminars/seminar-2026-06/data-wrangling.html#sec-taxonomy",
+    "title": "Fast Data Wrangling in R",
+    "section": "Not all wrangling is equal",
+    "text": "Not all wrangling is equal\nThe crucial idea for big data is that wrangling operations are not all the same kind of computation. Some can be done a chunk at a time and never need the whole dataset in memory; others need an entire column — or an entire group — present at once.\n\nStreaming (reducing) operations — easy to push out-of-memory\nThese work row-by-row or chunk-by-chunk, and partial results combine. An engine can stream the file past a fixed-size buffer and never hold it all:\n\nfilter / select — keep some rows / columns.\nmutate with ifelse, case_when/nif, arithmetic — each row is independent.\ngroup-by aggregation with combinable statistics — sum, count, min, max, mean (= sum ÷ count), var/sd (via sums of squares). A running total over chunks gives the right answer.\nequi-joins — hash or sort-merge, and the build side can spill to disk.\nmelt / pivot (reshape long ↔︎ wide) — mostly a re-mapping of cells.\n\nBecause these shrink the data and combine cleanly, both Arrow and DuckDB run them out-of-memory with ease.\n\n\nWhole-vector & window operations — must materialize in RAM\nThese need an entire column, or an entire partition, resident at once because the result of one element depends on the others:\n\nsorting the whole table (arrange) — a global order.\nexact median / quantiles — you must see every value of a group; they do not combine across chunks the way a sum does.\nwindow functions — lag/lead, cumsum/cumulative, rank, row_number, rolling windows — each needs ordered neighbours or a running state across the partition.\ndistinct over the whole table — needs global bookkeeping.\n\nThis is the limit the user runs into: a sum can be computed incrementally, but a median or a lag requires the whole vector in RAM. You either fit it in memory, or the engine must spill it to disk.\n\n\nWhat each engine does with them\n\n\n\nTable 2: Which engine can stay out-of-memory for which operation\n\n\n\n\n\n\n\n\n\n\n\nOperation\nCombines across chunks?\nArrow dataset (acero)\nDuckDB\n\n\n\n\nfilter, select\n✅\n✅ streams\n✅ streams\n\n\nmutate (ifelse, case_when)\n✅\n✅ streams\n✅ streams\n\n\ngroup-by sum/mean/count/min/max\n✅\n✅ streams\n✅ streams\n\n\nequi-join\n✅\n✅\n✅ spills to disk\n\n\nmelt / pivot\n✅\n⚠️ partial\n✅\n\n\narrange whole table\n❌\n❌ collect() first\n✅ out-of-core sort\n\n\nexact median / quantile\n❌\n❌ collect() first\n✅ (within groups)\n\n\nwindow: lag, cumsum, rank, rolling\n❌\n❌ collect() first\n✅ SQL window fns\n\n\n\n\n\n\nThe practical takeaways from Table 2:\n\nArrow implements the streaming bucket beautifully but hands the whole-vector bucket back to you — call collect() to bring (a now much smaller) result into RAM, then finish with collapse or data.table.\nDuckDB goes further: it has SQL window functions and out-of-core sort/aggregation that spill to disk, so it can do many whole-vector operations larger-than-RAM — at the cost of disk I/O.\nNeither escapes the fundamental rule: a median or a window needs its values present. The only question is whether they sit in RAM or spill to disk.\n\n\n\n\n\n\n\nNoteDuckDB’s window functions\n\n\n\nDuckDB implements the full SQL window-function family — ranking and positional functions such as row_number(), rank(), dense_rank(), lag(), lead(), first_value(), last_value(), nth_value(), ntile(), cume_dist() and percent_rank(), plus any aggregate (sum, avg, …) evaluated over an OVER (PARTITION BY … ORDER BY …) clause. These are precisely the whole-vector operations above: to evaluate them DuckDB must buffer each partition, which makes them its most memory-intensive workload — and, as Section 4.3 shows, the area it has optimised most aggressively. Full list and syntax: https://duckdb.org/docs/current/sql/functions/window_functions.\n\n\n\n\n\n\n\n\nTipThe pattern that scales\n\n\n\nPush the reducing operations out-of-memory first — filter → aggregate → join in Arrow or DuckDB — to shrink the data to something that fits in RAM. Then collect() and do the ordered / window work in-memory with collapse or data.table, which are the fastest tools once the data is small enough to hold.",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Fast & Big Data in R",
+      "Part 2 — Data Wrangling"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-06/data-wrangling.html#sec-benchmarks",
+    "href": "seminars/seminar-2026-06/data-wrangling.html#sec-benchmarks",
+    "title": "Fast Data Wrangling in R",
+    "section": "What the benchmarks say",
+    "text": "What the benchmarks say\nThree benchmarking sources are worth bookmarking. Treat all benchmarks as directional — exact numbers depend on hardware, data shape, cardinality, and versions — but the broad ordering is stable.\n\nReference suites\n\nfastverse — Benchmarks wiki — https://github.com/fastverse/fastverse/wiki/Benchmarks. A curated index of community benchmarks: collapse vs dplyr, collapse vs data.table joins, rolling-window functions, and collapse/arrow/data.table comparisons. Start here for the in-memory fast-R picture.\nAdrian Antico — Benchmarks — https://github.com/AdrianAntico/Benchmarks#background. Compares data.table, collapse, DuckDB (and Python’s Polars/Pandas) across eight operations — aggregation, melt, cast, windowing (lag), union, left/inner joins, and filtering — on realistic datasets from 1M to 1B rows. Useful for seeing how the ranking shifts as data grows.\nDuckDB Labs — Database-like ops benchmark — https://duckdblabs.github.io/db-benchmark/. The canonical group-by / join benchmark, run at 0.5 GB, 5 GB, and 50 GB, comparing DuckDB, data.table, dplyr, collapse, Arrow, Polars, Pandas, ClickHouse, Spark, and more.\n\n\n\ndb-benchmark at 5 GB: sum, median & join\nThe figures below are the group-by and join results at 5 GB (100 million rows) on a 16-core / 32 GB machine. They make the streaming-vs-whole-vector distinction from Section 3 visible: a plain sum is fast for nearly every tool, the median (which can’t combine across chunks) spreads the field out, and the join — the other workhorse database operation — shows how the engines cope when two large tables must be matched.\n\nSum (Query 1)Median (Query 6)Join (Query 1–5)\n\n\n\n\n\n\n\n\nFigure 1: db-benchmark group-by results at 5 GB (100M rows), basic question set. The top panel, q1: sum v1 by id1, is the simple sum benchmark; lower panels add more grouping keys and columns. Bars are seconds (shorter is faster); each solution reports a cold “first run” and a warm “second run”. A plain sum streams, so most engines finish quickly. Source: DuckDB Labs db-benchmark.\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: db-benchmark group-by results at 5 GB (100M rows), advanced question set. The top panel, q6: median v3, sd v3 by id4, id5, is the median benchmark. Because an exact median needs every value of each group in memory, it stresses the engines far more than a sum — and is where some solutions slow sharply, spill to disk, or fail. Source: DuckDB Labs db-benchmark.\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: db-benchmark join results at 5 GB (100M rows). Each panel is a different join — small, medium and big inner joins on integer keys, an outer join, and a join on a factor (string) key — matching the 100M-row left table against right-hand tables sized as fractions of it. Bars are seconds (shorter is faster), with a cold and a warm run. Joins stream and can spill to disk, so the out-of-memory engines (DuckDB, data.table) stay competitive even at 5 GB. Source: DuckDB Labs db-benchmark.\n\n\n\n\n\n\nFor the full matrix — other cardinalities, NA handling, pre-sorted data, and the 0.5 GB and 50 GB runs — see the live results at https://duckdblabs.github.io/db-benchmark/.\n\n\n\n\n\n\nNoteReading these the GeoPov way\n\n\n\nCompare Figure 1 and Figure 2 side by side. The sum is cheap and streamable, so the choice of tool barely matters — push it out-of-memory with Arrow or DuckDB and move on. The median is the expensive, whole-vector operation: here the engine and its memory strategy decide whether the job finishes in seconds, spills to disk, or runs out of memory. The join (Figure 3) sits in between — it streams and can spill, so DuckDB and data.table stay fast even at 5 GB. That is exactly the trade-off to plan for in larger-than-RAM poverty-data pipelines.\n\n\n\n\nDuckDB performance over time\nTo close, a look at how fast the out-of-memory engine itself is getting. DuckDB’s Benchmarks over time post tracks its own benchmark suite across three years of releases (v0.2.7 in June 2021 through v1.0 in June 2024): 3–25× faster overall, while handling roughly 10× larger datasets on the same hardware — the payoff of default multi-threading, parallel data loading, and larger-than-memory sort / aggregate / join / window support. Tellingly, the single biggest gain — about 25× — is in window functions, the hardest whole-vector workload from Section 3.\nAll of the interactive figures from that post are reproduced in the single tabset below, rendered live from DuckDB’s own published benchmark data. Switch workloads with the tabs; click a legend entry to hide a series, double-click to isolate it, and drag to zoom.\n\n\n\n\n\n\nFigure source. Every chart in this tabset is reproduced from DuckDB Labs, Benchmarks over time (26 June 2024, by Alex Monahan & Hannes Mühleisen), and is rendered directly from that article’s published benchmark data. © DuckDB Labs. See the original article for the full methodology, version history, and commentary.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOverall · timeOverall · time (rel.)Overall · versionOverall · version (rel.)CSV readerGroup byJoinWindowExportExport (vs others)Scan formatsScan (vs others)Scale\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFull article, methodology, and the original interactive charts: DuckDB — Benchmarks over time (26 June 2024).",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Fast & Big Data in R",
+      "Part 2 — Data Wrangling"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-06/data-wrangling.html#sec-read-more",
+    "href": "seminars/seminar-2026-06/data-wrangling.html#sec-read-more",
+    "title": "Fast Data Wrangling in R",
+    "section": "Read more",
+    "text": "Read more\n\nfastverse: https://fastverse.org/fastverse/\ndata.table: https://rdatatable.gitlab.io/data.table/\ncollapse: https://sebkrantz.github.io/collapse/\nArrow for R: https://arrow.apache.org/docs/r/\nDuckDB R API: https://duckdb.org/docs/api/r · duckplyr: https://duckplyr.tidyverse.org/",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Fast & Big Data in R",
+      "Part 2 — Data Wrangling"
+    ]
+  },
+  {
     "objectID": "WB-IGO-RIDER.html",
     "href": "WB-IGO-RIDER.html",
     "title": "GeoPov",
     "section": "",
     "text": "WORLD BANK IGO RIDER - PROCEDURAL TERMS\nWhere the Licensor is an intergovernmental organization (IGO), the following additional terms shall apply: 1. Privileges and Immunities Nothing in this License shall constitute or be interpreted as a waiver, express or implied, of any privileges and immunities that apply to the Licensor pursuant to international law, treaties, or the Licensor’s constituent documents, including immunity from jurisdiction and execution. 2. Dispute Resolution Any dispute arising under this License that involves the Licensor shall be resolved, to the extent not settled amicably, through the following procedures: - First, by non-binding mediation conducted in accordance with rules designated by the Licensor, or, if none, the UNCITRAL Mediation Rules; - Failing settlement within 45 days, by final and binding arbitration in accordance with the UNCITRAL Arbitration Rules then in force, by a sole arbitrator, conducted in English, seated at the Licensor’s headquarters, and conducted remotely when practicable. 3. Interpretation under International Law This License shall be interpreted in accordance with general principles of international law, including those reflected in the Berne Convention (1971), the WIPO Copyright Treaty (1996), and the Universal Copyright Convention (1971). No provision shall be interpreted in a manner that derogates from the legal status of the Licensor under international law. 4. No Waiver No provision of this License shall be deemed waived and no breach consented to unless expressly agreed in writing and signed by the Licensor. 5. No Ongoing Support or Maintenance Nothing in this License shall be construed to create an obligation on the part of the Licensor to provide updates, maintenance, support or any form of continued service for the software once released. 6. Entire Agreement This License constitutes the entire agreement between the Licensee and the Licensor concerning the Work and supersedes any additional terms submitted by You. No modification shall be effective unless agreed in writing by both parties. 7. Severability If any provision of this License is held to be unenforceable, it shall be interpreted to give effect to its purpose to the extent permitted by applicable law, and the remainder of the License shall remain in full force and effect. 8. Precedence In the event of any inconsistency between these Additional Terms for IGOs and the terms of the MIT License, these Additional Terms for IGOs shall prevail."
+  },
+  {
+    "objectID": "team/ben-brunckhorst.html",
+    "href": "team/ben-brunckhorst.html",
+    "title": "Ben Brunckhorst",
+    "section": "",
+    "text": "Ben Brunckhorst is a research analyst at the World Bank, where he contributes to the understanding of economic development and policy impact through interdisciplinary work spanning economics, climate change, and data science. He supports global welfare monitoring efforts with a particular focus on subnational spatial disparities in poverty and inequality. With a strong background in development economics and engineering, he utilizes tools such as R and Python to analyze large datasets and extract meaningful insights. His research has been published in academic journals and World Bank reports, and covered by the New York Times.",
+    "crumbs": [
+      "Team",
+      "Ben Brunckhorst"
+    ]
+  },
+  {
+    "objectID": "team/ben-brunckhorst.html#bio",
+    "href": "team/ben-brunckhorst.html#bio",
+    "title": "Ben Brunckhorst",
+    "section": "",
+    "text": "Ben Brunckhorst is a research analyst at the World Bank, where he contributes to the understanding of economic development and policy impact through interdisciplinary work spanning economics, climate change, and data science. He supports global welfare monitoring efforts with a particular focus on subnational spatial disparities in poverty and inequality. With a strong background in development economics and engineering, he utilizes tools such as R and Python to analyze large datasets and extract meaningful insights. His research has been published in academic journals and World Bank reports, and covered by the New York Times.",
+    "crumbs": [
+      "Team",
+      "Ben Brunckhorst"
+    ]
+  },
+  {
+    "objectID": "team/henry-stemmler.html",
+    "href": "team/henry-stemmler.html",
+    "title": "Henry Stemmler",
+    "section": "",
+    "text": "An Economist by training, Henry Stemmler works on poverty analysis and geospatial analytics at the World Bank. His current work explores how spatial factors shape labor market outcomes and welfare in developing countries, with a particular interest in urban job accessibility and the geographic dimensions of poverty.\nHe has co-authored World Bank flagship reports including the Poverty, Prosperity and Planet Report, and his work has appeared in journals such as the Economic Journal, Journal of Development Economics, World Development, and Food Policy. He holds a PhD in Economics from the University of Göttingen and previously worked as a postdoctoral researcher at ETH Zürich and as an Economist at the International Labor Organization.",
+    "crumbs": [
+      "Team",
+      "Henry Stemmler"
+    ]
+  },
+  {
+    "objectID": "team/henry-stemmler.html#bio",
+    "href": "team/henry-stemmler.html#bio",
+    "title": "Henry Stemmler",
+    "section": "",
+    "text": "An Economist by training, Henry Stemmler works on poverty analysis and geospatial analytics at the World Bank. His current work explores how spatial factors shape labor market outcomes and welfare in developing countries, with a particular interest in urban job accessibility and the geographic dimensions of poverty.\nHe has co-authored World Bank flagship reports including the Poverty, Prosperity and Planet Report, and his work has appeared in journals such as the Economic Journal, Journal of Development Economics, World Development, and Food Policy. He holds a PhD in Economics from the University of Göttingen and previously worked as a postdoctoral researcher at ETH Zürich and as an Economist at the International Labor Organization.",
+    "crumbs": [
+      "Team",
+      "Henry Stemmler"
+    ]
   },
   {
     "objectID": "team/maria-davalos.html",
@@ -102,11 +713,188 @@
     ]
   },
   {
-    "objectID": "seminars/seminar-2026-02/redme.html",
-    "href": "seminars/seminar-2026-02/redme.html",
-    "title": "GeoPov",
+    "objectID": "team/eduard-bukin.html",
+    "href": "team/eduard-bukin.html",
+    "title": "Eduard Bukin",
     "section": "",
-    "text": "IFrame background https://github.com/EmilHvitfeldt/quarto-iframe-examples"
+    "text": "Eduard Bukin is an experienced economist, data scientist, and statistician spending the last decade at the World Bank, UN, and academia. His career has focused on econometrics, economic research, microeconomics, and statistics, with a strong emphasis on empowering non-specialists to extract insights from complex datasets and effectively communicate analyses through interactive web tools, and artificial intelligence.\nKey technical expertise lies in use of the modern data science technologies and programming languages such as R, Python, STATA, and GIS tools. He holds a Master’s degree in Rural Development from Ghent University and pursues a Ph.D. in Agricultural Economics from Justus Liebig University Giessen.\nHis research focuses on land and agricultural economics in transitional countries, such as Ukraine and Kazakhstan as well as on economic modelling of trade and climate policies impacts on welfare in developing countries. His work has contributed to several peer-reviewed publications published in the Land Use Policy Journal, Environmental Research Letters, Environmental and Resource Economics and other academic outlets as well as World Bank reports, Food and Agriculture Organization (FAO) publications, and internal documents.",
+    "crumbs": [
+      "Team",
+      "Eduard Bukin"
+    ]
+  },
+  {
+    "objectID": "team/eduard-bukin.html#bio",
+    "href": "team/eduard-bukin.html#bio",
+    "title": "Eduard Bukin",
+    "section": "",
+    "text": "Eduard Bukin is an experienced economist, data scientist, and statistician spending the last decade at the World Bank, UN, and academia. His career has focused on econometrics, economic research, microeconomics, and statistics, with a strong emphasis on empowering non-specialists to extract insights from complex datasets and effectively communicate analyses through interactive web tools, and artificial intelligence.\nKey technical expertise lies in use of the modern data science technologies and programming languages such as R, Python, STATA, and GIS tools. He holds a Master’s degree in Rural Development from Ghent University and pursues a Ph.D. in Agricultural Economics from Justus Liebig University Giessen.\nHis research focuses on land and agricultural economics in transitional countries, such as Ukraine and Kazakhstan as well as on economic modelling of trade and climate policies impacts on welfare in developing countries. His work has contributed to several peer-reviewed publications published in the Land Use Policy Journal, Environmental Research Letters, Environmental and Resource Economics and other academic outlets as well as World Bank reports, Food and Agriculture Organization (FAO) publications, and internal documents.",
+    "crumbs": [
+      "Team",
+      "Eduard Bukin"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-06/serialization.html",
+    "href": "seminars/seminar-2026-06/serialization.html",
+    "title": "Part 1 — Data Serialization in R",
+    "section": "",
+    "text": "Do not expect to write data to a file (such as with write.table), read the data back into R and have that be precisely the same as the original. That is doing two translations, and there is often something lost in translation.\n— Burns, P. (2011). The R Inferno (§ 8.3.10, p 105). burns-stat.com.\n\n\nSerialization converts an R object into a byte stream for storage or transmission, then reconstructs it exactly. Unlike text formats (CSV), which convert data to characters and discard type information, binary serialization preserves the complete object: column types, factor levels, class attributes, and custom metadata.",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Fast & Big Data in R",
+      "Part 1 — Serialization"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-06/serialization.html#what-is-serialization",
+    "href": "seminars/seminar-2026-06/serialization.html#what-is-serialization",
+    "title": "Part 1 — Data Serialization in R",
+    "section": "",
+    "text": "Do not expect to write data to a file (such as with write.table), read the data back into R and have that be precisely the same as the original. That is doing two translations, and there is often something lost in translation.\n— Burns, P. (2011). The R Inferno (§ 8.3.10, p 105). burns-stat.com.\n\n\nSerialization converts an R object into a byte stream for storage or transmission, then reconstructs it exactly. Unlike text formats (CSV), which convert data to characters and discard type information, binary serialization preserves the complete object: column types, factor levels, class attributes, and custom metadata.",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Fast & Big Data in R",
+      "Part 1 — Serialization"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-06/serialization.html#rs-serialization-toolkit",
+    "href": "seminars/seminar-2026-06/serialization.html#rs-serialization-toolkit",
+    "title": "Part 1 — Data Serialization in R",
+    "section": "R’s Serialization Toolkit",
+    "text": "R’s Serialization Toolkit\nSeven approaches cover most use cases, grouped by storage strategy.\n\nBinary R-native\nStore any R object as bytes; reconstruct exactly with no post-processing.\n\n\n\n\n\n\n\n\nPackage\nWrite / Read\nNotes\n\n\n\n\nbase R\nsaveRDS() / readRDS()\nAny R object; gzip/bzip2/xz compression; single-threaded\n\n\nqs2\nqs_save() / qs_read()\nAny R object; zstd/lz4; multi-threaded — 5–10× faster than saveRDS\n\n\nfst\nwrite_fst() / read_fst()\nData frames only; LZ4/ZSTD; multi-threaded; random column/row access\n\n\n\n\n\nText-based\nConvert data to human-readable text; type information is lost and must be inferred on read.\n\n\n\n\n\n\n\n\nPackage\nWrite / Read\nNotes\n\n\n\n\nbase R\nwrite.csv() / read.csv()\nPortable; slow; single-threaded\n\n\ndata.table\nfwrite() / fread()\nSame format; 10–100× faster; smart type inference\n\n\n\n\n\nCross-platform binary\nUse C++ libraries (Apache Arrow, DuckDB) to access R memory directly — zero-copy where possible, language-agnostic output.\n\n\n\n\n\n\n\n\nPackage\nWrite / Read\nNotes\n\n\n\n\narrow\nwrite_feather() / read_feather()\nArrow columnar format; fastest I/O; largest files\n\n\narrow\nwrite_parquet() / read_parquet()\nColumnar with compression; column/row selection; cloud-native\n\n\nduckdb\ndbWriteTable() / dbReadTable()\nEmbedded SQL database; larger-than-RAM support",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Fast & Big Data in R",
+      "Part 1 — Serialization"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-06/serialization.html#native-r-serialization-in-practice",
+    "href": "seminars/seminar-2026-06/serialization.html#native-r-serialization-in-practice",
+    "title": "Part 1 — Data Serialization in R",
+    "section": "Native R Serialization in Practice",
+    "text": "Native R Serialization in Practice\n\nBasic usage\n\ndf &lt;- data.frame(\n  id    = 1:3,\n  name  = c(\"Alice\", \"Bob\", \"Charlie\"),\n  score = c(95.5, 87.3, 92.1)\n)\nsaveRDS(df, \"temp_df.rds\")\ndf_restored &lt;- readRDS(\"temp_df.rds\")\nidentical(df, df_restored)\n\n[1] TRUE\n\n\n\n\nFormat and compression options\n\n# Format version 3 supports ALTREP (e.g. 1:1000000 stored as a range, not all ints)\nsaveRDS(df, \"temp_v2.rds\", version = 2)\nsaveRDS(df, \"temp_v3.rds\", version = 3)\ncat(\"Version 2:\", file.size(\"temp_v2.rds\"), \"bytes\\n\")\ncat(\"Version 3:\", file.size(\"temp_v3.rds\"), \"bytes\\n\")\n\n# Compression: FALSE = fastest write; \"xz\" = smallest file\nlarge_df &lt;- data.frame(x = rep(1:100, 100), y = rnorm(10000),\n                       z = sample(letters, 10000, replace = TRUE))\nsaveRDS(large_df, \"temp_none.rds\",  compress = FALSE)\nsaveRDS(large_df, \"temp_gzip.rds\",  compress = \"gzip\")\nsaveRDS(large_df, \"temp_bzip2.rds\", compress = \"bzip2\")\nsaveRDS(large_df, \"temp_xz.rds\",   compress = \"xz\")\ncat(\"No compression:\", file.size(\"temp_none.rds\"),  \"bytes\\n\")\ncat(\"gzip:          \", file.size(\"temp_gzip.rds\"),  \"bytes\\n\")\ncat(\"bzip2:         \", file.size(\"temp_bzip2.rds\"), \"bytes\\n\")\ncat(\"xz:            \", file.size(\"temp_xz.rds\"),   \"bytes\\n\")\n\nVersion 2: 169 bytes\nVersion 3: 217 bytes\nNo compression: 210203 bytes\ngzip:           89287 bytes\nbzip2:          85597 bytes\nxz:             85008 bytes\n\n\n\n\nBinary vs text encoding\n\nraw_bytes   &lt;- serialize(df, connection = NULL)\nascii_bytes &lt;- serialize(df, connection = NULL, ascii = TRUE)\nhead(raw_bytes,   16)\nhead(ascii_bytes, 16)\ncat(\"Binary:\", length(raw_bytes),   \"bytes\\n\")\ncat(\"ASCII: \", length(ascii_bytes), \"bytes\\n\")\n\n [1] 58 0a 00 00 00 03 00 04 05 03 00 03 05 00 00 00\n [1] 41 0a 33 0a 32 36 33 34 32 37 0a 31 39 37 38 38\nBinary: 376 bytes\nASCII:  352 bytes\n\n\n\n\nAttributes and types are preserved\n\n# Custom attributes and subclasses survive round-trips\ndf_special &lt;- df\nattr(df_special, \"created_date\") &lt;- Sys.Date()\nattr(df_special, \"source\") &lt;- \"example data\"\nclass(df_special) &lt;- c(\"my_special_df\", \"data.frame\")\nsaveRDS(df_special, \"temp_special.rds\")\nattributes(readRDS(\"temp_special.rds\"))\n\n# All column types are preserved exactly\ndf_types &lt;- data.frame(\n  int_col  = 1:3,\n  dbl_col  = c(1.1, 2.2, 3.3),\n  chr_col  = c(\"a\", \"b\", \"c\"),\n  fct_col  = factor(c(\"low\", \"high\", \"medium\")),\n  date_col = as.Date(c(\"2026-01-01\", \"2026-01-02\", \"2026-01-03\")),\n  stringsAsFactors = FALSE\n)\nsaveRDS(df_types, \"temp_types.rds\")\nstr(df_types)\nstr(readRDS(\"temp_types.rds\"))\n\n$names\n[1] \"id\"    \"name\"  \"score\"\n\n$class\n[1] \"my_special_df\" \"data.frame\"   \n\n$row.names\n[1] 1 2 3\n\n$created_date\n[1] \"2026-06-02\"\n\n$source\n[1] \"example data\"\n\n'data.frame':   3 obs. of  5 variables:\n $ int_col : int  1 2 3\n $ dbl_col : num  1.1 2.2 3.3\n $ chr_col : chr  \"a\" \"b\" \"c\"\n $ fct_col : Factor w/ 3 levels \"high\",\"low\",\"medium\": 2 1 3\n $ date_col: Date, format: \"2026-01-01\" \"2026-01-02\" ...\n'data.frame':   3 obs. of  5 variables:\n $ int_col : int  1 2 3\n $ dbl_col : num  1.1 2.2 3.3\n $ chr_col : chr  \"a\" \"b\" \"c\"\n $ fct_col : Factor w/ 3 levels \"high\",\"low\",\"medium\": 2 1 3\n $ date_col: Date, format: \"2026-01-01\" \"2026-01-02\" ...",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Fast & Big Data in R",
+      "Part 1 — Serialization"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-06/serialization.html#format-deep-dives",
+    "href": "seminars/seminar-2026-06/serialization.html#format-deep-dives",
+    "title": "Part 1 — Data Serialization in R",
+    "section": "Format Deep Dives",
+    "text": "Format Deep Dives\n\nqs2 — fast serialization of any R object\nThe qs2 package stores any R object (data frames, models, lists, environments) with multi-threaded zstd/lz4 compression — typically 5–10× faster than saveRDS().\n\nlibrary(qs2)\n\nqs_save(large_data, \"data.qs2\")                  # uses all available cores\nqs_save(large_data, \"data.qs2\", nthreads = 4)    # or specify explicitly\nqs2::qs_threads()                                 # check active thread count\n\n# Save a complete analysis workspace — models, predictions, fitted objects\nanalysis_state &lt;- list(\n  model       = trained_rf_model,\n  predictions = pred_results,\n  metrics     = performance_metrics,\n  metadata    = list(timestamp = Sys.time(), r_version = R.version.string)\n)\nqs_save(analysis_state, \"analysis_cache.qs2\")\nanalysis_state &lt;- qs_read(\"analysis_cache.qs2\")   # restore in one call\n\n\n\nfst — columnar binary with random access\nfst stores data frames in a columnar format that supports partial reads without a full scan — useful when working with wide data frames or large files where you only need a subset of columns or a row range.\n\nlibrary(fst)\n\nwrite_fst(df, \"data.fst\", compress = 50)    # 0 = fastest write; 100 = smallest file\n\ndf_full    &lt;- read_fst(\"data.fst\")                                         # everything\ndf_cols    &lt;- read_fst(\"data.fst\", columns = c(\"region\", \"income\"))        # columns only\ndf_rows    &lt;- read_fst(\"data.fst\", from = 1000, to = 5000)                 # row range\ndf_partial &lt;- read_fst(\"data.fst\", columns = c(\"region\", \"income\"),\n                       from = 1000, to = 5000)                             # both\n\nCompression and I/O happen on background threads, so fst can write faster than disk speed — compression and disk writes overlap.\n\n\nArrow Parquet — columnar analytics format\nParquet is the standard format for analytical workloads: compressed, columnar, and readable by Python, Spark, BigQuery, DuckDB, and many other tools without conversion.\n\nlibrary(arrow)\nlibrary(dplyr)\n\n# Write and read\nwrite_parquet(data_100k, \"survey.parquet\")\nread_parquet(\"survey.parquet\")\nread_parquet(\"survey.parquet\", col_select = c(\"id\", \"region\", \"income\"))\n\n# Compression options\nwrite_parquet(data_100k, \"fast.parquet\",       compression = \"snappy\")     # faster\nwrite_parquet(data_100k, \"small.parquet\",      compression = \"zstd\",\n              compression_level = 9)                                        # smaller\n\n# Partitioned dataset — splits into region=/year= directory tree\nwrite_dataset(data_100k, path = \"survey_parts\", partitioning = c(\"region\", \"year\"))\nds &lt;- open_dataset(\"survey_parts\")\n\n# Filter + aggregate without loading the full file — only matching partitions are read\nds |&gt;\n  filter(region == \"A\", year &gt;= 2023) |&gt;\n  group_by(country) |&gt;\n  summarise(avg_income = mean(income), n = n()) |&gt;\n  collect()\n\nReplace the local path with \"s3://bucket/prefix/\" or an HTTPS URL and the same code reads from cloud storage — only the requested columns and row groups are downloaded.\n\n\nDuckDB — embedded analytical database\nDuckDB runs as an in-process library (no server), speaks SQL and dplyr, reads Parquet directly, and spills to disk automatically when data exceeds RAM.\n\nlibrary(duckdb)\nlibrary(dplyr)\n\ncon &lt;- dbConnect(duckdb())              # in-memory\ncon &lt;- dbConnect(duckdb(), \"data.duckdb\")  # persistent file\n\n# Write R data frame into DuckDB\ndbWriteTable(con, \"survey\", data_100k)\n\n# SQL query\ndbGetQuery(con, \"\n  SELECT region, AVG(income) AS avg_income, COUNT(*) AS n\n  FROM survey WHERE employed = TRUE\n  GROUP BY region ORDER BY avg_income DESC\n\")\n\n# Same query via dplyr\ntbl(con, \"survey\") |&gt;\n  filter(employed) |&gt;\n  group_by(region) |&gt;\n  summarise(avg_income = mean(income), n = n()) |&gt;\n  arrange(desc(avg_income)) |&gt;\n  collect()\n\n# Query Parquet directly — no import step\ndbGetQuery(con, \"\n  SELECT region, year, AVG(income) AS avg_income\n  FROM read_parquet('survey_parts/**/*.parquet')\n  WHERE year &gt;= 2023\n  GROUP BY region, year\n\")\n\ndbDisconnect(con, shutdown = TRUE)",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Fast & Big Data in R",
+      "Part 1 — Serialization"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-06/serialization.html#benchmarking",
+    "href": "seminars/seminar-2026-06/serialization.html#benchmarking",
+    "title": "Part 1 — Data Serialization in R",
+    "section": "Benchmarking",
+    "text": "Benchmarking\n\nlibrary(tidyverse)\nlibrary(data.table)\nlibrary(fst)\nlibrary(qs2)\nlibrary(arrow)\nlibrary(duckdb)\n\nset.seed(7892)\n\ngenerate_test_data &lt;- function(n_rows) {\n  data.frame(\n    id          = 1:n_rows,\n    region      = factor(sample(LETTERS[1:5], n_rows, replace = TRUE)),\n    country     = sample(c(\"Kenya\", \"Uganda\", \"Tanzania\", \"Rwanda\", \"Burundi\",\n                           \"Ethiopia\", \"Somalia\", \"Sudan\", \"Chad\", \"Niger\",\n                           \"Nigeria\", \"Ghana\", \"Senegal\", \"Mali\", \"Burkina Faso\",\n                           \"Benin\", \"Togo\", \"Cameroon\", \"Congo\", \"DRC\"),\n                         n_rows, replace = TRUE),\n    year        = sample(2020:2025, n_rows, replace = TRUE),\n    income      = rlnorm(n_rows, meanlog = 8, sdlog = 1.5),\n    employed    = sample(c(TRUE, FALSE), n_rows, replace = TRUE, prob = c(0.6, 0.4)),\n    survey_date = as.Date(\"2020-01-01\") + sample(0:2000, n_rows, replace = TRUE),\n    notes       = sample(c(\"Complete\", \"Partial\", \"Missing data\", NA, \"Verified\",\n                           \"Pending review\", \"Approved\"), n_rows, replace = TRUE)\n  )\n}\n\ndata_1k   &lt;- generate_test_data(1e3)\ndata_10k  &lt;- generate_test_data(1e4)\ndata_100k &lt;- generate_test_data(1e5)\ndata_1m   &lt;- generate_test_data(1e6)\n\ndata.frame(\n  Dataset       = c(\"1k rows\", \"10k rows\", \"100k rows\", \"1M rows\"),\n  `Size in RAM` = c(\n    format(object.size(data_1k),   units = \"MB\"),\n    format(object.size(data_10k),  units = \"MB\"),\n    format(object.size(data_100k), units = \"MB\"),\n    format(object.size(data_1m),   units = \"MB\")\n  ),\n  check.names = FALSE\n) |&gt; knitr::kable(caption = \"Dataset sizes in memory\")\n\n\nDataset sizes in memory\n\n\nDataset\nSize in RAM\n\n\n\n\n1k rows\n0 Mb\n\n\n10k rows\n0.5 Mb\n\n\n100k rows\n4.6 Mb\n\n\n1M rows\n45.8 Mb\n\n\n\n\n\nThe Write/Read RAM (MB) columns report the additional R-heap memory allocated at the peak of a single operation, measured with gc(). Arrow (feather/parquet) and DuckDB manage large allocations in C++ off the R heap, so their R-side figures understate true peak usage.\n\n1M Rows100k Rows10k Rows1k Rows\n\n\n\nbench_dir &lt;- tempfile(); dir.create(bench_dir)\n\nresults_1m &lt;- list(\n  saveRDS    = bench_write_read(data_1m, function(d,f) saveRDS(d,f), readRDS,     \"test.rds\",     n_rep = 5),\n  qs2        = bench_write_read(data_1m, qs_save,                    qs_read,      \"test.qs2\",     n_rep = 5),\n  fst        = bench_write_read(data_1m, write_fst,                  read_fst,     \"test.fst\",     n_rep = 5),\n  data.table = bench_write_read(data_1m, fwrite,                     fread,        \"test.csv\",     n_rep = 5),\n  feather    = bench_write_read(data_1m, write_feather,              read_feather, \"test.feather\", n_rep = 5),\n  parquet    = bench_write_read(data_1m, write_parquet,              read_parquet, \"test.parquet\", n_rep = 5)\n)\nresults_1m$duckdb &lt;- bench_duckdb(data_1m, n_rep = 5)\n\nknitr::kable(results_table(results_1m), caption = \"Performance comparison — 1M rows\")\n\n\nPerformance comparison — 1M rows\n\n\n\n\n\n\n\n\n\n\nMethod\nWrite (ms)\nWrite RAM (MB)\nRead (ms)\nRead RAM (MB)\nFile Size (MB)\n\n\n\n\nsaveRDS\n4471.9\n0.0\n735.8\n41.9\n12.26\n\n\nqs2\n425.2\n0.0\n214.1\n42.0\n12.60\n\n\nfst\n157.3\n0.0\n128.4\n45.8\n25.91\n\n\ndata.table\n77.6\n0.0\n150.7\n53.5\n61.39\n\n\nfeather\n251.5\n0.9\n41.0\n12.5\n27.98\n\n\nparquet\n817.3\n1.5\n219.7\n12.7\n15.48\n\n\nduckdb\n800.8\n16.7\n126.4\n46.3\n20.76\n\n\n\n\nunlink(bench_dir, recursive = TRUE)\n\n\n\n\nbench_dir &lt;- tempfile(); dir.create(bench_dir)\n\nresults_100k &lt;- list(\n  saveRDS    = bench_write_read(data_100k, function(d,f) saveRDS(d,f), readRDS,     \"test.rds\"),\n  qs2        = bench_write_read(data_100k, qs_save,                    qs_read,      \"test.qs2\"),\n  fst        = bench_write_read(data_100k, write_fst,                  read_fst,     \"test.fst\"),\n  data.table = bench_write_read(data_100k, fwrite,                     fread,        \"test.csv\"),\n  feather    = bench_write_read(data_100k, write_feather,              read_feather, \"test.feather\"),\n  parquet    = bench_write_read(data_100k, write_parquet,              read_parquet, \"test.parquet\")\n)\nresults_100k$duckdb &lt;- bench_duckdb(data_100k)\n\nknitr::kable(results_table(results_100k), caption = \"Performance comparison — 100k rows\")\n\n\nPerformance comparison — 100k rows\n\n\n\n\n\n\n\n\n\n\nMethod\nWrite (ms)\nWrite RAM (MB)\nRead (ms)\nRead RAM (MB)\nFile Size (MB)\n\n\n\n\nsaveRDS\n298.5\n0.0\n46.0\n4.2\n1.25\n\n\nqs2\n51.4\n0.1\n19.4\n4.2\n1.27\n\n\nfst\n35.7\n0.0\n16.0\n4.6\n2.59\n\n\ndata.table\n28.5\n0.0\n19.0\n5.5\n6.04\n\n\nfeather\n30.3\n0.9\n5.7\n2.1\n2.80\n\n\nparquet\n65.2\n1.5\n17.0\n2.4\n1.86\n\n\nduckdb\n67.5\n13.3\n12.5\n5.0\n2.76\n\n\n\n\nunlink(bench_dir, recursive = TRUE)\n\n\n\n\nbench_dir &lt;- tempfile(); dir.create(bench_dir)\n\nresults_10k &lt;- list(\n  saveRDS    = bench_write_read(data_10k, function(d,f) saveRDS(d,f), readRDS,     \"test.rds\"),\n  qs2        = bench_write_read(data_10k, qs_save,                    qs_read,      \"test.qs2\"),\n  fst        = bench_write_read(data_10k, write_fst,                  read_fst,     \"test.fst\"),\n  data.table = bench_write_read(data_10k, fwrite,                     fread,        \"test.csv\"),\n  feather    = bench_write_read(data_10k, write_feather,              read_feather, \"test.feather\"),\n  parquet    = bench_write_read(data_10k, write_parquet,              read_parquet, \"test.parquet\")\n)\nresults_10k$duckdb &lt;- bench_duckdb(data_10k)\n\nknitr::kable(results_table(results_10k), caption = \"Performance comparison — 10k rows\")\n\n\nPerformance comparison — 10k rows\n\n\n\n\n\n\n\n\n\n\nMethod\nWrite (ms)\nWrite RAM (MB)\nRead (ms)\nRead RAM (MB)\nFile Size (MB)\n\n\n\n\nsaveRDS\n41.0\n0.1\n7.4\n0.5\n0.13\n\n\nqs2\n27.7\n0.1\n3.9\n0.5\n0.15\n\n\nfst\n27.5\n0.0\n4.8\n0.4\n0.26\n\n\ndata.table\n22.2\n0.1\n5.3\n0.6\n0.59\n\n\nfeather\n22.4\n0.8\n5.5\n1.1\n0.30\n\n\nparquet\n35.1\n1.4\n10.4\n1.3\n0.19\n\n\nduckdb\n53.7\n13.0\n3.8\n0.9\n0.01\n\n\n\n\nunlink(bench_dir, recursive = TRUE)\n\n\n\n\nbench_dir &lt;- tempfile(); dir.create(bench_dir)\n\nresults_1k &lt;- list(\n  saveRDS    = bench_write_read(data_1k, function(d,f) saveRDS(d,f), readRDS,     \"test.rds\"),\n  qs2        = bench_write_read(data_1k, qs_save,                    qs_read,      \"test.qs2\"),\n  fst        = bench_write_read(data_1k, write_fst,                  read_fst,     \"test.fst\"),\n  data.table = bench_write_read(data_1k, fwrite,                     fread,        \"test.csv\"),\n  feather    = bench_write_read(data_1k, write_feather,              read_feather, \"test.feather\"),\n  parquet    = bench_write_read(data_1k, write_parquet,              read_parquet, \"test.parquet\")\n)\nresults_1k$duckdb &lt;- bench_duckdb(data_1k)\n\nknitr::kable(results_table(results_1k), caption = \"Performance comparison — 1k rows\")\n\n\nPerformance comparison — 1k rows\n\n\n\n\n\n\n\n\n\n\nMethod\nWrite (ms)\nWrite RAM (MB)\nRead (ms)\nRead RAM (MB)\nFile Size (MB)\n\n\n\n\nsaveRDS\n19.5\n0.0\n3.9\n0.0\n0.01\n\n\nqs2\n20.6\n0.0\n2.2\n0.0\n0.02\n\n\nfst\n26.2\n0.0\n2.9\n0.0\n0.03\n\n\ndata.table\n27.5\n0.1\n4.6\n0.2\n0.06\n\n\nfeather\n20.9\n0.8\n5.0\n1.0\n0.03\n\n\nparquet\n24.8\n1.4\n5.2\n1.2\n0.02\n\n\nduckdb\n38.8\n13.0\n1.4\n0.5\n0.01\n\n\n\n\nunlink(bench_dir, recursive = TRUE)",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Fast & Big Data in R",
+      "Part 1 — Serialization"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-06/serialization.html#summary-recommendations",
+    "href": "seminars/seminar-2026-06/serialization.html#summary-recommendations",
+    "title": "Part 1 — Data Serialization in R",
+    "section": "Summary & Recommendations",
+    "text": "Summary & Recommendations\nChoose based on your primary use case. Rows are properties; columns are tools.\n\n\n\nTable 1: Format comparison across key properties\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nsaveRDS\nqs2\nfst\nfwrite / fread\nfeather\nparquet\nDuckDB\n\n\n\n\nWrite speed\nslow\nfast\nfast\nfast\nfastest\nmoderate\nmoderate\n\n\nRead speed\nslow\nfast\nfastest\nfast\nfastest\nfast\nmoderate\n\n\nFile size\nsmall\nsmall\nmedium\nlargest\nlarge\nsmallest\nmedium\n\n\nCompressed\nyes\nyes\noptional\nno\nno\nyes\nyes\n\n\nMulti-threaded\nno\nyes\nyes\nyes\nyes\nyes\nyes\n\n\nStores any R object\n✓\n✓\ndf only\ndf only\ndf only\ndf only\ndf only\n\n\nSelect columns on read\n–\n–\n✓\n–\n✓\n✓\n✓\n\n\nSelect rows on read\n–\n–\nrange only\n–\n–\n✓\n✓ SQL\n\n\nCross-language\nR only\nR only\nR only\nany text tool\nArrow\nPython/Spark/etc.\nany\n\n\nLarger-than-RAM\n–\n–\n–\n–\n–\n✓ stream\n✓ spill\n\n\nBest for\nmodels, complex R objects\nfast model/list caching\nlarge df with partial reads\nCSV exchange with non-R users\ncross-language fast exchange\nbig data, cloud analytics\nSQL workflows, out-of-memory",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Fast & Big Data in R",
+      "Part 1 — Serialization"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2026-06/serialization.html#read-more",
+    "href": "seminars/seminar-2026-06/serialization.html#read-more",
+    "title": "Part 1 — Data Serialization in R",
+    "section": "Read More",
+    "text": "Read More\nPackage documentation\n\nsaveRDS / readRDS: base R serialization reference\nqs2: CRAN · GitHub\nfst: fstpackage.org · CRAN\ndata.table fwrite/fread: rdatatable.gitlab.io/data.table\nArrow for R: arrow.apache.org/docs/r — includes vignettes on datasets, S3, and Parquet\nApache Parquet format: parquet.apache.org\nDuckDB R API: duckdb.org/docs/api/r · duckplyr (drop-in dplyr backend): duckplyr.tidyverse.org\n\nBenchmarks\n\nfastverse benchmarks wiki: https://github.com/fastverse/fastverse/wiki/Benchmarks — curated index of collapse, data.table, and Arrow comparisons\nDuckDB Labs db-benchmark (group-by and join at 0.5 GB, 5 GB, 50 GB): https://duckdblabs.github.io/db-benchmark/\nAdrian Antico multi-tool benchmarks (1M–1B rows, 8 operations): https://github.com/AdrianAntico/Benchmarks#background\n\nBackground reading\n\nBurns, P. (2011). The R Inferno. burns-stat.com — § 8 covers numeric storage and write/read pitfalls that motivate binary serialization.",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Fast & Big Data in R",
+      "Part 1 — Serialization"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2025-10/overview.html",
+    "href": "seminars/seminar-2025-10/overview.html",
+    "title": "Geocoding GMD",
+    "section": "",
+    "text": "What happens when household surveys meet geospatial data? The Global Monitoring Database (GMD)—the World Bank’s harmonized repository of household surveys—now includes geocoded variables that capture the spatial context of interviewed households.\nUsing a global grid system (H3 hexagons), survey locations are linked to powerful spatial indicators such as population density, urbanization, nighttime lights, accessibility, and climate. Nearly 100 surveys across 44 low- and middle-income countries—representing about 3 million households—have already been mapped to more than 130,000 unique locations.\nThis integration opens new doors for analysis, allowing researchers and practitioners to combine household data with geospatial insights to better understand living conditions and inform policy.",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Geocoding GMD"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2025-10/overview.html#overview",
+    "href": "seminars/seminar-2025-10/overview.html#overview",
+    "title": "Geocoding GMD",
+    "section": "",
+    "text": "What happens when household surveys meet geospatial data? The Global Monitoring Database (GMD)—the World Bank’s harmonized repository of household surveys—now includes geocoded variables that capture the spatial context of interviewed households.\nUsing a global grid system (H3 hexagons), survey locations are linked to powerful spatial indicators such as population density, urbanization, nighttime lights, accessibility, and climate. Nearly 100 surveys across 44 low- and middle-income countries—representing about 3 million households—have already been mapped to more than 130,000 unique locations.\nThis integration opens new doors for analysis, allowing researchers and practitioners to combine household data with geospatial insights to better understand living conditions and inform policy.",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Geocoding GMD"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2025-10/overview.html#presenters",
+    "href": "seminars/seminar-2025-10/overview.html#presenters",
+    "title": "Geocoding GMD",
+    "section": "Presenters",
+    "text": "Presenters\nBen James Brunckhorst (bbrunckhorst@worldbank.org) and Minh Cong Nguyen (mnguyen3@worldbank.org)",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Geocoding GMD"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2025-10/overview.html#what-you-will-learn",
+    "href": "seminars/seminar-2025-10/overview.html#what-you-will-learn",
+    "title": "Geocoding GMD",
+    "section": "What You Will Learn",
+    "text": "What You Will Learn\nIn this webinar, you will:\n\nLearn the methodology behind geocoding household locations\nDiscover how to access the data and supporting documentation\nSee real-world use cases and practical tips for analysis",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Geocoding GMD"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2025-10/overview.html#materials",
+    "href": "seminars/seminar-2025-10/overview.html#materials",
+    "title": "Geocoding GMD",
+    "section": "Materials",
+    "text": "Materials\n\nPresentation Slides\n\n\nDownload: Geocoding GMD Slides (PDF)\nInteractive slides (requires World Bank VPN): Open interactive slides",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Geocoding GMD"
+    ]
+  },
+  {
+    "objectID": "seminars/seminar-2025-10/overview.html#recording",
+    "href": "seminars/seminar-2025-10/overview.html#recording",
+    "title": "Geocoding GMD",
+    "section": "Recording",
+    "text": "Recording\nRecording to be added",
+    "crumbs": [
+      "GeoPov BBL Series",
+      "Geocoding GMD"
+    ]
   },
   {
     "objectID": "seminars/seminar-2026-02/qa.html",
@@ -361,474 +1149,11 @@
     ]
   },
   {
-    "objectID": "seminars/seminar-2025-10/overview.html",
-    "href": "seminars/seminar-2025-10/overview.html",
-    "title": "Geocoding GMD",
+    "objectID": "seminars/seminar-2026-02/redme.html",
+    "href": "seminars/seminar-2026-02/redme.html",
+    "title": "GeoPov",
     "section": "",
-    "text": "What happens when household surveys meet geospatial data? The Global Monitoring Database (GMD)—the World Bank’s harmonized repository of household surveys—now includes geocoded variables that capture the spatial context of interviewed households.\nUsing a global grid system (H3 hexagons), survey locations are linked to powerful spatial indicators such as population density, urbanization, nighttime lights, accessibility, and climate. Nearly 100 surveys across 44 low- and middle-income countries—representing about 3 million households—have already been mapped to more than 130,000 unique locations.\nThis integration opens new doors for analysis, allowing researchers and practitioners to combine household data with geospatial insights to better understand living conditions and inform policy.",
-    "crumbs": [
-      "GeoPov BBL Series",
-      "Geocoding GMD"
-    ]
-  },
-  {
-    "objectID": "seminars/seminar-2025-10/overview.html#overview",
-    "href": "seminars/seminar-2025-10/overview.html#overview",
-    "title": "Geocoding GMD",
-    "section": "",
-    "text": "What happens when household surveys meet geospatial data? The Global Monitoring Database (GMD)—the World Bank’s harmonized repository of household surveys—now includes geocoded variables that capture the spatial context of interviewed households.\nUsing a global grid system (H3 hexagons), survey locations are linked to powerful spatial indicators such as population density, urbanization, nighttime lights, accessibility, and climate. Nearly 100 surveys across 44 low- and middle-income countries—representing about 3 million households—have already been mapped to more than 130,000 unique locations.\nThis integration opens new doors for analysis, allowing researchers and practitioners to combine household data with geospatial insights to better understand living conditions and inform policy.",
-    "crumbs": [
-      "GeoPov BBL Series",
-      "Geocoding GMD"
-    ]
-  },
-  {
-    "objectID": "seminars/seminar-2025-10/overview.html#presenters",
-    "href": "seminars/seminar-2025-10/overview.html#presenters",
-    "title": "Geocoding GMD",
-    "section": "Presenters",
-    "text": "Presenters\nBen James Brunckhorst (bbrunckhorst@worldbank.org) and Minh Cong Nguyen (mnguyen3@worldbank.org)",
-    "crumbs": [
-      "GeoPov BBL Series",
-      "Geocoding GMD"
-    ]
-  },
-  {
-    "objectID": "seminars/seminar-2025-10/overview.html#what-you-will-learn",
-    "href": "seminars/seminar-2025-10/overview.html#what-you-will-learn",
-    "title": "Geocoding GMD",
-    "section": "What You Will Learn",
-    "text": "What You Will Learn\nIn this webinar, you will:\n\nLearn the methodology behind geocoding household locations\nDiscover how to access the data and supporting documentation\nSee real-world use cases and practical tips for analysis",
-    "crumbs": [
-      "GeoPov BBL Series",
-      "Geocoding GMD"
-    ]
-  },
-  {
-    "objectID": "seminars/seminar-2025-10/overview.html#materials",
-    "href": "seminars/seminar-2025-10/overview.html#materials",
-    "title": "Geocoding GMD",
-    "section": "Materials",
-    "text": "Materials\n\nPresentation Slides\n\n\nDownload: Geocoding GMD Slides (PDF)\nInteractive slides (requires World Bank VPN): Open interactive slides",
-    "crumbs": [
-      "GeoPov BBL Series",
-      "Geocoding GMD"
-    ]
-  },
-  {
-    "objectID": "seminars/seminar-2025-10/overview.html#recording",
-    "href": "seminars/seminar-2025-10/overview.html#recording",
-    "title": "Geocoding GMD",
-    "section": "Recording",
-    "text": "Recording\nRecording to be added",
-    "crumbs": [
-      "GeoPov BBL Series",
-      "Geocoding GMD"
-    ]
-  },
-  {
-    "objectID": "seminars/index.html",
-    "href": "seminars/index.html",
-    "title": "GeoPov BBL Series",
-    "section": "",
-    "text": "This webinar series creates a platform for dialogue on how geospatial data can strengthen analysis and policy discussions aimed at reducing poverty and vulnerability. It has two main objectives:\n\nShowcasing impactful applications – highlighting country experiences and operational work where geospatial tools have improved poverty analysis, targeting, and decision-making. These cases illustrate models with potential for scaling up and replication in other contexts.\nSharing technical knowledge – presenting innovative geospatial data sources, tools, and methodologies relevant for economists and practitioners working at the country level, with a focus on practical skills.\n\nThrough these conversations, the series seeks to bridge the gap between cutting-edge technical innovations and their use in shaping policies that can make a measurable difference for the poorest and most vulnerable populations.\nSuggestions for future topics and speakers are warmly welcome – please reach out to Henry Stemmler (hstemmler@worldbank.org).",
-    "crumbs": [
-      "GeoPov BBL Series"
-    ]
-  },
-  {
-    "objectID": "seminars/index.html#about-the-geopov-series",
-    "href": "seminars/index.html#about-the-geopov-series",
-    "title": "GeoPov BBL Series",
-    "section": "",
-    "text": "This webinar series creates a platform for dialogue on how geospatial data can strengthen analysis and policy discussions aimed at reducing poverty and vulnerability. It has two main objectives:\n\nShowcasing impactful applications – highlighting country experiences and operational work where geospatial tools have improved poverty analysis, targeting, and decision-making. These cases illustrate models with potential for scaling up and replication in other contexts.\nSharing technical knowledge – presenting innovative geospatial data sources, tools, and methodologies relevant for economists and practitioners working at the country level, with a focus on practical skills.\n\nThrough these conversations, the series seeks to bridge the gap between cutting-edge technical innovations and their use in shaping policies that can make a measurable difference for the poorest and most vulnerable populations.\nSuggestions for future topics and speakers are warmly welcome – please reach out to Henry Stemmler (hstemmler@worldbank.org).",
-    "crumbs": [
-      "GeoPov BBL Series"
-    ]
-  },
-  {
-    "objectID": "seminars/index.html#past-talks-seminars-and-presentations",
-    "href": "seminars/index.html#past-talks-seminars-and-presentations",
-    "title": "GeoPov BBL Series",
-    "section": "Past talks, seminars, and presentations",
-    "text": "Past talks, seminars, and presentations",
-    "crumbs": [
-      "GeoPov BBL Series"
-    ]
-  },
-  {
-    "objectID": "projects/capacity-building.html",
-    "href": "projects/capacity-building.html",
-    "title": "Capacity Building",
-    "section": "",
-    "text": "We help demystify geospatial data for microeconomists. Through hands-on trainings and peer-learning events, we build core skills for microeconomists to use geospatial methods with confidence.",
-    "crumbs": [
-      "Projects",
-      "Capacity Building"
-    ]
-  },
-  {
-    "objectID": "projects/capacity-building.html#overview",
-    "href": "projects/capacity-building.html#overview",
-    "title": "Capacity Building",
-    "section": "",
-    "text": "We help demystify geospatial data for microeconomists. Through hands-on trainings and peer-learning events, we build core skills for microeconomists to use geospatial methods with confidence.",
-    "crumbs": [
-      "Projects",
-      "Capacity Building"
-    ]
-  },
-  {
-    "objectID": "projects/capacity-building.html#our-approach",
-    "href": "projects/capacity-building.html#our-approach",
-    "title": "Capacity Building",
-    "section": "Our Approach",
-    "text": "Our Approach\nWhether you’re just getting started or looking to refine your toolkit, we’re here to support you through our growing Community of Practice.",
-    "crumbs": [
-      "Projects",
-      "Capacity Building"
-    ]
-  },
-  {
-    "objectID": "projects/capacity-building.html#training-programs",
-    "href": "projects/capacity-building.html#training-programs",
-    "title": "Capacity Building",
-    "section": "Training Programs",
-    "text": "Training Programs\n\nIntroductory Workshops\nFor those new to geospatial analysis\n\n\nAdvanced Methods\nDeep dives into specific techniques\n\n\nApplied Case Studies\nLearning from real-world applications",
-    "crumbs": [
-      "Projects",
-      "Capacity Building"
-    ]
-  },
-  {
-    "objectID": "projects/capacity-building.html#community-of-practice",
-    "href": "projects/capacity-building.html#community-of-practice",
-    "title": "Capacity Building",
-    "section": "Community of Practice",
-    "text": "Community of Practice\nJoin our community to:\n\nShare experiences and challenges\nLearn from peers\nAccess ongoing support\nContribute to collective knowledge",
-    "crumbs": [
-      "Projects",
-      "Capacity Building"
-    ]
-  },
-  {
-    "objectID": "projects/capacity-building.html#upcoming-events",
-    "href": "projects/capacity-building.html#upcoming-events",
-    "title": "Capacity Building",
-    "section": "Upcoming Events",
-    "text": "Upcoming Events\nCheck the Seminars page for upcoming training events",
-    "crumbs": [
-      "Projects",
-      "Capacity Building"
-    ]
-  },
-  {
-    "objectID": "projects/capacity-building.html#resources",
-    "href": "projects/capacity-building.html#resources",
-    "title": "Capacity Building",
-    "section": "Resources",
-    "text": "Resources\n\nTraining materials\nCode examples\nSelf-paced tutorials\nCommunity forums",
-    "crumbs": [
-      "Projects",
-      "Capacity Building"
-    ]
-  },
-  {
-    "objectID": "projects/index.html",
-    "href": "projects/index.html",
-    "title": "Projects",
-    "section": "",
-    "text": "Our work is organized around three main pillars that guide our approach to integrating geospatial data with poverty analysis.",
-    "crumbs": [
-      "Projects"
-    ]
-  },
-  {
-    "objectID": "projects/index.html#our-three-pillars",
-    "href": "projects/index.html#our-three-pillars",
-    "title": "Projects",
-    "section": "Our Three Pillars",
-    "text": "Our Three Pillars\n\nSpatial Analysis\nApplying a geographic lens to pressing policy questions on poverty and inequality.\n\n\nKnowledge and Data Center\nBuilding a curated repository of geospatial data sources and methods for poverty analysis.\n\n\nCapacity Building\nDemystifying geospatial data for microeconomists through hands-on training and peer-learning.",
-    "crumbs": [
-      "Projects"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome to GeoPov",
-    "section": "",
-    "text": "🌍 We are a group of development economists and geospatial enthusiasts working at the intersection of poverty, place, and policy. At GeoPov, we believe that where people live matters just as much as how they live — and we’re here to make sure that spatial realities are part of the poverty dialogue.",
-    "crumbs": [
-      "About Us"
-    ]
-  },
-  {
-    "objectID": "index.html#our-goal",
-    "href": "index.html#our-goal",
-    "title": "Welcome to GeoPov",
-    "section": "🎯 Our Goal",
-    "text": "🎯 Our Goal\nTo develop a global agenda that:\n\nEmpowers economists by integrating geospatial data and spatial analysis into country-level diagnostics and policy engagement.\nContributes to global knowledge that helps design local solutions grounded in data and spatial context.",
-    "crumbs": [
-      "About Us"
-    ]
-  },
-  {
-    "objectID": "index.html#latest-news",
-    "href": "index.html#latest-news",
-    "title": "Welcome to GeoPov",
-    "section": "Latest News",
-    "text": "Latest News\n\nFeb 2026: Seminar on AI-Assisted Data Analysis workflow with Positron and Copilot—materials and slides now available in seminars/seminar-2026-02.\nNovember 2025: GeoPov team seminar on Geocoding GMD.",
-    "crumbs": [
-      "About Us"
-    ]
-  },
-  {
-    "objectID": "index.html#what-we-do",
-    "href": "index.html#what-we-do",
-    "title": "Welcome to GeoPov",
-    "section": "🧭 What We Do",
-    "text": "🧭 What We Do\nOur work is organized around three main pillars:\n\nPillar 1: Spatial Analysis\nWe apply a geographic lens to pressing policy questions on poverty and inequality. Whether it’s identifying where jobs are (and aren’t) for the poor, mapping urban deprivation, or analyzing rural income dynamics, we use spatially disaggregated data to generate actionable insights. This includes household surveys, censuses, administrative records, private sector data, and satellite-based remote sensing — covering everything from climate and land use to infrastructure and conflict. We also develop and share open, reproducible code and tools that can be adapted across countries and topics.\nLearn more about our Spatial Analysis work →\n\n\nPillar 2: Knowledge and Data Center\nWe bring clarity to the what, why, and how of using geospatial data in poverty analysis. This pillar focuses on:\n\nBuilding a curated repository of geospatial data sources and methods, with clear guidance on how they can (and can’t) be used in applied work.\nShowcasing examples of microeconomic analyses that successfully integrate geospatial data to answer real-world policy questions.\n\nExplore our Knowledge and Data Center →\n\n\nPillar 3: Capacity Building\nWe help demystify geospatial data for microeconomists. Through hands-on trainings and peer-learning events, we build core skills for microeconomists to use geospatial methods with confidence. Whether you’re just getting started or looking to refine your toolkit, we’re here to support you through our growing Community of Practice.\nExplore our seminars and training events →",
-    "crumbs": [
-      "About Us"
-    ]
-  },
-  {
-    "objectID": "index.html#meet-the-team",
-    "href": "index.html#meet-the-team",
-    "title": "Welcome to GeoPov",
-    "section": "👥 Meet the Team",
-    "text": "👥 Meet the Team\nWe’re a global multi-disciplinary team in the Distributional Impact of Policy under the Prosperity Vice Presidency. We combine expertise in microeconomic analysis, spatial economics, and data engineering.\nWho we are:\n\nCurious minds who ask “where”, “who”, “what” and “why” together\nPassionate about open data, open code, and inclusive analytics\nBelievers in the power of maps and evidence to drive better policy\n\nMeet our team members →",
-    "crumbs": [
-      "About Us"
-    ]
-  },
-  {
-    "objectID": "index.html#get-involved",
-    "href": "index.html#get-involved",
-    "title": "Welcome to GeoPov",
-    "section": "🤝 Get Involved",
-    "text": "🤝 Get Involved\n\nBrowse our seminars for recordings and materials\nReach out to our team\nReport issues or suggest improvements to our code and materials on GitHub issues",
-    "crumbs": [
-      "About Us"
-    ]
-  },
-  {
-    "objectID": "projects/knowledge-data-center.html",
-    "href": "projects/knowledge-data-center.html",
-    "title": "Knowledge and Data Center",
-    "section": "",
-    "text": "We bring clarity to the what, why, and how of using geospatial data in poverty analysis.",
-    "crumbs": [
-      "Projects",
-      "Knowledge and Data Center"
-    ]
-  },
-  {
-    "objectID": "projects/knowledge-data-center.html#overview",
-    "href": "projects/knowledge-data-center.html#overview",
-    "title": "Knowledge and Data Center",
-    "section": "",
-    "text": "We bring clarity to the what, why, and how of using geospatial data in poverty analysis.",
-    "crumbs": [
-      "Projects",
-      "Knowledge and Data Center"
-    ]
-  },
-  {
-    "objectID": "projects/knowledge-data-center.html#what-we-provide",
-    "href": "projects/knowledge-data-center.html#what-we-provide",
-    "title": "Knowledge and Data Center",
-    "section": "What We Provide",
-    "text": "What We Provide\n\nData Repository\nBuilding a curated repository of geospatial data sources and methods, with clear guidance on how they can (and can’t) be used in applied work.\n\n\nPractical Examples\nShowcasing examples of microeconomic analyses that successfully integrate geospatial data to answer real-world policy questions.",
-    "crumbs": [
-      "Projects",
-      "Knowledge and Data Center"
-    ]
-  },
-  {
-    "objectID": "projects/knowledge-data-center.html#resources",
-    "href": "projects/knowledge-data-center.html#resources",
-    "title": "Knowledge and Data Center",
-    "section": "Resources",
-    "text": "Resources\n\nData Sources\nCurated list of geospatial data sources\n\n\nMethods and Guidelines\nBest practices and methodological guidance\n\n\nCase Studies\nExamples of successful applications",
-    "crumbs": [
-      "Projects",
-      "Knowledge and Data Center"
-    ]
-  },
-  {
-    "objectID": "projects/knowledge-data-center.html#how-to-use-this-resource",
-    "href": "projects/knowledge-data-center.html#how-to-use-this-resource",
-    "title": "Knowledge and Data Center",
-    "section": "How to Use This Resource",
-    "text": "How to Use This Resource\nGuidance for economists new to geospatial data",
-    "crumbs": [
-      "Projects",
-      "Knowledge and Data Center"
-    ]
-  },
-  {
-    "objectID": "projects/spatial-analysis.html",
-    "href": "projects/spatial-analysis.html",
-    "title": "Spatial Analysis",
-    "section": "",
-    "text": "We apply a geographic lens to pressing policy questions on poverty and inequality. Whether it’s identifying where jobs are (and aren’t) for the poor, mapping urban deprivation, or analyzing rural income dynamics, we use spatially disaggregated data to generate actionable insights.",
-    "crumbs": [
-      "Projects",
-      "Spatial Analysis"
-    ]
-  },
-  {
-    "objectID": "projects/spatial-analysis.html#overview",
-    "href": "projects/spatial-analysis.html#overview",
-    "title": "Spatial Analysis",
-    "section": "",
-    "text": "We apply a geographic lens to pressing policy questions on poverty and inequality. Whether it’s identifying where jobs are (and aren’t) for the poor, mapping urban deprivation, or analyzing rural income dynamics, we use spatially disaggregated data to generate actionable insights.",
-    "crumbs": [
-      "Projects",
-      "Spatial Analysis"
-    ]
-  },
-  {
-    "objectID": "projects/spatial-analysis.html#our-approach",
-    "href": "projects/spatial-analysis.html#our-approach",
-    "title": "Spatial Analysis",
-    "section": "Our Approach",
-    "text": "Our Approach\nWe work with diverse data sources including:\n\nHousehold surveys\nCensuses\nAdministrative records\nPrivate sector data\nSatellite-based remote sensing\n\nOur analysis covers everything from climate and land use to infrastructure and conflict.",
-    "crumbs": [
-      "Projects",
-      "Spatial Analysis"
-    ]
-  },
-  {
-    "objectID": "projects/spatial-analysis.html#tools-and-methods",
-    "href": "projects/spatial-analysis.html#tools-and-methods",
-    "title": "Spatial Analysis",
-    "section": "Tools and Methods",
-    "text": "Tools and Methods\nWe develop and share open, reproducible code and tools that can be adapted across countries and topics.",
-    "crumbs": [
-      "Projects",
-      "Spatial Analysis"
-    ]
-  },
-  {
-    "objectID": "projects/spatial-analysis.html#current-projects",
-    "href": "projects/spatial-analysis.html#current-projects",
-    "title": "Spatial Analysis",
-    "section": "Current Projects",
-    "text": "Current Projects\nProject examples will be added here",
-    "crumbs": [
-      "Projects",
-      "Spatial Analysis"
-    ]
-  },
-  {
-    "objectID": "projects/spatial-analysis.html#publications-and-outputs",
-    "href": "projects/spatial-analysis.html#publications-and-outputs",
-    "title": "Spatial Analysis",
-    "section": "Publications and Outputs",
-    "text": "Publications and Outputs\nKey outputs will be added here",
-    "crumbs": [
-      "Projects",
-      "Spatial Analysis"
-    ]
-  },
-  {
-    "objectID": "seminars/seminar-2026-02/setup-instructions.html",
-    "href": "seminars/seminar-2026-02/setup-instructions.html",
-    "title": "Positron + GitHub Copilot: Setup Instructions",
-    "section": "",
-    "text": "Setup software for AI agent-assisted analysis in Stata and R\nEnable AI-assistance with GitHub Copilot or Claude AI integration\nBe able to reproduce AI-assisted coding workflow demonstrated in the seminar",
-    "crumbs": [
-      "GeoPov BBL Series",
-      "Revolutionizing Coding in Stata/R",
-      "Setup instructions"
-    ]
-  },
-  {
-    "objectID": "seminars/seminar-2026-02/setup-instructions.html#goals",
-    "href": "seminars/seminar-2026-02/setup-instructions.html#goals",
-    "title": "Positron + GitHub Copilot: Setup Instructions",
-    "section": "",
-    "text": "Setup software for AI agent-assisted analysis in Stata and R\nEnable AI-assistance with GitHub Copilot or Claude AI integration\nBe able to reproduce AI-assisted coding workflow demonstrated in the seminar",
-    "crumbs": [
-      "GeoPov BBL Series",
-      "Revolutionizing Coding in Stata/R",
-      "Setup instructions"
-    ]
-  },
-  {
-    "objectID": "seminars/seminar-2026-02/setup-instructions.html#overview",
-    "href": "seminars/seminar-2026-02/setup-instructions.html#overview",
-    "title": "Positron + GitHub Copilot: Setup Instructions",
-    "section": "Overview",
-    "text": "Overview\nTo be able to use AI in daily coding and data analysis we need to:\n\nSoftware setup:\n\nStata, R, Python, Positron, Quarto, Git\nPython package uv\nExtensions in Positron (Stata MCP)\n\nGitHub setup:\n\nCreate a GitHub account using private email (not WB email).\nJoin World Bank GitHub organization.\nRequest GitHub Copilot access from World Bank GitHub organization administrators.\nFor a private setup, you need to make a subscription to GitHub Copilot Pro or Pro+ plan.\n\nConnect GitHub Copilot to Positron and enable Positron Assistant in Positron settings.\n\n\nKnown Issues and Troubleshooting\n\nIf you have trouble installing software from the Software Center, contact IT Help: ITHelp@worldbankgroup.org or use Walk-in center.\nIf you have trouble with GitHub World Bank or Github Copilot access from World Bank GitHub setup instructions or contact github@worldbank.org.\nGitHub Copilot does not work in Positron after installation:\n\nMake sure you set-up GitHub account properly\nMake sure that you have enabled Positron Assistant in Positron settings\nMake sure you are signed into GitHub in Positron\nReload Positron after installation and setup: Ctrl+Shift+P &gt; Developer: Reload Window &gt; Enter or close it and open again.\n\nStata-MCP extension does not run Stata code from the OneDrive.\nThis was a known issue with Stata MCP extension that has been resolved after this GitHub issue. It happened when running code from OneDrive folder because our one drive folder has a space in the name (“OneDrive - WBG”). A workaround is to move the code to a different folder without spaces in the path, for example C:\\Users\\wbXXXXXXX\\code, and run it from there. Once this issue it resolved on the Stata MCP extension side, it will update in positron automatically and you will be able to run code from the OneDrive folder again.",
-    "crumbs": [
-      "GeoPov BBL Series",
-      "Revolutionizing Coding in Stata/R",
-      "Setup instructions"
-    ]
-  },
-  {
-    "objectID": "seminars/seminar-2026-02/setup-instructions.html#software-setup",
-    "href": "seminars/seminar-2026-02/setup-instructions.html#software-setup",
-    "title": "Positron + GitHub Copilot: Setup Instructions",
-    "section": "Software setup",
-    "text": "Software setup\n\nStep 1: Install the software\nFirst you need to install the required software on your computer. The table below summarizes the software needed and instructions for installation.\n\n\n\n\n\n\n\n\n\nSoftware\nNote for self-installation\n\n\n\n\n\nStata 19 or higher\nUse regular installation\n\n\n\nPositron Latest\nUse user-level installation\n\n\n\nQuarto 1.9.+ (latest)\nUse admin-level (for all users) installation\n\n\n\nR 4.5.2 (latest)\nUse regular installation\n\n\n\nPython 3.13+ (latest)\nUse regular installation\n\n\n\nGit 2.52+ (latest)\nUse regular installation\n\n\n\nAll software listed above is available for installation at the World Bank through the Software Center. Go to the Software Center and install it (if not already installed) . If some is not available in the Software Center, make a Software Installation Request or contact IT Help: ITHelp@worldbankgroup.org.\n\n\n\n\n\n\nNote\n\n\n\nIf you had an older version of Positron installed, please reinstall it as the one on the software center is more up to date and capable of self-updating.\nPrivate laptop setup\n\nR: Install R from https://cran.r-project.org/\nPython: Install Python from https://www.python.org/downloads/\nPositron: Install user-level Positron from https://positron.posit.co/download.html\nQuarto: Install Quarto from https://quarto.org/docs/get-started/\nGit: Install Git from https://git-scm.com/download/win\n\n\n\n\n\nStep 2: Configure the software and install extensions\n\nUV: Required Python Package\n\nOpen Command Prompt (cmd) or PowerShell:\n\nPress Win + R, type cmd or powershell, and hit Enter.\n\nType pip install uv and press Enter to install the uv package.\n\nuv is a package that allows environments management in python, see https://pypi.org/project/uv/\n\nCheck if UV is installed correctly by typing uv --version in the Command Prompt or PowerShell. You should see the version number displayed, something like this:\nuv 0.9.18 (0cee76417 2025-12-16)\n\n\n\nStata-MCP: Extensions in Positron for Stata\nExtensions in Positron are add-ons that enhance functionality. To install extensions, open the Extensions panel by clicking the square icon  on the left sidebar or pressing Ctrl+Shift+X. There are many extensions available for Positron. Below are the key extensions to install for AI-assisted analysis:\nStata MCP Extension enables Model Communication Protocol (MCP) for Stata, providing better context awareness for AI agents and allowing you to run Stata code directly from Positron.\nTo install it:\n\n\n\n\n\n\n\n\nDescription\n\n\n\n\n\nOpen the Extensions panel in Positron\n\n\n\nSearch for “Stata MCP” in the Extensions panel\n\n\n\nClick “Install” to add the extension to Positron\n\n\n\nAfter installation, restart Positron or reload the window (Ctrl+Shift+P &gt; Developer: Reload Window &gt; Enter)\n\n\n\nOnce installed, configure the Stata MCP extension by setting up the path to the Stata executable and Stata edition.\n\n\n\n\nDescription\n\n\n\n\n\nOpen stata-vscode.stataPath or press Ctrl+, &gt; search “Stata Path” (or stata-vscode.stataPath), and set it to your Stata executable folder: C:\\Program Files\\StataNow19\\ (for most WB laptops and VDIs).\n\n\n\nOpen stata-vscode.stataEdition or press Ctrl+, &gt; search “Stata Edition” (or stata-vscode.stataEdition), and set it to “mp” for Stata MP version.\n\n\n\nVerify Stata MCP is working\nCreate and save a new Stata .do file with a simple command like:\nsysuse auto\nsummarize price\ndisplay \"Stata is working!\"\n\n\n\n\n\n\n\n\nDescription\n\n\n\n\n\nSave the file (Ctrl+S) before running — any unsaved edits will not be executed.\n\n\n\nPress Ctrl+Shift+D in the .do file, or Ctrl+Shift+P &gt; Stata: Run Current File &gt; Enter, or click the run button.\n\n\n\nResults appear in the Output panel: Ctrl+Shift+P &gt; Output: Show Output Channels... &gt; Enter &gt; Stata.\n\n\n\nYou can move the Output panel to a different location in Positron using the button shown.",
-    "crumbs": [
-      "GeoPov BBL Series",
-      "Revolutionizing Coding in Stata/R",
-      "Setup instructions"
-    ]
-  },
-  {
-    "objectID": "seminars/seminar-2026-02/setup-instructions.html#github-setup",
-    "href": "seminars/seminar-2026-02/setup-instructions.html#github-setup",
-    "title": "Positron + GitHub Copilot: Setup Instructions",
-    "section": "GitHub and GitHub Copilot Setup",
-    "text": "GitHub and GitHub Copilot Setup\nGitHub setup includes\n\ncreating a GitHub account,\njoining the World Bank GitHub organization, and\nrequesting access to GitHub Copilot.\nfor private developers, instead of joining the World Bank GitHub organization, you can get access to GitHub Copilot through a private subscription to GitHub Copilot Pro or Pro+ plan.\nMonitor your usage of premium requests in GitHub Copilot:\n\nGo to: GitHub &gt; Settings &gt; Copilot settings\nScroll down to the “Usage” section to see your usage of premium requests.\n100% is the monthly limit of 300 premium requests from GH Copilot from the WB. If you have a private Pro or Pro+ subscription, you have 500 and 1500 requests respectively.\n\n\nThese steps can be done independently and give different privileges to users, see table below.\n\n\n\nAccess Level\nGitHub Permissions\nGitHub Copilot / AI Assistance\nWB GitHub Org Access\n\n\n\n\nNo GitHub Account\n❌ No: view public repos only\n❌ No\n❌ No (only view public repositories)\n\n\nPersonal GH Account(created at github.com)\n✅ Everything: Create personal repos, collaborate\n⚠️ Usage limit. No access to Claude\n❌ No\n\n\n+ GH Copilot subscription (Copilot Pro or Pro+)\n✅ Everything\n✅ Unlimited code completion + Chat. ⚠️ Monthly use limit on AgentPrivate budget for over-limit use.✅ Premium models (Claude)\n❌ No\n\n\nWB Organization Member(join via eServices)\n✅ Access WB public and internal repos.Create repos under WB org\n⚠️ Limited (basic completions only; no premium models).\n✅ Yes (view / contribute)\n\n\nWB Org + WB Copilot Access(request Copilot via GitHub Settings and email to github@worldbank.org)\n✅ Everything: personal repos + WB org repos\n✅ Unlimited code completion + Chat. ⚠️ Limit on Agent (300 requests/month)✅ Premium models (Claude, GPT-4.5)Manager-approved budget for overuse.\n✅ Yes\n\n\n\nKey takeaways:\n\nFor AI-assisted coding: You need at minimum “Private GH account + Copilot Access (private Pro subscription or from World Bank GitHub)”\nTo be able to use GitHub Copilot with Claude: You need Copilot Access (private Pro subscription or from World Bank GitHub)\nEmail matters: Always use your personal email, not your WB email, when creating your GitHub account\n\n\nStep 1: Create a GitHub Account\nIf you don’t have a GitHub account yet, create one at https://github.com/signup or read more GH: get-started\n\n\n\n\n\n\nWarning\n\n\n\nNote: Use your personal email address, not your World Bank email.\n\n\n\n\nStep 2: Join the World Bank GitHub Organization\n\nSubmit a “Join GitHub Organization Account Request” on eServices to join github.com/worldbank\nOnce your request is approved, you will receive an email invitation to join the World Bank GitHub organization\n\nEmail will be sent to the email address associated with your GitHub account\n\nAccept the invitation by clicking the link in the email\n\nYou need to confirm your membership in the World Bank organization on GitHub by following steps indicated in the email.\nIf you don’t confirm within a few days, the invitation will expire, and you will need to request again through eService.\n\n\n\n\nStep 3: Request GitHub Copilot Access from World Bank GitHub Organization\nAfter joining the World Bank organization, request GitHub Copilot access. To do this:\n\n\nGo to GitHub &gt; Settings &gt; Copilot settings.\n\n\n\n\n\n\n\nScroll all the way down to the “Get Copilot from an organization” section and click the “Request access” button from the worldbank organization.\nSend an email to github@worldbank.org with the subject line: “Request GitHub Copilot Access”. In the email body, include your GitHub username and a brief reason for requesting access. Copy your manager or team lead for approval.\n\n\n\n\n\nYour request will be reviewed and approved by the GitHub organization administrators.\n\n\n\n\n\n\nTip\n\n\n\nTip: Bryan Cahill and github@worldbank.org lead the github.com/worldbank organization and can help with Copilot access requests.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nWarning: If you don’t see the “Request access” button or worldbank organization, it means you either:\n\nwere not added to the World Bank GitHub organization yet, or\ndid not accept the invitation in due time.\n\nPlease complete Step 2 above, wait for the invitation email, and accept it before requesting GH Copilot access.\n\n\nOnce approved, you’ll be able to use GitHub Copilot in Positron\n\n\nStep 4: Verify GitHub Copilot Access\nIn github.com, go to GitHub &gt; Settings &gt; Copilot settings and verify that you have access to GitHub Copilot through the World Bank organization. Your usage statistics will look like this:\n\n\nNo access to Copilot from World Bank GitHub organization or personal plan Pro or Pro+\n\n\nAccess to Copilot from World Bank GitHub organization or personal plan Pro or Pro+\n\n\n\nAnother way is to check if you have access to premium models like Anthropic Claude or GPT-4.5 in the Positron Assistant settings (see instructions below).\n\nOpen Positron and sign in to your GitHub account (see “Connecting GitHub Copilot to Positron” section above)\nCheck that the GitHub Copilot extension is active in the Extensions panel\nTry typing a comment in a code file to verify that Copilot suggestions appear\n\nNote: If you have access to GitHub Copilot but don’t see suggestions in Positron, make sure you are signed into GitHub in Positron and that the GitHub Copilot extension is installed and enabled.\n\n\nStep 5: To enable overuse of GitHub Copilot Agent\n\nAsk your manager for permission to use a budget code for overuse of GitHub Copilot Agent\nSet up a monthly limit of usage (you will be charged only for what you use)\nContact github@worldbank.org asking to set a budget for your account and provide the budget code approved by your manager (copy manager in the email for approval confirmation).",
-    "crumbs": [
-      "GeoPov BBL Series",
-      "Revolutionizing Coding in Stata/R",
-      "Setup instructions"
-    ]
-  },
-  {
-    "objectID": "seminars/seminar-2026-02/setup-instructions.html#positron-copilot-setup",
-    "href": "seminars/seminar-2026-02/setup-instructions.html#positron-copilot-setup",
-    "title": "Positron + GitHub Copilot: Setup Instructions",
-    "section": "Positron + GitHub Copilot / Anthropic Claude Setup",
-    "text": "Positron + GitHub Copilot / Anthropic Claude Setup\nThis step enables you to use the GitHub Copilot coding agent and other LLMs, such as ChatGPT or Anthropic Claude, with Positron.\nSee Positron Assistant: Getting Started for the full overview of what it does.\n\n\n\n\n\n\nWarning\n\n\n\nWarning: Sometimes it is needed to reload Positron after installing software or extensions for the changes to take effect.\n\n\n\nStep 1: Connect GitHub to Positron\nThis requires a GitHub account linked to the World Bank organization. See GitHub Setup instructions above if you don’t have an account or haven’t linked it to the WB organization. To connect GitHub to Positron:\n\n\n\n\n\n\n\n\nNote\n\n\n\n\n\nOpen Account menu\n\n\n\nClick Sign in to your GitHub account\n\n\n\nAuthorize GitHub in your browser\n\n\n\nConfirm the authorization request\n\n\n\nComplete the authentication process\n\n\n\nGrant necessary permissions\n\n\n\n\n\n\n\nSee also Positron Assistant Guide for more details on connecting GitHub and using the assistant.\n\n\nStep 2: Enable Positron Assistant in Positron Settings\n\nOpen settings positron.assistant.enable and check the box to enable it. or Ctrl+, &gt; positron.assistant.enable &gt; Check the box \nRestart Positron to apply the changes\nor reload the window (Ctrl+Shift+P &gt; Developer: Reload Window &gt; Enter) \n\nSee Enable Positron Assistant for more details.\n\n\nStep 3: Configure LLM Provider\nBy default, when logged into GitHub, Positron Assistant uses GitHub Copilot as the LLM provider. GitHub Copilot provides code completion, answers questions in chat, and operates in agent mode (able to run code directly).\n\n\n\n\n\n\nTip\n\n\n\nWithin GitHub Copilot, you can also configure other LLM providers, such as Anthropic Claude, OpenAI GPT, etc.\n\n\nIf you want to use Anthropic Claude or other LLMs as the provider, follow instructions in Configure language model providers.\n\n\n\n\n\n\nNote\n\n\n\nCode completion will still be provided by the GitHub Copilot extension or will not work with Anthropic Claude.\n\n\n\n\nStep 4: Use Positron Assistant\n\nCtrl+Shift+P &gt; Help: Ask Positron Assistant &gt; Enter to open it.\nIn the input box that appears, type your question. For example:\nWrite a Stata do file that loads the auto dataset and summarizes the price variable.\nOpen it.\nExplain how to run it.\n\nTo learn more about using Positron Assistant, see Use Positron Assistant",
-    "crumbs": [
-      "GeoPov BBL Series",
-      "Revolutionizing Coding in Stata/R",
-      "Setup instructions"
-    ]
-  },
-  {
-    "objectID": "seminars/seminar-2026-02/setup-instructions.html#additional-resources",
-    "href": "seminars/seminar-2026-02/setup-instructions.html#additional-resources",
-    "title": "Positron + GitHub Copilot: Setup Instructions",
-    "section": "Additional Resources",
-    "text": "Additional Resources\n\nPositron Documentation\nGitHub Copilot Documentation\nWorld Bank GitHub: https://github.com/worldbank",
-    "crumbs": [
-      "GeoPov BBL Series",
-      "Revolutionizing Coding in Stata/R",
-      "Setup instructions"
-    ]
-  },
-  {
-    "objectID": "seminars/seminar-2026-02/setup-instructions.html#support",
-    "href": "seminars/seminar-2026-02/setup-instructions.html#support",
-    "title": "Positron + GitHub Copilot: Setup Instructions",
-    "section": "Support",
-    "text": "Support\nFor help with setting up or troubleshooting the software, contact:\n\nIT Help: ITHelp@worldbankgroup.org\nHQ Walk-in center\n\nRemember to provide assisting person with these setup instructions.\nFor help with accessing GitHub.com/Worldbank or GitHub Copilot from the worldbank:\n\nCheck: GitHub Setup instructions above\nReach out to: github@worldbank.org",
-    "crumbs": [
-      "GeoPov BBL Series",
-      "Revolutionizing Coding in Stata/R",
-      "Setup instructions"
-    ]
+    "text": "IFrame background https://github.com/EmilHvitfeldt/quarto-iframe-examples"
   },
   {
     "objectID": "seminars/seminar-2026-02/overview.html",
@@ -897,202 +1222,78 @@
     ]
   },
   {
-    "objectID": "seminars/seminar-2026-02/slides.html#the-goal",
-    "href": "seminars/seminar-2026-02/slides.html#the-goal",
-    "title": "GeoPov",
-    "section": "The goal",
-    "text": "The goal\n\n\n\n\n\nof this seminar is to introduce you to AI-assisted data analysis with Positron IDE and GitHub Copilot | Claude.\n\n\n\n\n\nThere are many IDEs ➔\n\n\n\n\n\n\n\nThose are: Positron | VS Code | Cursor | Claude Code | and more…"
-  },
-  {
-    "objectID": "seminars/seminar-2026-02/slides.html#ai-integrated-ide",
-    "href": "seminars/seminar-2026-02/slides.html#ai-integrated-ide",
-    "title": "GeoPov",
-    "section": "💬 AI Integrated IDE",
-    "text": "💬 AI Integrated IDE\n\n\nSource: Positron: AI Features"
-  },
-  {
-    "objectID": "seminars/seminar-2026-02/slides.html#ai-chat",
-    "href": "seminars/seminar-2026-02/slides.html#ai-chat",
-    "title": "GeoPov",
-    "section": "💬 AI: Chat",
-    "text": "💬 AI: Chat\n\nPositron Assistant\n\nAsk AI (Claude 4.5) through Github Copilot\nProvides explanations, suggestions, and code snippets.\nIntegrates with project context, and code.\nLearn more:\nAssistant Chat"
-  },
-  {
-    "objectID": "seminars/seminar-2026-02/slides.html#ai-agent",
-    "href": "seminars/seminar-2026-02/slides.html#ai-agent",
-    "title": "GeoPov",
-    "section": "💬 AI: Agent",
-    "text": "💬 AI: Agent\n\nPositron Assistant\n\nExecutes instructions.\nActs independently\n\nRuns code\nFixes errors\nLearns\nReasons\n\nSee more in the live demo!"
-  },
-  {
-    "objectID": "seminars/seminar-2026-02/slides.html#ai-inline-completion",
-    "href": "seminars/seminar-2026-02/slides.html#ai-inline-completion",
-    "title": "GeoPov",
-    "section": "💬 AI: Inline Completion",
-    "text": "💬 AI: Inline Completion\nPositron Inline Code Completion: Suggests code snippets as you type."
-  },
-  {
-    "objectID": "seminars/seminar-2026-02/slides.html#context-awareness",
-    "href": "seminars/seminar-2026-02/slides.html#context-awareness",
-    "title": "GeoPov",
-    "section": "🧠 Context Awareness",
-    "text": "🧠 Context Awareness\n\n\nPositron accesses project metadata. Thus AI ‘knows’:\n\n📁 Files str.: Code, docs\n📊 Data: Var. names, types\n⏮️ History: Edits, commands\n📦 Environment: Packages\n🎯 Intent: Current task\n✅ Results: Output, errors\n\n\nWhy does it matter?\n\n🎯 Project-specific suggestions\n🔗 Understands dependencies\n🛡️ Reduces hallucinations\n⏱️ Improves efficiency\n\n\n\nRead more: Positron: AI Context | GH Copilot | Claude | WB AI Responsible Use"
-  },
-  {
-    "objectID": "seminars/seminar-2026-02/slides.html#model-context-protocol-mcp",
-    "href": "seminars/seminar-2026-02/slides.html#model-context-protocol-mcp",
-    "title": "GeoPov",
-    "section": "🔌 Model Context Protocol (MCP)",
-    "text": "🔌 Model Context Protocol (MCP)\nMCP is a universal adapter for AI—Anthropic— that connects data flows:\n\nStata-MCP or R MCP for Stata/R ⟶ Positron ⟶ Copilot ⟶ LLMs.\n\n\n\nRead more: modelcontextprotocol.io"
-  },
-  {
-    "objectID": "seminars/seminar-2026-02/slides.html#github-copilot-anthropic-claude",
-    "href": "seminars/seminar-2026-02/slides.html#github-copilot-anthropic-claude",
-    "title": "GeoPov",
-    "section": "🤖 GitHub Copilot | Anthropic Claude",
-    "text": "🤖 GitHub Copilot | Anthropic Claude\n\n\nGitHub Copilot\n\n✅ WB-approved\n🌐 github.com/worldbank\n🤝 Uses Claude | GPT\n🔌 Integrates with IDEs\ngithub@worldbank.org\nAI @ WB: ai.worldbank.org\n\n\nChoose your LLM:\n\n🧠 Claude Sonnet/Haiku/Opus\n💡 OpenAI GPT-4/o1…\n\n\n\n\n\n\n\n\nSources: Anthropic Claude Sonnet 4.5"
-  },
-  {
-    "objectID": "seminars/seminar-2026-02/slides.html#efficient-prompting",
-    "href": "seminars/seminar-2026-02/slides.html#efficient-prompting",
-    "title": "GeoPov",
-    "section": "✍️ Efficient Prompting",
-    "text": "✍️ Efficient Prompting\n\n\n🎯 Be specific:\n“Write a Stata do-file to …” / “Refactor this R function to …”\n🧩 Provide context:\n“Goal: X; Dataset: Y variables; Constraints: Z (WB rules, packages, runtime)”\n📌 Define expected output:\n“Save as regression_results.xlsx, format as APA table” / “Create bar chart with 95% CIs”\n🔁 Summarize + clarify first:\n“Restate and ask clarifying questions before implementing”, “Explain why …”, “Give alternatives with trade-offs…”\n🪜 Iterate in small steps:\n“minimal changes”, “refine”\n🛑 Set boundaries:\n“Don’t use … data”, “Don’t print secrets, ask if in doubt.”, “Don’t change files”.\n\n\n\nTip: Treat the assistant as a collaborator."
-  },
-  {
-    "objectID": "seminars/seminar-2026-02/slides.html#limitations-and-remedies",
-    "href": "seminars/seminar-2026-02/slides.html#limitations-and-remedies",
-    "title": "GeoPov",
-    "section": "⚠️ Limitations and Remedies",
-    "text": "⚠️ Limitations and Remedies\n\n⚠︎ Wrong-but-plausible outputs / hallucinations: code runs but logic is wrong\n✓ Verify and validate: ask the model to explain and justify the solution\n⚠︎ Context limits: not all files/data are in context; too large projects.\n✓ Be explicit: state assumptions, expected inputs/outputs, and references\n⚠︎ Outdated knowledge: suggested APIs/packages/options may have changed\n✓ Teach the model: provide references/links; ask it to learn\n⚠︎ Over-reliance: erodes fundamentals; mistakes slip through unchallenged\n✓ Keep learning: ask for step-by-step reasoning; request alternatives and trade-offs\n⚠︎ Confidentiality / security / privacy\n✓ Constrain context: exclude sensitive data; use .copilot-ignore; AI @ WB\n⚠︎ Reproducibility: answers can vary across sessions/models/settings\n✓ Cutomize agents: save prompts, use Git; create AI agents\n\n\nRead more: GitHub Copilot Trust Center | AI @ WB: ai.worldbank.org"
-  },
-  {
-    "objectID": "seminars/seminar-2026-02/slides.html#summary",
-    "href": "seminars/seminar-2026-02/slides.html#summary",
-    "title": "GeoPov",
-    "section": "Summary",
-    "text": "Summary\n\nWhy use IDEs, not a web-browser-based workflow?\n\nContext-awareness\nStreamlined workflow\nReduced friction\n\n\n\nWhy Positron?\n\nBuilt for data science, not software development\nIntegrates with Stata, R, and Python seamlessly\nAdvanced AI features for data analysis"
-  },
-  {
-    "objectID": "seminars/seminar-2026-02/slides.html#where-to-start",
-    "href": "seminars/seminar-2026-02/slides.html#where-to-start",
-    "title": "GeoPov",
-    "section": "Where to Start?",
-    "text": "Where to Start?\n\n\nSetup the software: follow instructions\nReproduce demos:\n\nLive demo in Positron with Stata (recording) + Materials\nPosit Conf 2025 Postron assistant Demo in R and Python\n\nAsk AI’s help to learn.\nStep out of your comfort zone:\n\nlearn and experiment with new technologies: Git, GitHub, R, Python—they are there for a good reason!\n\nSee more slides with additional materials below."
-  },
-  {
-    "objectID": "seminars/seminar-2026-02/slides.html#live-demo-positron-ide-overview",
-    "href": "seminars/seminar-2026-02/slides.html#live-demo-positron-ide-overview",
-    "title": "GeoPov",
-    "section": "Live Demo: Positron IDE overview",
-    "text": "Live Demo: Positron IDE overview"
-  },
-  {
-    "objectID": "seminars/seminar-2026-02/slides.html#thank-you-questins",
-    "href": "seminars/seminar-2026-02/slides.html#thank-you-questins",
-    "title": "GeoPov",
-    "section": "Thank You! Questins?",
-    "text": "Thank You! Questins?\n\n\nResources & Source Code\n\nInternal seminar page\n🎥 Recording\nPositron + Stata: Live Demo (code)\nSlides and Supporting Materials\n\nSlides (web) + Slides (PDF)\n📚 Setup Instructions\n\nPresentation Source Code\nGeoPov learning resources\n\nContact: Distributional Impact of Policies poverty@worldbank.org"
-  },
-  {
-    "objectID": "seminars/seminar-2026-02/slides.html#software-setup-overview",
-    "href": "seminars/seminar-2026-02/slides.html#software-setup-overview",
-    "title": "GeoPov",
-    "section": "Software Setup Overview",
-    "text": "Software Setup Overview\n\n\n\n\n\n\nNote\n\n\nFull details: Setup Instructions\n\n\n\n\nInstall prerequisite software (via WB Software Center)\n\nStata 19+, R 4.5+, Python 3.13+, Quarto, Git\nInstall Python uv package: pip install uv\n\nInstall Positron IDE (system-level install): Request help from IT if needed\nInstall key extensions in Positron\n\nStata MCP, Quarto\n\nConnect GitHub and configure Positron Assistant\nStart experimenting!\n\nOpen assistant: Ctrl+Shift+P &gt; “Ask Positron Assistant”\nTry: chat, agent mode, inline code completion"
-  },
-  {
-    "objectID": "seminars/seminar-2026-02/slides.html#positron-ide-self-learning",
-    "href": "seminars/seminar-2026-02/slides.html#positron-ide-self-learning",
-    "title": "GeoPov",
-    "section": "Positron IDE: Self-learning",
-    "text": "Positron IDE: Self-learning\n\n\nPositron: Modern AI-native IDE for data science\n\nBuilt by Posit (creators of RStudio)\nSupports Stata, R, Python, and others\nWatch the introduction video →\nTry it yourself with examples in R and Python:\n\ngithub.com/posit-dev/posit-conf-2025-positron-assistant-demo"
-  },
-  {
-    "objectID": "seminars/seminar-2026-02/slides.html#positron-assistant",
-    "href": "seminars/seminar-2026-02/slides.html#positron-assistant",
-    "title": "GeoPov",
-    "section": "Positron: Assistant",
-    "text": "Positron: Assistant\n\n\nSource: positron.posit.co/features"
-  },
-  {
-    "objectID": "seminars/seminar-2026-02/slides.html#positron-data-explorer",
-    "href": "seminars/seminar-2026-02/slides.html#positron-data-explorer",
-    "title": "GeoPov",
-    "section": "Positron: Data explorer",
-    "text": "Positron: Data explorer"
-  },
-  {
-    "objectID": "seminars/seminar-2026-02/slides.html#positron-stata",
-    "href": "seminars/seminar-2026-02/slides.html#positron-stata",
-    "title": "GeoPov",
-    "section": "Positron + Stata",
-    "text": "Positron + Stata\n\n\nMake sure prerequisite software is installed (Stata, R, Positron)\nInstall Python after that the uv package: pip install uv\nInstall Stata MCP in Positron and configure Stata path and Edition\nCreate a new Stata do-file, write some code, save it and press run it."
-  },
-  {
-    "objectID": "team/eduard-bukin.html",
-    "href": "team/eduard-bukin.html",
-    "title": "Eduard Bukin",
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
     "section": "",
-    "text": "Eduard Bukin is an experienced economist, data scientist, and statistician spending the last decade at the World Bank, UN, and academia. His career has focused on econometrics, economic research, microeconomics, and statistics, with a strong emphasis on empowering non-specialists to extract insights from complex datasets and effectively communicate analyses through interactive web tools, and artificial intelligence.\nKey technical expertise lies in use of the modern data science technologies and programming languages such as R, Python, STATA, and GIS tools. He holds a Master’s degree in Rural Development from Ghent University and pursues a Ph.D. in Agricultural Economics from Justus Liebig University Giessen.\nHis research focuses on land and agricultural economics in transitional countries, such as Ukraine and Kazakhstan as well as on economic modelling of trade and climate policies impacts on welfare in developing countries. His work has contributed to several peer-reviewed publications published in the Land Use Policy Journal, Environmental Research Letters, Environmental and Resource Economics and other academic outlets as well as World Bank reports, Food and Agriculture Organization (FAO) publications, and internal documents.",
+    "text": "Our work is organized around three main pillars that guide our approach to integrating geospatial data with poverty analysis.",
     "crumbs": [
-      "Team",
-      "Eduard Bukin"
+      "Projects"
     ]
   },
   {
-    "objectID": "team/eduard-bukin.html#bio",
-    "href": "team/eduard-bukin.html#bio",
-    "title": "Eduard Bukin",
-    "section": "",
-    "text": "Eduard Bukin is an experienced economist, data scientist, and statistician spending the last decade at the World Bank, UN, and academia. His career has focused on econometrics, economic research, microeconomics, and statistics, with a strong emphasis on empowering non-specialists to extract insights from complex datasets and effectively communicate analyses through interactive web tools, and artificial intelligence.\nKey technical expertise lies in use of the modern data science technologies and programming languages such as R, Python, STATA, and GIS tools. He holds a Master’s degree in Rural Development from Ghent University and pursues a Ph.D. in Agricultural Economics from Justus Liebig University Giessen.\nHis research focuses on land and agricultural economics in transitional countries, such as Ukraine and Kazakhstan as well as on economic modelling of trade and climate policies impacts on welfare in developing countries. His work has contributed to several peer-reviewed publications published in the Land Use Policy Journal, Environmental Research Letters, Environmental and Resource Economics and other academic outlets as well as World Bank reports, Food and Agriculture Organization (FAO) publications, and internal documents.",
+    "objectID": "projects/index.html#our-three-pillars",
+    "href": "projects/index.html#our-three-pillars",
+    "title": "Projects",
+    "section": "Our Three Pillars",
+    "text": "Our Three Pillars\n\nSpatial Analysis\nApplying a geographic lens to pressing policy questions on poverty and inequality.\n\n\nKnowledge and Data Center\nBuilding a curated repository of geospatial data sources and methods for poverty analysis.\n\n\nCapacity Building\nDemystifying geospatial data for microeconomists through hands-on training and peer-learning.",
     "crumbs": [
-      "Team",
-      "Eduard Bukin"
+      "Projects"
     ]
   },
   {
-    "objectID": "team/henry-stemmler.html",
-    "href": "team/henry-stemmler.html",
-    "title": "Henry Stemmler",
+    "objectID": "projects/knowledge-data-center.html",
+    "href": "projects/knowledge-data-center.html",
+    "title": "Knowledge and Data Center",
     "section": "",
-    "text": "An Economist by training, Henry Stemmler works on poverty analysis and geospatial analytics at the World Bank. His current work explores how spatial factors shape labor market outcomes and welfare in developing countries, with a particular interest in urban job accessibility and the geographic dimensions of poverty.\nHe has co-authored World Bank flagship reports including the Poverty, Prosperity and Planet Report, and his work has appeared in journals such as the Economic Journal, Journal of Development Economics, World Development, and Food Policy. He holds a PhD in Economics from the University of Göttingen and previously worked as a postdoctoral researcher at ETH Zürich and as an Economist at the International Labor Organization.",
+    "text": "We bring clarity to the what, why, and how of using geospatial data in poverty analysis.",
     "crumbs": [
-      "Team",
-      "Henry Stemmler"
+      "Projects",
+      "Knowledge and Data Center"
     ]
   },
   {
-    "objectID": "team/henry-stemmler.html#bio",
-    "href": "team/henry-stemmler.html#bio",
-    "title": "Henry Stemmler",
+    "objectID": "projects/knowledge-data-center.html#overview",
+    "href": "projects/knowledge-data-center.html#overview",
+    "title": "Knowledge and Data Center",
     "section": "",
-    "text": "An Economist by training, Henry Stemmler works on poverty analysis and geospatial analytics at the World Bank. His current work explores how spatial factors shape labor market outcomes and welfare in developing countries, with a particular interest in urban job accessibility and the geographic dimensions of poverty.\nHe has co-authored World Bank flagship reports including the Poverty, Prosperity and Planet Report, and his work has appeared in journals such as the Economic Journal, Journal of Development Economics, World Development, and Food Policy. He holds a PhD in Economics from the University of Göttingen and previously worked as a postdoctoral researcher at ETH Zürich and as an Economist at the International Labor Organization.",
+    "text": "We bring clarity to the what, why, and how of using geospatial data in poverty analysis.",
     "crumbs": [
-      "Team",
-      "Henry Stemmler"
+      "Projects",
+      "Knowledge and Data Center"
     ]
   },
   {
-    "objectID": "team/ben-brunckhorst.html",
-    "href": "team/ben-brunckhorst.html",
-    "title": "Ben Brunckhorst",
-    "section": "",
-    "text": "Ben Brunckhorst is a research analyst at the World Bank, where he contributes to the understanding of economic development and policy impact through interdisciplinary work spanning economics, climate change, and data science. He supports global welfare monitoring efforts with a particular focus on subnational spatial disparities in poverty and inequality. With a strong background in development economics and engineering, he utilizes tools such as R and Python to analyze large datasets and extract meaningful insights. His research has been published in academic journals and World Bank reports, and covered by the New York Times.",
+    "objectID": "projects/knowledge-data-center.html#what-we-provide",
+    "href": "projects/knowledge-data-center.html#what-we-provide",
+    "title": "Knowledge and Data Center",
+    "section": "What We Provide",
+    "text": "What We Provide\n\nData Repository\nBuilding a curated repository of geospatial data sources and methods, with clear guidance on how they can (and can’t) be used in applied work.\n\n\nPractical Examples\nShowcasing examples of microeconomic analyses that successfully integrate geospatial data to answer real-world policy questions.",
     "crumbs": [
-      "Team",
-      "Ben Brunckhorst"
+      "Projects",
+      "Knowledge and Data Center"
     ]
   },
   {
-    "objectID": "team/ben-brunckhorst.html#bio",
-    "href": "team/ben-brunckhorst.html#bio",
-    "title": "Ben Brunckhorst",
-    "section": "",
-    "text": "Ben Brunckhorst is a research analyst at the World Bank, where he contributes to the understanding of economic development and policy impact through interdisciplinary work spanning economics, climate change, and data science. He supports global welfare monitoring efforts with a particular focus on subnational spatial disparities in poverty and inequality. With a strong background in development economics and engineering, he utilizes tools such as R and Python to analyze large datasets and extract meaningful insights. His research has been published in academic journals and World Bank reports, and covered by the New York Times.",
+    "objectID": "projects/knowledge-data-center.html#resources",
+    "href": "projects/knowledge-data-center.html#resources",
+    "title": "Knowledge and Data Center",
+    "section": "Resources",
+    "text": "Resources\n\nData Sources\nCurated list of geospatial data sources\n\n\nMethods and Guidelines\nBest practices and methodological guidance\n\n\nCase Studies\nExamples of successful applications",
     "crumbs": [
-      "Team",
-      "Ben Brunckhorst"
+      "Projects",
+      "Knowledge and Data Center"
+    ]
+  },
+  {
+    "objectID": "projects/knowledge-data-center.html#how-to-use-this-resource",
+    "href": "projects/knowledge-data-center.html#how-to-use-this-resource",
+    "title": "Knowledge and Data Center",
+    "section": "How to Use This Resource",
+    "text": "How to Use This Resource\nGuidance for economists new to geospatial data",
+    "crumbs": [
+      "Projects",
+      "Knowledge and Data Center"
     ]
   }
 ]

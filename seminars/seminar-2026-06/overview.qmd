@@ -263,260 +263,130 @@ file.remove(c("temp_df.rds", "temp_v2.rds", "temp_v3.rds",
 
 The serialization format is designed to be a perfect "snapshot" of the R object, making it ideal for caching intermediate results, sharing data between R sessions, or storing complex objects that CSV can't handle well (like factors, dates, or nested structures).
 
-### Limitations of saveRDS Serialization
+### Alternative Serialization Methods
 
-While `saveRDS()` provides perfect object reconstruction, it has important limitations:
+Modern R provides multiple serialization approaches, each optimized for different use cases. These can be grouped by how they store and access data:
 
-#### 1. RAM Usage - Must Load Entire Object
+#### Group 1: Binary Serialization (R-native, stores objects as-is)
 
-```{r}
-#| label: ram-limitations
-# Create a test data frame
-test_df <- data.frame(
-  id = 1:100000,
-  value = rnorm(100000),
-  category = sample(LETTERS[1:5], 100000, replace = TRUE)
-)
+**`saveRDS()` / `readRDS()`** — Base R serialization
+- Stores any R object in binary format with compression (gzip/bzip2/xz)
+- Single-threaded, perfect object reconstruction
+- Returns R objects exactly as saved, no post-processing needed
+- **Limitation**: Must load entire object into memory
 
-cat("Object size in memory:", format(object.size(test_df), units = "MB"), "\n")
+**`qs2::qs_save()` / `qs_read()`** — Fast alternative to RDS
+- Stores any R object using modern compression (zstd/lz4)
+- Multi-threaded compression, 5-10x faster than saveRDS
+- Returns R objects exactly as saved, no post-processing needed
+- **Best for**: Fast serialization of R objects (models, lists, environments)
 
-# saveRDS requires the entire object to be in memory
-saveRDS(test_df, "test_large.rds")
-cat("File size on disk:", file.size("test_large.rds") / 1024^2, "MB\n")
+**`fst::write_fst()` / `read_fst()`** — Columnar binary for data frames
+- Data frames only, columnar storage format
+- Multi-threaded, supports random column and row-number access
+- Returns data frames as stored, no post-processing needed
+- **Best for**: Large data frames with frequent partial reads
 
-# Key limitation: Cannot read just one column or subset of rows
-# You must load the entire object into RAM
-test_read <- readRDS("test_large.rds")
-```
+#### Group 2: Text-Based Serialization (converts to text format)
 
-**Key limitation**: No partial reads — you must load the entire object into RAM, even if you only need specific columns or rows.
+**`write.csv()` / `read.csv()`** — Base R CSV functions
+- Converts data frames to comma-separated text
+- Single-threaded, slow, human-readable
+- Type information lost; requires re-parsing and type inference on read
 
-#### 2. CPU Usage - Single-Threaded Compression
+**`data.table::fwrite()` / `fread()`** — Fast CSV alternative
+- Converts data frames to text with automatic type detection
+- Multi-threaded, 10-100x faster than base CSV
+- Smart type inference on read, but still text conversion overhead
+- **Best for**: Sharing with non-R users while maintaining speed
 
-```{r}
-#| label: cpu-limitations
-library(microbenchmark)
+#### Group 3: Cross-Platform Binary (uses external C++ libraries)
 
-# Compare compression methods - all single-threaded in saveRDS
-compression_bench <- microbenchmark(
-  no_compress = saveRDS(test_df, "temp_none.rds", compress = FALSE),
-  gzip = saveRDS(test_df, "temp_gzip.rds", compress = "gzip"),
-  bzip2 = saveRDS(test_df, "temp_bzip2.rds", compress = "bzip2"),
-  xz = saveRDS(test_df, "temp_xz.rds", compress = "xz"),
-  times = 5
-)
+**Arrow Feather** via `arrow::write_feather()` / `read_feather()`
+- Uses Apache Arrow C++ library to access R memory directly
+- Stores data frames in Arrow columnar format (language-agnostic)
+- Zero-copy reads when possible, minimal post-processing
+- **Best for**: Fast cross-language data exchange
 
-print(compression_bench)
+**Arrow Parquet** via `arrow::write_parquet()` / `read_parquet()`
+- Uses Apache Arrow C++ library with Parquet compression
+- Columnar storage, excellent compression, cross-language (Python/Spark/etc.)
+- Supports column selection and predicate pushdown (filter by values)
+- **Best for**: Big data, cloud storage (S3/HTTP streaming), cross-platform analytics
 
-cat("\nFile sizes:\n")
-cat("No compression:", file.size("temp_none.rds") / 1024^2, "MB\n")
-cat("gzip:", file.size("temp_gzip.rds") / 1024^2, "MB\n")
-cat("bzip2:", file.size("temp_bzip2.rds") / 1024^2, "MB\n")
-cat("xz:", file.size("temp_xz.rds") / 1024^2, "MB\n")
-```
+**DuckDB database** via `duckdb::dbWriteTable()` or writing Parquet
+- Uses DuckDB in-process database engine (written in C++)
+- Can store as DuckDB database file or write Parquet directly
+- Enables SQL queries and larger-than-RAM operations
+- **Best for**: Data warehouse operations, SQL-based analytics
 
-**Key limitation**: All compression in `saveRDS()` is single-threaded and can be slow, especially with stronger compression algorithms like `xz`.
+**Key distinction**: Arrow and DuckDB use optimized C++ libraries that either access R object memory directly (zero-copy when possible) or copy data efficiently into their own memory layout for optimal compression and cross-language compatibility.
 
-#### 3. Other Limitations
+### fst Package: Multi-threaded Columnar Storage
 
-- **No cross-language support**: RDS format is R-specific
-- **No random access**: Cannot read specific columns without loading entire object
-- **Version compatibility**: Older R versions cannot read newer format versions
-- **Large file handling**: Inefficient for very large objects (multi-GB)
+The `fst` package deserves special attention for its exceptional performance characteristics and unique capabilities for data frame serialization.
 
-### Alternative Serialization Approaches in R
+#### Performance Characteristics
 
-Modern R offers several alternatives that overcome these limitations:
+From benchmarking on a modern SSD system:
+- **Read speeds**: 2184 MB/s (vs 633 MB/s for readRDS)
+- **Write speeds**: 3180 MB/s (vs 489 MB/s for saveRDS)
+- **File size**: ~30% of uncompressed RDS size
+- **Multi-threaded**: Compression/decompression happens in background while disk I/O continues
 
-#### 1. qs2 - Fast Serialization for Any R Object
+#### Random Access Capabilities
 
-`qs2` is a drop-in replacement for `saveRDS()` with multi-threaded compression:
-
-```{r}
-#| label: qs2-demo
-library(qs2)
-
-# Basic usage - similar to saveRDS but much faster
-qs_save(test_df, "test_df.qs2")
-test_qs2 <- qs_read("test_df.qs2")
-
-# Verify identical reconstruction
-identical(test_df, test_qs2)
-```
-
-**Advantages**: 5-10x faster than `saveRDS`, smaller files, multi-threaded, handles any R object
-
-**Use when**: You need fast serialization of R objects (models, lists, environments, functions)
-
-#### 2. fst - Fast Columnar Storage for Data Frames
-
-`fst` provides random access to columns and rows:
+Unlike RDS, `fst` provides true random access to both columns and rows:
 
 ```{r}
-#| label: fst-demo
+#| label: fst-random-access-demo
+#| eval: false
 library(fst)
 
-# Write data frame
-write_fst(test_df, "test_df.fst")
+# Write data frame with maximum compression
+write_fst(df, "data.fst", compress = 100)
 
-# Read only specific columns (random access!)
-partial_read <- read_fst("test_df.fst", columns = c("id", "value"))
-head(partial_read, 3)
+# Read full dataset
+df_full <- read_fst("data.fst")
 
-cat("\nPartial read size:", format(object.size(partial_read), units = "MB"), "\n")
-cat("vs full object size:", format(object.size(test_df), units = "MB"), "\n")
+# Read only specific columns (no need to load others)
+df_subset <- read_fst("data.fst", columns = c("region", "income"))
 
-# Read specific row ranges
-row_subset <- read_fst("test_df.fst", from = 1, to = 1000)
-cat("Read only first 1000 rows:", format(object.size(row_subset), units = "MB"), "\n")
+# Read specific row range (by row number)
+df_rows <- read_fst("data.fst", from = 1000, to = 5000)
+
+# Combine column and row selection
+df_partial <- read_fst("data.fst", 
+                       columns = c("region", "income"),
+                       from = 1000, to = 5000)
 ```
 
-**Advantages**: Very fast, multi-threaded, random access to columns/rows, no decompression needed for unused columns
+This random access means you can read a 10 GB file on disk and extract only 100 MB of data you need, without loading the entire file into RAM first.
 
-**Use when**: Working with large data frames where you often need subsets
+#### Compression Options
 
-#### 3. data.table - Fast CSV Alternative
-
-`data.table` provides blazing-fast CSV read/write:
+`fst` uses LZ4 and ZSTD compressors with configurable compression levels:
 
 ```{r}
-#| label: datatable-demo
-library(data.table)
-
-# fwrite is much faster than write.csv
-csv_bench <- microbenchmark(
-  base_write = write.csv(test_df, "base.csv", row.names = FALSE),
-  fwrite = fwrite(test_df, "fwrite.csv"),
-  times = 5
-)
-
-print(csv_bench)
-
-# fread is much faster than read.csv
-csv_read_bench <- microbenchmark(
-  base_read = read.csv("base.csv"),
-  fread = fread("fwrite.csv"),
-  times = 5
-)
-
-cat("\n")
-print(csv_read_bench)
+#| label: fst-compression-demo
+#| eval: false
+# Compression level: 0 (minimum/fastest) to 100 (maximum/smallest)
+write_fst(df, "fast.fst", compress = 0)    # Fastest write, larger file
+write_fst(df, "balanced.fst", compress = 50)  # Default balance
+write_fst(df, "small.fst", compress = 100)    # Smallest file, slower write
 ```
 
-**Advantages**: Universal format (any tool can read CSV), multi-threaded, automatic type detection
+The compression happens on background threads, so even with high compression settings, `fst` can write faster than the disk speed because compression and I/O overlap.
 
-**Use when**: Need cross-platform compatibility or sharing with non-R users
+#### Multi-threading Benefits
 
-#### 4. arrow - Parquet for Big Data
+`fst` automatically utilizes all available CPU cores:
+- **Parallel compression**: Multiple columns compressed simultaneously
+- **Background I/O**: Compression happens while disk writes continue
+- **Column-optimized**: Each column uses type-specific compression
+- **Can exceed disk speed**: Through efficient CPU/I/O parallelization
 
-Apache Parquet provides columnar storage with compression:
-
-```{r}
-#| label: parquet-demo
-library(arrow)
-
-# Write parquet file
-write_parquet(test_df, "test.parquet")
-
-# Read parquet file
-test_parquet <- read_parquet("test.parquet")
-
-# Parquet supports column selection
-partial_parquet <- read_parquet("test.parquet", col_select = c("id", "value"))
-cat("Parquet file size:", file.size("test.parquet") / 1024^2, "MB\n")
-cat("Partial column read:", format(object.size(partial_parquet), units = "MB"), "\n")
-```
-
-**Advantages**: Cross-language, compressed, columnar, works with Python/Pandas/Spark, can handle larger-than-RAM datasets
-
-**Use when**: Working with big data, need cross-language compatibility, or using distributed systems
-
-### Comprehensive Speed Comparison
-
-```{r}
-#| label: comprehensive-comparison
-# Write speed comparison
-all_writes <- microbenchmark(
-  saveRDS_gzip = saveRDS(test_df, "all_rds.rds", compress = "gzip"),
-  qs2 = qs_save(test_df, "all_qs2.qs2"),
-  fst = write_fst(test_df, "all_fst.fst"),
-  csv_fwrite = fwrite(test_df, "all_fwrite.csv"),
-  parquet = write_parquet(test_df, "all_parquet.parquet"),
-  times = 10
-)
-
-cat("=== WRITE SPEEDS ===\n")
-print(all_writes)
-
-# Read speed comparison
-cat("\n=== READ SPEEDS ===\n")
-all_reads <- microbenchmark(
-  readRDS_gzip = readRDS("all_rds.rds"),
-  qs2 = qs_read("all_qs2.qs2"),
-  fst = read_fst("all_fst.fst"),
-  csv_fread = fread("all_fwrite.csv"),
-  parquet = read_parquet("all_parquet.parquet"),
-  times = 10
-)
-
-print(all_reads)
-```
-
-### File Size and Feature Comparison
-
-```{r}
-#| label: size-feature-comparison
-# File size comparison
-file_sizes <- data.frame(
-  Format = c("saveRDS (gzip)", "qs2", "fst", "CSV (fwrite)", "Parquet"),
-  Size_MB = c(
-    file.size("all_rds.rds") / 1024^2,
-    file.size("all_qs2.qs2") / 1024^2,
-    file.size("all_fst.fst") / 1024^2,
-    file.size("all_fwrite.csv") / 1024^2,
-    file.size("all_parquet.parquet") / 1024^2
-  ),
-  stringsAsFactors = FALSE
-)
-
-file_sizes <- file_sizes[order(file_sizes$Size_MB), ]
-cat("=== FILE SIZES ===\n")
-print(file_sizes, row.names = FALSE)
-
-# Feature comparison
-cat("\n=== KEY FEATURES ===\n")
-features <- data.frame(
-  Format = c("saveRDS", "qs2", "fst", "CSV (data.table)", "Parquet"),
-  `Random Access` = c("No", "No", "Cols + Rows", "No", "Columns"),
-  `Multi-threaded` = c("No", "Yes", "Yes", "Yes", "Yes"),
-  `Arbitrary Objects` = c("Yes", "Yes", "Data frames", "Data frames", "Data frames"),
-  `Cross-language` = c("R only", "R only", "Limited", "Universal", "Universal"),
-  `Best For` = c("Legacy", "Fast R objects", "Fast data frames", "CSV alternative", "Big data"),
-  check.names = FALSE
-)
-
-print(features, row.names = FALSE)
-```
-
-```{r}
-#| label: cleanup-comparison-files
-#| include: false
-# Clean up temporary files
-file.remove(c("test_large.rds", "temp_none.rds", "temp_gzip.rds", "temp_bzip2.rds", "temp_xz.rds",
-              "test_df.fst", "test_df.qs2", "base.csv", "fwrite.csv", "test.parquet",
-              "all_rds.rds", "all_qs2.qs2", "all_fst.fst", "all_fwrite.csv", "all_parquet.parquet"))
-```
-
-### Summary: Choosing the Right Serialization Method
-
-| Scenario | Recommended Method | Why |
-|----------|-------------------|-----|
-| **Quick R object save** (models, lists) | `qs2` | 5-10x faster than `saveRDS`, smaller files |
-| **Large data frames** with frequent partial reads | `fst` | Random access, multi-threaded, very fast |
-| **Share with non-R users** | CSV via `fwrite`/`fread` | Universal format, still fast |
-| **Big data / cross-language** | Parquet via `arrow` | Columnar, compressed, works with Python/Spark |
-| **Legacy code / simple use** | `saveRDS` | Built-in, perfect for small objects |
-
+This makes `fst` ideal for interactive data analysis where you frequently save and load intermediate results.
 
 ## Overview
 
@@ -568,95 +438,4 @@ In this session, we will:
 | 1 | **Motivation — fast & big** | 1:00 | R works in RAM; I/O, grouped computation, and larger-than-RAM data are the three friction points in development data work. |
 | 2 | **Roadmap: three bottlenecks** | 0:30 | (1) store/load, (2) compute, (3) data > RAM. |
 | 3 | **Serialize R objects fast** | 2:00 | `saveRDS()` baseline (gzip, slow) → **`qs2`** for any object, **`fst`** for data frames (columnar, random access, multithreaded). Size vs. speed trade-offs. |
-| 4 | **Fast in-memory compute: `collapse`** | 2:30 | Fast statistical functions; `fgroup_by()` / `fsummarise()` / `collap()`; side-by-side with `dplyr`; the `fastverse` bundle. |
-| 5 | **Columnar on disk: Parquet + Arrow** | 1:30 | Parquet = columnar, compressed, cross-language; `arrow::open_dataset()` for lazy `dplyr` over partitioned datasets — read only the columns/rows you need. |
-| 6 | **Beyond RAM: DuckDB / duckplyr** | 1:30 | DuckDB queries Parquet/CSV in place; **`duckplyr`** runs `dplyr` pipelines on the DuckDB engine; `data.table` as the in-memory workhorse (`fread`/`fwrite`). |
-| 7 | **Which tool when + resources** | 1:00 | Decision guide and pointers to docs and benchmarks. |
-
-::: callout-note
-This is a survey/lightning format — each tool gets a slide or two and a tiny
-code snippet, not a deep benchmark. A few code cells will be executed live;
-heavy benchmarking is intentionally avoided.
-:::
-
-## Decision guide (draft)
-
-| If you need to… | Reach for | Notes |
-|-----------------|-----------|-------|
-| Save/load an arbitrary R object fast | **`qs2`** | Drop-in for `saveRDS`/`readRDS`; much faster, smaller. |
-| Save/load a big **data frame**, maybe a few columns at a time | **`fst`** | Columnar, random row/column access, multithreaded. |
-| Fast grouped stats / transforms in memory | **`collapse`** (or `data.table`) | C/C++ speed, tidy-ish syntax, integrates with `data.table`. |
-| Readable pipelines on medium data | **`dplyr`** | The baseline; reach for the above when it gets slow. |
-| Cross-language, compressed, partitioned on-disk storage | **Parquet** via **`arrow`** | `open_dataset()` + lazy `dplyr`; share with Python/Stata/DuckDB. |
-| Query data **bigger than RAM** with SQL or `dplyr` | **DuckDB** / **`duckplyr`** | Reads Parquet/CSV in place; spills to disk as needed. |
-
-## Materials
-
-<!-- Add links/embeds as they become available -->
-
-- Slides: TBD (`slides.qmd`)
-- Recording: TBD
-- Supporting materials / repo: TBD
-- Code snippets / demo: TBD (a few small executed examples — see resources below)
-
-## Resources by topic
-
-### Fast in-memory computation
-
-- **collapse** — Advanced and fast data transformation:
-  [docs](https://sebkrantz.github.io/collapse/) ·
-  [CRAN](https://CRAN.R-project.org/package=collapse) ·
-  [intro vignette](https://sebkrantz.github.io/collapse/articles/collapse_intro.html)
-- **fastverse** — meta-package bundling `collapse`, `data.table`, `kit`, etc.:
-  [site](https://fastverse.github.io/fastverse/)
-- **data.table** — fast in-memory ops and `fread`/`fwrite`:
-  [docs](https://rdatatable.gitlab.io/data.table/) ·
-  [GitHub](https://github.com/Rdatatable/data.table)
-- **dplyr** — the readable baseline for comparison:
-  [docs](https://dplyr.tidyverse.org/)
-
-### Serialization — storing & loading R objects / tables
-
-- **base R** — `saveRDS()` / `readRDS()`, `save()` / `load()`:
-  [`?saveRDS`](https://stat.ethz.ch/R-manual/R-devel/library/base/html/readRDS.html)
-- **qs2** — fast serialization of *arbitrary* R objects (zstd/lz4):
-  [GitHub](https://github.com/qsbase/qs2) ·
-  [CRAN](https://CRAN.R-project.org/package=qs2)
-- **fst** — fast, columnar serialization of *data frames* with random access:
-  [site](https://www.fstpackage.org/) ·
-  [GitHub](https://github.com/fstpackage/fst)
-
-### Columnar & cross-language storage
-
-- **Apache Parquet** — columnar, compressed file format:
-  [parquet.apache.org](https://parquet.apache.org/)
-- **arrow (R)** — read/write Parquet & Feather, Arrow datasets:
-  [docs](https://arrow.apache.org/docs/r/) ·
-  [larger-than-memory datasets](https://arrow.apache.org/docs/r/articles/dataset.html)
-
-### Out-of-memory / database engines
-
-- **DuckDB (R API)** — in-process OLAP engine; query Parquet/CSV in place:
-  [docs](https://duckdb.org/docs/stable/clients/r) ·
-  [r.duckdb.org](https://r.duckdb.org/)
-- **duckplyr** — `dplyr` backend powered by DuckDB (larger-than-RAM, lazy):
-  [docs](https://duckplyr.tidyverse.org/)
-- **arrow ↔ duckdb** — hand a dataset to DuckDB with `to_duckdb()`:
-  [reference](https://arrow.apache.org/docs/r/reference/to_duckdb.html)
-
-### Benchmarks & background
-
-- **Database-like ops benchmark** (DuckDB Labs revival) — `data.table`,
-  `dplyr`, `collapse`, DuckDB, Polars, pandas, …:
-  [duckdblabs.github.io/db-benchmark](https://duckdblabs.github.io/db-benchmark/)
-
-### Datasets for demos (candidates)
-
-- `nycflights13` (small, familiar) for the `collapse`/`dplyr` comparison.
-- A larger CSV/Parquet (e.g., GMD-like microdata or the public NYC taxi
-  dataset used in the Arrow tutorial) for the Parquet/DuckDB section.
-
-## Additional Resources
-
-- Prior seminar: [AI-Assisted Coding in Stata and R](../seminar-2026-02/overview.qmd)
-- [GeoPov learning resources](https://worldbank.github.io/geoPovLearn/)
+| 4 | **Fast in-memory compute: `collapse`** | 2:30 | Fast statistical functions; `fgroup_by()` / `fsummarise()` /

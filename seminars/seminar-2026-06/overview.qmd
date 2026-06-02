@@ -460,60 +460,62 @@ safe_size <- function(x) {
 bench_method <- function(data, method_name) {
   tmp_dir <- tempfile()
   dir.create(tmp_dir)
-  orig_dir <- setwd(tmp_dir)
-  on.exit({ setwd(orig_dir); unlink(tmp_dir, recursive = TRUE) })
+  
+  
   
   result <- list()
   
   if (method_name == "saveRDS") {
     b <- microbenchmark(
-      write = saveRDS(data, "f.rds"), 
-      read = readRDS("f.rds"), times = 10
+      write = saveRDS(data, file.path(tmp_dir, "f.rds")), 
+      read = readRDS(file.path(tmp_dir, "f.rds")), times = 10
     )
-    result$size <- safe_size("f.rds")
+    result$size <- safe_size(file.path(tmp_dir, "f.rds"))
   } else if (method_name == "qs2") {
     b <- microbenchmark(
-      write = qs_save(data, "f.qs2"),
-      read = qs_read("f.qs2"), times = 10
+      write = qs_save(data, file.path(tmp_dir, "f.qs2")),
+      read = qs_read(file.path(tmp_dir, "f.qs2")), times = 10
     )
-    result$size <- safe_size("f.qs2")
+    result$size <- safe_size(file.path(tmp_dir, "f.qs2"))
   } else if (method_name == "fst") {
     b <- microbenchmark(
-      write = write_fst(data, "f.fst"),
-      read = read_fst("f.fst"), times = 10
+      write = write_fst(data, file.path(tmp_dir, "f.fst")),
+      read = read_fst(file.path(tmp_dir, "f.fst")), times = 10
     )
-    result$size <- safe_size("f.fst")
+    result$size <- safe_size(file.path(tmp_dir, "f.fst"))
   } else if (method_name == "data.table") {
     b <- microbenchmark(
-      write = fwrite(data, "f.csv"),
-      read = fread("f.csv"), times = 10
+      write = fwrite(data, file.path(tmp_dir, "f.csv")),
+      read = fread(file.path(tmp_dir, "f.csv")), times = 10
     )
-    result$size <- safe_size("f.csv")
+    result$size <- safe_size(file.path(tmp_dir, "f.csv"))
   } else if (method_name == "feather") {
     b <- microbenchmark(
-      write = write_feather(data, "f.feather"),
-      read = read_feather("f.feather"), times = 10
+      write = write_feather(data, file.path(tmp_dir, "f.feather")),
+      read = read_feather(file.path(tmp_dir, "f.feather")), times = 10
     )
-    result$size <- safe_size("f.feather")
+    result$size <- safe_size(file.path(tmp_dir, "f.feather"))
   } else if (method_name == "parquet") {
     b <- microbenchmark(
-      write = write_parquet(data, "f.parquet"),
-      read = read_parquet("f.parquet"), times = 10
+      write = write_parquet(data, file.path(tmp_dir, "f.parquet")),
+      read = read_parquet(file.path(tmp_dir, "f.parquet")), times = 10
     )
-    result$size <- safe_size("f.parquet")
+    result$size <- safe_size(file.path(tmp_dir, "f.parquet"))
   } else if (method_name == "duckdb") {
-    con <- dbConnect(duckdb::duckdb(), "f.duckdb")
+    con <- dbConnect(duckdb::duckdb(), file.path(tmp_dir, "f.duckdb"))
     b <- microbenchmark(
       write = { dbWriteTable(con, "data", data, overwrite = TRUE) },
       read = dbReadTable(con, "data"), times = 10
     )
     dbDisconnect(con, shutdown = TRUE)
-    result$size <- safe_size("f.duckdb")
+    result$size <- safe_size(file.path(tmp_dir, "f.duckdb"))
   }
   
   result$write_ms <- round(median(subset(b, expr == "write")$time) / 1e6, 1)
   result$read_ms <- round(median(subset(b, expr == "read")$time) / 1e6, 1)
   result
+  
+  unlink(tmp_dir, recursive = TRUE)
 }
 
 methods <- c("saveRDS", "qs2", "fst", "data.table", "feather", "parquet", "duckdb")

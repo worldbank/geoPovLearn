@@ -44,6 +44,8 @@ website:
           - text: Fast & Big Data in R
             href: seminars/seminar-2026-06/overview.qmd
             contents:
+              - text: "Part 1 — Serialization"
+                href: seminars/seminar-2026-06/serialization.qmd
               - text: "Part 2 — Data Wrangling"
                 href: seminars/seminar-2026-06/data-wrangling.qmd
           - text: Revolutionizing Coding in Stata/R

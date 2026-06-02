@@ -1,0 +1,551 @@
+---
+title: "Part 1 — Data Serialization in R"
+title-long: "Fast & Big Data in R: Storing, Moving, and Benchmarking Data on Disk"
+date: "2026-06-DD"   # TODO: confirm seminar date
+description: "How R reads and writes data — RDS, qs2, fst, CSV, Feather, Parquet, and DuckDB — with benchmarks across 1k to 1M rows and practical recommendations for development-data workflows."
+author: "Eduard Bukin"   # TODO: confirm speaker
+categories: [R, serialization, qs2, fst, arrow, parquet, duckdb, benchmarks]
+code-tools: true
+code-fold: false
+---
+
+## What is Serialization?
+
+::: {.unnumbered .unlisted style="font-family: 'Times New Roman', serif; font-size: 0.85em;"}
+
+> Do not expect to write data to a file (such as with `write.table`), read the
+> data back into R and have that be precisely the same as the original. That is
+> doing two translations, and there is often something lost in translation.
+>
+> — Burns, P. (2011). *The R Inferno* (§ 8.3.10, p 105). burns-stat.com.
+
+:::
+
+Serialization converts an R object into a byte stream for storage or transmission, then reconstructs it exactly. Unlike text formats (CSV), which convert data to characters and discard type information, binary serialization preserves the complete object: column types, factor levels, class attributes, and custom metadata.
+
+## R's Serialization Toolkit
+
+Seven approaches cover most use cases, grouped by storage strategy.
+
+### Binary R-native
+
+Store any R object as bytes; reconstruct exactly with no post-processing.
+
+| Package | Write / Read | Notes |
+|---|---|---|
+| base R | `saveRDS()` / `readRDS()` | Any R object; gzip/bzip2/xz compression; single-threaded |
+| qs2 | `qs_save()` / `qs_read()` | Any R object; zstd/lz4; multi-threaded — 5–10× faster than saveRDS |
+| fst | `write_fst()` / `read_fst()` | Data frames only; LZ4/ZSTD; multi-threaded; random column/row access |
+
+### Text-based
+
+Convert data to human-readable text; type information is lost and must be inferred on read.
+
+| Package | Write / Read | Notes |
+|---|---|---|
+| base R | `write.csv()` / `read.csv()` | Portable; slow; single-threaded |
+| data.table | `fwrite()` / `fread()` | Same format; 10–100× faster; smart type inference |
+
+### Cross-platform binary
+
+Use C++ libraries (Apache Arrow, DuckDB) to access R memory directly — zero-copy where possible, language-agnostic output.
+
+| Package | Write / Read | Notes |
+|---|---|---|
+| arrow | `write_feather()` / `read_feather()` | Arrow columnar format; fastest I/O; largest files |
+| arrow | `write_parquet()` / `read_parquet()` | Columnar with compression; column/row selection; cloud-native |
+| duckdb | `dbWriteTable()` / `dbReadTable()` | Embedded SQL database; larger-than-RAM support |
+
+## Native R Serialization in Practice
+
+### Basic usage
+
+```{r}
+#| label: basic-serialization
+#| results: hold
+df <- data.frame(
+  id    = 1:3,
+  name  = c("Alice", "Bob", "Charlie"),
+  score = c(95.5, 87.3, 92.1)
+)
+saveRDS(df, "temp_df.rds")
+df_restored <- readRDS("temp_df.rds")
+identical(df, df_restored)
+```
+
+### Format and compression options
+
+```{r}
+#| label: format-and-compression
+#| results: hold
+
+# Format version 3 supports ALTREP (e.g. 1:1000000 stored as a range, not all ints)
+saveRDS(df, "temp_v2.rds", version = 2)
+saveRDS(df, "temp_v3.rds", version = 3)
+cat("Version 2:", file.size("temp_v2.rds"), "bytes\n")
+cat("Version 3:", file.size("temp_v3.rds"), "bytes\n")
+
+# Compression: FALSE = fastest write; "xz" = smallest file
+large_df <- data.frame(x = rep(1:100, 100), y = rnorm(10000),
+                       z = sample(letters, 10000, replace = TRUE))
+saveRDS(large_df, "temp_none.rds",  compress = FALSE)
+saveRDS(large_df, "temp_gzip.rds",  compress = "gzip")
+saveRDS(large_df, "temp_bzip2.rds", compress = "bzip2")
+saveRDS(large_df, "temp_xz.rds",   compress = "xz")
+cat("No compression:", file.size("temp_none.rds"),  "bytes\n")
+cat("gzip:          ", file.size("temp_gzip.rds"),  "bytes\n")
+cat("bzip2:         ", file.size("temp_bzip2.rds"), "bytes\n")
+cat("xz:            ", file.size("temp_xz.rds"),   "bytes\n")
+```
+
+### Binary vs text encoding
+
+```{r}
+#| label: binary-vs-text
+#| results: hold
+raw_bytes   <- serialize(df, connection = NULL)
+ascii_bytes <- serialize(df, connection = NULL, ascii = TRUE)
+head(raw_bytes,   16)
+head(ascii_bytes, 16)
+cat("Binary:", length(raw_bytes),   "bytes\n")
+cat("ASCII: ", length(ascii_bytes), "bytes\n")
+```
+
+### Attributes and types are preserved
+
+```{r}
+#| label: attributes-and-types
+#| results: hold
+
+# Custom attributes and subclasses survive round-trips
+df_special <- df
+attr(df_special, "created_date") <- Sys.Date()
+attr(df_special, "source") <- "example data"
+class(df_special) <- c("my_special_df", "data.frame")
+saveRDS(df_special, "temp_special.rds")
+attributes(readRDS("temp_special.rds"))
+
+# All column types are preserved exactly
+df_types <- data.frame(
+  int_col  = 1:3,
+  dbl_col  = c(1.1, 2.2, 3.3),
+  chr_col  = c("a", "b", "c"),
+  fct_col  = factor(c("low", "high", "medium")),
+  date_col = as.Date(c("2026-01-01", "2026-01-02", "2026-01-03")),
+  stringsAsFactors = FALSE
+)
+saveRDS(df_types, "temp_types.rds")
+str(df_types)
+str(readRDS("temp_types.rds"))
+```
+
+```{r}
+#| label: cleanup-temp-files
+#| include: false
+file.remove(c("temp_df.rds", "temp_v2.rds", "temp_v3.rds",
+              "temp_none.rds", "temp_gzip.rds", "temp_bzip2.rds", "temp_xz.rds",
+              "temp_special.rds", "temp_types.rds"))
+```
+
+## Format Deep Dives
+
+### qs2 — fast serialization of any R object
+
+The `qs2` package stores any R object (data frames, models, lists, environments) with
+multi-threaded zstd/lz4 compression — typically 5–10× faster than `saveRDS()`.
+
+```{r}
+#| label: qs2-demo
+#| eval: false
+library(qs2)
+
+qs_save(large_data, "data.qs2")                  # uses all available cores
+qs_save(large_data, "data.qs2", nthreads = 4)    # or specify explicitly
+qs2::qs_threads()                                 # check active thread count
+
+# Save a complete analysis workspace — models, predictions, fitted objects
+analysis_state <- list(
+  model       = trained_rf_model,
+  predictions = pred_results,
+  metrics     = performance_metrics,
+  metadata    = list(timestamp = Sys.time(), r_version = R.version.string)
+)
+qs_save(analysis_state, "analysis_cache.qs2")
+analysis_state <- qs_read("analysis_cache.qs2")   # restore in one call
+```
+
+### fst — columnar binary with random access
+
+`fst` stores data frames in a columnar format that supports partial reads without a
+full scan — useful when working with wide data frames or large files where you
+only need a subset of columns or a row range.
+
+```{r}
+#| label: fst-demo
+#| eval: false
+library(fst)
+
+write_fst(df, "data.fst", compress = 50)    # 0 = fastest write; 100 = smallest file
+
+df_full    <- read_fst("data.fst")                                         # everything
+df_cols    <- read_fst("data.fst", columns = c("region", "income"))        # columns only
+df_rows    <- read_fst("data.fst", from = 1000, to = 5000)                 # row range
+df_partial <- read_fst("data.fst", columns = c("region", "income"),
+                       from = 1000, to = 5000)                             # both
+```
+
+Compression and I/O happen on background threads, so `fst` can write faster than disk
+speed — compression and disk writes overlap.
+
+### Arrow Parquet — columnar analytics format
+
+Parquet is the standard format for analytical workloads: compressed, columnar, and
+readable by Python, Spark, BigQuery, DuckDB, and many other tools without conversion.
+
+```{r}
+#| label: parquet-demo
+#| eval: false
+library(arrow)
+library(dplyr)
+
+# Write and read
+write_parquet(data_100k, "survey.parquet")
+read_parquet("survey.parquet")
+read_parquet("survey.parquet", col_select = c("id", "region", "income"))
+
+# Compression options
+write_parquet(data_100k, "fast.parquet",       compression = "snappy")     # faster
+write_parquet(data_100k, "small.parquet",      compression = "zstd",
+              compression_level = 9)                                        # smaller
+
+# Partitioned dataset — splits into region=/year= directory tree
+write_dataset(data_100k, path = "survey_parts", partitioning = c("region", "year"))
+ds <- open_dataset("survey_parts")
+
+# Filter + aggregate without loading the full file — only matching partitions are read
+ds |>
+  filter(region == "A", year >= 2023) |>
+  group_by(country) |>
+  summarise(avg_income = mean(income), n = n()) |>
+  collect()
+```
+
+Replace the local path with `"s3://bucket/prefix/"` or an HTTPS URL and the same
+code reads from cloud storage — only the requested columns and row groups are
+downloaded.
+
+### DuckDB — embedded analytical database
+
+DuckDB runs as an in-process library (no server), speaks SQL and dplyr, reads Parquet
+directly, and spills to disk automatically when data exceeds RAM.
+
+```{r}
+#| label: duckdb-demo
+#| eval: false
+library(duckdb)
+library(dplyr)
+
+con <- dbConnect(duckdb())              # in-memory
+con <- dbConnect(duckdb(), "data.duckdb")  # persistent file
+
+# Write R data frame into DuckDB
+dbWriteTable(con, "survey", data_100k)
+
+# SQL query
+dbGetQuery(con, "
+  SELECT region, AVG(income) AS avg_income, COUNT(*) AS n
+  FROM survey WHERE employed = TRUE
+  GROUP BY region ORDER BY avg_income DESC
+")
+
+# Same query via dplyr
+tbl(con, "survey") |>
+  filter(employed) |>
+  group_by(region) |>
+  summarise(avg_income = mean(income), n = n()) |>
+  arrange(desc(avg_income)) |>
+  collect()
+
+# Query Parquet directly — no import step
+dbGetQuery(con, "
+  SELECT region, year, AVG(income) AS avg_income
+  FROM read_parquet('survey_parts/**/*.parquet')
+  WHERE year >= 2023
+  GROUP BY region, year
+")
+
+dbDisconnect(con, shutdown = TRUE)
+```
+
+## Benchmarking
+
+```{r}
+#| label: generate-benchmark-data
+#| message: false
+
+library(tidyverse)
+library(data.table)
+library(fst)
+library(qs2)
+library(arrow)
+library(duckdb)
+
+set.seed(7892)
+
+generate_test_data <- function(n_rows) {
+  data.frame(
+    id          = 1:n_rows,
+    region      = factor(sample(LETTERS[1:5], n_rows, replace = TRUE)),
+    country     = sample(c("Kenya", "Uganda", "Tanzania", "Rwanda", "Burundi",
+                           "Ethiopia", "Somalia", "Sudan", "Chad", "Niger",
+                           "Nigeria", "Ghana", "Senegal", "Mali", "Burkina Faso",
+                           "Benin", "Togo", "Cameroon", "Congo", "DRC"),
+                         n_rows, replace = TRUE),
+    year        = sample(2020:2025, n_rows, replace = TRUE),
+    income      = rlnorm(n_rows, meanlog = 8, sdlog = 1.5),
+    employed    = sample(c(TRUE, FALSE), n_rows, replace = TRUE, prob = c(0.6, 0.4)),
+    survey_date = as.Date("2020-01-01") + sample(0:2000, n_rows, replace = TRUE),
+    notes       = sample(c("Complete", "Partial", "Missing data", NA, "Verified",
+                           "Pending review", "Approved"), n_rows, replace = TRUE)
+  )
+}
+
+data_1k   <- generate_test_data(1e3)
+data_10k  <- generate_test_data(1e4)
+data_100k <- generate_test_data(1e5)
+data_1m   <- generate_test_data(1e6)
+
+data.frame(
+  Dataset       = c("1k rows", "10k rows", "100k rows", "1M rows"),
+  `Size in RAM` = c(
+    format(object.size(data_1k),   units = "MB"),
+    format(object.size(data_10k),  units = "MB"),
+    format(object.size(data_100k), units = "MB"),
+    format(object.size(data_1m),   units = "MB")
+  ),
+  check.names = FALSE
+) |> knitr::kable(caption = "Dataset sizes in memory")
+```
+
+The **Write/Read RAM (MB)** columns report the additional R-heap memory allocated
+at the peak of a single operation, measured with `gc()`. Arrow (feather/parquet)
+and DuckDB manage large allocations in C++ off the R heap, so their R-side figures
+understate true peak usage.
+
+```{r}
+#| label: benchmark-helpers
+#| include: false
+
+mem_of <- function(expr) {
+  g0 <- gc(reset = TRUE, full = TRUE)
+  before <- sum(g0[, 2])
+  force(expr)
+  g1 <- gc(full = TRUE)
+  round(sum(g1[, 6]) - before, 1)
+}
+
+bench_write_read <- function(data, write_fn, read_fn, filename, n_rep = 10) {
+  fpath <- file.path(bench_dir, filename)
+  write_times <- replicate(n_rep, {
+    start <- Sys.time()
+    write_fn(data, fpath)
+    as.numeric(difftime(Sys.time(), start, units = "secs")) * 1000
+  })
+  read_times <- replicate(n_rep, {
+    start <- Sys.time()
+    result <- read_fn(fpath)
+    as.numeric(difftime(Sys.time(), start, units = "secs")) * 1000
+  })
+  write_mem <- mem_of(write_fn(data, fpath))
+  read_mem  <- mem_of(read_fn(fpath))
+  fsize <- if (file.exists(fpath)) round(file.size(fpath) / 1024^2, 2) else 0
+  list(
+    write_ms     = round(median(write_times), 1),
+    read_ms      = round(median(read_times), 1),
+    size_mb      = fsize,
+    write_mem_mb = write_mem,
+    read_mem_mb  = read_mem
+  )
+}
+
+bench_duckdb <- function(data, n_rep = 10) {
+  fpath_db <- file.path(bench_dir, "test.duckdb")
+  con <- dbConnect(duckdb::duckdb(), fpath_db)
+  write_times_db <- replicate(n_rep, {
+    start <- Sys.time()
+    dbWriteTable(con, "data", data, overwrite = TRUE)
+    as.numeric(difftime(Sys.time(), start, units = "secs")) * 1000
+  })
+  read_times_db <- replicate(n_rep, {
+    start <- Sys.time()
+    result <- dbReadTable(con, "data")
+    as.numeric(difftime(Sys.time(), start, units = "secs")) * 1000
+  })
+  write_mem_db <- mem_of(dbWriteTable(con, "data", data, overwrite = TRUE))
+  read_mem_db  <- mem_of(dbReadTable(con, "data"))
+  fsize <- round(file.size(fpath_db) / 1024^2, 2)
+  dbDisconnect(con, shutdown = TRUE)
+  list(
+    write_ms     = round(median(write_times_db), 1),
+    read_ms      = round(median(read_times_db), 1),
+    size_mb      = fsize,
+    write_mem_mb = write_mem_db,
+    read_mem_mb  = read_mem_db
+  )
+}
+
+results_table <- function(results) {
+  data.frame(
+    Method           = names(results),
+    `Write (ms)`     = sapply(results, function(x) x$write_ms),
+    `Write RAM (MB)` = sapply(results, function(x) x$write_mem_mb),
+    `Read (ms)`      = sapply(results, function(x) x$read_ms),
+    `Read RAM (MB)`  = sapply(results, function(x) x$read_mem_mb),
+    `File Size (MB)` = sapply(results, function(x) x$size_mb),
+    check.names = FALSE,
+    row.names = NULL
+  )
+}
+```
+
+::: panel-tabset
+
+## 1M Rows
+
+```{r}
+#| label: benchmark-1m
+#| cache: true
+#| message: false
+#| warning: false
+
+bench_dir <- tempfile(); dir.create(bench_dir)
+
+results_1m <- list(
+  saveRDS    = bench_write_read(data_1m, function(d,f) saveRDS(d,f), readRDS,     "test.rds",     n_rep = 5),
+  qs2        = bench_write_read(data_1m, qs_save,                    qs_read,      "test.qs2",     n_rep = 5),
+  fst        = bench_write_read(data_1m, write_fst,                  read_fst,     "test.fst",     n_rep = 5),
+  data.table = bench_write_read(data_1m, fwrite,                     fread,        "test.csv",     n_rep = 5),
+  feather    = bench_write_read(data_1m, write_feather,              read_feather, "test.feather", n_rep = 5),
+  parquet    = bench_write_read(data_1m, write_parquet,              read_parquet, "test.parquet", n_rep = 5)
+)
+results_1m$duckdb <- bench_duckdb(data_1m, n_rep = 5)
+
+knitr::kable(results_table(results_1m), caption = "Performance comparison — 1M rows")
+unlink(bench_dir, recursive = TRUE)
+```
+
+## 100k Rows
+
+```{r}
+#| label: benchmark-100k
+#| cache: true
+#| message: false
+#| warning: false
+
+bench_dir <- tempfile(); dir.create(bench_dir)
+
+results_100k <- list(
+  saveRDS    = bench_write_read(data_100k, function(d,f) saveRDS(d,f), readRDS,     "test.rds"),
+  qs2        = bench_write_read(data_100k, qs_save,                    qs_read,      "test.qs2"),
+  fst        = bench_write_read(data_100k, write_fst,                  read_fst,     "test.fst"),
+  data.table = bench_write_read(data_100k, fwrite,                     fread,        "test.csv"),
+  feather    = bench_write_read(data_100k, write_feather,              read_feather, "test.feather"),
+  parquet    = bench_write_read(data_100k, write_parquet,              read_parquet, "test.parquet")
+)
+results_100k$duckdb <- bench_duckdb(data_100k)
+
+knitr::kable(results_table(results_100k), caption = "Performance comparison — 100k rows")
+unlink(bench_dir, recursive = TRUE)
+```
+
+## 10k Rows
+
+```{r}
+#| label: benchmark-10k
+#| cache: true
+#| message: false
+#| warning: false
+
+bench_dir <- tempfile(); dir.create(bench_dir)
+
+results_10k <- list(
+  saveRDS    = bench_write_read(data_10k, function(d,f) saveRDS(d,f), readRDS,     "test.rds"),
+  qs2        = bench_write_read(data_10k, qs_save,                    qs_read,      "test.qs2"),
+  fst        = bench_write_read(data_10k, write_fst,                  read_fst,     "test.fst"),
+  data.table = bench_write_read(data_10k, fwrite,                     fread,        "test.csv"),
+  feather    = bench_write_read(data_10k, write_feather,              read_feather, "test.feather"),
+  parquet    = bench_write_read(data_10k, write_parquet,              read_parquet, "test.parquet")
+)
+results_10k$duckdb <- bench_duckdb(data_10k)
+
+knitr::kable(results_table(results_10k), caption = "Performance comparison — 10k rows")
+unlink(bench_dir, recursive = TRUE)
+```
+
+## 1k Rows
+
+```{r}
+#| label: benchmark-1k
+#| cache: true
+#| message: false
+#| warning: false
+
+bench_dir <- tempfile(); dir.create(bench_dir)
+
+results_1k <- list(
+  saveRDS    = bench_write_read(data_1k, function(d,f) saveRDS(d,f), readRDS,     "test.rds"),
+  qs2        = bench_write_read(data_1k, qs_save,                    qs_read,      "test.qs2"),
+  fst        = bench_write_read(data_1k, write_fst,                  read_fst,     "test.fst"),
+  data.table = bench_write_read(data_1k, fwrite,                     fread,        "test.csv"),
+  feather    = bench_write_read(data_1k, write_feather,              read_feather, "test.feather"),
+  parquet    = bench_write_read(data_1k, write_parquet,              read_parquet, "test.parquet")
+)
+results_1k$duckdb <- bench_duckdb(data_1k)
+
+knitr::kable(results_table(results_1k), caption = "Performance comparison — 1k rows")
+unlink(bench_dir, recursive = TRUE)
+```
+
+:::
+
+## Summary & Recommendations
+
+Choose based on your primary use case. Rows are properties; columns are tools.
+
+| | saveRDS | qs2 | fst | fwrite / fread | feather | parquet | DuckDB |
+|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **Write speed** | slow | fast | fast | fast | fastest | moderate | moderate |
+| **Read speed** | slow | fast | fastest | fast | fastest | fast | moderate |
+| **File size** | small | small | medium | largest | large | smallest | medium |
+| **Compressed** | yes | yes | optional | no | no | yes | yes |
+| **Multi-threaded** | no | yes | yes | yes | yes | yes | yes |
+| **Stores any R object** | ✓ | ✓ | df only | df only | df only | df only | df only |
+| **Select columns on read** | – | – | ✓ | – | ✓ | ✓ | ✓ |
+| **Select rows on read** | – | – | range only | – | – | ✓ | ✓ SQL |
+| **Cross-language** | R only | R only | R only | any text tool | Arrow | Python/Spark/etc. | any |
+| **Larger-than-RAM** | – | – | – | – | – | ✓ stream | ✓ spill |
+| **Best for** | models, complex R objects | fast model/list caching | large df with partial reads | CSV exchange with non-R users | cross-language fast exchange | big data, cloud analytics | SQL workflows, out-of-memory |
+
+: Format comparison across key properties {#tbl-formats}
+
+## Read More
+
+**Package documentation**
+
+- `saveRDS` / `readRDS`: [base R serialization reference](https://rdrr.io/r/base/readRDS.html)
+- **qs2**: [CRAN](https://CRAN.R-project.org/package=qs2) · [GitHub](https://github.com/traversc/qs)
+- **fst**: [fstpackage.org](https://www.fstpackage.org/) · [CRAN](https://CRAN.R-project.org/package=fst)
+- **data.table** `fwrite`/`fread`: [rdatatable.gitlab.io/data.table](https://rdatatable.gitlab.io/data.table/)
+- **Arrow for R**: [arrow.apache.org/docs/r](https://arrow.apache.org/docs/r/) — includes vignettes on datasets, S3, and Parquet
+- Apache Parquet format: [parquet.apache.org](https://parquet.apache.org/)
+- **DuckDB R API**: [duckdb.org/docs/api/r](https://duckdb.org/docs/api/r) · **duckplyr** (drop-in dplyr backend): [duckplyr.tidyverse.org](https://duckplyr.tidyverse.org/)
+
+**Benchmarks**
+
+- fastverse benchmarks wiki: <https://github.com/fastverse/fastverse/wiki/Benchmarks> — curated index of collapse, data.table, and Arrow comparisons
+- DuckDB Labs db-benchmark (group-by and join at 0.5 GB, 5 GB, 50 GB): <https://duckdblabs.github.io/db-benchmark/>
+- Adrian Antico multi-tool benchmarks (1M–1B rows, 8 operations): <https://github.com/AdrianAntico/Benchmarks#background>
+
+**Background reading**
+
+- Burns, P. (2011). *The R Inferno*. [burns-stat.com](https://www.burns-stat.com/pages/Tutor/R_inferno.pdf) — § 8 covers numeric storage and write/read pitfalls that motivate binary serialization.

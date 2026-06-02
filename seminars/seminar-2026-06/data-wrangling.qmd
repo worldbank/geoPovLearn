@@ -11,7 +11,7 @@ code-fold: false
 ---
 
 ::: {.callout-note}
-This is **Part 2** of *Fast & Big Data in R*. [Part 1](overview.qmd) was about
+This is **Part 2** of *Fast & Big Data in R*. [Part 1](serialization.qmd) was about
 getting data *in and out of RAM* — serialization (RDS, qs2, fst) and
 out-of-memory storage (Parquet/Arrow, DuckDB). This part is about **computing on
 data**: the fast R toolkit for *wrangling*, and which operations you can push
@@ -220,11 +220,26 @@ The practical takeaways from @tbl-ops:
 - **Arrow** implements the *streaming* bucket beautifully but hands the
   whole-vector bucket back to you — call `collect()` to bring (a now much smaller)
   result into RAM, then finish with **collapse** or **data.table**.
-- **DuckDB** goes further: it has SQL **window functions** and **out-of-core**
-  sort/aggregation that spill to disk, so it can do many whole-vector operations
-  *larger-than-RAM* — at the cost of disk I/O.
+- **DuckDB** goes further: it has SQL
+  [**window functions**](https://duckdb.org/docs/current/sql/functions/window_functions)
+  and **out-of-core** sort/aggregation that spill to disk, so it can do many
+  whole-vector operations *larger-than-RAM* — at the cost of disk I/O.
 - Neither escapes the fundamental rule: a median or a window needs its values
   present. The only question is whether they sit in **RAM** or **spill to disk**.
+
+::: {.callout-note}
+## DuckDB's window functions
+
+DuckDB implements the full SQL window-function family — ranking and positional
+functions such as `row_number()`, `rank()`, `dense_rank()`, `lag()`, `lead()`,
+`first_value()`, `last_value()`, `nth_value()`, `ntile()`, `cume_dist()` and
+`percent_rank()`, plus any aggregate (`sum`, `avg`, …) evaluated over an
+`OVER (PARTITION BY … ORDER BY …)` clause. These are precisely the *whole-vector*
+operations above: to evaluate them DuckDB must **buffer each partition**, which makes
+them its most memory-intensive workload — and, as @sec-duckdb-over-time shows, the
+area it has optimised most aggressively. Full list and syntax:
+<https://duckdb.org/docs/current/sql/functions/window_functions>.
+:::
 
 ::: {.callout-tip}
 ## The pattern that scales
@@ -259,12 +274,14 @@ versions — but the broad ordering is stable.
   benchmark, run at **0.5 GB, 5 GB, and 50 GB**, comparing DuckDB, data.table,
   dplyr, collapse, Arrow, Polars, Pandas, ClickHouse, Spark, and more.
 
-### db-benchmark at 5 GB: sum vs. median {#sec-bench-figs}
+### db-benchmark at 5 GB: sum, median & join {#sec-bench-figs}
 
-The two figures below are the **group-by** results at **5 GB (100 million rows)** on
-a 16-core / 32 GB machine. They make the streaming-vs-whole-vector distinction from
-@sec-taxonomy visible: a plain **sum** is fast for nearly every tool, whereas the
-**median** (which can't combine across chunks) spreads the field out.
+The figures below are the **group-by** and **join** results at **5 GB (100 million
+rows)** on a 16-core / 32 GB machine. They make the streaming-vs-whole-vector
+distinction from @sec-taxonomy visible: a plain **sum** is fast for nearly every
+tool, the **median** (which can't combine across chunks) spreads the field out, and
+the **join** — the other workhorse database operation — shows how the engines cope
+when two large tables must be matched.
 
 ::: {.panel-tabset}
 
@@ -276,10 +293,15 @@ a 16-core / 32 GB machine. They make the streaming-vs-whole-vector distinction f
 
 ![db-benchmark group-by results at 5 GB (100M rows), *advanced* question set. The top panel, `q6: median v3, sd v3 by id4, id5`, is the **median** benchmark. Because an exact median needs every value of each group in memory, it stresses the engines far more than a sum — and is where some solutions slow sharply, spill to disk, or fail. Source: DuckDB Labs db-benchmark.](images/db-benchmark-groupby-advanced-5gb.png){#fig-db-median fig-alt="Faceted horizontal bar chart of advanced group-by queries at 5 GB. The top facet, q6 median and sd by two id columns, shows a much wider spread of timings than the sum query, with data.table, DuckDB and collapse leading and several solutions much slower or not finishing." width="70%"}
 
+## Join (Query 1–5)
+
+![db-benchmark **join** results at 5 GB (100M rows). Each panel is a different join — small, medium and big inner joins on integer keys, an outer join, and a join on a factor (string) key — matching the 100M-row left table against right-hand tables sized as fractions of it. Bars are seconds (shorter is faster), with a cold and a warm run. Joins stream and can spill to disk, so the out-of-memory engines (DuckDB, data.table) stay competitive even at 5 GB. Source: DuckDB Labs db-benchmark.](images/db-benchmark-join-5gb.png){#fig-db-join fig-alt="Faceted horizontal bar chart of five join queries at 5 GB across DuckDB, data.table, collapse, dplyr, Arrow and Polars. DuckDB and data.table lead across the small, medium and big inner joins, the outer join and the factor-key join, while several solutions are much slower or do not finish on the largest join." width="70%"}
+
 :::
 
-For the full matrix — joins, other cardinalities, and the 0.5 GB and 50 GB runs —
-see the live results at <https://duckdblabs.github.io/db-benchmark/>.
+For the full matrix — other cardinalities, NA handling, pre-sorted data, and the
+0.5 GB and 50 GB runs — see the live results at
+<https://duckdblabs.github.io/db-benchmark/>.
 
 ::: {.callout-note}
 ## Reading these the GeoPov way
@@ -288,9 +310,199 @@ Compare @fig-db-sum and @fig-db-median side by side. The **sum** is cheap and
 streamable, so the choice of tool barely matters — push it out-of-memory with Arrow
 or DuckDB and move on. The **median** is the expensive, whole-vector operation: here
 the engine and its memory strategy decide whether the job finishes in seconds, spills
-to disk, or runs out of memory. That is exactly the trade-off to plan for in
-larger-than-RAM poverty-data pipelines.
+to disk, or runs out of memory. The **join** (@fig-db-join) sits in between — it
+streams and can spill, so DuckDB and data.table stay fast even at 5 GB. That is
+exactly the trade-off to plan for in larger-than-RAM poverty-data pipelines.
 :::
+
+### DuckDB performance over time {#sec-duckdb-over-time}
+
+To close, a look at how fast the out-of-memory engine itself is getting. DuckDB's
+[*Benchmarks over time*](https://duckdb.org/2024/06/26/benchmarks-over-time) post
+tracks its own benchmark suite across three years of releases (v0.2.7 in June 2021
+through v1.0 in June 2024): **3–25× faster overall**, while handling roughly **10×
+larger datasets on the same hardware** — the payoff of default multi-threading,
+parallel data loading, and larger-than-memory sort / aggregate / join / window
+support. Tellingly, the single biggest gain — about **25×** — is in **window
+functions**, the hardest whole-vector workload from @sec-taxonomy.
+
+All of the interactive figures from that post are reproduced in the single tabset
+below, rendered live from DuckDB's own published benchmark data. Switch workloads
+with the tabs; **click a legend entry to hide a series, double-click to isolate it,
+and drag to zoom**.
+
+::: {.callout-note appearance="simple"}
+**Figure source.** Every chart in this tabset is reproduced from DuckDB Labs,
+[*Benchmarks over time*](https://duckdb.org/2024/06/26/benchmarks-over-time)
+(26 June 2024, by Alex Monahan & Hannes Mühleisen), and is rendered directly from
+that article's published benchmark data. © DuckDB Labs. See the original article for
+the full methodology, version history, and commentary.
+:::
+
+```{=html}
+<script src="https://cdn.plot.ly/plotly-1.58.5.min.js" charset="utf-8"></script>
+```
+
+```{r}
+#| echo: false
+#| results: asis
+#| message: false
+# Inline DuckDB's published benchmark chart data (Plotly JSON) into the page so the
+# charts render with no runtime fetch() — works over file://, quarto preview, and the
+# published site alike. Source files live in duckdb-perf/ (from duckdb.org/data/).
+.ddb_charts <- c(
+  ddb_overall_time        = "perf_over_time_overall_results_by_time.json",
+  ddb_overall_time_rel    = "perf_over_time_overall_results_by_time_relative.json",
+  ddb_overall_version     = "perf_over_time_overall_results_by_version.json",
+  ddb_overall_version_rel = "perf_over_time_overall_results_by_version_relative.json",
+  ddb_csv                 = "perf_over_time_csv_reader_area.json",
+  ddb_groupby             = "perf_over_time_group_by_area.json",
+  ddb_join                = "perf_over_time_join_area.json",
+  ddb_window              = "perf_over_time_window_area.json",
+  ddb_export              = "perf_over_time_export_area.json",
+  ddb_export_vs           = "perf_over_time_export_arrow_pandas_parquet.json",
+  ddb_scan                = "perf_over_time_scan_other_formats_area.json",
+  ddb_scan_vs             = "perf_over_time_scan_other_formats_arrow_pandas_parquet.json",
+  ddb_scale               = "perf_over_time_scale_by_time.json"
+)
+for (.id in names(.ddb_charts)) {
+  .f <- file.path("duckdb-perf", .ddb_charts[[.id]])
+  .txt <- paste(readLines(.f, warn = FALSE, encoding = "UTF-8"), collapse = "\n")
+  .txt <- gsub("</", "<\\/", .txt, fixed = TRUE)  # keep any "</script" from closing the tag early
+  cat(sprintf('<script type="application/json" class="ddb-data" id="data-%s">%s</script>\n',
+              .id, .txt))
+}
+```
+
+::: {.panel-tabset}
+
+## Overall · time
+
+```{=html}
+<div id="ddb_overall_time" class="duckdb-plotly" style="width:100%;height:430px;"></div>
+```
+
+## Overall · time (rel.)
+
+```{=html}
+<div id="ddb_overall_time_rel" class="duckdb-plotly" style="width:100%;height:430px;"></div>
+```
+
+## Overall · version
+
+```{=html}
+<div id="ddb_overall_version" class="duckdb-plotly" style="width:100%;height:430px;"></div>
+```
+
+## Overall · version (rel.)
+
+```{=html}
+<div id="ddb_overall_version_rel" class="duckdb-plotly" style="width:100%;height:430px;"></div>
+```
+
+## CSV reader
+
+```{=html}
+<div id="ddb_csv" class="duckdb-plotly" style="width:100%;height:430px;"></div>
+```
+
+## Group by
+
+```{=html}
+<div id="ddb_groupby" class="duckdb-plotly" style="width:100%;height:430px;"></div>
+```
+
+## Join
+
+```{=html}
+<div id="ddb_join" class="duckdb-plotly" style="width:100%;height:430px;"></div>
+```
+
+## Window
+
+```{=html}
+<div id="ddb_window" class="duckdb-plotly" style="width:100%;height:430px;"></div>
+```
+
+## Export
+
+```{=html}
+<div id="ddb_export" class="duckdb-plotly" style="width:100%;height:430px;"></div>
+```
+
+## Export (vs others)
+
+```{=html}
+<div id="ddb_export_vs" class="duckdb-plotly" style="width:100%;height:430px;"></div>
+```
+
+## Scan formats
+
+```{=html}
+<div id="ddb_scan" class="duckdb-plotly" style="width:100%;height:430px;"></div>
+```
+
+## Scan (vs others)
+
+```{=html}
+<div id="ddb_scan_vs" class="duckdb-plotly" style="width:100%;height:430px;"></div>
+```
+
+## Scale
+
+```{=html}
+<div id="ddb_scale" class="duckdb-plotly" style="width:100%;height:430px;"></div>
+```
+
+:::
+
+```{=html}
+<script>
+(function () {
+  // Titles to overlay on the four "overall" charts (matches the original article).
+  var titles = {
+    "ddb_overall_time":        "Benchmark results over time",
+    "ddb_overall_time_rel":    "Relative benchmark results over time",
+    "ddb_overall_version":     "Benchmark results by version",
+    "ddb_overall_version_rel": "Relative benchmark results by version"
+  };
+  function draw(el) {
+    if (!el || typeof Plotly === "undefined") return;
+    if (el.dataset.drawn === "1") return;
+    var src = document.getElementById("data-" + el.id);  // inlined Plotly JSON
+    if (!src) return;
+    var j;
+    try { j = JSON.parse(src.textContent); }
+    catch (e) {
+      el.innerHTML = '<p style="padding:1rem"><em>Could not render this chart — view it live at <a href="https://duckdb.org/2024/06/26/benchmarks-over-time" target="_blank" rel="noopener">duckdb.org</a>.</em></p>';
+      return;
+    }
+    var layout = j.layout || {};
+    if (titles[el.id]) { layout = Object.assign({}, layout, { title: titles[el.id] }); }
+    Plotly.newPlot(el, j.data, layout, { responsive: true, displaylogo: false });
+    el.dataset.drawn = "1";
+  }
+  // Draw charts in visible tabs; resize those already drawn (Plotly mis-sizes hidden divs).
+  function refresh() {
+    document.querySelectorAll(".duckdb-plotly").forEach(function (el) {
+      if (el.offsetParent === null) return;            // in a hidden tab — defer
+      if (el.dataset.drawn === "1") { Plotly.Plots.resize(el); } else { draw(el); }
+    });
+  }
+  if (document.readyState !== "loading") { refresh(); }
+  else { document.addEventListener("DOMContentLoaded", refresh); }
+  document.addEventListener("shown.bs.tab", refresh);   // lazy-draw a tab when first shown
+  window.addEventListener("resize", function () {
+    document.querySelectorAll(".duckdb-plotly").forEach(function (el) {
+      if (el.offsetParent !== null && el.dataset.drawn === "1") Plotly.Plots.resize(el);
+    });
+  });
+})();
+</script>
+```
+
+**Full article, methodology, and the original interactive charts:**
+[DuckDB — *Benchmarks over time* (26 June 2024)](https://duckdb.org/2024/06/26/benchmarks-over-time).
 
 ## Read more {#sec-read-more}
 

@@ -43,6 +43,9 @@ website:
         contents:
           - text: Fast & Big Data in R
             href: seminars/seminar-2026-06/overview.qmd
+            contents:
+              - text: "Part 2 — Data Wrangling"
+                href: seminars/seminar-2026-06/data-wrangling.qmd
           - text: Revolutionizing Coding in Stata/R
             href: seminars/seminar-2026-02/overview.qmd
             contents:

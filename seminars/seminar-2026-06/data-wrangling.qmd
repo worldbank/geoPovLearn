@@ -1,0 +1,301 @@
+---
+title: "Fast Data Wrangling in R"
+title-long: "Fast Data Wrangling in R: data.table, collapse, Arrow & DuckDB"
+date: "2026-06-DD"   # TODO: confirm seminar date
+description: "Part 2 of Fast & Big Data in R. Where to start with dplyr, data.table, collapse, Arrow/Parquet and DuckDB; why some operations stream happily out-of-memory while window functions must live in RAM; and what the benchmarks say."
+author: "Eduard Bukin"   # TODO: confirm speaker
+categories: [R, performance, data, collapse, data.table, dplyr, arrow, duckdb, benchmarks]
+# image: "images/cover.png"
+code-tools: true
+code-fold: false
+---
+
+::: {.callout-note}
+This is **Part 2** of *Fast & Big Data in R*. [Part 1](overview.qmd) was about
+getting data *in and out of RAM* — serialization (RDS, qs2, fst) and
+out-of-memory storage (Parquet/Arrow, DuckDB). This part is about **computing on
+data**: the fast R toolkit for *wrangling*, and which operations you can push
+out-of-memory versus which ones must be pulled into RAM.
+:::
+
+## Where to start: the fast-R ecosystem {#sec-fastverse}
+
+A good map of the high-performance R ecosystem is the
+[**fastverse**](https://fastverse.org/fastverse/) — a meta-package (and a loose
+"verse") that bundles and version-manages the packages built for speed through
+heavy use of compiled C/C++ code. Its four *core* packages are:
+
+- **[data.table](https://rdatatable.gitlab.io/data.table/)** — an enhanced
+  `data.frame` with a terse `dt[i, j, by]` grammar: aggregation, update-by-reference,
+  reshaping, (rolling) joins, and the fastest CSV reader/writer in R.
+- **[collapse](https://sebkrantz.github.io/collapse/)** — fast grouped and
+  weighted statistical computations, time-series/panel transforms, joins and pivots,
+  working on vectors, matrices, and data frames alike.
+- **[kit](https://github.com/2005m/kit)** — parallel row-wise statistics and
+  vectorized `switch`/`nif` (the fast `case_when`).
+- **[magrittr](https://magrittr.tidyverse.org/)** — the pipe.
+
+The fastverse positions these as performance-oriented complements to the
+**tidyverse**. For this seminar we treat **dplyr** as the *readability baseline*
+and compare four faster or bigger-than-RAM routes against it:
+
+| Tool | Lives where | Reach for it when… |
+| --- | --- | --- |
+| **dplyr** | in RAM | readability is the priority; data fits comfortably |
+| **data.table** | in RAM | you want maximum in-memory speed and concise code |
+| **collapse** | in RAM | grouped/weighted statistics and panel data, composable with the above |
+| **Arrow / Parquet** | on disk | data is larger than RAM and the work is *filter + aggregate + join* |
+| **DuckDB** | on disk | data is larger than RAM and you need *full SQL*, including windows and sorting |
+
+: The five wrangling routes compared in this seminar {#tbl-tools}
+
+## The same job, five ways {#sec-five-ways}
+
+To make the starting points concrete, here is one small task — *average income and
+record count by region, sorted* — written in each tool. The data is the survey-like
+frame from [Part 1](overview.qmd) (`region`, `country`, `year`, `income`, `employed`, …).
+
+### dplyr — the readability baseline {#sec-start-dplyr}
+
+```{r}
+#| eval: false
+library(dplyr)
+
+survey |>
+  group_by(region) |>
+  summarise(avg_income = mean(income), n = n()) |>
+  arrange(desc(avg_income))
+```
+
+> Start here: <https://dplyr.tidyverse.org>.
+
+### data.table — maximum in-memory speed {#sec-start-datatable}
+
+```{r}
+#| eval: false
+library(data.table)
+setDT(survey)                 # convert in place, no copy
+
+survey[, .(avg_income = mean(income), n = .N), by = region][order(-avg_income)]
+```
+
+The `[i, j, by]` form reads as *"rows `i`, compute `j`, grouped by `by`"*, and
+chains with `[...][...]`. Updates can happen **by reference** (`:=`) with no copy.
+
+> Start here: the [*Introduction to data.table*](https://rdatatable.gitlab.io/data.table/articles/datatable-intro.html) vignette.
+
+### collapse — fast grouped statistics {#sec-start-collapse}
+
+```{r}
+#| eval: false
+library(collapse)
+
+survey |>
+  fgroup_by(region) |>
+  fsummarise(avg_income = fmean(income), n = fnobs(income)) |>
+  roworder(-avg_income)
+```
+
+`collapse` exposes a family of `f*` functions (`fmean`, `fsum`, `fmedian`,
+`fnobs`, …) that are grouped-aware and vectorized in C++. It also plays nicely as
+a *backend* — e.g. `fastplyr` and `timeplyr` give a tidyverse-style API on top.
+
+> Start here: <https://sebkrantz.github.io/collapse/>.
+
+### Arrow / Parquet — out-of-memory, on the fly {#sec-start-arrow}
+
+`arrow` lets you write **dplyr** against a Parquet file (or a folder of them) that
+is **never fully loaded into RAM**. The query is streamed over the file; only the
+small result is materialized when you call `collect()`.
+
+```{r}
+#| eval: false
+library(arrow)
+library(dplyr)
+
+ds <- open_dataset("survey_parquet/")   # a lazy view over files on disk
+
+ds |>
+  group_by(region) |>
+  summarise(avg_income = mean(income), n = n()) |>
+  arrange(desc(avg_income)) |>
+  collect()                              # only the small summary enters RAM
+```
+
+> Start here: the [*Working with Arrow Datasets and dplyr*](https://arrow.apache.org/docs/r/articles/dataset.html) vignette.
+
+### DuckDB — out-of-memory SQL engine {#sec-start-duckdb}
+
+DuckDB is an embedded analytical database. It reads Parquet directly, spills to
+disk when data exceeds RAM, and speaks both SQL and dplyr.
+
+```{r}
+#| eval: false
+library(duckdb)
+library(dplyr)
+
+con <- dbConnect(duckdb())
+
+# Pure SQL — reads Parquet directly, larger-than-RAM
+dbGetQuery(con, "
+  SELECT region, AVG(income) AS avg_income, COUNT(*) AS n
+  FROM read_parquet('survey_parquet/*.parquet')
+  GROUP BY region
+  ORDER BY avg_income DESC
+")
+
+# …or the same query through dplyr, via a view
+dbExecute(con, "CREATE VIEW survey AS
+                SELECT * FROM read_parquet('survey_parquet/*.parquet')")
+
+tbl(con, "survey") |>
+  group_by(region) |>
+  summarise(avg_income = mean(income), n = n()) |>
+  arrange(desc(avg_income)) |>
+  collect()
+
+dbDisconnect(con, shutdown = TRUE)
+```
+
+> Start here: the [DuckDB R API](https://duckdb.org/docs/api/r). For a zero-friction
+> drop-in dplyr backend powered by DuckDB, see [**duckplyr**](https://duckplyr.tidyverse.org/).
+
+## Not all wrangling is equal {#sec-taxonomy}
+
+The crucial idea for big data is that **wrangling operations are not all the same
+kind of computation**. Some can be done a chunk at a time and *never* need the whole
+dataset in memory; others need an entire column — or an entire group — present at
+once.
+
+### Streaming (reducing) operations — easy to push out-of-memory
+
+These work **row-by-row or chunk-by-chunk**, and partial results *combine*. An
+engine can stream the file past a fixed-size buffer and never hold it all:
+
+- **`filter` / `select`** — keep some rows / columns.
+- **`mutate` with `ifelse`, `case_when`/`nif`, arithmetic** — each row is independent.
+- **group-by aggregation with *combinable* statistics** — `sum`, `count`, `min`,
+  `max`, `mean` (= sum ÷ count), `var`/`sd` (via sums of squares). A running total
+  over chunks gives the right answer.
+- **equi-joins** — hash or sort-merge, and the build side can spill to disk.
+- **`melt` / `pivot` (reshape long ↔ wide)** — mostly a re-mapping of cells.
+
+Because these *shrink* the data and combine cleanly, both **Arrow** and **DuckDB**
+run them out-of-memory with ease.
+
+### Whole-vector & window operations — must materialize in RAM
+
+These need an **entire column, or an entire partition, resident at once** because
+the result of one element depends on the others:
+
+- **sorting the whole table** (`arrange`) — a global order.
+- **exact `median` / quantiles** — you must see *every* value of a group; they do
+  **not** combine across chunks the way a sum does.
+- **window functions** — `lag`/`lead`, `cumsum`/cumulative, `rank`, `row_number`,
+  **rolling** windows — each needs ordered neighbours or a running state across the
+  partition.
+- **`distinct` over the whole table** — needs global bookkeeping.
+
+This is the limit the user runs into: *a `sum` can be computed incrementally, but a
+`median` or a `lag` requires the whole vector in RAM.* You either fit it in memory,
+or the engine must spill it to disk.
+
+### What each engine does with them
+
+| Operation | Combines across chunks? | Arrow dataset (acero) | DuckDB |
+| --- | :---: | :---: | :---: |
+| `filter`, `select` | ✅ | ✅ streams | ✅ streams |
+| `mutate` (`ifelse`, `case_when`) | ✅ | ✅ streams | ✅ streams |
+| group-by `sum`/`mean`/`count`/`min`/`max` | ✅ | ✅ streams | ✅ streams |
+| equi-`join` | ✅ | ✅ | ✅ spills to disk |
+| `melt` / `pivot` | ✅ | ⚠️ partial | ✅ |
+| `arrange` whole table | ❌ | ❌ `collect()` first | ✅ out-of-core sort |
+| exact `median` / quantile | ❌ | ❌ `collect()` first | ✅ (within groups) |
+| window: `lag`, `cumsum`, `rank`, rolling | ❌ | ❌ `collect()` first | ✅ SQL window fns |
+
+: Which engine can stay out-of-memory for which operation {#tbl-ops}
+
+The practical takeaways from @tbl-ops:
+
+- **Arrow** implements the *streaming* bucket beautifully but hands the
+  whole-vector bucket back to you — call `collect()` to bring (a now much smaller)
+  result into RAM, then finish with **collapse** or **data.table**.
+- **DuckDB** goes further: it has SQL **window functions** and **out-of-core**
+  sort/aggregation that spill to disk, so it can do many whole-vector operations
+  *larger-than-RAM* — at the cost of disk I/O.
+- Neither escapes the fundamental rule: a median or a window needs its values
+  present. The only question is whether they sit in **RAM** or **spill to disk**.
+
+::: {.callout-tip}
+## The pattern that scales
+
+Push the **reducing** operations out-of-memory first — `filter → aggregate → join`
+in Arrow or DuckDB — to shrink the data to something that fits in RAM. *Then*
+`collect()` and do the **ordered / window** work in-memory with **collapse** or
+**data.table**, which are the fastest tools once the data is small enough to hold.
+:::
+
+## What the benchmarks say {#sec-benchmarks}
+
+Three benchmarking sources are worth bookmarking. Treat all benchmarks as
+*directional* — exact numbers depend on hardware, data shape, cardinality, and
+versions — but the broad ordering is stable.
+
+### Reference suites {#sec-bench-refs}
+
+- **fastverse — Benchmarks wiki** —
+  <https://github.com/fastverse/fastverse/wiki/Benchmarks>. A curated index of
+  community benchmarks: *collapse* vs *dplyr*, *collapse* vs *data.table* joins,
+  rolling-window functions, and *collapse*/*arrow*/*data.table* comparisons. Start
+  here for the in-memory fast-R picture.
+- **Adrian Antico — Benchmarks** —
+  <https://github.com/AdrianAntico/Benchmarks#background>. Compares
+  **data.table**, **collapse**, **DuckDB** (and Python's Polars/Pandas) across
+  eight operations — aggregation, melt, cast, windowing (lag), union, left/inner
+  joins, and filtering — on realistic datasets from **1M to 1B rows**. Useful for
+  seeing how the ranking shifts as data grows.
+- **DuckDB Labs — Database-like ops benchmark** —
+  <https://duckdblabs.github.io/db-benchmark/>. The canonical group-by / join
+  benchmark, run at **0.5 GB, 5 GB, and 50 GB**, comparing DuckDB, data.table,
+  dplyr, collapse, Arrow, Polars, Pandas, ClickHouse, Spark, and more.
+
+### db-benchmark at 5 GB: sum vs. median {#sec-bench-figs}
+
+The two figures below are the **group-by** results at **5 GB (100 million rows)** on
+a 16-core / 32 GB machine. They make the streaming-vs-whole-vector distinction from
+@sec-taxonomy visible: a plain **sum** is fast for nearly every tool, whereas the
+**median** (which can't combine across chunks) spreads the field out.
+
+::: {.panel-tabset}
+
+## Sum (Query 1)
+
+![db-benchmark group-by results at 5 GB (100M rows), *basic* question set. The top panel, `q1: sum v1 by id1`, is the simple **sum** benchmark; lower panels add more grouping keys and columns. Bars are seconds (shorter is faster); each solution reports a cold "first run" and a warm "second run". A plain sum streams, so most engines finish quickly. Source: DuckDB Labs db-benchmark.](images/db-benchmark-groupby-basic-5gb.png){#fig-db-sum fig-alt="Faceted horizontal bar chart of group-by sum queries at 5 GB. The top facet, q1 sum v1 by id1, shows DuckDB, data.table, collapse, Polars and Arrow all completing in a few seconds, with dplyr slower; lower facets repeat for harder grouping combinations." width="70%"}
+
+## Median (Query 6)
+
+![db-benchmark group-by results at 5 GB (100M rows), *advanced* question set. The top panel, `q6: median v3, sd v3 by id4, id5`, is the **median** benchmark. Because an exact median needs every value of each group in memory, it stresses the engines far more than a sum — and is where some solutions slow sharply, spill to disk, or fail. Source: DuckDB Labs db-benchmark.](images/db-benchmark-groupby-advanced-5gb.png){#fig-db-median fig-alt="Faceted horizontal bar chart of advanced group-by queries at 5 GB. The top facet, q6 median and sd by two id columns, shows a much wider spread of timings than the sum query, with data.table, DuckDB and collapse leading and several solutions much slower or not finishing." width="70%"}
+
+:::
+
+For the full matrix — joins, other cardinalities, and the 0.5 GB and 50 GB runs —
+see the live results at <https://duckdblabs.github.io/db-benchmark/>.
+
+::: {.callout-note}
+## Reading these the GeoPov way
+
+Compare @fig-db-sum and @fig-db-median side by side. The **sum** is cheap and
+streamable, so the choice of tool barely matters — push it out-of-memory with Arrow
+or DuckDB and move on. The **median** is the expensive, whole-vector operation: here
+the engine and its memory strategy decide whether the job finishes in seconds, spills
+to disk, or runs out of memory. That is exactly the trade-off to plan for in
+larger-than-RAM poverty-data pipelines.
+:::
+
+## Read more {#sec-read-more}
+
+- fastverse: <https://fastverse.org/fastverse/>
+- data.table: <https://rdatatable.gitlab.io/data.table/>
+- collapse: <https://sebkrantz.github.io/collapse/>
+- Arrow for R: <https://arrow.apache.org/docs/r/>
+- DuckDB R API: <https://duckdb.org/docs/api/r> · duckplyr: <https://duckplyr.tidyverse.org/>

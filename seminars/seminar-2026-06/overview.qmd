@@ -315,7 +315,7 @@ Modern R provides multiple serialization approaches, each optimized for differen
 
 ## Serialization Performance Benchmarking
 
-To compare serialization methods empirically, we benchmark write/read performance, file sizes, and memory usage across three dataset sizes (1k, 10k, and 100k rows).
+To compare serialization methods empirically, we benchmark write/read speed, the RAM used during each operation, and file sizes across four dataset sizes (1k, 10k, 100k, and 1M rows).
 
 #### Data Generation
 
@@ -372,9 +372,130 @@ data.frame(
   knitr::kable(caption = "Dataset sizes in memory")
 ```
 
+```{r}
+#| label: benchmark-helpers
+#| include: true
+
+# Measure the additional R-heap RAM (MB) used at the peak of an operation.
+# gc(reset = TRUE) resets the "max used" counters; the difference between
+# peak "max used" and the baseline "used" is the extra RAM the operation
+# needed. Tracks R's own heap only — C++ engines (Arrow, DuckDB) may use
+# more off-heap memory than reported here.
+mem_of <- function(expr) {
+  g0 <- gc(reset = TRUE, full = TRUE)
+  before <- sum(g0[, 2])
+  force(expr)
+  g1 <- gc(full = TRUE)
+  round(sum(g1[, 6]) - before, 1)
+}
+
+# Benchmark wrapper: write/read time (median of n_rep runs), RAM used, file size.
+# bench_dir must be set in the calling chunk before use.
+bench_write_read <- function(data, write_fn, read_fn, filename, n_rep = 10) {
+  fpath <- file.path(bench_dir, filename)
+
+  write_times <- replicate(n_rep, {
+    start <- Sys.time()
+    write_fn(data, fpath)
+    as.numeric(difftime(Sys.time(), start, units = "secs")) * 1000
+  })
+  read_times <- replicate(n_rep, {
+    start <- Sys.time()
+    result <- read_fn(fpath)
+    as.numeric(difftime(Sys.time(), start, units = "secs")) * 1000
+  })
+
+  write_mem <- mem_of(write_fn(data, fpath))
+  read_mem  <- mem_of(read_fn(fpath))
+
+  fsize <- if (file.exists(fpath)) round(file.size(fpath) / 1024^2, 2) else 0
+  list(
+    write_ms = round(median(write_times), 1),
+    read_ms = round(median(read_times), 1),
+    size_mb = fsize,
+    write_mem_mb = write_mem,
+    read_mem_mb = read_mem
+  )
+}
+
+# DuckDB needs a live connection across write and read.
+bench_duckdb <- function(data, n_rep = 10) {
+  fpath_db <- file.path(bench_dir, "test.duckdb")
+  con <- dbConnect(duckdb::duckdb(), fpath_db)
+
+  write_times_db <- replicate(n_rep, {
+    start <- Sys.time()
+    dbWriteTable(con, "data", data, overwrite = TRUE)
+    as.numeric(difftime(Sys.time(), start, units = "secs")) * 1000
+  })
+  read_times_db <- replicate(n_rep, {
+    start <- Sys.time()
+    result <- dbReadTable(con, "data")
+    as.numeric(difftime(Sys.time(), start, units = "secs")) * 1000
+  })
+
+  write_mem_db <- mem_of(dbWriteTable(con, "data", data, overwrite = TRUE))
+  read_mem_db  <- mem_of(dbReadTable(con, "data"))
+
+  fsize <- round(file.size(fpath_db) / 1024^2, 2)
+  dbDisconnect(con, shutdown = TRUE)
+  list(
+    write_ms = round(median(write_times_db), 1),
+    read_ms = round(median(read_times_db), 1),
+    size_mb = fsize,
+    write_mem_mb = write_mem_db,
+    read_mem_mb = read_mem_db
+  )
+}
+
+# Assemble timing + RAM + file-size into a display data frame.
+results_table <- function(results) {
+  data.frame(
+    Method = names(results),
+    `Write (ms)` = sapply(results, function(x) x$write_ms),
+    `Write RAM (MB)` = sapply(results, function(x) x$write_mem_mb),
+    `Read (ms)` = sapply(results, function(x) x$read_ms),
+    `Read RAM (MB)` = sapply(results, function(x) x$read_mem_mb),
+    `File Size (MB)` = sapply(results, function(x) x$size_mb),
+    check.names = FALSE,
+    row.names = NULL
+  )
+}
+```
+
 #### Benchmarking Results
 
+The **RAM (MB)** columns report the additional R-heap memory used at the peak of a
+single write or read, measured with `gc()`. This captures allocations on R's own
+heap; engines that manage memory off the R heap in C++ — Arrow (feather/parquet)
+and DuckDB — may use more than these R-side figures suggest.
+
 ::: panel-tabset
+
+## 1M Rows
+
+```{r}
+#| label: benchmark-1m
+#| cache: true
+#| message: false
+#| warning: false
+
+bench_dir <- tempfile()
+dir.create(bench_dir)
+
+results_1m <- list(
+  saveRDS = bench_write_read(data_1m, function(d, f) saveRDS(d, f), readRDS, "test.rds", n_rep = 5),
+  qs2 = bench_write_read(data_1m, qs_save, qs_read, "test.qs2", n_rep = 5),
+  fst = bench_write_read(data_1m, write_fst, read_fst, "test.fst", n_rep = 5),
+  data.table = bench_write_read(data_1m, fwrite, fread, "test.csv", n_rep = 5),
+  feather = bench_write_read(data_1m, write_feather, read_feather, "test.feather", n_rep = 5),
+  parquet = bench_write_read(data_1m, write_parquet, read_parquet, "test.parquet", n_rep = 5)
+)
+results_1m$duckdb <- bench_duckdb(data_1m, n_rep = 5)
+
+knitr::kable(results_table(results_1m), caption = "Performance comparison for 1M rows")
+unlink(bench_dir, recursive = TRUE)
+```
 
 ## 100k Rows
 
@@ -384,114 +505,20 @@ data.frame(
 #| message: false
 #| warning: false
 
-# Create single temp directory for all benchmarks
 bench_dir <- tempfile()
 dir.create(bench_dir)
 
-# Simple benchmark wrapper
-bench_write_read <- function(data, write_fn, read_fn, filename) {
-  fpath <- file.path(bench_dir, filename)
-
-  # Benchmark write
-  write_times <- replicate(10, {
-    start <- Sys.time()
-    write_fn(data, fpath)
-    as.numeric(difftime(Sys.time(), start, units = "secs")) * 1000
-  })
-
-  # Benchmark read
-  read_times <- replicate(10, {
-    start <- Sys.time()
-    result <- read_fn(fpath)
-    as.numeric(difftime(Sys.time(), start, units = "secs")) * 1000
-  })
-
-  # Get file size
-  fsize <- if(file.exists(fpath)) round(file.size(fpath) / 1024^2, 2) else 0
-
-  list(
-    write_ms = round(median(write_times), 1),
-    read_ms = round(median(read_times), 1),
-    size_mb = fsize
-  )
-}
-
-# Benchmark all methods
 results_100k <- list(
-  saveRDS = bench_write_read(
-    data_100k,
-    function(d, f) saveRDS(d, f),
-    readRDS,
-    "test.rds"
-  ),
-  qs2 = bench_write_read(
-    data_100k,
-    qs_save,
-    qs_read,
-    "test.qs2"
-  ),
-  fst = bench_write_read(
-    data_100k,
-    write_fst,
-    read_fst,
-    "test.fst"
-  ),
-  data.table = bench_write_read(
-    data_100k,
-    fwrite,
-    fread,
-    "test.csv"
-  ),
-  feather = bench_write_read(
-    data_100k,
-    write_feather,
-    read_feather,
-    "test.feather"
-  ),
-  parquet = bench_write_read(
-    data_100k,
-    write_parquet,
-    read_parquet,
-    "test.parquet"
-  )
+  saveRDS = bench_write_read(data_100k, function(d, f) saveRDS(d, f), readRDS, "test.rds"),
+  qs2 = bench_write_read(data_100k, qs_save, qs_read, "test.qs2"),
+  fst = bench_write_read(data_100k, write_fst, read_fst, "test.fst"),
+  data.table = bench_write_read(data_100k, fwrite, fread, "test.csv"),
+  feather = bench_write_read(data_100k, write_feather, read_feather, "test.feather"),
+  parquet = bench_write_read(data_100k, write_parquet, read_parquet, "test.parquet")
 )
+results_100k$duckdb <- bench_duckdb(data_100k)
 
-# DuckDB special case
-fpath_db <- file.path(bench_dir, "test.duckdb")
-con <- dbConnect(duckdb::duckdb(), fpath_db)
-
-write_times_db <- replicate(10, {
-  start <- Sys.time()
-  dbWriteTable(con, "data", data_100k, overwrite = TRUE)
-  as.numeric(difftime(Sys.time(), start, units = "secs")) * 1000
-})
-
-read_times_db <- replicate(10, {
-  start <- Sys.time()
-  result <- dbReadTable(con, "data")
-  as.numeric(difftime(Sys.time(), start, units = "secs")) * 1000
-})
-
-dbDisconnect(con, shutdown = TRUE)
-
-results_100k$duckdb <- list(
-  write_ms = round(median(write_times_db), 1),
-  read_ms = round(median(read_times_db), 1),
-  size_mb = round(file.size(fpath_db) / 1024^2, 2)
-)
-
-# Create results table
-df_100k <- data.frame(
-  Method = names(results_100k),
-  `Write (ms)` = sapply(results_100k, function(x) x$write_ms),
-  `Read (ms)` = sapply(results_100k, function(x) x$read_ms),
-  `File Size (MB)` = sapply(results_100k, function(x) x$size_mb),
-  check.names = FALSE
-)
-
-knitr::kable(df_100k, caption = "Performance comparison for 100k rows")
-
-# Cleanup
+knitr::kable(results_table(results_100k), caption = "Performance comparison for 100k rows")
 unlink(bench_dir, recursive = TRUE)
 ```
 
@@ -514,23 +541,9 @@ results_10k <- list(
   feather = bench_write_read(data_10k, write_feather, read_feather, "test.feather"),
   parquet = bench_write_read(data_10k, write_parquet, read_parquet, "test.parquet")
 )
+results_10k$duckdb <- bench_duckdb(data_10k)
 
-fpath_db <- file.path(bench_dir, "test.duckdb")
-con <- dbConnect(duckdb::duckdb(), fpath_db)
-write_times_db <- replicate(10, { start <- Sys.time(); dbWriteTable(con, "data", data_10k, overwrite = TRUE); as.numeric(difftime(Sys.time(), start, units = "secs")) * 1000 })
-read_times_db <- replicate(10, { start <- Sys.time(); result <- dbReadTable(con, "data"); as.numeric(difftime(Sys.time(), start, units = "secs")) * 1000 })
-dbDisconnect(con, shutdown = TRUE)
-results_10k$duckdb <- list(write_ms = round(median(write_times_db), 1), read_ms = round(median(read_times_db), 1), size_mb = round(file.size(fpath_db) / 1024^2, 2))
-
-df_10k <- data.frame(
-  Method = names(results_10k),
-  `Write (ms)` = sapply(results_10k, function(x) x$write_ms),
-  `Read (ms)` = sapply(results_10k, function(x) x$read_ms),
-  `File Size (MB)` = sapply(results_10k, function(x) x$size_mb),
-  check.names = FALSE
-)
-
-knitr::kable(df_10k, caption = "Performance comparison for 10k rows")
+knitr::kable(results_table(results_10k), caption = "Performance comparison for 10k rows")
 unlink(bench_dir, recursive = TRUE)
 ```
 
@@ -553,28 +566,42 @@ results_1k <- list(
   feather = bench_write_read(data_1k, write_feather, read_feather, "test.feather"),
   parquet = bench_write_read(data_1k, write_parquet, read_parquet, "test.parquet")
 )
+results_1k$duckdb <- bench_duckdb(data_1k)
 
-fpath_db <- file.path(bench_dir, "test.duckdb")
-con <- dbConnect(duckdb::duckdb(), fpath_db)
-write_times_db <- replicate(10, { start <- Sys.time(); dbWriteTable(con, "data", data_1k, overwrite = TRUE); as.numeric(difftime(Sys.time(), start, units = "secs")) * 1000 })
-read_times_db <- replicate(10, { start <- Sys.time(); result <- dbReadTable(con, "data"); as.numeric(difftime(Sys.time(), start, units = "secs")) * 1000 })
-dbDisconnect(con, shutdown = TRUE)
-results_1k$duckdb <- list(write_ms = round(median(write_times_db), 1), read_ms = round(median(read_times_db), 1), size_mb = round(file.size(fpath_db) / 1024^2, 2))
-
-df_1k <- data.frame(
-  Method = names(results_1k),
-  `Write (ms)` = sapply(results_1k, function(x) x$write_ms),
-  `Read (ms)` = sapply(results_1k, function(x) x$read_ms),
-  `File Size (MB)` = sapply(results_1k, function(x) x$size_mb),
-  check.names = FALSE
-)
-
-knitr::kable(df_1k, caption = "Performance comparison for 1k rows")
+knitr::kable(results_table(results_1k), caption = "Performance comparison for 1k rows")
 unlink(bench_dir, recursive = TRUE)
 ```
 
 :::
 
+## Summary & recommendations
+
+@tbl-serialization-summary distills the trade-offs across the serialization methods
+benchmarked above. There is no single winner — the right choice depends on *what*
+you are storing and *who* needs to read it back.
+
+| Method | Write Speed | Read Speed | File Size | RAM Usage | CPU | Random Access | Object Types | Cross-platform | Best For |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **saveRDS** | Slow | Medium | Small | Full object | Single-thread | No | Any R object | R only | Legacy / default |
+| **qs2** | Fast | Very Fast | Smallest | Full object | Multi-thread | No | Any R object | R only | Fast R objects |
+| **fst** | Very Fast | Very Fast | Medium | Full object | Multi-thread | Cols + Rows | Data frames | Limited | Fast data frames |
+| **data.table** (`fwrite`/`fread`) | Very Fast | Very Fast | Large | Full object | Multi-thread | No | Data frames | Universal | CSV alternative |
+| **arrow** (Parquet) | Fast | Very Fast | Medium | Can stream | Multi-thread | Columns | Data frames | Universal | Big data / cross-lang |
+
+: Serialization methods compared {#tbl-serialization-summary}
+
+**Recommendations:**
+
+- **Any R object** (models, lists, fitted objects, environments) → **`qs2`** for
+  speed, or base **`saveRDS`** when you want zero dependencies.
+- **Large data frames you re-read partially** (selected columns or row ranges) →
+  **`fst`**, the only format here with built-in random access.
+- **Sharing with non-R users or text-based pipelines** → **`data.table::fwrite`**
+  (universal CSV, but the largest files and lossy types).
+- **Bigger-than-RAM or cross-language analytics** → **Parquet via `arrow`**
+  (columnar, compressed, streamable), optionally queried with **DuckDB** — see
+  [Part 2 — Data Wrangling](data-wrangling.qmd) for computing on these formats
+  out-of-memory.
 
 ## Examples
 

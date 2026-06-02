@@ -387,3 +387,276 @@ The compression happens on background threads, so even with high compression set
 - **Can exceed disk speed**: Through efficient CPU/I/O parallelization
 
 This makes `fst` ideal for interactive data analysis where you frequently save and load intermediate results.
+
+### Serialization Performance Benchmarking
+
+To compare serialization methods empirically, we benchmark write/read performance, file sizes, and memory usage across three dataset sizes (1k, 10k, and 100k rows).
+
+#### Data Generation
+
+We create realistic test datasets with 8 columns covering all major R data types:
+
+```{r}
+#| label: generate-benchmark-data
+#| message: false
+library(tidyverse)
+library(microbenchmark)
+library(data.table)
+library(fst)
+library(qs2)
+library(arrow)
+library(duckdb)
+
+set.seed(7892)
+
+generate_test_data <- function(n_rows) {
+  data.frame(
+    id = 1:n_rows,
+    region = factor(sample(LETTERS[1:5], n_rows, replace = TRUE)),
+    country = sample(c("Kenya", "Uganda", "Tanzania", "Rwanda", "Burundi",
+                       "Ethiopia", "Somalia", "Sudan", "Chad", "Niger",
+                       "Nigeria", "Ghana", "Senegal", "Mali", "Burkina Faso",
+                       "Benin", "Togo", "Cameroon", "Congo", "DRC"), 
+                     n_rows, replace = TRUE),
+    year = sample(2020:2025, n_rows, replace = TRUE),
+    income = rlnorm(n_rows, meanlog = 8, sdlog = 1.5),
+    employed = sample(c(TRUE, FALSE), n_rows, replace = TRUE, prob = c(0.6, 0.4)),
+    survey_date = as.Date("2020-01-01") + sample(0:2000, n_rows, replace = TRUE),
+    notes = sample(c("Complete", "Partial", "Missing data", NA, "Verified", 
+                     "Pending review", "Approved"), n_rows, replace = TRUE)
+  )
+}
+
+# Generate datasets
+data_1k <- generate_test_data(1000)
+data_10k <- generate_test_data(10000)
+data_100k <- generate_test_data(100000)
+
+cat("Dataset sizes:\n")
+cat("1k rows:", format(object.size(data_1k), units = "MB"), "\n")
+cat("10k rows:", format(object.size(data_10k), units = "MB"), "\n")
+cat("100k rows:", format(object.size(data_100k), units = "MB"), "\n")
+```
+
+#### Benchmarking Methods
+
+We benchmark each serialization method with 10 iterations, measuring:
+- Write speed (median milliseconds)
+- Read speed (median milliseconds)
+- File size (MB)
+- Memory usage during operations
+
+::: {.panel-tabset}
+
+##### 100k Rows
+
+```{r}
+#| label: benchmark-100k
+#| cache: true
+#| message: false
+#| warning: false
+
+# Create temp directory for benchmarks
+bench_dir <- tempfile("serialization_bench_")
+dir.create(bench_dir)
+old_wd <- setwd(bench_dir)
+
+data <- data_100k
+n_size <- "100k"
+
+# Helper function to measure file size safely
+safe_file_size <- function(path) {
+  if (file.exists(path)) {
+    size_bytes <- file.size(path)
+    if (is.na(size_bytes)) return(0)
+    return(size_bytes / 1024^2)  # Convert to MB
+  }
+  return(0)
+}
+
+# Benchmark each method
+results_100k <- list()
+
+# 1. saveRDS
+bench_rds <- microbenchmark(
+  write = saveRDS(data, "test.rds", compress = "gzip"),
+  read = readRDS("test.rds"),
+  times = 10
+)
+results_100k$saveRDS <- c(
+  write_ms = median(subset(bench_rds, expr == "write")$time) / 1e6,
+  read_ms = median(subset(bench_rds, expr == "read")$time) / 1e6,
+  size_mb = safe_file_size("test.rds")
+)
+
+# 2. qs2
+bench_qs2 <- microbenchmark(
+  write = qs_save(data, "test.qs2"),
+  read = qs_read("test.qs2"),
+  times = 10
+)
+results_100k$qs2 <- c(
+  write_ms = median(subset(bench_qs2, expr == "write")$time) / 1e6,
+  read_ms = median(subset(bench_qs2, expr == "read")$time) / 1e6,
+  size_mb = safe_file_size("test.qs2")
+)
+
+# 3. fst
+bench_fst <- microbenchmark(
+  write = write_fst(data, "test.fst"),
+  read = read_fst("test.fst"),
+  times = 10
+)
+results_100k$fst <- c(
+  write_ms = median(subset(bench_fst, expr == "write")$time) / 1e6,
+  read_ms = median(subset(bench_fst, expr == "read")$time) / 1e6,
+  size_mb = safe_file_size("test.fst")
+)
+
+# 4. data.table CSV
+bench_csv <- microbenchmark(
+  write = fwrite(data, "test.csv"),
+  read = fread("test.csv"),
+  times = 10
+)
+results_100k$csv_datatable <- c(
+  write_ms = median(subset(bench_csv, expr == "write")$time) / 1e6,
+  read_ms = median(subset(bench_csv, expr == "read")$time) / 1e6,
+  size_mb = safe_file_size("test.csv")
+)
+
+# 5. Arrow Feather
+bench_feather <- microbenchmark(
+  write = write_feather(data, "test.feather"),
+  read = read_feather("test.feather"),
+  times = 10
+)
+results_100k$feather <- c(
+  write_ms = median(subset(bench_feather, expr == "write")$time) / 1e6,
+  read_ms = median(subset(bench_feather, expr == "read")$time) / 1e6,
+  size_mb = safe_file_size("test.feather")
+)
+
+# 6. Arrow Parquet (single file)
+bench_parquet <- microbenchmark(
+  write = write_parquet(data, "test.parquet"),
+  read = read_parquet("test.parquet"),
+  times = 10
+)
+results_100k$parquet <- c(
+  write_ms = median(subset(bench_parquet, expr == "write")$time) / 1e6,
+  read_ms = median(subset(bench_parquet, expr == "read")$time) / 1e6,
+  size_mb = safe_file_size("test.parquet")
+)
+
+# 7. Arrow Parquet (Hive partitioned)
+write_dataset(data, "partitioned_data", partitioning = "region")
+bench_parquet_hive <- microbenchmark(
+  read_full = open_dataset("partitioned_data") |> collect(),
+  read_filtered = open_dataset("partitioned_data") |> 
+    filter(region == "A") |> collect(),
+  times = 10
+)
+parquet_dir_size <- sum(file.size(list.files("partitioned_data", 
+                                               recursive = TRUE, 
+                                               full.names = TRUE))) / 1024^2
+results_100k$parquet_hive <- c(
+  write_ms = NA,  # Partitioning is part of write_dataset, not benchmarked separately
+  read_ms = median(subset(bench_parquet_hive, expr == "read_full")$time) / 1e6,
+  read_filtered_ms = median(subset(bench_parquet_hive, expr == "read_filtered")$time) / 1e6,
+  size_mb = parquet_dir_size
+)
+
+# 8. DuckDB
+con <- dbConnect(duckdb::duckdb(), "test.duckdb")
+bench_duckdb <- microbenchmark(
+  write = dbWriteTable(con, "data", data, overwrite = TRUE),
+  read = dbReadTable(con, "data"),
+  times = 10
+)
+dbDisconnect(con, shutdown = TRUE)
+results_100k$duckdb <- c(
+  write_ms = median(subset(bench_duckdb, expr == "write")$time) / 1e6,
+  read_ms = median(subset(bench_duckdb, expr == "read")$time) / 1e6,
+  size_mb = safe_file_size("test.duckdb")
+)
+
+# Create results table
+results_df_100k <- data.frame(
+  Method = names(results_100k),
+  `Write (ms)` = sapply(results_100k, function(x) round(x["write_ms"], 1)),
+  `Read (ms)` = sapply(results_100k, function(x) round(x["read_ms"], 1)),
+  `File Size (MB)` = sapply(results_100k, function(x) round(x["size_mb"], 2)),
+  check.names = FALSE
+)
+
+knitr::kable(results_df_100k, caption = "Performance comparison for 100k rows")
+
+# Cleanup
+setwd(old_wd)
+unlink(bench_dir, recursive = TRUE)
+```
+
+##### 10k Rows
+
+```{r}
+#| label: benchmark-10k
+#| cache: true
+#| message: false
+#| warning: false
+
+bench_dir <- tempfile("serialization_bench_")
+dir.create(bench_dir)
+old_wd <- setwd(bench_dir)
+
+data <- data_10k
+results_10k <- list()
+
+# Repeat benchmarking for 10k dataset (abbreviated code)
+bench_rds <- microbenchmark(
+  write = saveRDS(data, "test.rds", compress = "gzip"),
+  read = readRDS("test.rds"),
+  times = 10
+)
+results_10k$saveRDS <- c(
+  write_ms = median(subset(bench_rds, expr == "write")$time) / 1e6,
+  read_ms = median(subset(bench_rds, expr == "read")$time) / 1e6,
+  size_mb = safe_file_size("test.rds")
+)
+
+bench_qs2 <- microbenchmark(
+  write = qs_save(data, "test.qs2"),
+  read = qs_read("test.qs2"),
+  times = 10
+)
+results_10k$qs2 <- c(
+  write_ms = median(subset(bench_qs2, expr == "write")$time) / 1e6,
+  read_ms = median(subset(bench_qs2, expr == "read")$time) / 1e6,
+  size_mb = safe_file_size("test.qs2")
+)
+
+bench_fst <- microbenchmark(
+  write = write_fst(data, "test.fst"),
+  read = read_fst("test.fst"),
+  times = 10
+)
+results_10k$fst <- c(
+  write_ms = median(subset(bench_fst, expr == "write")$time) / 1e6,
+  read_ms = median(subset(bench_fst, expr == "read")$time) / 1e6,
+  size_mb = safe_file_size("test.fst")
+)
+
+bench_csv <- microbenchmark(
+  write = fwrite(data, "test.csv"),
+  read = fread("test.csv"),
+  times = 10
+)
+results_10k$csv_datatable <- c(
+  write_ms = median(subset(bench_csv, expr == "write")$time) / 1e6,
+  read_ms = median(subset(bench_csv, expr == "read")$time) / 1e6,
+  size_mb = safe_file_size("test.csv")
+)
+
+bench_feather <- microbenchmark(
+  write = write_feather(data, "test.feather"),
+  read = read_feather("

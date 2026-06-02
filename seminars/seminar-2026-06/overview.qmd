@@ -416,13 +416,13 @@ generate_test_data <- function(n_rows) {
     country = sample(c("Kenya", "Uganda", "Tanzania", "Rwanda", "Burundi",
                        "Ethiopia", "Somalia", "Sudan", "Chad", "Niger",
                        "Nigeria", "Ghana", "Senegal", "Mali", "Burkina Faso",
-                       "Benin", "Togo", "Cameroon", "Congo", "DRC"), 
+                       "Benin", "Togo", "Cameroon", "Congo", "DRC"),
                      n_rows, replace = TRUE),
     year = sample(2020:2025, n_rows, replace = TRUE),
     income = rlnorm(n_rows, meanlog = 8, sdlog = 1.5),
     employed = sample(c(TRUE, FALSE), n_rows, replace = TRUE, prob = c(0.6, 0.4)),
     survey_date = as.Date("2020-01-01") + sample(0:2000, n_rows, replace = TRUE),
-    notes = sample(c("Complete", "Partial", "Missing data", NA, "Verified", 
+    notes = sample(c("Complete", "Partial", "Missing data", NA, "Verified",
                      "Pending review", "Approved"), n_rows, replace = TRUE)
   )
 }
@@ -455,24 +455,24 @@ dir.create(bench_dir)
 # Simple benchmark wrapper
 bench_write_read <- function(data, write_fn, read_fn, filename) {
   fpath <- file.path(bench_dir, filename)
-  
+
   # Benchmark write
   write_times <- replicate(10, {
     start <- Sys.time()
     write_fn(data, fpath)
     as.numeric(difftime(Sys.time(), start, units = "secs")) * 1000
   })
-  
-  # Benchmark read  
+
+  # Benchmark read
   read_times <- replicate(10, {
     start <- Sys.time()
     result <- read_fn(fpath)
     as.numeric(difftime(Sys.time(), start, units = "secs")) * 1000
   })
-  
+
   # Get file size
   fsize <- if(file.exists(fpath)) round(file.size(fpath) / 1024^2, 2) else 0
-  
+
   list(
     write_ms = round(median(write_times), 1),
     read_ms = round(median(read_times), 1),
@@ -562,7 +562,7 @@ unlink(bench_dir, recursive = TRUE)
 ##### 10k Rows
 
 ```{r}
-#| label: benchmark-10k  
+#| label: benchmark-10k
 #| cache: true
 #| message: false
 #| warning: false

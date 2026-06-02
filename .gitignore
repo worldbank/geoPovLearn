@@ -51,5 +51,6 @@ rsconnect/
 /.quarto/
 **/*.quarto_ipynb
 _site/*
-_freeze/*
+# _freeze/ IS committed: CI (publish.yml) sets up Quarto only, no R/Python,
+# so pages with computational cells are assembled from frozen results.
 .DS_Store

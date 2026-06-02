@@ -356,7 +356,7 @@ df_subset <- read_fst("data.fst", columns = c("region", "income"))
 df_rows <- read_fst("data.fst", from = 1000, to = 5000)
 
 # Combine column and row selection
-df_partial <- read_fst("data.fst", 
+df_partial <- read_fst("data.fst",
                        columns = c("region", "income"),
                        from = 1000, to = 5000)
 ```
@@ -387,55 +387,3 @@ The compression happens on background threads, so even with high compression set
 - **Can exceed disk speed**: Through efficient CPU/I/O parallelization
 
 This makes `fst` ideal for interactive data analysis where you frequently save and load intermediate results.
-
-## Overview
-
-Development data work keeps getting bigger — harmonized household surveys (GMD),
-census microdata, gridded geospatial layers, and panels that no longer fit
-comfortably in memory. R is excellent for this work, but by default it holds
-everything in RAM and leans on convenient-but-slow defaults for reading,
-writing, and aggregating data.
-
-This 10-minute lightning talk maps the modern R toolkit for going **fast** and
-going **big**, organized around the three friction points you actually hit:
-
-1. **Storing and loading** R objects and data frames quickly and compactly.
-2. **Computing** on data — especially grouped aggregations — at C/C++ speed.
-3. Working with data that is **larger than RAM**, without leaving familiar
-   `dplyr`-style syntax.
-
-The goal is not to crown a single winner, but to give you a mental map and a
-short list of packages worth adopting in everyday analysis.
-
-## Speaker
-
-**Eduard Bukin** ([ebukin@worldbank.org](mailto:ebukin@worldbank.org))
-
-**Series Lead:** Maria Eugenia Genoni ([mgenoni@worldbank.org](mailto:mgenoni@worldbank.org))
-
-**Moderator:** Henry Stemmler ([hstemmler@worldbank.org](mailto:hstemmler@worldbank.org))
-
-## What You Will Learn
-
-In this session, we will:
-
-- See why **R's default `saveRDS()` / data import** is often the slowest part of
-  a workflow, and how **`qs2`** (arbitrary objects) and **`fst`** (data frames)
-  make serialization dramatically faster and smaller.
-- Meet **`collapse`** — a C/C++ statistical-computing toolkit for very fast
-  grouped calculations and transformations — and compare it to **`dplyr`** and
-  **`data.table`**.
-- Learn the **Parquet** columnar format and how **`arrow`** lets you query
-  partitioned, on-disk datasets lazily with `dplyr` verbs.
-- Use **DuckDB** (and **`duckplyr`**) to run SQL-grade analytics over
-  larger-than-RAM data directly from R, keeping `dplyr` syntax.
-- Walk away with a **"which tool when"** decision guide.
-
-## Presentation Outline (~10 min)
-
-| # | Segment | ~Time | Key points |
-|---|---------|:-----:|------------|
-| 1 | **Motivation — fast & big** | 1:00 | R works in RAM; I/O, grouped computation, and larger-than-RAM data are the three friction points in development data work. |
-| 2 | **Roadmap: three bottlenecks** | 0:30 | (1) store/load, (2) compute, (3) data > RAM. |
-| 3 | **Serialize R objects fast** | 2:00 | `saveRDS()` baseline (gzip, slow) → **`qs2`** for any object, **`fst`** for data frames (columnar, random access, multithreaded). Size vs. speed trade-offs. |
-| 4 | **Fast in-memory compute: `collapse`** | 2:30 | Fast statistical functions; `fgroup_by()` / `fsummarise()` /

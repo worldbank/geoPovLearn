@@ -83,3 +83,17 @@ format:
     css: styles.css
     toc: true
     toc-depth: 3
+    include-in-header:
+      text: |
+        <style>
+          /* Center the whole content block (sidebar + body + TOC) on wide
+             screens instead of letting it hug the left edge. Below this
+             breakpoint the layout already fills the viewport, so leave it. */
+          @media (min-width: 1400px) {
+            #quarto-content.page-columns {
+              max-width: 1400px;
+              margin-left: auto;
+              margin-right: auto;
+            }
+          }
+        </style>

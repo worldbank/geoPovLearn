@@ -638,3 +638,335 @@ unlink(bench_dir, recursive = TRUE)
 ```
 
 :::
+
+### qs2 Package: Ultra-Fast R Object Serialization
+
+The `qs2` package provides a modern, high-performance alternative to `saveRDS()` for any R object type.
+
+#### Performance Characteristics
+
+`qs2` delivers exceptional speed improvements over base R serialization:
+- **Write speeds**: 5-10x faster than `saveRDS()`
+- **Read speeds**: 3-5x faster than `readRDS()`
+- **File size**: 10-30% smaller than gzip-compressed RDS
+- **Any R object**: Works with data frames, models, lists, environments, functions, etc.
+
+#### Modern Compression
+
+`qs2` uses state-of-the-art compression algorithms:
+
+```{r}
+#| label: qs2-compression-demo
+#| eval: false
+library(qs2)
+
+# Default: fast and balanced (uses zstd)
+qs_save(my_model, "model.qs2")
+
+# Maximum compression (slower write, smallest file)
+qs_save(my_model, "model_compressed.qs2", preset = "high")
+
+# Maximum speed (larger file, fastest I/O)
+qs_save(my_model, "model_fast.qs2", preset = "fast")
+
+# Custom compression level (1-22, higher = more compression)
+qs_save(my_model, "model_custom.qs2", algorithm = "zstd", compress_level = 15)
+```
+
+#### Multi-threading Capabilities
+
+`qs2` automatically uses multiple CPU cores:
+
+```{r}
+#| label: qs2-threading-demo
+#| eval: false
+
+# Automatic threading (uses all available cores)
+qs_save(large_data, "data.qs2")
+
+# Specify number of threads explicitly
+qs_save(large_data, "data.qs2", nthreads = 4)
+
+# Check number of threads being used
+qs2::qs_threads()
+```
+
+#### Use Cases
+
+**Perfect for**:
+- Saving trained machine learning models
+- Caching intermediate analysis results
+- Storing complex nested lists
+- Saving environments with functions and closures
+- Any R object that needs fast serialization
+
+**Example workflow**:
+
+```{r}
+#| label: qs2-workflow-demo
+#| eval: false
+
+# Save a complex analysis workspace
+analysis_state <- list(
+  model = trained_rf_model,
+  predictions = pred_results,
+  metrics = performance_metrics,
+  preprocessing = list(
+    scaler = fitted_scaler,
+    encoder = category_encoder
+  ),
+  metadata = list(
+    timestamp = Sys.time(),
+    r_version = R.version.string
+  )
+)
+
+# Save entire state (much faster than saveRDS)
+qs_save(analysis_state, "analysis_cache.qs2")
+
+# Later: restore instantly
+analysis_state <- qs_read("analysis_cache.qs2")
+```
+
+### Arrow Parquet: Columnar Analytics Format
+
+Apache Arrow and Parquet provide a powerful combination for analytical workloads, especially with large datasets.
+
+#### Arrow Format Overview
+
+Arrow provides two file formats:
+- **Feather**: Uncompressed, fastest I/O, larger files
+- **Parquet**: Compressed, smaller files, columnar analytics optimized
+
+#### Parquet Advantages
+
+**Columnar storage** means:
+- Only read columns you need (huge I/O savings)
+- Excellent compression (similar data grouped together)
+- Fast aggregations and filtering
+- Native support in many tools (Python, Spark, BigQuery, etc.)
+
+#### Basic Parquet Operations
+
+```{r}
+#| label: parquet-basic-demo
+#| eval: false
+library(arrow)
+
+# Write Parquet file
+write_parquet(data_100k, "survey_data.parquet")
+
+# Read entire file
+full_data <- read_parquet("survey_data.parquet")
+
+# Read only specific columns (most efficient!)
+subset <- read_parquet("survey_data.parquet", 
+                       col_select = c("id", "region", "income"))
+
+# Parquet with compression options
+write_parquet(data_100k, "compressed.parquet", compression = "zstd", compression_level = 9)
+write_parquet(data_100k, "fast.parquet", compression = "snappy")  # Faster, larger
+```
+
+#### Partitioned Datasets
+
+Partitioning organizes data into directory structure for efficient filtering:
+
+```{r}
+#| label: parquet-partitioning-demo
+#| eval: false
+
+# Write partitioned dataset (creates region=A/, region=B/, etc.)
+write_dataset(data_100k, 
+              path = "partitioned_survey",
+              partitioning = c("region", "year"))
+
+# Open dataset lazily (doesn't load into memory)
+ds <- open_dataset("partitioned_survey")
+
+# Query with partition pruning - only reads relevant files
+regional_data <- ds |>
+  filter(region == "A", year >= 2023) |>
+  select(id, country, income, employed) |>
+  collect()  # Execute and bring into R memory
+
+# Aggregate without loading full data
+summary_stats <- ds |>
+  group_by(region, year) |>
+  summarise(
+    avg_income = mean(income),
+    employment_rate = mean(employed),
+    n = n()
+  ) |>
+  collect()
+```
+
+#### Schema and Metadata
+
+Parquet preserves data types and metadata:
+
+```{r}
+#| label: parquet-schema-demo
+#| eval: false
+
+# View schema without reading data
+ds <- open_dataset("partitioned_survey")
+schema(ds)
+
+# Parquet preserves:
+# - Integer vs numeric types
+# - Date types
+# - Dictionary encoding for categories
+# - Custom metadata
+
+# Add custom metadata
+write_parquet(
+  data_100k, 
+  "survey_with_metadata.parquet",
+  metadata = list(
+    "source" = "Household Survey 2024",
+    "contact" = "data@example.org",
+    "version" = "1.2"
+  )
+)
+```
+
+#### Cloud and Streaming
+
+Parquet excels with cloud storage:
+
+```{r}
+#| label: parquet-cloud-demo
+#| eval: false
+
+# Read from S3 (only downloads needed columns/rows)
+s3_ds <- open_dataset("s3://mybucket/survey_data/")
+
+# Stream processing - process in chunks
+s3_ds |>
+  filter(year == 2024) |>
+  select(income, region) |>
+  group_by(region) |>
+  summarise(median_income = median(income)) |>
+  collect()
+
+# HTTP streaming (great for public datasets)
+http_ds <- open_dataset("https://data.example.org/public/survey.parquet")
+```
+
+### DuckDB: Analytical Database Engine
+
+DuckDB is an in-process analytical database that integrates seamlessly with R for larger-than-RAM analytics.
+
+#### DuckDB Philosophy
+
+- **Embedded**: No separate server process needed
+- **Columnar**: Optimized for analytical queries
+- **SQL interface**: Use SQL or dplyr
+- **Larger-than-RAM**: Spills to disk automatically
+- **Parquet native**: Reads Parquet files directly
+
+#### Basic DuckDB Operations
+
+```{r}
+#| label: duckdb-basic-demo
+#| eval: false
+library(duckdb)
+
+# Create connection (in-memory database)
+con <- dbConnect(duckdb::duckdb())
+
+# Create connection (persistent database)
+con <- dbConnect(duckdb::duckdb(), "mydata.duckdb")
+
+# Load data into DuckDB
+dbWriteTable(con, "survey", data_100k)
+
+# Query with SQL
+result <- dbGetQuery(con, "
+  SELECT region, 
+         AVG(income) as avg_income,
+         COUNT(*) as n
+  FROM survey
+  WHERE employed = TRUE
+  GROUP BY region
+  ORDER BY avg_income DESC
+")
+
+# Or use dplyr
+library(dplyr)
+survey_tbl <- tbl(con, "survey")
+
+summary <- survey_tbl |>
+  filter(employed == TRUE) |>
+  group_by(region) |>
+  summarise(
+    avg_income = mean(income),
+    n = n()
+  ) |>
+  arrange(desc(avg_income)) |>
+  collect()
+
+# Always disconnect when done
+dbDisconnect(con, shutdown = TRUE)
+```
+
+#### Querying Parquet Directly
+
+DuckDB can query Parquet files without loading into database:
+
+```{r}
+#| label: duckdb-parquet-demo
+#| eval: false
+
+con <- dbConnect(duckdb::duckdb())
+
+# Query Parquet file directly (zero-copy when possible)
+result <- dbGetQuery(con, "
+  SELECT region, year, AVG(income) as avg_income
+  FROM read_parquet('partitioned_survey/**/*.parquet')
+  WHERE year >= 2023
+  GROUP BY region, year
+")
+
+# Query multiple Parquet files as single table
+result <- dbGetQuery(con, "
+  SELECT *
+  FROM read_parquet(['file1.parquet', 'file2.parquet', 'file3.parquet'])
+  WHERE income > 10000
+")
+
+# Query partitioned Parquet (with partition pruning)
+result <- dbGetQuery(con, "
+  SELECT country, AVG(income)
+  FROM read_parquet('partitioned_survey/region=A/**/*.parquet')
+  GROUP BY country
+")
+
+dbDisconnect(con, shutdown = TRUE)
+```
+
+#### DuckDB + Arrow Integration
+
+DuckDB and Arrow work together seamlessly:
+
+```{r}
+#| label: duckdb-arrow-demo
+#| eval: false
+library(arrow)
+library(duckdb)
+
+# Open Arrow dataset
+ds <- open_dataset("partitioned_survey")
+
+# Hand dataset to DuckDB for SQL queries
+con <- dbConnect(duckdb::duckdb())
+arrow_table <- to_duckdb(ds, con, "survey_data")
+
+# Now query with SQL
+result <- dbGetQuery(con, "
+  SELECT region, 
+         year,
+         MEDIAN(income) as median_income,
+         PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY income) as q25,
+         PERCENTILE_CONT(0.75) WITHIN GROUP (ORD

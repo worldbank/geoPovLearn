@@ -42,13 +42,6 @@ website:
       - section: "GeoPov BBL Series"
         href: seminars/index.qmd
         contents:
-          - text: Fast & Big Data in R
-            href: seminars/seminar-2026-06/overview.qmd
-            contents:
-              - text: "Part 1 — Serialization"
-                href: seminars/seminar-2026-06/serialization.qmd
-              - text: "Part 2 — Data Wrangling"
-                href: seminars/seminar-2026-06/data-wrangling.qmd
           - text: Revolutionizing Coding in Stata/R
             href: seminars/seminar-2026-02/overview.qmd
             contents:
@@ -60,23 +53,15 @@ website:
               href: seminars/seminar-2026-02/qa.qmd
           - text: Geocoding GMD
             href: seminars/seminar-2025-10/overview.qmd
-      - section: "Projects"
-        href: projects/index.qmd
+      - section: "Other Materials"
         contents:
-          - text: "Spatial Analysis"
-            href: projects/spatial-analysis.qmd
-          - text: "Knowledge and Data Center"
-            href: projects/knowledge-data-center.qmd
-          - text: "Capacity Building"
-            href: projects/capacity-building.qmd
-      - section: "Team"
-        href: team/index.qmd
-        contents:
-          - team/ben-brunckhorst.qmd
-          - team/eduard-bukin.qmd
-          - team/henry-stemmler.qmd
-          - team/maria-davalos.qmd
-          - team/nga-nguyen.qmd
+          - text: Fast & Big Data in R
+            href: seminars/seminar-2026-06/overview.qmd
+            contents:
+              - text: "Part 1 — Serialization"
+                href: seminars/seminar-2026-06/serialization.qmd
+              - text: "Part 2 — Data Wrangling"
+                href: seminars/seminar-2026-06/data-wrangling.qmd
   page-footer:
     background: "#e8eaed"
     foreground: "#555555"

@@ -19,3 +19,27 @@
   width: 100%;
   height: 200px;
 }
+
+/* Banner: white title + subtitle text over gradient SVG */
+.quarto-title-banner .title {
+  color: #fff !important;
+  font-weight: 700;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+.quarto-title-banner .subtitle {
+  color: #fff !important;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+/* Right TOC: purple active/hover state */
+#quarto-margin-sidebar .nav-link.active,
+#quarto-margin-sidebar .nav-link:hover {
+  color: #872C8F !important;
+  border-left: 3px solid #872C8F;
+  padding-left: 0.5rem;
+}
+
+/* Footer: rounded top corners */
+.nav-footer {
+  border-radius: 12px 12px 0 0;
+}

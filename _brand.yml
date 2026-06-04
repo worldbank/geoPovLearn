@@ -1,0 +1,52 @@
+meta:
+  name: GeoPov
+
+logo:
+  images:
+    geopov-logo:
+      path: brand/GeoPov_logo_editable.svg
+      alt: GeoPov logo
+  medium: geopov-logo
+
+color:
+  palette:
+    dark-blue: "#123154"
+    purple: "#872C8F"
+    purple-90: "#93419A"
+    purple-80: "#9F56A5"
+    purple-70: "#AB6BB1"
+    purple-60: "#B780BC"
+    purple-50: "#C395C7"
+    purple-40: "#CFABD2"
+    purple-30: "#DBC0DD"
+    purple-20: "#E7D5E9"
+    purple-10: "#F3EAF4"
+    white: "#FFFFFF"
+    black: "#333333"
+  foreground: black
+  background: white
+  primary: purple
+  secondary: dark-blue
+
+typography:
+  fonts:
+    - family: Open Sans
+      source: google
+      weight: [300, 400, 600, 700]
+      style: [normal, italic]
+    - family: Source Code Pro
+      source: google
+      weight: [400, 500]
+  base:
+    family: Open Sans
+    size: 16px
+    line-height: 1.5
+  headings:
+    family: Open Sans
+    weight: 700
+    color: black
+  monospace:
+    family: Source Code Pro
+    size: 0.9em
+  link:
+    color: purple

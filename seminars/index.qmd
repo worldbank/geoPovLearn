@@ -1,14 +1,13 @@
 ---
 title: "GeoPov BBL Series"
 listing:
-  contents: "*/overview.qmd"
+  contents:
+    - seminar-2026-02/overview.qmd
+    - seminar-2025-10/overview.qmd
   type: default
   sort: "date desc"
-  max-items: 100
   fields: [image, date, title, title-long, description]
   categories: true
-  sort-ui: false
-  filter-ui: false
 ---
 
 ## About the GeoPov Series

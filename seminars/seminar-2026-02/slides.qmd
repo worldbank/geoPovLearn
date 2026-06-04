@@ -43,14 +43,14 @@ format:
 ::: fragment
 Use familiar technologies:
 
--   🌐 Web-Browser,
--   💬 Chat,
--   📝 Stata editor,
--   [**📋 copy-paste**]{style="color: red;"} ...
+-   Web-Browser,
+-   Chat,
+-   Stata editor,
+-   [**copy-paste**]{style="color: red;"} ...
 :::
 
 ::: fragment
-**Is this the best way to use AI for data analysis❓**
+**Is this the best way to use AI for data analysis?**
 :::
 ::::
 :::::
@@ -108,16 +108,16 @@ There are many IDEs ➔
 
 **What do we need to know about modern analysis with AI?**
 
-1.  💬 [**AI Integrated IDE**]{style="color:#1565c0;"}: Chat \| Agent \| Inline Completion
-2.  🧠 [**Context awareness**]{style="color:#6a1b9a;"}: How AI understands your project
-3.  🔌 [**Model Context Protocol (MCP)**]{style="color:#00695c;"}: Universal adapter for AI
-4.  🤖 [**GitHub Copilot \| Claude**]{style="color:#e65100;"}: LLM providers
-5.  ✍️ [**Efficient prompting**]{style="color:#2e7d32;"}: Getting the best results
-6.  ⚠️ [**Caveats and limitations**]{style="color:#b00020;"}: What to watch out for
+1.  [**AI Integrated IDE**]{style="color:#1565c0;"}: Chat \| Agent \| Inline Completion
+2.  [**Context awareness**]{style="color:#6a1b9a;"}: How AI understands your project
+3.  [**Model Context Protocol (MCP)**]{style="color:#00695c;"}: Universal adapter for AI
+4.  [**GitHub Copilot \| Claude**]{style="color:#e65100;"}: LLM providers
+5.  [**Efficient prompting**]{style="color:#2e7d32;"}: Getting the best results
+6.  [**Caveats and limitations**]{style="color:#b00020;"}: What to watch out for
 
 ------------------------------------------------------------------------
 
-## 💬 [AI Integrated IDE]{style="color:#1565c0;"}
+## [AI Integrated IDE]{style="color:#1565c0;"}
 
 {{< video https://positron.posit.co/videos/positron-assistant-copytoeditor.mp4 >}}
 
@@ -125,7 +125,7 @@ There are many IDEs ➔
 Source: [Positron: AI Features](https://positron.posit.co/features.html){target="_blank"}
 :::
 
-## 💬 [AI: Chat]{style="color:#1565c0;"}
+## [AI: Chat]{style="color:#1565c0;"}
 
 ::: {style="max-width: 40%; font-size: 0.85em;"}
 [Positron Assistant](https://positron.posit.co/assistant-chat.html){target="_blank"}
@@ -145,7 +145,7 @@ Source: [Positron: AI Features](https://positron.posit.co/features.html){target=
 ![](images/positron-assistant.png){.absolute .stacked-gif top="0" right="200" width="300"} ![](images/positron-assistant-ask-small.gif){.fragment .absolute .stacked-gif top="50" right="0" width="600"}
 :::
 
-## 💬 [AI: Agent]{style="color:#1565c0;"}
+## [AI: Agent]{style="color:#1565c0;"}
 
 ::: {style="max-width: 30%; font-size: 0.8em;"}
 [Positron Assistant](https://positron.posit.co/assistant-chat.html){target="_blank"}
@@ -166,34 +166,34 @@ Source: [Positron: AI Features](https://positron.posit.co/features.html){target=
 ![](images/positron-agent.png){.absolute .stacked-gif top="0" right="250" width="300"} ![](images/positron-agent-small.gif){.fragment .absolute .stacked-gif top="75" right="0" width="700"}
 :::
 
-## 💬 [AI: Inline Completion]{style="color:#1565c0;"}
+## [AI: Inline Completion]{style="color:#1565c0;"}
 
 [Positron Inline Code Completion](https://positron.posit.co/assistant-completions.html){target="_blank"}: Suggests code snippets as you type.
 
 ![](images/positron-inline-small.gif){.fragment .absolute .stacked-gif top="180" right="150" width="650"}
 
-## 🧠 [Context Awareness]{style="color:#6a1b9a;"}
+## [Context Awareness]{style="color:#6a1b9a;"}
 
 ::::: columns
 ::: {.column width="60%"}
 **Positron** accesses project metadata.
 Thus **AI 'knows':**
 
--   📁 **Files str.**: Code, docs
--   📊 **Data**: Var. names, types
--   ⏮️ **History**: Edits, commands
--   📦 **Environment**: Packages
--   🎯 **Intent**: Current task
--   ✅ **Results**: Output, errors
+-   **Files str.**: Code, docs
+-   **Data**: Var. names, types
+-   **History**: Edits, commands
+-   **Environment**: Packages
+-   **Intent**: Current task
+-   **Results**: Output, errors
 :::
 
 ::: {.column width="40%"}
 [**Why does it matter?**]{style="color:#6a1b9a;"}
 
--   🎯 Project-specific suggestions
--   🔗 Understands dependencies
--   🛡️ Reduces hallucinations
--   ⏱️ Improves efficiency
+-   Project-specific suggestions
+-   Understands dependencies
+-   Reduces hallucinations
+-   Improves efficiency
 :::
 :::::
 
@@ -201,7 +201,7 @@ Thus **AI 'knows':**
 **Read more:** [Positron: AI Context](https://positron.posit.co/assistant-chat-context.html){target="_blank"} \| [GH Copilot](https://docs.github.com/en/copilot/using-github-copilot/getting-started-with-github-copilot#understanding-copilot-context){target="_blank"} \| [Claude](https://www.anthropic.com/news/claude-sonnet-4-5){target="_blank"} \| [WB AI Responsible Use](https://ai.worldbank.org/responsible-use){target="_blank"}
 :::
 
-## 🔌 [Model Context Protocol (MCP)]{style="color:#00695c;"} {.smaller}
+## [Model Context Protocol (MCP)]{style="color:#00695c;"} {.smaller}
 
 MCP is a universal adapter for AI—[Anthropic](https://www.anthropic.com/news/model-context-protocol){target="_blank"}— that connects [data flows](https://github.com/modelcontextprotocol/servers){target="_blank"}:
 
@@ -213,24 +213,24 @@ MCP is a universal adapter for AI—[Anthropic](https://www.anthropic.com/news/m
 **Read more:** [modelcontextprotocol.io](https://modelcontextprotocol.io/docs/getting-started/intro){target="_blank"}
 :::
 
-## 🤖 [GitHub Copilot \| Anthropic Claude]{style="color:#e65100;"} {.smaller}
+## [GitHub Copilot \| Anthropic Claude]{style="color:#e65100;"} {.smaller}
 
 ::::::: columns
 :::: {.column width="40%"}
 [**GitHub Copilot**]{style="color:#0366d6;"}
 
--   ✅ WB-approved
--   🌐 [github.com/worldbank](https://github.com/worldbank){target="_blank"}
--   🤝 Uses [**Claude**]{style="color:#d97757;"} \| [**GPT**]{style="color:#10a37f;"}
--   🔌 Integrates with **IDEs**
+-   WB-approved
+-   [github.com/worldbank](https://github.com/worldbank){target="_blank"}
+-   Uses [**Claude**]{style="color:#d97757;"} \| [**GPT**]{style="color:#10a37f;"}
+-   Integrates with **IDEs**
 -   [github\@worldbank.org](mailto:github@worldbank.org)
 -   [**AI \@ WB**]{style="color:#b00020;"}: [ai.worldbank.org](https://ai.worldbank.org/responsible-use)
 
 ::: fragment
 [**Choose your LLM:**]{style="color:#e65100;"}
 
--   🧠 Claude Sonnet/Haiku/Opus
--   💡 OpenAI GPT-4/o1...
+-   Claude Sonnet/Haiku/Opus
+-   OpenAI GPT-4/o1...
 :::
 ::::
 
@@ -245,31 +245,31 @@ MCP is a universal adapter for AI—[Anthropic](https://www.anthropic.com/news/m
 Sources: [Anthropic Claude Sonnet 4.5](https://www.anthropic.com/news/claude-sonnet-4-5){target="_blank"}
 :::
 
-## ✍️ [Efficient Prompting]{style="color:#2e7d32;"}
+## [Efficient Prompting]{style="color:#2e7d32;"}
 
 :::: incremental
 ::: {style="font-size: 0.60em;"}
--   [🎯 **Be specific**]{style="color:#1b5e20;"}:
+-   [**Be specific**]{style="color:#1b5e20;"}:
 
     "Write a Stata do-file to …" / "Refactor this R function to …"
 
--   [🧩 **Provide context**]{style="color:#1b5e20;"}:
+-   [**Provide context**]{style="color:#1b5e20;"}:
 
     "Goal: X; Dataset: Y variables; Constraints: Z (WB rules, packages, runtime)"
 
--   [📌 **Define expected output**]{style="color:#1b5e20;"}:
+-   [**Define expected output**]{style="color:#1b5e20;"}:
 
     "Save as regression_results.xlsx, format as APA table" / "Create bar chart with 95% CIs"
 
--   [🔁 **Summarize + clarify first**]{style="color:#1b5e20;"}:
+-   [**Summarize + clarify first**]{style="color:#1b5e20;"}:
 
     "Restate and ask clarifying questions before implementing", "Explain why ...", "Give alternatives with trade-offs..."
 
--   [🪜 **Iterate in small steps**]{style="color:#1b5e20;"}:
+-   [**Iterate in small steps**]{style="color:#1b5e20;"}:
 
     "minimal changes", "refine"
 
--   [🛑 **Set boundaries**]{style="color:#1b5e20;"}:
+-   [**Set boundaries**]{style="color:#1b5e20;"}:
 
     "Don’t use ... data", "Don’t print secrets, ask if in doubt.", "Don’t change files".
 :::
@@ -279,32 +279,32 @@ Sources: [Anthropic Claude Sonnet 4.5](https://www.anthropic.com/news/claude-son
 **Tip:** Treat the assistant as a *collaborator*.
 :::
 
-## ⚠️ [Limitations]{style="color:#b00020;"} and [Remedies]{style="color:#1b5e20;"} {.smaller}
+## [Limitations]{style="color:#b00020;"} and [Remedies]{style="color:#1b5e20;"} {.smaller}
 
 ::: incremental
--   [⚠︎ **Wrong-but-plausible outputs / hallucinations**]{style="color:#b00020;"}: code runs but logic is wrong
+-   [**Wrong-but-plausible outputs / hallucinations**]{style="color:#b00020;"}: code runs but logic is wrong
 
-    [✓ **Verify and validate**]{style="color:#1b5e20;"}: ask the model to **explain and justify** the solution
+    [**Verify and validate**]{style="color:#1b5e20;"}: ask the model to **explain and justify** the solution
 
--   [⚠︎ **Context limits**]{style="color:#b00020;"}: not all files/data are in context; too large projects.
+-   [**Context limits**]{style="color:#b00020;"}: not all files/data are in context; too large projects.
 
-    [✓ **Be explicit**]{style="color:#1b5e20;"}: state assumptions, expected inputs/outputs, and references
+    [**Be explicit**]{style="color:#1b5e20;"}: state assumptions, expected inputs/outputs, and references
 
--   [⚠︎ **Outdated knowledge**]{style="color:#b00020;"}: suggested APIs/packages/options may have changed
+-   [**Outdated knowledge**]{style="color:#b00020;"}: suggested APIs/packages/options may have changed
 
-    [✓ **Teach the model**]{style="color:#1b5e20;"}: provide references/links; ask it to learn
+    [**Teach the model**]{style="color:#1b5e20;"}: provide references/links; ask it to learn
 
--   [⚠︎ **Over-reliance**]{style="color:#b00020;"}: erodes fundamentals; mistakes slip through unchallenged
+-   [**Over-reliance**]{style="color:#b00020;"}: erodes fundamentals; mistakes slip through unchallenged
 
-    [✓ **Keep learning**]{style="color:#1b5e20;"}: ask for step-by-step reasoning; request alternatives and trade-offs
+    [**Keep learning**]{style="color:#1b5e20;"}: ask for step-by-step reasoning; request alternatives and trade-offs
 
--   [⚠︎ **Confidentiality / security / privacy**]{style="color:#b00020;"}
+-   [**Confidentiality / security / privacy**]{style="color:#b00020;"}
 
-    [✓ **Constrain context**]{style="color:#1b5e20;"}: exclude sensitive data; use `.copilot-ignore`; [AI \@ WB](https://ai.worldbank.org/responsible-use)
+    [**Constrain context**]{style="color:#1b5e20;"}: exclude sensitive data; use `.copilot-ignore`; [AI \@ WB](https://ai.worldbank.org/responsible-use)
 
--   [⚠︎ **Reproducibility**]{style="color:#b00020;"}: answers can vary across sessions/models/settings
+-   [**Reproducibility**]{style="color:#b00020;"}: answers can vary across sessions/models/settings
 
-    [✓ **Cutomize agents**]{style="color:#1b5e20;"}: save prompts, use Git; create AI agents
+    [**Cutomize agents**]{style="color:#1b5e20;"}: save prompts, use Git; create AI agents
 :::
 
 ::: footer
@@ -364,7 +364,7 @@ Sources: [Anthropic Claude Sonnet 4.5](https://www.anthropic.com/news/claude-son
 -   Seminar internal page: [link](https://worldbankgroup.sharepoint.com/:u:/r/sites/FPG/SitePages/SystemPages/Detail.aspx?csf=1&web=1&e=FpUcQU)
 
 ::: {.callout-tip icon="true"}
-💡 **Ask AI for help**: "How do I download a project from GitHub and open it in Positron IDE? The link is: ..."
+**Ask AI for help**: "How do I download a project from GitHub and open it in Positron IDE? The link is: ..."
 :::
 
 ------------------------------------------------------------------------
@@ -381,7 +381,7 @@ Sources: [Anthropic Claude Sonnet 4.5](https://www.anthropic.com/news/claude-son
 
 -   [Internal seminar page](https://worldbankgroup.sharepoint.com/:u:/r/sites/FPG/SitePages/SystemPages/Detail.aspx?csf=1&web=1&e=FpUcQU)
 
--   🎥 [Recording](https://worldbankgroup.sharepoint.com/:v:/s/FPG/IQAP1iO3p3J_TYbLOsBn5UqtAeJUq3oW9ukcs1BlgLMRMRg?e=pkO3bL&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+-   [Recording](https://worldbankgroup.sharepoint.com/:v:/s/FPG/IQAP1iO3p3J_TYbLOsBn5UqtAeJUq3oW9ukcs1BlgLMRMRg?e=pkO3bL&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
 -   [Positron + Stata: Live Demo (code)](https://github.com/WBGGeoPov/seminar-coding-with-ai-demo)
 
@@ -389,7 +389,7 @@ Sources: [Anthropic Claude Sonnet 4.5](https://www.anthropic.com/news/claude-son
 
     -   [Slides (web)](slides.qmd) + [Slides (PDF)](https://raw.githubusercontent.com/WBGGeoPov/geoPovLearn/main/seminars/seminar-2026-02/ai-for-coding-slides-2026-02-05.pdf)
 
-    -   📚 [Setup Instructions](setup-instructions.qmd)
+    -   [Setup Instructions](setup-instructions.qmd)
 
 -   [Presentation Source Code](https://github.com/WBGGeoPov/geoPovLearn/blob/main/seminars/seminar-2026-02){target="_blank"}
 

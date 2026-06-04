@@ -56,7 +56,7 @@ During this first session, we will:
 
 -   [Slides (web)](slides.qmd) + [Slides (PDF)](https://raw.githubusercontent.com/WBGGeoPov/geoPovLearn/main/seminars/seminar-2026-02/ai-for-coding-slides-2026-02-05.pdf)
 
--   📚 [Setup Instructions](setup-instructions.qmd)
+-   [Setup Instructions](setup-instructions.qmd)
 
 -   [Q/A: Questions and Answers from the Seminar and Teams Chat](qa.qmd)
 

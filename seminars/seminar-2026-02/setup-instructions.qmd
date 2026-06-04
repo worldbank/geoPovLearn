@@ -216,11 +216,11 @@ users, see table below.
 
 | Access Level | GitHub Permissions | GitHub Copilot / AI Assistance | WB GitHub Org Access |
 |-----------------|-----------------|--------------------|------------------|
-| **No GitHub Account** | ❌ No: view public repos only | ❌ No | ❌ No (only view public repositories) |
-| **Personal GH Account**<br/>(created at github.com) | ✅ Everything: Create personal repos, collaborate | ⚠️ **Usage limit**. **No access to Claude** | ❌ No |
-| **+ GH Copilot subscription** ([Copilot Pro or Pro+](https://github.com/features/copilot/plans){target="_blank"}) | ✅ Everything | ✅ **Unlimited code completion + Chat**. ⚠️ Monthly use limit on **Agent**<br/>Private budget for over-limit use.<br/>✅ **Premium models (Claude)** | ❌ No |
-| **WB Organization Member**<br/>(join via eServices) | ✅ Access WB public and internal repos.<br/>Create repos under WB org | ⚠️ Limited (basic completions only; no premium models). | ✅ Yes (view / contribute) |
-| **WB Org + WB Copilot Access**<br/>(request Copilot via GitHub Settings and email to github\@worldbank.org) | ✅ Everything: personal repos + WB org repos | ✅ **Unlimited code completion + Chat**. ⚠️ Limit on **Agent** (300 requests/month)<br/>✅ **Premium models (Claude, GPT-4.5)**<br/>Manager-approved budget for overuse. | ✅ Yes |
+| **No GitHub Account** | No: view public repos only | No | No (only view public repositories) |
+| **Personal GH Account**<br/>(created at github.com) | Everything: Create personal repos, collaborate | **Usage limit**. **No access to Claude** | No |
+| **+ GH Copilot subscription** ([Copilot Pro or Pro+](https://github.com/features/copilot/plans){target="_blank"}) | Everything | **Unlimited code completion + Chat**. Monthly use limit on **Agent**<br/>Private budget for over-limit use.<br/>**Premium models (Claude)** | No |
+| **WB Organization Member**<br/>(join via eServices) | Access WB public and internal repos.<br/>Create repos under WB org | Limited (basic completions only; no premium models). | Yes (view / contribute) |
+| **WB Org + WB Copilot Access**<br/>(request Copilot via GitHub Settings and email to github\@worldbank.org) | Everything: personal repos + WB org repos | **Unlimited code completion + Chat**. Limit on **Agent** (300 requests/month)<br/>**Premium models (Claude, GPT-4.5)**<br/>Manager-approved budget for overuse. | Yes |
 
 **Key takeaways:**
 

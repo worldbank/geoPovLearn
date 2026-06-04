@@ -1,14 +1,14 @@
 # GeoPov Learning Hub
 
-🌐 **Website:** [worldbank.github.io/geoPovLearn/](https://worldbank.github.io/geoPovLearn/)
+**Website:** [worldbank.github.io/geoPovLearn/](https://worldbank.github.io/geoPovLearn/)
 
 This repository hosts learning materials developed and maintained by the GeoPov team - a global multi-disciplinary team in the Distributional Impact of Policy under the Prosperity Vice Presidency at the World Bank.
 
-## 🌍 About GeoPov
+## About GeoPov
 
 We are development economists and geospatial enthusiasts working at the intersection of poverty, place, and policy. We believe that where people live matters just as much as how they live — and we're here to make sure that spatial realities are part of the poverty dialogue.
 
-## 📚 What's in This Repository
+## What's in This Repository
 
 This repository contains materials from our:
 
@@ -16,7 +16,7 @@ This repository contains materials from our:
 - **Training Materials**: Hands-on guides and practical exercise
 - **Resources**: Curated data sources and methodological guidance
 
-## 🎯 Our Three Pillars
+## Our Three Pillars
 
 1. **Spatial Analysis** - Applying geographic lens to poverty and inequality questions
 2. **Knowledge and Data Center** - Curated repository of geospatial data sources and methods

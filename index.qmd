@@ -2,9 +2,9 @@
 title: "Welcome to GeoPov"
 ---
 
-🌍 We are a group of development economists and geospatial enthusiasts working at the intersection of poverty, place, and policy. At GeoPov, we believe that where people live matters just as much as how they live — and we're here to make sure that spatial realities are part of the poverty dialogue.
+We are a group of development economists and geospatial enthusiasts working at the intersection of poverty, place, and policy. At GeoPov, we believe that where people live matters just as much as how they live — and we're here to make sure that spatial realities are part of the poverty dialogue.
 
-## 🎯 Our Goal
+## Our Goal
 
 To develop a global agenda that:
 
@@ -12,13 +12,7 @@ To develop a global agenda that:
 - **Contributes to global knowledge** that helps design local solutions grounded in data and spatial context.
 
 
-## Latest News
-
-- **Feb 2026:** Seminar on AI-Assisted Data Analysis workflow with Positron and Copilot—materials and slides now available in [seminars/seminar-2026-02](seminars/seminar-2026-02/overview.qmd).
-
-- **November 2025:** GeoPov team seminar on [Geocoding GMD](seminars/seminar-2025-10/overview.qmd).
-
-## 🧭 What We Do
+## What We Do
 
 Our work is organized around three main pillars:
 
@@ -43,7 +37,7 @@ We help demystify geospatial data for microeconomists. Through hands-on training
 
 [Explore our seminars and training events →](seminars/index.qmd)
 
-## 👥 Meet the Team
+## Meet the Team
 
 We're a global multi-disciplinary team in the Distributional Impact of Policy under the Prosperity Vice Presidency. We combine expertise in microeconomic analysis, spatial economics, and data engineering.
 
@@ -55,7 +49,7 @@ We're a global multi-disciplinary team in the Distributional Impact of Policy un
 
 [Meet our team members →](team/index.qmd)
 
-## 🤝 Get Involved
+## Get Involved
 
 - Browse our [seminars](seminars/index.qmd) for recordings and materials
 - Reach out to our [team](team/index.qmd)

@@ -95,7 +95,7 @@
     "href": "index.html",
     "title": "Welcome to GeoPov",
     "section": "",
-    "text": "🌍 We are a group of development economists and geospatial enthusiasts working at the intersection of poverty, place, and policy. At GeoPov, we believe that where people live matters just as much as how they live — and we’re here to make sure that spatial realities are part of the poverty dialogue.",
+    "text": "We are a group of development economists and geospatial enthusiasts working at the intersection of poverty, place, and policy. At GeoPov, we believe that where people live matters just as much as how they live — and we’re here to make sure that spatial realities are part of the poverty dialogue.",
     "crumbs": [
       "About Us"
     ]
@@ -104,18 +104,8 @@
     "objectID": "index.html#our-goal",
     "href": "index.html#our-goal",
     "title": "Welcome to GeoPov",
-    "section": "🎯 Our Goal",
-    "text": "🎯 Our Goal\nTo develop a global agenda that:\n\nEmpowers economists by integrating geospatial data and spatial analysis into country-level diagnostics and policy engagement.\nContributes to global knowledge that helps design local solutions grounded in data and spatial context.",
-    "crumbs": [
-      "About Us"
-    ]
-  },
-  {
-    "objectID": "index.html#latest-news",
-    "href": "index.html#latest-news",
-    "title": "Welcome to GeoPov",
-    "section": "Latest News",
-    "text": "Latest News\n\nFeb 2026: Seminar on AI-Assisted Data Analysis workflow with Positron and Copilot—materials and slides now available in seminars/seminar-2026-02.\nNovember 2025: GeoPov team seminar on Geocoding GMD.",
+    "section": "Our Goal",
+    "text": "Our Goal\nTo develop a global agenda that:\n\nEmpowers economists by integrating geospatial data and spatial analysis into country-level diagnostics and policy engagement.\nContributes to global knowledge that helps design local solutions grounded in data and spatial context.",
     "crumbs": [
       "About Us"
     ]
@@ -124,8 +114,8 @@
     "objectID": "index.html#what-we-do",
     "href": "index.html#what-we-do",
     "title": "Welcome to GeoPov",
-    "section": "🧭 What We Do",
-    "text": "🧭 What We Do\nOur work is organized around three main pillars:\n\nPillar 1: Spatial Analysis\nWe apply a geographic lens to pressing policy questions on poverty and inequality. Whether it’s identifying where jobs are (and aren’t) for the poor, mapping urban deprivation, or analyzing rural income dynamics, we use spatially disaggregated data to generate actionable insights. This includes household surveys, censuses, administrative records, private sector data, and satellite-based remote sensing — covering everything from climate and land use to infrastructure and conflict. We also develop and share open, reproducible code and tools that can be adapted across countries and topics.\nLearn more about our Spatial Analysis work →\n\n\nPillar 2: Knowledge and Data Center\nWe bring clarity to the what, why, and how of using geospatial data in poverty analysis. This pillar focuses on:\n\nBuilding a curated repository of geospatial data sources and methods, with clear guidance on how they can (and can’t) be used in applied work.\nShowcasing examples of microeconomic analyses that successfully integrate geospatial data to answer real-world policy questions.\n\nExplore our Knowledge and Data Center →\n\n\nPillar 3: Capacity Building\nWe help demystify geospatial data for microeconomists. Through hands-on trainings and peer-learning events, we build core skills for microeconomists to use geospatial methods with confidence. Whether you’re just getting started or looking to refine your toolkit, we’re here to support you through our growing Community of Practice.\nExplore our seminars and training events →",
+    "section": "What We Do",
+    "text": "What We Do\nOur work is organized around three main pillars:\n\nPillar 1: Spatial Analysis\nWe apply a geographic lens to pressing policy questions on poverty and inequality. Whether it’s identifying where jobs are (and aren’t) for the poor, mapping urban deprivation, or analyzing rural income dynamics, we use spatially disaggregated data to generate actionable insights. This includes household surveys, censuses, administrative records, private sector data, and satellite-based remote sensing — covering everything from climate and land use to infrastructure and conflict. We also develop and share open, reproducible code and tools that can be adapted across countries and topics.\nLearn more about our Spatial Analysis work →\n\n\nPillar 2: Knowledge and Data Center\nWe bring clarity to the what, why, and how of using geospatial data in poverty analysis. This pillar focuses on:\n\nBuilding a curated repository of geospatial data sources and methods, with clear guidance on how they can (and can’t) be used in applied work.\nShowcasing examples of microeconomic analyses that successfully integrate geospatial data to answer real-world policy questions.\n\nExplore our Knowledge and Data Center →\n\n\nPillar 3: Capacity Building\nWe help demystify geospatial data for microeconomists. Through hands-on trainings and peer-learning events, we build core skills for microeconomists to use geospatial methods with confidence. Whether you’re just getting started or looking to refine your toolkit, we’re here to support you through our growing Community of Practice.\nExplore our seminars and training events →",
     "crumbs": [
       "About Us"
     ]
@@ -134,8 +124,8 @@
     "objectID": "index.html#meet-the-team",
     "href": "index.html#meet-the-team",
     "title": "Welcome to GeoPov",
-    "section": "👥 Meet the Team",
-    "text": "👥 Meet the Team\nWe’re a global multi-disciplinary team in the Distributional Impact of Policy under the Prosperity Vice Presidency. We combine expertise in microeconomic analysis, spatial economics, and data engineering.\nWho we are:\n\nCurious minds who ask “where”, “who”, “what” and “why” together\nPassionate about open data, open code, and inclusive analytics\nBelievers in the power of maps and evidence to drive better policy\n\nMeet our team members →",
+    "section": "Meet the Team",
+    "text": "Meet the Team\nWe’re a global multi-disciplinary team in the Distributional Impact of Policy under the Prosperity Vice Presidency. We combine expertise in microeconomic analysis, spatial economics, and data engineering.\nWho we are:\n\nCurious minds who ask “where”, “who”, “what” and “why” together\nPassionate about open data, open code, and inclusive analytics\nBelievers in the power of maps and evidence to drive better policy\n\nMeet our team members →",
     "crumbs": [
       "About Us"
     ]
@@ -144,8 +134,8 @@
     "objectID": "index.html#get-involved",
     "href": "index.html#get-involved",
     "title": "Welcome to GeoPov",
-    "section": "🤝 Get Involved",
-    "text": "🤝 Get Involved\n\nBrowse our seminars for recordings and materials\nReach out to our team\nReport issues or suggest improvements to our code and materials on GitHub issues",
+    "section": "Get Involved",
+    "text": "Get Involved\n\nBrowse our seminars for recordings and materials\nReach out to our team\nReport issues or suggest improvements to our code and materials on GitHub issues",
     "crumbs": [
       "About Us"
     ]
@@ -203,7 +193,7 @@
     "href": "seminars/seminar-2026-02/setup-instructions.html#github-setup",
     "title": "Positron + GitHub Copilot: Setup Instructions",
     "section": "GitHub and GitHub Copilot Setup",
-    "text": "GitHub and GitHub Copilot Setup\nGitHub setup includes\n\ncreating a GitHub account,\njoining the World Bank GitHub organization, and\nrequesting access to GitHub Copilot.\nfor private developers, instead of joining the World Bank GitHub organization, you can get access to GitHub Copilot through a private subscription to GitHub Copilot Pro or Pro+ plan.\nMonitor your usage of premium requests in GitHub Copilot:\n\nGo to: GitHub &gt; Settings &gt; Copilot settings\nScroll down to the “Usage” section to see your usage of premium requests.\n100% is the monthly limit of 300 premium requests from GH Copilot from the WB. If you have a private Pro or Pro+ subscription, you have 500 and 1500 requests respectively.\n\n\nThese steps can be done independently and give different privileges to users, see table below.\n\n\n\nAccess Level\nGitHub Permissions\nGitHub Copilot / AI Assistance\nWB GitHub Org Access\n\n\n\n\nNo GitHub Account\n❌ No: view public repos only\n❌ No\n❌ No (only view public repositories)\n\n\nPersonal GH Account(created at github.com)\n✅ Everything: Create personal repos, collaborate\n⚠️ Usage limit. No access to Claude\n❌ No\n\n\n+ GH Copilot subscription (Copilot Pro or Pro+)\n✅ Everything\n✅ Unlimited code completion + Chat. ⚠️ Monthly use limit on AgentPrivate budget for over-limit use.✅ Premium models (Claude)\n❌ No\n\n\nWB Organization Member(join via eServices)\n✅ Access WB public and internal repos.Create repos under WB org\n⚠️ Limited (basic completions only; no premium models).\n✅ Yes (view / contribute)\n\n\nWB Org + WB Copilot Access(request Copilot via GitHub Settings and email to github@worldbank.org)\n✅ Everything: personal repos + WB org repos\n✅ Unlimited code completion + Chat. ⚠️ Limit on Agent (300 requests/month)✅ Premium models (Claude, GPT-4.5)Manager-approved budget for overuse.\n✅ Yes\n\n\n\nKey takeaways:\n\nFor AI-assisted coding: You need at minimum “Private GH account + Copilot Access (private Pro subscription or from World Bank GitHub)”\nTo be able to use GitHub Copilot with Claude: You need Copilot Access (private Pro subscription or from World Bank GitHub)\nEmail matters: Always use your personal email, not your WB email, when creating your GitHub account\n\n\nStep 1: Create a GitHub Account\nIf you don’t have a GitHub account yet, create one at https://github.com/signup or read more GH: get-started\n\n\n\n\n\n\nWarning\n\n\n\nNote: Use your personal email address, not your World Bank email.\n\n\n\n\nStep 2: Join the World Bank GitHub Organization\n\nSubmit a “Join GitHub Organization Account Request” on eServices to join github.com/worldbank\nOnce your request is approved, you will receive an email invitation to join the World Bank GitHub organization\n\nEmail will be sent to the email address associated with your GitHub account\n\nAccept the invitation by clicking the link in the email\n\nYou need to confirm your membership in the World Bank organization on GitHub by following steps indicated in the email.\nIf you don’t confirm within a few days, the invitation will expire, and you will need to request again through eService.\n\n\n\n\nStep 3: Request GitHub Copilot Access from World Bank GitHub Organization\nAfter joining the World Bank organization, request GitHub Copilot access. To do this:\n\n\nGo to GitHub &gt; Settings &gt; Copilot settings.\n\n\n\n\n\n\n\nScroll all the way down to the “Get Copilot from an organization” section and click the “Request access” button from the worldbank organization.\nSend an email to github@worldbank.org with the subject line: “Request GitHub Copilot Access”. In the email body, include your GitHub username and a brief reason for requesting access. Copy your manager or team lead for approval.\n\n\n\n\n\nYour request will be reviewed and approved by the GitHub organization administrators.\n\n\n\n\n\n\nTip\n\n\n\nTip: Bryan Cahill and github@worldbank.org lead the github.com/worldbank organization and can help with Copilot access requests.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nWarning: If you don’t see the “Request access” button or worldbank organization, it means you either:\n\nwere not added to the World Bank GitHub organization yet, or\ndid not accept the invitation in due time.\n\nPlease complete Step 2 above, wait for the invitation email, and accept it before requesting GH Copilot access.\n\n\nOnce approved, you’ll be able to use GitHub Copilot in Positron\n\n\nStep 4: Verify GitHub Copilot Access\nIn github.com, go to GitHub &gt; Settings &gt; Copilot settings and verify that you have access to GitHub Copilot through the World Bank organization. Your usage statistics will look like this:\n\n\nNo access to Copilot from World Bank GitHub organization or personal plan Pro or Pro+\n\n\nAccess to Copilot from World Bank GitHub organization or personal plan Pro or Pro+\n\n\n\nAnother way is to check if you have access to premium models like Anthropic Claude or GPT-4.5 in the Positron Assistant settings (see instructions below).\n\nOpen Positron and sign in to your GitHub account (see “Connecting GitHub Copilot to Positron” section above)\nCheck that the GitHub Copilot extension is active in the Extensions panel\nTry typing a comment in a code file to verify that Copilot suggestions appear\n\nNote: If you have access to GitHub Copilot but don’t see suggestions in Positron, make sure you are signed into GitHub in Positron and that the GitHub Copilot extension is installed and enabled.\n\n\nStep 5: To enable overuse of GitHub Copilot Agent\n\nAsk your manager for permission to use a budget code for overuse of GitHub Copilot Agent\nSet up a monthly limit of usage (you will be charged only for what you use)\nContact github@worldbank.org asking to set a budget for your account and provide the budget code approved by your manager (copy manager in the email for approval confirmation).",
+    "text": "GitHub and GitHub Copilot Setup\nGitHub setup includes\n\ncreating a GitHub account,\njoining the World Bank GitHub organization, and\nrequesting access to GitHub Copilot.\nfor private developers, instead of joining the World Bank GitHub organization, you can get access to GitHub Copilot through a private subscription to GitHub Copilot Pro or Pro+ plan.\nMonitor your usage of premium requests in GitHub Copilot:\n\nGo to: GitHub &gt; Settings &gt; Copilot settings\nScroll down to the “Usage” section to see your usage of premium requests.\n100% is the monthly limit of 300 premium requests from GH Copilot from the WB. If you have a private Pro or Pro+ subscription, you have 500 and 1500 requests respectively.\n\n\nThese steps can be done independently and give different privileges to users, see table below.\n\n\n\nAccess Level\nGitHub Permissions\nGitHub Copilot / AI Assistance\nWB GitHub Org Access\n\n\n\n\nNo GitHub Account\nNo: view public repos only\nNo\nNo (only view public repositories)\n\n\nPersonal GH Account(created at github.com)\nEverything: Create personal repos, collaborate\nUsage limit. No access to Claude\nNo\n\n\n+ GH Copilot subscription (Copilot Pro or Pro+)\nEverything\nUnlimited code completion + Chat. Monthly use limit on AgentPrivate budget for over-limit use.Premium models (Claude)\nNo\n\n\nWB Organization Member(join via eServices)\nAccess WB public and internal repos.Create repos under WB org\nLimited (basic completions only; no premium models).\nYes (view / contribute)\n\n\nWB Org + WB Copilot Access(request Copilot via GitHub Settings and email to github@worldbank.org)\nEverything: personal repos + WB org repos\nUnlimited code completion + Chat. Limit on Agent (300 requests/month)Premium models (Claude, GPT-4.5)Manager-approved budget for overuse.\nYes\n\n\n\nKey takeaways:\n\nFor AI-assisted coding: You need at minimum “Private GH account + Copilot Access (private Pro subscription or from World Bank GitHub)”\nTo be able to use GitHub Copilot with Claude: You need Copilot Access (private Pro subscription or from World Bank GitHub)\nEmail matters: Always use your personal email, not your WB email, when creating your GitHub account\n\n\nStep 1: Create a GitHub Account\nIf you don’t have a GitHub account yet, create one at https://github.com/signup or read more GH: get-started\n\n\n\n\n\n\nWarning\n\n\n\nNote: Use your personal email address, not your World Bank email.\n\n\n\n\nStep 2: Join the World Bank GitHub Organization\n\nSubmit a “Join GitHub Organization Account Request” on eServices to join github.com/worldbank\nOnce your request is approved, you will receive an email invitation to join the World Bank GitHub organization\n\nEmail will be sent to the email address associated with your GitHub account\n\nAccept the invitation by clicking the link in the email\n\nYou need to confirm your membership in the World Bank organization on GitHub by following steps indicated in the email.\nIf you don’t confirm within a few days, the invitation will expire, and you will need to request again through eService.\n\n\n\n\nStep 3: Request GitHub Copilot Access from World Bank GitHub Organization\nAfter joining the World Bank organization, request GitHub Copilot access. To do this:\n\n\nGo to GitHub &gt; Settings &gt; Copilot settings.\n\n\n\n\n\n\n\nScroll all the way down to the “Get Copilot from an organization” section and click the “Request access” button from the worldbank organization.\nSend an email to github@worldbank.org with the subject line: “Request GitHub Copilot Access”. In the email body, include your GitHub username and a brief reason for requesting access. Copy your manager or team lead for approval.\n\n\n\n\n\nYour request will be reviewed and approved by the GitHub organization administrators.\n\n\n\n\n\n\nTip\n\n\n\nTip: Bryan Cahill and github@worldbank.org lead the github.com/worldbank organization and can help with Copilot access requests.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nWarning: If you don’t see the “Request access” button or worldbank organization, it means you either:\n\nwere not added to the World Bank GitHub organization yet, or\ndid not accept the invitation in due time.\n\nPlease complete Step 2 above, wait for the invitation email, and accept it before requesting GH Copilot access.\n\n\nOnce approved, you’ll be able to use GitHub Copilot in Positron\n\n\nStep 4: Verify GitHub Copilot Access\nIn github.com, go to GitHub &gt; Settings &gt; Copilot settings and verify that you have access to GitHub Copilot through the World Bank organization. Your usage statistics will look like this:\n\n\nNo access to Copilot from World Bank GitHub organization or personal plan Pro or Pro+\n\n\nAccess to Copilot from World Bank GitHub organization or personal plan Pro or Pro+\n\n\n\nAnother way is to check if you have access to premium models like Anthropic Claude or GPT-4.5 in the Positron Assistant settings (see instructions below).\n\nOpen Positron and sign in to your GitHub account (see “Connecting GitHub Copilot to Positron” section above)\nCheck that the GitHub Copilot extension is active in the Extensions panel\nTry typing a comment in a code file to verify that Copilot suggestions appear\n\nNote: If you have access to GitHub Copilot but don’t see suggestions in Positron, make sure you are signed into GitHub in Positron and that the GitHub Copilot extension is installed and enabled.\n\n\nStep 5: To enable overuse of GitHub Copilot Agent\n\nAsk your manager for permission to use a budget code for overuse of GitHub Copilot Agent\nSet up a monthly limit of usage (you will be charged only for what you use)\nContact github@worldbank.org asking to set a budget for your account and provide the budget code approved by your manager (copy manager in the email for approval confirmation).",
     "crumbs": [
       "GeoPov BBL Series",
       "Revolutionizing Coding in Stata/R",
@@ -257,64 +247,64 @@
     "objectID": "seminars/seminar-2026-02/slides.html#ai-integrated-ide",
     "href": "seminars/seminar-2026-02/slides.html#ai-integrated-ide",
     "title": "GeoPov",
-    "section": "💬 AI Integrated IDE",
-    "text": "💬 AI Integrated IDE\n\n\nSource: Positron: AI Features"
+    "section": "AI Integrated IDE",
+    "text": "AI Integrated IDE\n\n\nSource: Positron: AI Features"
   },
   {
     "objectID": "seminars/seminar-2026-02/slides.html#ai-chat",
     "href": "seminars/seminar-2026-02/slides.html#ai-chat",
     "title": "GeoPov",
-    "section": "💬 AI: Chat",
-    "text": "💬 AI: Chat\n\nPositron Assistant\n\nAsk AI (Claude 4.5) through Github Copilot\nProvides explanations, suggestions, and code snippets.\nIntegrates with project context, and code.\nLearn more:\nAssistant Chat"
+    "section": "AI: Chat",
+    "text": "AI: Chat\n\nPositron Assistant\n\nAsk AI (Claude 4.5) through Github Copilot\nProvides explanations, suggestions, and code snippets.\nIntegrates with project context, and code.\nLearn more:\nAssistant Chat"
   },
   {
     "objectID": "seminars/seminar-2026-02/slides.html#ai-agent",
     "href": "seminars/seminar-2026-02/slides.html#ai-agent",
     "title": "GeoPov",
-    "section": "💬 AI: Agent",
-    "text": "💬 AI: Agent\n\nPositron Assistant\n\nExecutes instructions.\nActs independently\n\nRuns code\nFixes errors\nLearns\nReasons\n\nSee more in the live demo!"
+    "section": "AI: Agent",
+    "text": "AI: Agent\n\nPositron Assistant\n\nExecutes instructions.\nActs independently\n\nRuns code\nFixes errors\nLearns\nReasons\n\nSee more in the live demo!"
   },
   {
     "objectID": "seminars/seminar-2026-02/slides.html#ai-inline-completion",
     "href": "seminars/seminar-2026-02/slides.html#ai-inline-completion",
     "title": "GeoPov",
-    "section": "💬 AI: Inline Completion",
-    "text": "💬 AI: Inline Completion\nPositron Inline Code Completion: Suggests code snippets as you type."
+    "section": "AI: Inline Completion",
+    "text": "AI: Inline Completion\nPositron Inline Code Completion: Suggests code snippets as you type."
   },
   {
     "objectID": "seminars/seminar-2026-02/slides.html#context-awareness",
     "href": "seminars/seminar-2026-02/slides.html#context-awareness",
     "title": "GeoPov",
-    "section": "🧠 Context Awareness",
-    "text": "🧠 Context Awareness\n\n\nPositron accesses project metadata. Thus AI ‘knows’:\n\n📁 Files str.: Code, docs\n📊 Data: Var. names, types\n⏮️ History: Edits, commands\n📦 Environment: Packages\n🎯 Intent: Current task\n✅ Results: Output, errors\n\n\nWhy does it matter?\n\n🎯 Project-specific suggestions\n🔗 Understands dependencies\n🛡️ Reduces hallucinations\n⏱️ Improves efficiency\n\n\n\nRead more: Positron: AI Context | GH Copilot | Claude | WB AI Responsible Use"
+    "section": "Context Awareness",
+    "text": "Context Awareness\n\n\nPositron accesses project metadata. Thus AI ‘knows’:\n\nFiles str.: Code, docs\nData: Var. names, types\nHistory: Edits, commands\nEnvironment: Packages\nIntent: Current task\nResults: Output, errors\n\n\nWhy does it matter?\n\nProject-specific suggestions\nUnderstands dependencies\nReduces hallucinations\nImproves efficiency\n\n\n\nRead more: Positron: AI Context | GH Copilot | Claude | WB AI Responsible Use"
   },
   {
     "objectID": "seminars/seminar-2026-02/slides.html#model-context-protocol-mcp",
     "href": "seminars/seminar-2026-02/slides.html#model-context-protocol-mcp",
     "title": "GeoPov",
-    "section": "🔌 Model Context Protocol (MCP)",
-    "text": "🔌 Model Context Protocol (MCP)\nMCP is a universal adapter for AI—Anthropic— that connects data flows:\n\nStata-MCP or R MCP for Stata/R ⟶ Positron ⟶ Copilot ⟶ LLMs.\n\n\n\nRead more: modelcontextprotocol.io"
+    "section": "Model Context Protocol (MCP)",
+    "text": "Model Context Protocol (MCP)\nMCP is a universal adapter for AI—Anthropic— that connects data flows:\n\nStata-MCP or R MCP for Stata/R ⟶ Positron ⟶ Copilot ⟶ LLMs.\n\n\n\nRead more: modelcontextprotocol.io"
   },
   {
     "objectID": "seminars/seminar-2026-02/slides.html#github-copilot-anthropic-claude",
     "href": "seminars/seminar-2026-02/slides.html#github-copilot-anthropic-claude",
     "title": "GeoPov",
-    "section": "🤖 GitHub Copilot | Anthropic Claude",
-    "text": "🤖 GitHub Copilot | Anthropic Claude\n\n\nGitHub Copilot\n\n✅ WB-approved\n🌐 github.com/worldbank\n🤝 Uses Claude | GPT\n🔌 Integrates with IDEs\ngithub@worldbank.org\nAI @ WB: ai.worldbank.org\n\n\nChoose your LLM:\n\n🧠 Claude Sonnet/Haiku/Opus\n💡 OpenAI GPT-4/o1…\n\n\n\n\n\n\n\n\nSources: Anthropic Claude Sonnet 4.5"
+    "section": "GitHub Copilot | Anthropic Claude",
+    "text": "GitHub Copilot | Anthropic Claude\n\n\nGitHub Copilot\n\nWB-approved\ngithub.com/worldbank\nUses Claude | GPT\nIntegrates with IDEs\ngithub@worldbank.org\nAI @ WB: ai.worldbank.org\n\n\nChoose your LLM:\n\nClaude Sonnet/Haiku/Opus\nOpenAI GPT-4/o1…\n\n\n\n\n\n\n\n\nSources: Anthropic Claude Sonnet 4.5"
   },
   {
     "objectID": "seminars/seminar-2026-02/slides.html#efficient-prompting",
     "href": "seminars/seminar-2026-02/slides.html#efficient-prompting",
     "title": "GeoPov",
-    "section": "✍️ Efficient Prompting",
-    "text": "✍️ Efficient Prompting\n\n\n🎯 Be specific:\n“Write a Stata do-file to …” / “Refactor this R function to …”\n🧩 Provide context:\n“Goal: X; Dataset: Y variables; Constraints: Z (WB rules, packages, runtime)”\n📌 Define expected output:\n“Save as regression_results.xlsx, format as APA table” / “Create bar chart with 95% CIs”\n🔁 Summarize + clarify first:\n“Restate and ask clarifying questions before implementing”, “Explain why …”, “Give alternatives with trade-offs…”\n🪜 Iterate in small steps:\n“minimal changes”, “refine”\n🛑 Set boundaries:\n“Don’t use … data”, “Don’t print secrets, ask if in doubt.”, “Don’t change files”.\n\n\n\nTip: Treat the assistant as a collaborator."
+    "section": "Efficient Prompting",
+    "text": "Efficient Prompting\n\n\nBe specific:\n“Write a Stata do-file to …” / “Refactor this R function to …”\nProvide context:\n“Goal: X; Dataset: Y variables; Constraints: Z (WB rules, packages, runtime)”\nDefine expected output:\n“Save as regression_results.xlsx, format as APA table” / “Create bar chart with 95% CIs”\nSummarize + clarify first:\n“Restate and ask clarifying questions before implementing”, “Explain why …”, “Give alternatives with trade-offs…”\nIterate in small steps:\n“minimal changes”, “refine”\nSet boundaries:\n“Don’t use … data”, “Don’t print secrets, ask if in doubt.”, “Don’t change files”.\n\n\n\nTip: Treat the assistant as a collaborator."
   },
   {
     "objectID": "seminars/seminar-2026-02/slides.html#limitations-and-remedies",
     "href": "seminars/seminar-2026-02/slides.html#limitations-and-remedies",
     "title": "GeoPov",
-    "section": "⚠️ Limitations and Remedies",
-    "text": "⚠️ Limitations and Remedies\n\n⚠︎ Wrong-but-plausible outputs / hallucinations: code runs but logic is wrong\n✓ Verify and validate: ask the model to explain and justify the solution\n⚠︎ Context limits: not all files/data are in context; too large projects.\n✓ Be explicit: state assumptions, expected inputs/outputs, and references\n⚠︎ Outdated knowledge: suggested APIs/packages/options may have changed\n✓ Teach the model: provide references/links; ask it to learn\n⚠︎ Over-reliance: erodes fundamentals; mistakes slip through unchallenged\n✓ Keep learning: ask for step-by-step reasoning; request alternatives and trade-offs\n⚠︎ Confidentiality / security / privacy\n✓ Constrain context: exclude sensitive data; use .copilot-ignore; AI @ WB\n⚠︎ Reproducibility: answers can vary across sessions/models/settings\n✓ Cutomize agents: save prompts, use Git; create AI agents\n\n\nRead more: GitHub Copilot Trust Center | AI @ WB: ai.worldbank.org"
+    "section": "Limitations and Remedies",
+    "text": "Limitations and Remedies\n\nWrong-but-plausible outputs / hallucinations: code runs but logic is wrong\nVerify and validate: ask the model to explain and justify the solution\nContext limits: not all files/data are in context; too large projects.\nBe explicit: state assumptions, expected inputs/outputs, and references\nOutdated knowledge: suggested APIs/packages/options may have changed\nTeach the model: provide references/links; ask it to learn\nOver-reliance: erodes fundamentals; mistakes slip through unchallenged\nKeep learning: ask for step-by-step reasoning; request alternatives and trade-offs\nConfidentiality / security / privacy\nConstrain context: exclude sensitive data; use .copilot-ignore; AI @ WB\nReproducibility: answers can vary across sessions/models/settings\nCutomize agents: save prompts, use Git; create AI agents\n\n\nRead more: GitHub Copilot Trust Center | AI @ WB: ai.worldbank.org"
   },
   {
     "objectID": "seminars/seminar-2026-02/slides.html#summary",
@@ -342,7 +332,7 @@
     "href": "seminars/seminar-2026-02/slides.html#thank-you-questins",
     "title": "GeoPov",
     "section": "Thank You! Questins?",
-    "text": "Thank You! Questins?\n\n\nResources & Source Code\n\nInternal seminar page\n🎥 Recording\nPositron + Stata: Live Demo (code)\nSlides and Supporting Materials\n\nSlides (web) + Slides (PDF)\n📚 Setup Instructions\n\nPresentation Source Code\nGeoPov learning resources\n\nContact: Distributional Impact of Policies poverty@worldbank.org"
+    "text": "Thank You! Questins?\n\n\nResources & Source Code\n\nInternal seminar page\nRecording\nPositron + Stata: Live Demo (code)\nSlides and Supporting Materials\n\nSlides (web) + Slides (PDF)\nSetup Instructions\n\nPresentation Source Code\nGeoPov learning resources\n\nContact: Distributional Impact of Policies poverty@worldbank.org"
   },
   {
     "objectID": "seminars/seminar-2026-02/slides.html#software-setup-overview",
@@ -1096,7 +1086,7 @@
     "href": "seminars/seminar-2026-02/overview.html#materials",
     "title": "AI-Assisted Coding in Stata and R",
     "section": "Materials",
-    "text": "Materials\n\nSeminar\n\nInternal seminar page\nRecording\nPositron + Stata Live Demo materials: github.com/WBGGeoPov/seminar-coding-with-ai-demo\nSlides (web) + Slides (PDF)\n📚 Setup Instructions\nQ/A: Questions and Answers from the Seminar and Teams Chat\n\n\n\nPresentation Slides\n\n\nView Slides | Download PDF",
+    "text": "Materials\n\nSeminar\n\nInternal seminar page\nRecording\nPositron + Stata Live Demo materials: github.com/WBGGeoPov/seminar-coding-with-ai-demo\nSlides (web) + Slides (PDF)\nSetup Instructions\nQ/A: Questions and Answers from the Seminar and Teams Chat\n\n\n\nPresentation Slides\n\n\nView Slides | Download PDF",
     "crumbs": [
       "GeoPov BBL Series",
       "Revolutionizing Coding in Stata/R"

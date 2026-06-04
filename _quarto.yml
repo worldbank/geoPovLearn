@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: _site
+  resources:
+    - brand/*
 
 execute:
   freeze: auto
@@ -66,8 +68,6 @@ website:
     background: "#e8eaed"
     foreground: "#555555"
     left: "© 2026 World Bank Group. All Rights Reserved."
-  resources:
-    - brand/*
 
 format:
   html:
